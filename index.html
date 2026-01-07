@@ -96,39 +96,51 @@
     }
 
     /* Video screen */
-    .video-wrap{
-      display:none;
-      width:min(980px, 96vw);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid rgba(0,0,0,.18);
-      background: rgba(0,0,0,.15);
-    }
-    video{
-      width:100%;
-      height:auto;
-      display:block;
-      background:#000;
-    }
-.banner{
+    /* Video screen (desktop + mobile consistent) */
+.video-wrap{
+  display:none;                 /* stays hidden until unlock */
+  width:min(980px, 96vw);
+  margin: 0 auto;
+  padding: 18px 14px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.18);
+  background: rgba(0,0,0,.15);
+
+  /* KEY: stack items vertically and center them */
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+#videoWrap{
+  max-height: 92vh;
+  overflow: auto;
+}
+.video-wrap video{
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  display:block;
+  background:#000;
+  border-radius: 14px;
+  overflow:hidden;
+}
+
+/* Huge centered flashing text */
+.mega{
+  width: 100%;
   text-align:center;
-  font-weight: 900;
-  letter-spacing: 2px;
-  padding: 14px 10px;
-  user-select: none;
+  font-weight: 1000;
   text-transform: uppercase;
-  font-size: clamp(22px, 4vw, 44px);
-  background: rgba(255,255,255,.25);
-  text-shadow: 0 2px 0 rgba(0,0,0,.25);
-}
-
-.banner.top{
-  border-bottom: 1px solid rgba(0,0,0,.18);
-}
-
-.banner.bottom{
-  border-top: 1px solid rgba(0,0,0,.18);
+  letter-spacing: 6px;
+  line-height: 1;
+  font-size: clamp(56px, 8vw, 160px);
+  text-shadow:
+    0 4px 0 rgba(0,0,0,.45),
+    0 0 30px rgba(0,0,0,.35);
+  user-select:none;
 }
     .footer{
       margin-top: 10px;
@@ -162,16 +174,15 @@
 
   <!-- VIDEO SCREEN -->
 <section class="video-wrap" id="videoWrap">
-  <div class="overlay">
-    <div class="mega top" id="topBanner">FATTY FATTY</div>
-    <div class="mega bottom" id="bottomBanner">LOSER!</div>
-  </div>
+  <div class="mega" id="topBanner">FATTY FATTY</div>
 
   <video id="video" controls playsinline preload="metadata" muted loop>
     <source src="xvFZjo5PgG0.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
-</section>
 
+  <div class="mega" id="bottomBanner">LOSER!</div>
+</section>
   <script>
     // ✅ Your chosen password:
     const CORRECT_PASSWORD = "HungryAgainLOL";
@@ -227,11 +238,11 @@ function startSyncedFlash(){
         msg.textContent = "Unlocked. Enjoy 😈";
         // Hide lock UI, show video, and play
         lockCard.style.display = "none";
-        videoWrap.style.display = "block";
+        videoWrap.style.display = "flex";
 
 startSyncedFlash(); // <-- ADD THIS (starts synced flashing)
 
-// Attempt autoplay; if blocked, user can press play.
+// Attempt autoplay; if ed, user can press play.
 video.play().catch(() => {});
       } else {
         msg.textContent = rand(wrongPrompts);
