@@ -111,7 +111,25 @@
       display:block;
       background:#000;
     }
+.banner{
+  text-align:center;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 14px 10px;
+  user-select: none;
+  text-transform: uppercase;
+  font-size: clamp(22px, 4vw, 44px);
+  background: rgba(255,255,255,.25);
+  text-shadow: 0 2px 0 rgba(0,0,0,.25);
+}
 
+.banner.top{
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+
+.banner.bottom{
+  border-top: 1px solid rgba(0,0,0,.18);
+}
     .footer{
       margin-top: 10px;
       font-size: 12px;
@@ -146,7 +164,7 @@
  <section class="video-wrap" id="videoWrap">
   <div class="banner top" id="topBanner">FATTY FATTY</div>
 
-  <video id="video" controls playsinline preload="metadata">
+<video id="video" controls playsinline preload="metadata" loop>
     <source src="xvFZjo5PgG0.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -174,7 +192,30 @@
     const lockCard = document.getElementById("lockCard");
     const videoWrap = document.getElementById("videoWrap");
     const video = document.getElementById("video");
+const topBanner = document.getElementById("topBanner");
+const bottomBanner = document.getElementById("bottomBanner");
 
+let flashTimer = null;
+
+function randomColor(){
+  const h = Math.floor(Math.random() * 360);
+  return `hsl(${h} 95% 55%)`;
+}
+
+function startSyncedFlash(){
+  if (flashTimer) clearInterval(flashTimer);
+
+  flashTimer = setInterval(() => {
+    const c = randomColor(); // SAME color for both (synced)
+    topBanner.style.color = c;
+    bottomBanner.style.color = c;
+
+    // synced pulse
+    const nextOpacity = (topBanner.style.opacity === "0.35") ? "1" : "0.35";
+    topBanner.style.opacity = nextOpacity;
+    bottomBanner.style.opacity = nextOpacity;
+  }, 140);
+}
     function rand(arr){
       return arr[Math.floor(Math.random() * arr.length)];
     }
@@ -188,8 +229,10 @@
         lockCard.style.display = "none";
         videoWrap.style.display = "block";
 
-        // Attempt autoplay; if blocked, user can press play.
-        video.play().catch(() => {});
+startSyncedFlash(); // <-- ADD THIS (starts synced flashing)
+
+// Attempt autoplay; if blocked, user can press play.
+video.play().catch(() => {});
       } else {
         msg.textContent = rand(wrongPrompts);
         pwInput.value = "";
