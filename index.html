@@ -3,261 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Locked</title>
+  <title>Access Restricted</title>
+
   <style>
     :root{
-      --bg:#9c9c9c;          /* grey wall */
-      --panel:#e7e7e7;
-      --text:#111;
-      --muted:#333;
-      --shadow: 0 18px 60px rgba(0,0,0,.25);
-      --radius: 18px;
+      --bg:#0f1220;
+      --card:#181c36;
+      --text:#eaeaff;
+      --muted:#c9cffb;
+      --accent:#7aa2ff;
+      --success:#9bffd6;
     }
 
-    html, body { height: 100%; }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
       display:flex;
       align-items:center;
       justify-content:center;
-    }
-
-    /* subtle “wall texture” */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:
-        linear-gradient(0deg, rgba(255,255,255,.12), rgba(0,0,0,.10)),
-        repeating-linear-gradient(45deg,
-          rgba(255,255,255,.06) 0px, rgba(255,255,255,.06) 2px,
-          rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 6px);
-      opacity:.35;
-      pointer-events:none;
+      background:var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
     }
 
     .card{
-      position:relative;
-      width:min(520px, 92vw);
-      background: rgba(255,255,255,.55);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(0,0,0,.15);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      padding: 24px 22px;
+      max-width:420px;
+      width:90%;
+      padding:28px;
+      border-radius:16px;
+      background:var(--card);
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+      text-align:center;
     }
 
     h1{
-      margin:0 0 10px;
-      font-size: 22px;
-      color: var(--text);
-      letter-spacing:.2px;
+      margin-top:0;
+      font-size:1.5rem;
     }
 
-    .row{
-      display:flex;
-      gap:10px;
-      margin-top: 10px;
-    }
-
-    input{
-      flex:1;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.22);
-      outline: none;
-      font-size: 16px;
-      background: rgba(255,255,255,.85);
+    p{
+      color:var(--muted);
+      line-height:1.55;
+      margin-bottom:18px;
     }
 
     button{
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.22);
-      background: rgba(0,0,0,.08);
+      padding:12px 20px;
+      font-size:1rem;
+      border-radius:10px;
+      border:none;
       cursor:pointer;
-      font-size: 16px;
-    }
-    button:hover{ background: rgba(0,0,0,.12); }
-
-    .msg{
-      margin-top: 12px;
-      min-height: 22px;
-      color: var(--muted);
-      font-weight: 600;
+      background:var(--accent);
+      color:#000;
+      font-weight:600;
     }
 
-    .hint{
-      margin-top: 6px;
-      font-size: 13px;
-      color: rgba(0,0,0,.65);
-    }
-
-    /* Video screen */
-    /* Video screen (desktop + mobile consistent) */
-.video-wrap{
-  display:none;                 /* stays hidden until unlock */
-  width:min(980px, 96vw);
-  margin: 0 auto;
-  padding: 18px 14px;
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  border: 1px solid rgba(0,0,0,.18);
-  background: rgba(0,0,0,.15);
-
-  /* KEY: stack items vertically and center them */
-  display:none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-}
-#videoWrap{
-  max-height: 92vh;
-  overflow: auto;
-}
-.video-wrap video{
-  width: 100%;
-  max-width: 980px;
-  height: auto;
-  display:block;
-  background:#000;
-  border-radius: 14px;
-  overflow:hidden;
-}
-
-/* Huge centered flashing text */
-.mega{
-  width: 100%;
-  text-align:center;
-  font-weight: 1000;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  line-height: 1;
-  font-size: clamp(56px, 8vw, 160px);
-  text-shadow:
-    0 4px 0 rgba(0,0,0,.45),
-    0 0 30px rgba(0,0,0,.35);
-  user-select:none;
-}
-    .footer{
-      margin-top: 10px;
-      font-size: 12px;
-      color: rgba(0,0,0,.55);
+    #status{
+      margin-top:14px;
+      min-height:1.2em;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- LOCK SCREEN -->
-  <main class="card" id="lockCard" aria-live="polite">
-    <h1>Enter Password</h1>
+  <div class="card">
+    <h1>Hey big guy, that’s WiFi for one day</h1>
+    <p>
+      To continue, turn off Wi-Fi or disconnect from the internet.
+      Once you’re offline, click the button below.
+    </p>
 
-    <div class="row">
-      <input
-        id="pw"
-        type="password"
-        placeholder="Password…"
-        autocomplete="off"
-        spellcheck="false"
-        inputmode="text"
-      />
-      <button id="go" type="button">Unlock</button>
-    </div>
+    <button onclick="checkConnection()">I’ve Turned It Off</button>
 
-    <div class="msg" id="msg"></div>
-    <div class="hint">Hint: I know you already ate but I know that you are...</div>
-    <div class="footer">Press Enter to submit.</div>
-  </main>
+    <div id="status"></div>
+  </div>
 
-  <!-- VIDEO SCREEN -->
-<section class="video-wrap" id="videoWrap">
-  <div class="mega" id="topBanner">FATTY FATTY</div>
-
-  <video id="video" controls playsinline preload="metadata" muted loop>
-    <source src="xvFZjo5PgG0.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="mega" id="bottomBanner">LOSER!</div>
-</section>
   <script>
-    // ✅ Your chosen password:
-    const CORRECT_PASSWORD = "HungryAgainLOL";
+    function checkConnection(){
+      const status = document.getElementById("status");
 
-    // ✅ Troll-ish but non-body-shaming “wrong password” prompts:
-    const wrongPrompts = [
-      "Nope. Try again, FATSO!",
-      "Incorrect. I know you're getting hungry.",
-      "Denied. This won't be as easy as eating those 40 nuggets, 2 large fries, and a sweet tea from McDonalds!",
-      "Wrong. FAT!",
-      "Access rejected. You can't get into this buffet so easily!",
-    ];
-
-    const pwInput = document.getElementById("pw");
-    const goBtn = document.getElementById("go");
-    const msg = document.getElementById("msg");
-
-    const lockCard = document.getElementById("lockCard");
-    const videoWrap = document.getElementById("videoWrap");
-    const video = document.getElementById("video");
-const topBanner = document.getElementById("topBanner");
-const bottomBanner = document.getElementById("bottomBanner");
-
-let flashTimer = null;
-
-function randomColor(){
-  const h = Math.floor(Math.random() * 360);
-  return `hsl(${h} 95% 55%)`;
-}
-
-function startSyncedFlash(){
-  if (flashTimer) clearInterval(flashTimer);
-
-  flashTimer = setInterval(() => {
-    const c = randomColor(); // SAME color for both (synced)
-    topBanner.style.color = c;
-    bottomBanner.style.color = c;
-
-    // synced pulse
-    const nextOpacity = (topBanner.style.opacity === "0.35") ? "1" : "0.35";
-    topBanner.style.opacity = nextOpacity;
-    bottomBanner.style.opacity = nextOpacity;
-  }, 140);
-}
-    function rand(arr){
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-
-    function unlock(){
-      const attempt = pwInput.value;
-
-      if (attempt === CORRECT_PASSWORD){
-        msg.textContent = "Unlocked. Enjoy 😈";
-        // Hide lock UI, show video, and play
-        lockCard.style.display = "none";
-        videoWrap.style.display = "flex";
-
-startSyncedFlash(); // <-- ADD THIS (starts synced flashing)
-
-// Attempt autoplay; if ed, user can press play.
-video.play().catch(() => {});
+      if (navigator.onLine) {
+        status.textContent = "Still online 😬 Turn off Wi-Fi and try again.";
+        status.style.color = "#ffb3b3";
       } else {
-        msg.textContent = rand(wrongPrompts);
-        pwInput.value = "";
-        pwInput.focus();
+        document.body.innerHTML = `
+          <h1 style="color:${getComputedStyle(document.documentElement).getPropertyValue('--success')};
+                     font-family:system-ui;
+                     text-align:center;">
+            Disconnected ✔ You may proceed.
+          </h1>`;
       }
     }
-
-    goBtn.addEventListener("click", unlock);
-    pwInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") unlock();
-    });
-
-    // Focus on load
-    pwInput.focus();
   </script>
+
 </body>
 </html>
