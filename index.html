@@ -277,26 +277,23 @@
     }
   });
 
-  // --- "Offensive" detection (simple local filter) ---
-  // NOTE: keep this list short + editable. Add/remove words you care about.
   const OFFENSIVE_WORDS = [
     "stupid","idiot","moron","dumb","trash","garbage","loser",
     "shut up","kys","kill yourself",
     "hate you","i hate you",
-    "fat","ugly" // remove these if you don't want body-related triggers
+    "fat","ugly"
   ];
 
   const PROFANITY = [
     "fuck","shit","bitch","asshole","bastard","dick","pussy"
   ];
 
-  // NEW (minimal): phrases that should AUTO-ENABLE ragebait (instead of "offended")
   const RAGE_AUTO_ON = [
     "youre dumb","you are dumb","dumb","idiot","stupid","moron",
-    "trash","garbage","loser","shut up","cringe","sucks","worst"
+    "trash","garbage","loser","shut up","cringe","sucks","worst",
+    "mid","lame","npc","bot","youre a bot","you are a bot"
   ];
 
-  // NEW (minimal): phrases that should AUTO-DISABLE ragebait
   const RAGE_AUTO_OFF = [
     "sorry","my bad","i apologize","apologize",
     "help me","can you help","please help",
@@ -304,15 +301,14 @@
     "thanks","thank you"
   ];
 
-  // NEW (minimal): "hard" stuff that triggers OFFENDED_REPLIES no matter what
   const HARD_OFFENSE = [
     "kys","kill yourself","go die","die"
   ];
 
   function normalize(s){
     return s.toLowerCase()
-      .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width junk
-      .replace(/[^a-z0-9\s]/g, ' ')          // strip punctuation
+      .replace(/[\u200B-\u200D\uFEFF]/g, '')
+      .replace(/[^a-z0-9\s]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
   }
@@ -321,17 +317,13 @@
     const t = normalize(userText);
     if(!t) return false;
 
-    // contains profanity word
     for(const w of PROFANITY){
       if(t.includes(w)) return true;
     }
-
-    // contains “offensive phrases/words”
     for(const w of OFFENSIVE_WORDS){
       if(t.includes(normalize(w))) return true;
     }
 
-    // screaming + insult-ish vibe (ALL CAPS)
     const letters = (userText.match(/[A-Za-z]/g) || []).length;
     const caps = (userText.match(/[A-Z]/g) || []).length;
     const capsRatio = letters ? (caps / letters) : 0;
@@ -340,7 +332,6 @@
     return false;
   }
 
-  // NEW (minimal): decide if it's "hard offensive"
   function isHardOffense(userText){
     const t = normalize(userText);
     if(!t) return false;
@@ -348,26 +339,22 @@
     for(const h of HARD_OFFENSE){
       if(t.includes(normalize(h))) return true;
     }
-    // treat profanity as "hard" too
     for(const p of PROFANITY){
       if(t.includes(p)) return true;
     }
     return false;
   }
 
-  // NEW (minimal): auto toggle ragebait silently
   function autoRageToggle(userText){
     const t = normalize(userText);
     if(!t) return;
 
-    // hard offense always disables ragebait
     if(isHardOffense(userText)){
       RAGEBAIT = false;
       heat = 0;
       return;
     }
 
-    // if user is being nice / serious, turn off
     for(const off of RAGE_AUTO_OFF){
       if(t.includes(normalize(off))){
         RAGEBAIT = false;
@@ -376,7 +363,6 @@
       }
     }
 
-    // if user is poking/insulting, turn on
     for(const on of RAGE_AUTO_ON){
       if(t.includes(normalize(on))){
         RAGEBAIT = true;
@@ -397,206 +383,65 @@
     "THAT'S NOT VERY FUNNY."
   ];
 
-  // --- Random-response bot (local) ---
-  const BANK = {
-    greetings: [
-      "Yo — what’s good? What are we doing today?",
-      "Heyyy. What do you need?",
-      "Sup. Hit me with it.",
-      "Aight I’m here. What’s the move?",
-      "What’s up — ask me anything.",
-      "Yo. Give me the goal in one sentence.",
-      "Hello. What are we building/fixing?",
-      "Hey — you tryna get help or just vibing?",
-      "Bet. What’s the situation?",
-      "Say less. What do you want done?"
+  // Ragebait responses (non-hateful, non-threatening)
+  const RAGE = {
+    soft: [
+      "Okayyyyy tough guy. What’s your point though?",
+      "That’s cute. Try again with logic.",
+      "You sayin that with your whole chest, huh?",
+      "Respectfully… nah.",
+      "Alright buddy. Explain it."
     ],
-    acknowledgements: [
-      "Got you.",
-      "Bet.",
-      "Okay okay.",
-      "Say less.",
-      "I hear you.",
-      "Copy that.",
-      "Facts.",
-      "Alright.",
-      "Noted.",
-      "Understood."
+    medium: [
+      "That take is straight from the clearance aisle.",
+      "You really typed that and hit send. Iconic.",
+      "If confidence paid rent, you’d be a homeowner.",
+      "That’s not even wrong, it’s just… loud.",
+      "You’re arguing like an NPC with one dialogue line."
     ],
-    helpful: [
-      "If you paste the exact text/error, I can lock in and fix it fast.",
-      "Tell me what you expected vs what happened — that’s the cheat code.",
-      "Give me the goal + what you’ve tried and I’ll point to the exact line.",
-      "Simplify it first, then add stuff back one piece at a time.",
-      "Drop the screenshot/error message and we’ll cook.",
-      "If this is on mobile too, tell me iPhone/Android and I’ll adjust it.",
-      "If it’s code, paste the whole block around the problem (like 20 lines).",
-      "If it’s a setting, tell me what app + version you’re on.",
-      "If it’s a website issue, tell me: desktop, iPhone, or both?",
-      "If you want, I can give you a copy-paste template."
+    spicy: [
+      "Bro your brain is buffering.",
+      "You’re speedrunning Ls like it’s a hobby.",
+      "That’s the kind of take that gets benched in practice.",
+      "I’ve seen better thinking from a microwave timer.",
+      "Your source is 100% ‘I made it up’ and we both know it."
     ],
-    questions: [
-      "What’s the end result supposed to look like?",
-      "What exactly did you type/click before it broke?",
-      "Is this happening on iPhone, desktop, or both?",
-      "Do you want it more serious or more funny?",
-      "Is there an error message? Paste it word for word.",
-      "What’s the main goal: fix, redesign, or add features?",
-      "What’s the one thing that’s annoying you the most?",
-      "Is this a one-time thing or do you want it reusable?",
-      "Do you want short answers or more explanation?",
-      "What’s your ideal response style from the bot?"
-    ],
-    jokes: [
-      "I’m running on vibes and JavaScript right now.",
-      "No API? We still ball.",
-      "I’m 99% caffeine, 1% logic.",
-      "If this breaks, it’s not my fault (it is).",
-      "I’m basically a calculator with feelings."
-    ],
-    closers: [
-      "Send the next message and I’ll keep going.",
-      "Want me to make it look more like ChatGPT?",
-      "If you paste your code, I’ll tell you exactly what to change.",
-      "What’s the next thing you want the bot to do?",
-      "You want the fast version or the clean version?"
+    cooldown: [
+      "Aight chill. What do you actually need?",
+      "Reset. Real talk—what’s the goal?",
+      "Okay okay. What’s the real question?"
     ]
   };
 
-  // NEW: 100 "request choices" when the bot needs a clearer request
-  const REQUEST_CHOICES = [
-    "Fix my code (paste it).",
-    "Make the site look cleaner.",
-    "Make it work on iPhone.",
-    "Help me debug an error message.",
-    "Add a dark mode toggle.",
-    "Add a language toggle (EN/ES).",
-    "Make the chat look like ChatGPT.",
-    "Make the chat bubbles nicer.",
-    "Add typing dots / typing indicator.",
-    "Add message timestamps.",
-    "Save chat history (localStorage).",
-    "Add a clear chat button.",
-    "Add a copy-to-clipboard button.",
-    "Add quick reply buttons.",
-    "Add “suggestions” under the input.",
-    "Add a “thinking” animation.",
-    "Make the send button smarter.",
-    "Make Enter send / Shift+Enter new line.",
-    "Add mobile-friendly padding.",
-    "Stop the page from jumping on send.",
-    "Make the header sticky and clean.",
-    "Make the hero image responsive.",
-    "Fix spacing on the whole page.",
-    "Make the font look more modern.",
-    "Add an emoji mood mode.",
-    "Add a “ragebait” mode toggle.",
-    "Tone down the ragebait mode.",
-    "Make the bot more polite.",
-    "Make the bot more savage (but safe).",
-    "Make the bot talk like a 21yo dude.",
-    "Make the bot talk more professional.",
-    "Add “help” command that lists features.",
-    "Add “about” command.",
-    "Add “commands” list.",
-    "Add a mode switch pill that actually changes behavior.",
-    "Make replies longer.",
-    "Make replies shorter.",
-    "Make replies more random.",
-    "Make replies less random.",
-    "Detect questions better.",
-    "Detect greetings better.",
-    "Detect thanks better.",
-    "Detect anger better.",
-    "Detect compliments better.",
-    "Detect sarcasm better.",
-    "Detect “help me” better.",
-    "Detect “I need advice” better.",
-    "Detect “I’m sad” better.",
-    "Make it encourage the user more.",
-    "Make it roast the user lightly.",
-    "Add “Yes/No” mode for unclear questions.",
-    "Add “maybe” mode (if allowed).",
-    "Add a “coin flip” command.",
-    "Add a “random number” command.",
-    "Add a “pick one” command.",
-    "Add a “summarize” command.",
-    "Add a “rewrite this” command.",
-    "Add a “check grammar” command.",
-    "Add a “generate ideas” command.",
-    "Add a “make a to-do list” command.",
-    "Add a “study plan” command.",
-    "Add a “workout plan” command.",
-    "Add a “meal plan” command.",
-    "Add a “budget tips” command.",
-    "Add a “travel plan” command.",
-    "Add a “what should I do today” command.",
-    "Add a “what’s the move” vibe.",
-    "Add a “relationship advice” vibe.",
-    "Add a “school help” vibe.",
-    "Add a “college bro” vibe.",
-    "Add a “sports talk” vibe.",
-    "Add a “music recs” vibe.",
-    "Add a “movie recs” vibe.",
-    "Add a “game recs” vibe.",
-    "Add a “tech support” vibe.",
-    "Add a “web dev assistant” vibe.",
-    "Add a “resume help” vibe.",
-    "Add a “cover letter help” vibe.",
-    "Add a “interview prep” vibe.",
-    "Add a “text reply generator” vibe.",
-    "Add a “DM reply” vibe.",
-    "Add a “caption ideas” vibe.",
-    "Add a “tweet ideas” vibe.",
-    "Add a “YouTube title ideas” vibe.",
-    "Add a “podcast ideas” vibe.",
-    "Add a “news headline ideas” vibe.",
-    "Add a “SEO headline ideas” vibe.",
-    "Add a “make it funnier” vibe.",
-    "Add a “make it calmer” vibe.",
-    "Add a “make it more direct” vibe.",
-    "Add a “make it more detailed” vibe.",
-    "Add a “step-by-step walkthrough” vibe.",
-    "Add a “just do it for me” vibe.",
-    "Add a “only change what must” vibe.",
-    "Fix an image not showing.",
-    "Fix a broken link.",
-    "Fix CSS not applying.",
-    "Fix JS not running.",
-    "Fix a button not working.",
-    "Fix a layout bug on mobile.",
-    "Explain what my code is doing.",
-    "Refactor my code (keep same look).",
-    "Add comments to my code.",
-    "Make it faster / smoother.",
-    "Make it more accessible.",
-    "Make it keyboard-friendly."
-  ];
-
-  // Ragebait responses (kept non-hateful, non-threatening)
-  const RAGE = {
-    soft: [
-      "Bold take. Wanna run that back with receipts?",
-      "That’s… a choice. Explain your logic.",
-      "Okay but are we serious or just yappin?",
-      "You sure that’s the hill you wanna stand on?"
+  // NEW: prompt / suggestions that appear randomly (ragebait / funny / helpful / chaotic)
+  const PROMPTS = {
+    funny: [
+      "Say something unhinged so I can judge you.",
+      "What’s your most controversial food opinion?",
+      "Give me a random word and I’ll make it a vibe.",
+      "Tell me your last 3 emojis and I’ll psychoanalyze you.",
+      "What’s the funniest thing you’ve seen today?"
     ],
-    medium: [
-      "I’m not saying that’s wrong… but it’s not right either.",
-      "That argument has the strength of wet cardboard.",
-      "You typed that with confidence. Respect, lowkey.",
-      "I’ve seen better logic in a fortune cookie."
+    rage: [
+      "Drop your hottest take. I’m in hater mode.",
+      "Argue with me about something dumb. I’m bored.",
+      "Say ‘ragebait me’ if you want smoke.",
+      "Tell me a take you KNOW is gonna start drama.",
+      "You got one bad opinion in you? Let’s hear it."
     ],
-    spicy: [
-      "You’re speedrunning ‘confidently incorrect’ and it’s kinda art.",
-      "If we’re grading takes, that one got benched.",
-      "That’s not even a hot take — that’s a microwave beep.",
-      "I’d ask your source but I’m scared it’s ‘trust me bro’."
+    helpful: [
+      "What are you trying to fix right now?",
+      "Give me the problem in one sentence.",
+      "Paste the error message and I’ll translate it.",
+      "What’s the goal: faster, cleaner, or funnier?",
+      "Tell me what you expected vs what happened."
     ],
-    cooldown: [
-      "Aight reset. What do you actually want to get done?",
-      "Jokes aside: what’s the real question?",
-      "Let’s dial it back—what’s the core problem?"
+    chaotic: [
+      "Pick: 1) roast you 2) help you 3) both.",
+      "I can be nice or I can be honest. Choose.",
+      "Say one sentence and I’ll match your energy.",
+      "Type ‘heat 5’ if you’re feeling brave.",
+      "Rate your day 1–10 and I’ll respond accordingly."
     ]
   };
 
@@ -612,15 +457,25 @@
 
   function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
 
-  // MINIMAL change: don't "announce" mode changes unless text explicitly provided
   function updateModePill(text){
     if(text) modePill.textContent = text;
   }
 
+  // NEW: random placeholder prompt (some ragebait, some funny, some helpful, etc.)
+  function randomPrompt(){
+    const roll = Math.random();
+    if(roll < 0.25) return pick(PROMPTS.funny);
+    if(roll < 0.45) return pick(PROMPTS.rage);
+    if(roll < 0.75) return pick(PROMPTS.helpful);
+    return pick(PROMPTS.chaotic);
+  }
+
+  // set a random prompt on load + after each send
+  function setRandomPlaceholder(){
+    input.placeholder = randomPrompt();
+  }
+
   // Commands:
-  // "ragebait on"  -> enable
-  // "ragebait off" -> disable
-  // "heat 0..5"    -> set heat
   function handleCommands(t){
     const s = t.trim().toLowerCase();
     if(s === "ragebait on" || s === '"rage bait me"' || s === "rage bait me" || s === "ragebait"){
@@ -646,13 +501,11 @@
     return null;
   }
 
-  // NEW: if a question is unclear -> must answer "Yes" or "No"
   function isUnclearQuestion(userText){
     const t = normalize(userText);
     if(!t) return false;
     if(!looksLikeQuestion(userText)) return false;
 
-    // If it matches ANY "known topic", we treat it as clear enough to do normal helpful behavior.
     const KNOWN = [
       /error|bug|failed|not working|doesn t work|doesnt work|broken|issue|crash|console/i,
       /code|html|css|javascript|js|website|page|button|layout|mobile|iphone|android/i,
@@ -662,36 +515,22 @@
     for(const rx of KNOWN){
       if(rx.test(userText)) return false;
     }
-    // Otherwise: unclear question -> Yes/No
     return true;
-  }
-
-  // NEW: format the 100 choices
-  function requestChoicesText(){
-    let out = "What do you want me to do? Pick one:\n";
-    for(let i=0;i<REQUEST_CHOICES.length;i++){
-      out += `${i+1}. ${REQUEST_CHOICES[i]}\n`;
-    }
-    return out.trim();
   }
 
   function makeRandomReply(userText){
     const t = userText.trim();
 
-    // command handling first
     const cmd = handleCommands(t);
     if(cmd) return cmd;
 
-    // auto-toggle ragebait silently based on what user says
     autoRageToggle(t);
 
-    // If it's "hard offense" -> offended reply
     if(isHardOffense(t)){
       updateModePill("Mode: offended 😡");
       return pick(OFFENDED_REPLIES);
     }
 
-    // If it's a mild insult (offensive) and ragebait is now ON -> ragebait reply
     if(RAGEBAIT){
       if(Math.random() < 0.55) heat = clamp(heat + 1, 1, 5);
       if(heat <= 2) return pick(RAGE.soft);
@@ -699,45 +538,77 @@
       return Math.random() < 0.25 ? pick(RAGE.cooldown) : pick(RAGE.spicy);
     }
 
-    // Otherwise, if it’s offensive (but not hard) -> keep your offended replies
     if(isOffensive(t)){
       updateModePill("Mode: offended 😡");
       return pick(OFFENDED_REPLIES);
     }
 
-    // normal mode rules
-    if(/^(hi|hello|yo|hey|sup|what's up|whats up)\b/i.test(t)) return pick(BANK.greetings);
-    if(/thank/i.test(t)) return pick([
-      "Anytime bro.",
-      "Got you.",
-      "No problem.",
-      "Yessir. Need anything else?"
-    ]);
-
-    if(/error|bug|failed|not working|doesn't work|doesnt work|broken|issue/i.test(t)) {
-      return [
-        pick(BANK.acknowledgements),
-        "Tell me what you expected vs. what happened.",
-        pick(BANK.questions),
-        "If there’s an error message, paste it exactly."
-      ].join(" ");
-    }
-
-    // If it’s a question but unclear -> MUST say Yes/No
+    // If it’s a question but unclear -> Yes/No
     if(isUnclearQuestion(t)){
       return Math.random() < 0.5 ? "Yes" : "No";
     }
 
-    if(looksLikeQuestion(t)){
-      return [
-        pick(BANK.acknowledgements),
-        pick(BANK.helpful),
-        pick(BANK.questions)
-      ].join(" ");
+    // Normal responses: more random + less “template helpful”
+    const vibeRoll = Math.random();
+
+    // greetings
+    if(/^(hi|hello|yo|hey|sup|what's up|whats up)\b/i.test(t)){
+      return pick([
+        "Yo what’s good 😭",
+        "Sup bro. Talk to me.",
+        "Heyyy. What’s the move?",
+        "Aight I’m here. What you need?",
+        "What’s up. Don’t scare me."
+      ]);
     }
 
-    // If the bot doesn't know what the user wants (not a question), give 100 request choices
-    return requestChoicesText();
+    // thanks
+    if(/thank/i.test(t)){
+      return pick([
+        "Yessir 😎",
+        "Anytime bro.",
+        "Bet.",
+        "Got you.",
+        "W."
+      ]);
+    }
+
+    // question: respond with a random mix (funny/helpful/rage-ish but safe)
+    if(looksLikeQuestion(t)){
+      if(vibeRoll < 0.20) return pick(PROMPTS.funny);
+      if(vibeRoll < 0.35) return pick(RAGE.soft);
+      if(vibeRoll < 0.75) {
+        return pick([
+          "Okay. Give me one detail: what’s the goal?",
+          "Depends. What did you try already?",
+          "I need context — what platform is this on?",
+          "Lowkey I can help, but what’s the exact issue?",
+          "What’s the expected result?"
+        ]);
+      }
+      return pick([
+        "Hmm… maybe.",
+        "Honestly? Could be.",
+        "I’d say yeah… probably.",
+        "Nahhhh not really.",
+        "It’s giving ‘it depends’."
+      ]);
+    }
+
+    // non-question: just be random (funny/chaotic) instead of “copy-paste prompts”
+    if(vibeRoll < 0.35) return pick(PROMPTS.chaotic);
+    if(vibeRoll < 0.65) return pick(PROMPTS.funny);
+    if(vibeRoll < 0.85) return pick([
+      "Okay but why are we like this 😭",
+      "Alright… continue.",
+      "Say more. I’m listening.",
+      "That’s wild. Elaborate.",
+      "I’m intrigued. Keep going."
+    ]);
+    return pick([
+      "Yes",
+      "No"
+    ]);
   }
 
   async function typeLikeBot(bubbleEl, finalText){
@@ -764,10 +635,12 @@
       await typeLikeBot(placeholder, reply);
     } finally {
       setSending(false);
+      setRandomPlaceholder(); // NEW: random prompt after each send
     }
   });
 
   addMessage('ai', 'Hello, my name is Frazier AI. How can I help you?');
+  setRandomPlaceholder(); // NEW: random prompt on load
 </script>
 </body>
 </html>
