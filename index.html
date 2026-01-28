@@ -28,7 +28,6 @@
       background:var(--bg);
     }
 
-    /* Simple top bar */
     .topbar{
       position:sticky;
       top:0;
@@ -68,14 +67,12 @@
       white-space:nowrap;
     }
 
-    /* Main area */
     .content{
       max-width:var(--max);
       margin:0 auto;
-      padding:18px 16px 140px; /* room for composer */
+      padding:18px 16px 140px;
     }
 
-    /* Homepage hero image above composer area */
     .hero{
       margin:10px auto 16px;
       border:1px solid var(--rule);
@@ -92,7 +89,6 @@
       line-height:1.45;
     }
 
-    /* Messages */
     .messages{
       display:flex;
       flex-direction:column;
@@ -126,7 +122,6 @@
     .msg.user .bubble{ background:var(--bubble2); }
     .msg.ai .avatar{ background:#000; color:#fff; border-color:#000; }
 
-    /* Composer */
     .composerWrap{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -197,19 +192,18 @@
         <div class="mark"></div>
         <b>Frazier AI</b>
       </div>
-      <div class="rightnote">Frazer AI</div>
+      <div class="rightnote">Frazier AI</div>
     </div>
   </header>
 
   <main class="content">
-    <!-- Your image above the chatbar on the homepage -->
     <div class="hero">
       <img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg" alt="Frazier AI" />
     </div>
 
     <div class="hint">
-      Type a message below. This page will call <b>/api/chat</b> for real AI replies.
-      If that endpoint isn’t available yet, it falls back to a small local demo bot.
+      Type a message below. This page calls a Supabase Edge Function for real AI replies.
+      <br><span style="font-size:12px;">If it fails, the error will show in the Mode pill.</span>
     </div>
 
     <div class="messages" id="messages"></div>
@@ -224,7 +218,7 @@
     <div class="tiny">
       <span class="pill">Enter = send</span>
       <span class="pill">Shift+Enter = new line</span>
-      <span class="pill" id="modePill">Mode: auto</span>
+      <span class="pill" id="modePill">Mode: ready</span>
     </div>
   </footer>
 
@@ -235,11 +229,9 @@
     const sendBtn = document.getElementById('sendBtn');
     const modePill = document.getElementById('modePill');
 
-    // Toggle this if you want to force demo mode:
-    const FORCE_DEMO = false;
+    const SUPABASE_CHAT_URL = "https://bvdkggyrfrnvahfywxic.supabase.co/functions/v1/chat";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2ZGtnZ3lyZnJudmFoZnl3eGljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NzIyMDUsImV4cCI6MjA4NTE0ODIwNX0.tLRXG1kgfZkblth2gmIV8Y9AvYTcTCXbP5GcE6PD4Sg";
 
-    // Conversation memory sent to your backend (if you want it).
-    // Keep it small; your server should manage long histories.
     const history = [];
 
     function escapeHtml(str){
@@ -264,7 +256,6 @@
       row.appendChild(bubble);
       messagesEl.appendChild(row);
 
-      // Scroll to bottom
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       return bubble;
     }
@@ -284,7 +275,6 @@
       el.style.height = Math.min(el.scrollHeight, 160) + 'px';
     }
 
-    // Enter to send, Shift+Enter newline
     input.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' && !e.shiftKey){
         e.preventDefault();
@@ -293,50 +283,28 @@
     });
 
     async function callBackend(userText){
-      // Your server should accept: { message: string, history: [{role, content}] }
-      // And return: { reply: string }
-      const res = await fetch('https://bvdkggyrfrnvahfywxic.supabase.co/functions/v1/chat', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2ZGtnZ3lyZnJudmFoZnl3eGljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NzIyMDUsImV4cCI6MjA4NTE0ODIwNX0.tLRXG1kgfZkblth2gmIV8Y9AvYTcTCXbP5GcE6PD4Sg'
-  },
-  body: JSON.stringify({
-    message: userText,
-    history: history.slice(-12)
-  })
-});
-      if(!res.ok) throw new Error('Backend error: ' + res.status);
-      const data = await res.json();
-      if(!data || typeof data.reply !== 'string') throw new Error('Invalid backend response');
+      const res = await fetch(SUPABASE_CHAT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          message: userText,
+          history: history.slice(-12)
+        })
+      });
+
+      const raw = await res.text();
+      if(!res.ok){
+        // show useful error in the UI instead of silently demoing
+        throw new Error(`${res.status} ${raw}`);
+      }
+
+      let data;
+      try { data = JSON.parse(raw); } catch { throw new Error(`Bad JSON: ${raw}`); }
+      if(!data || typeof data.reply !== 'string') throw new Error(`Invalid response: ${raw}`);
       return data.reply;
-    }
-
-    // Demo bot fallback (NOT real AI, just makes the UI usable immediately)
-    function demoBotReply(userText){
-      const t = userText.trim().toLowerCase();
-
-      if(t.includes('hello') || t.includes('hi')) return "Hey. I’m Frazier AI (demo mode).";
-      if(t.includes('who are you')) return "I’m the demo bot running locally. Hook up /api/chat for real AI.";
-      if(t.includes('help')) return "To make me real AI: build a server endpoint at /api/chat that returns { reply }.";
-      if(t.endsWith('?')) return "Good question. In demo mode I can’t truly reason—connect /api/chat for real AI responses.";
-      return "Demo mode reply: I received your message. Connect /api/chat to make this real AI.";
-    }
-
-    async function getAiReply(userText){
-      if(FORCE_DEMO){
-        modePill.textContent = "Mode: demo";
-        return demoBotReply(userText);
-      }
-
-      try{
-        const reply = await callBackend(userText);
-        modePill.textContent = "Mode: backend (/api/chat)";
-        return reply;
-      }catch(err){
-        modePill.textContent = "Mode: demo (fallback)";
-        return demoBotReply(userText);
-      }
     }
 
     form.addEventListener('submit', async (e) => {
@@ -344,7 +312,6 @@
       const text = input.value.trim();
       if(!text) return;
 
-      // Add user message
       addMessage('user', text);
       history.push({ role: 'user', content: text });
 
@@ -352,20 +319,21 @@
       autoGrow(input);
       setSending(true);
 
-      // Add AI placeholder bubble and fill it in
       const placeholder = addMessage('ai', '...');
+
       try{
-        const reply = await getAiReply(text);
+        modePill.textContent = "Mode: backend";
+        const reply = await callBackend(text);
         placeholder.textContent = reply;
         history.push({ role: 'assistant', content: reply });
       }catch(err){
-        placeholder.textContent = "Error generating reply.";
+        placeholder.textContent = "Backend error (see Mode pill).";
+        modePill.textContent = `Mode: error (${String(err.message || err)})`;
       }finally{
         setSending(false);
       }
     });
 
-    // Starter message
     addMessage('ai', "Ask me anything.");
   </script>
 </body>
