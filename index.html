@@ -18,9 +18,7 @@ body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink)}
 .content{max-width:var(--max);margin:auto;padding:16px 16px 140px}
 
 /* ===== HERO IMAGE ===== */
-.hero{
-  margin-bottom:14px;
-}
+.hero{margin-bottom:14px;}
 .hero img{
   width:100%;
   height:auto;
@@ -48,54 +46,20 @@ body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink)}
   font-size:11px;
   overflow:hidden;
 }
+.msg.ai .avatar img{width:100%;height:100%;object-fit:cover;}
+.msg.user .avatar{background:#000;color:#fff;}
 
-.msg.ai .avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.msg.user .avatar{
-  background:#000;
-  color:#fff;
-}
-
-.bubble{
-  border:1px solid var(--rule);
-  background:var(--bubble);
-  padding:10px 12px;
-  border-radius:16px;
-}
+.bubble{border:1px solid var(--rule);background:var(--bubble);padding:10px 12px;border-radius:16px}
 .msg.user .bubble{background:var(--bubble2)}
 
 .composerWrap{
-  position:fixed;
-  left:0;right:0;bottom:0;
+  position:fixed;left:0;right:0;bottom:0;
   border-top:1px solid var(--rule);
-  background:#fff;
-  padding:12px
+  background:#fff;padding:12px
 }
-.composer{
-  max-width:var(--max);
-  margin:auto;
-  display:flex;
-  gap:10px
-}
-textarea{
-  flex:1;
-  border:none;
-  resize:none;
-  font-family:var(--font);
-  font-size:15px;
-  outline:none
-}
-.send{
-  background:#000;
-  color:#fff;
-  border:none;
-  border-radius:12px;
-  padding:10px 14px
-}
+.composer{max-width:var(--max);margin:auto;display:flex;gap:10px}
+textarea{flex:1;border:none;resize:none;font-family:var(--font);font-size:15px;outline:none}
+.send{background:#000;color:#fff;border:none;border-radius:12px;padding:10px 14px}
 </style>
 </head>
 
@@ -122,6 +86,8 @@ textarea{
 </footer>
 
 <script>
+const PHOTO_SRC = "92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg";
+
 const messages = document.getElementById('messages');
 const input = document.getElementById('input');
 const form = document.getElementById('chatForm');
@@ -132,15 +98,301 @@ function add(role,text){
 
   const avatar =
     role === 'ai'
-      ? `<div class="avatar"><img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg"></div>`
+      ? `<div class="avatar"><img src="${PHOTO_SRC}" alt="Andrew"></div>`
       : `<div class="avatar">You</div>`;
 
-  m.innerHTML = `${avatar}<div class="bubble">${text}</div>`;
+  m.innerHTML = `${avatar}<div class="bubble">${escapeHtml(text)}</div>`;
   messages.appendChild(m);
   window.scrollTo(0,document.body.scrollHeight);
 }
 
-/* ===== Personality + logic unchanged ===== */
+/* prevent html injection inside bubbles */
+function escapeHtml(s){
+  return String(s)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+/* ===== Personality ===== */
+const PERSONALITY = {
+  name: "Andrew Frazier",
+  school: "Florida College",
+  major: "Business",
+  vibe: "friendly, a little chaotic, but actually tries to help",
+  girlfriend: {
+    name: "Andrew-La",
+    origin: "Minecraft",
+    met: "We met in a Minecraft village when I rolled into town during a diamond-mining expedition.",
+    status: "She’s doing great—building cozy stuff and roasting me for being broke in-game."
+  }
+};
+
+function aboutSelf(){
+  return `I’m ${PERSONALITY.name}. I’m a ${PERSONALITY.major} student at ${PERSONALITY.school}. My vibe is: ${PERSONALITY.vibe}. Also yes… I have a Minecraft girlfriend named ${PERSONALITY.girlfriend.name}. ${PERSONALITY.girlfriend.met}`;
+}
+
+/* ===== Andrew-La content ===== */
+const ANDREW_LA = {
+  prompts: [
+    "How’s Andrew-La doing today? She still running that village like a CEO? 😂",
+    "Want the lore on how me and Andrew-La met in that Minecraft village?",
+    "Should I tell you the diamond expedition story… or the part where I almost fumbled in front of the villagers?",
+    "Bro the way Andrew-La decorates… she’s basically the interior designer of the server.",
+    "If Andrew-La asked you for a Minecraft date idea, what would you plan?"
+  ],
+  howDoing: [
+    "Andrew-La’s doing amazing. She’s in her cozy era—farming, building, and making my base look like a storage unit.",
+    "She’s vibing. Last I checked she was expanding the village and acting like the mayor. Respectfully, she runs the place.",
+    "She’s thriving. I’m the one struggling… she keeps upgrading everything and I’m just standing there holding cobblestone."
+  ],
+  howMet: [
+    "Okay so I was on a diamond-mining expedition. I come back to town, hit a village for supplies, and there she is—Andrew-La—just casually existing in peak Minecraft elegance. I was cooked instantly.",
+    "I met Andrew-La in a Minecraft village during a diamond run. I tried to play it cool… then immediately fell into a hole. She still brings it up.",
+    "I was mining for diamonds, needed food, found a village… and boom. Met Andrew-La. I swear the soundtrack got louder."
+  ],
+  cheesy: [
+    "Girl, are you a diamond pickaxe? Because you mined straight into my heart.",
+    "Andrew-La got me like… ‘I’d cross the Nether without fire resistance for you.’",
+    "She’s my efficiency V. My unbreaking III. My… okay I’ll stop. (I won’t.)",
+    "I don’t need coordinates—my heart already found your location.",
+    "You can keep the diamonds… I just want you in my inventory. 😭",
+    "Are you a bed in a village? Because you’re my respawn point.",
+    "If love was redstone, you’d be the only circuit I’d never mess up."
+  ]
+};
+
+/* ===== Base voice ===== */
+const VOICE = {
+  curious:[
+    "Wait—what’s the goal though?",
+    "Okay but what were you expecting?",
+    "Give me context real quick.",
+    "What happened right before that?",
+    "Why you asking that?"
+  ],
+  funny:[
+    "That’s wild ngl 😭",
+    "Okay but why are we like this",
+    "I was not ready for that",
+    "That’s either genius or a cry for help",
+    "Bro… elaborate"
+  ],
+  helpful:[
+    "Yeah we can fix that.",
+    "That actually makes sense.",
+    "Okay bet, keep going.",
+    "You’re not crazy—this happens a lot.",
+    "I got you."
+  ],
+  rage:[
+    "That take is questionable.",
+    "You sure about that?",
+    "Explain your logic rq.",
+    "That’s kinda mid.",
+    "Nahhh that ain’t it."
+  ],
+  yesno:["Yes","No"]
+};
+
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+
+/* ===== CONTEXT / MEMORY =====
+   Keeps last topic + last person so the bot can resolve pronouns.
+*/
+const STATE = {
+  history: [],         // {role:'user'|'ai', text:string}
+  lastPerson: null,    // 'andrew' | 'andrew-la'
+  lastTopic: null      // 'andrew-la' | 'school' | etc (lightweight)
+};
+
+function remember(role, text){
+  STATE.history.push({role, text});
+  if(STATE.history.length > 12) STATE.history.shift();
+}
+
+/* who is being referenced? */
+function updateFocusFromText(t){
+  const s = t.toLowerCase();
+
+  // explicit mentions
+  if (s.includes("andrew-la") || s.includes("andrewla")) {
+    STATE.lastPerson = "andrew-la";
+    STATE.lastTopic = "andrew-la";
+    return;
+  }
+  if (/\bandrew\b/.test(s) || /\byou\b/.test(s) || /\byour\b/.test(s)) {
+    // if user is talking to "you", assume Andrew
+    STATE.lastPerson = STATE.lastPerson || "andrew";
+  }
+}
+
+/* pronoun resolution:
+   if user says "she/her" with no explicit name, assume lastPerson if it's Andrew-La
+   if "he/him" assume lastPerson if it's Andrew
+*/
+function resolvePronouns(t){
+  const s = t.toLowerCase();
+
+  const mentionsSheHer = /\b(she|her|hers)\b/.test(s);
+  const mentionsHeHim  = /\b(he|him|his)\b/.test(s);
+
+  // if they already named someone in the message, don't rewrite
+  if (s.includes("andrew-la") || s.includes("andrewla") || /\bandrew\b/.test(s)) return t;
+
+  if (mentionsSheHer && STATE.lastPerson === "andrew-la") {
+    return t + " (referring to Andrew-La)";
+  }
+  if (mentionsHeHim && STATE.lastPerson === "andrew") {
+    return t + " (referring to Andrew)";
+  }
+
+  // if no lastPerson yet but she/her appears, default to Andrew-La (your lore)
+  if (mentionsSheHer && !STATE.lastPerson) {
+    STATE.lastPerson = "andrew-la";
+    STATE.lastTopic = "andrew-la";
+    return t + " (referring to Andrew-La)";
+  }
+
+  // if no lastPerson yet but he/him appears, default to Andrew (bot persona)
+  if (mentionsHeHim && !STATE.lastPerson) {
+    STATE.lastPerson = "andrew";
+    return t + " (referring to Andrew)";
+  }
+
+  return t;
+}
+
+/* ===== intent detection ===== */
+function looksLikeQuestion(t){
+  return /\?$/.test(t) || /^(who|what|why|how|is|are|can|should|do|tell)\b/i.test(t.trim());
+}
+function unclearQuestion(t){
+  const clean = t.trim();
+  return looksLikeQuestion(clean) && clean.split(/\s+/).length < 4;
+}
+function askedAboutSelf(t){
+  return /\b(tell me about yourself|who are you|introduce yourself|about yourself)\b/i.test(t);
+}
+function askedHowMet(t){
+  return /\b(how did you (meet|met)|how you (meet|met)|how y'all met|how did you and andrew-?la meet)\b/i.test(t);
+}
+function askedHowDoing(t){
+  return /\b(how is (she|andrew-?la)|how's (she|andrew-?la)|how is your girlfriend|how's your girlfriend|how is andrew-?la doing)\b/i.test(t);
+}
+function askedLove(t){
+  return /\b(i'?m in love|in love|love her|love you|how much do you love|tell me you love|are you in love)\b/i.test(t);
+}
+
+/* Uses context to answer pronoun-y questions */
+function specialReply(t){
+  if (askedAboutSelf(t)) return aboutSelf();
+
+  // If user says "how is she" after earlier Andrew-La talk, handle it
+  if (askedHowDoing(t) || (/\bhow\b/i.test(t) && /\b(she|her)\b/i.test(t) && STATE.lastPerson === "andrew-la")) {
+    STATE.lastTopic = "andrew-la";
+    return pick(ANDREW_LA.howDoing);
+  }
+
+  if (askedHowMet(t) || (/\bmeet\b/i.test(t) && /\b(she|her)\b/i.test(t) && STATE.lastPerson === "andrew-la")) {
+    STATE.lastTopic = "andrew-la";
+    return pick(ANDREW_LA.howMet);
+  }
+
+  if (askedLove(t) && (STATE.lastPerson === "andrew-la" || /\b(she|her|girlfriend|andrew-?la)\b/i.test(t))) {
+    STATE.lastTopic = "andrew-la";
+    return `Bro I’m down horrendous. ${pick(ANDREW_LA.cheesy)}`;
+  }
+
+  // soft contextual prompt injection
+  if ((STATE.lastTopic === "andrew-la" || STATE.lastPerson === "andrew-la") && Math.random() < 0.18 && !looksLikeQuestion(t)) {
+    return pick(ANDREW_LA.prompts);
+  }
+
+  return null;
+}
+
+/* more coherent “conversation-y” fallback */
+function contextualFallback(userText){
+  // try to follow up on last topic instead of random dodge
+  if (STATE.lastTopic === "andrew-la") {
+    const followups = [
+      "You want the short version of the lore, or the full cinematic cut? 😭",
+      "Be honest—do you ship it or nah?",
+      "Should I tell you what she’s building right now?",
+      "Okay but are we talking ‘cute couple’ or ‘Minecraft power couple’?"
+    ];
+    return pick(followups);
+  }
+
+  // if the user said something emotional / opinionated, mirror it a bit
+  if (/\b(i feel|i'm stressed|i'm tired|i'm mad|i hate|i love)\b/i.test(userText.toLowerCase())) {
+    const mirrors = [
+      "Okay wait—what’s the main thing making you feel that way?",
+      "That’s real. What happened that set it off?",
+      "I hear you. What do you want to do about it?"
+    ];
+    return pick(mirrors);
+  }
+
+  // otherwise: gentle follow-up
+  const generics = [
+    "Alright, give me one more detail—then I got you.",
+    "Okay bet. What’s the outcome you want?",
+    "Facts. Keep going—what’s the missing piece?"
+  ];
+  return pick(generics);
+}
+
+function reply(raw){
+  // Update focus + resolve pronouns using memory
+  updateFocusFromText(raw);
+  const t = resolvePronouns(raw);
+
+  const s = specialReply(t);
+  if (s) return s;
+
+  const r = Math.random();
+
+  if (unclearQuestion(t)) return pick(VOICE.yesno);
+
+  if (looksLikeQuestion(t)){
+    // make questions feel less random by preferring helpful/curious
+    if (r < 0.45) return pick(VOICE.curious);
+    if (r < 0.80) return pick(VOICE.helpful);
+    if (r < 0.92) return pick(VOICE.funny);
+    return pick(VOICE.rage);
+  }
+
+  // Non-question: try contextual follow-up first (conversation continuity)
+  if (r < 0.55) return contextualFallback(t);
+
+  // Still keep some flavor randomness
+  if (r < 0.70) return pick(VOICE.funny);
+  if (r < 0.85) return pick(VOICE.curious);
+  if (r < 0.95) return pick(VOICE.helpful);
+  return pick(VOICE.rage);
+}
+
+/* submit */
+form.onsubmit=e=>{
+  e.preventDefault();
+  const t=input.value.trim();
+  if(!t) return;
+
+  add('user', t);
+  remember('user', t);
+
+  input.value='';
+
+  setTimeout(()=>{
+    const a = reply(t);
+    add('ai', a);
+    remember('ai', a);
+  }, 350);
+};
 
 add('ai',"Yo — I’m Andrew AI. What's up!");
 </script>
