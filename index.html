@@ -556,12 +556,9 @@
       ].join(" ");
     }
 
-    const parts = [];
-    if(Math.random() < 0.7) parts.push(pick(BANK.acknowledgements));
-    if(Math.random() < 0.9) parts.push(pick(BANK.helpful));
-    if(Math.random() < 0.35) parts.push(pick(BANK.jokes));
-    if(Math.random() < 0.7) parts.push(pick(BANK.closers));
-    return parts.join(" ");
+    // ✅ ONLY CHANGE FOR YOUR REQUEST:
+    // When the bot doesn't quite know how to respond, say "I'm silly"
+    return "I'm silly";
   }
 
   async function typeLikeBot(bubbleEl, finalText){
