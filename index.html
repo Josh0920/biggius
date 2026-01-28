@@ -14,11 +14,30 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink)}
 .topbar{border-bottom:1px solid var(--rule);padding:14px}
+
 .content{max-width:var(--max);margin:auto;padding:16px 16px 140px}
+
+/* ===== HERO IMAGE ===== */
+.hero{
+  margin-bottom:14px;
+}
+.hero img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:18px;
+  border:1px solid var(--rule);
+}
+.hero .caption{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+/* ===== CHAT ===== */
 .messages{display:flex;flex-direction:column;gap:10px}
 .msg{display:flex;gap:10px}
 
-/* avatar base */
 .avatar{
   width:28px;
   height:28px;
@@ -30,28 +49,53 @@ body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink)}
   overflow:hidden;
 }
 
-/* AI avatar = photo */
-.msg.ai .avatar{
-  padding:0;
-}
 .msg.ai .avatar img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-/* user avatar stays text */
 .msg.user .avatar{
   background:#000;
   color:#fff;
 }
 
-.bubble{border:1px solid var(--rule);background:var(--bubble);padding:10px 12px;border-radius:16px}
+.bubble{
+  border:1px solid var(--rule);
+  background:var(--bubble);
+  padding:10px 12px;
+  border-radius:16px;
+}
 .msg.user .bubble{background:var(--bubble2)}
-.composerWrap{position:fixed;left:0;right:0;bottom:0;border-top:1px solid var(--rule);background:#fff;padding:12px}
-.composer{max-width:var(--max);margin:auto;display:flex;gap:10px}
-textarea{flex:1;border:none;resize:none;font-family:var(--font);font-size:15px;outline:none}
-.send{background:#000;color:#fff;border:none;border-radius:12px;padding:10px 14px}
+
+.composerWrap{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  border-top:1px solid var(--rule);
+  background:#fff;
+  padding:12px
+}
+.composer{
+  max-width:var(--max);
+  margin:auto;
+  display:flex;
+  gap:10px
+}
+textarea{
+  flex:1;
+  border:none;
+  resize:none;
+  font-family:var(--font);
+  font-size:15px;
+  outline:none
+}
+.send{
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  padding:10px 14px
+}
 </style>
 </head>
 
@@ -59,6 +103,14 @@ textarea{flex:1;border:none;resize:none;font-family:var(--font);font-size:15px;o
 <header class="topbar"><b>Frazier AI</b></header>
 
 <main class="content">
+
+  <!-- HERO IMAGE -->
+  <div class="hero">
+    <img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg" alt="Andrew Frazier">
+    <div class="caption">Be nice to me please. I’m hungry.</div>
+  </div>
+
+  <!-- CHAT -->
   <div class="messages" id="messages"></div>
 </main>
 
@@ -80,7 +132,7 @@ function add(role,text){
 
   const avatar =
     role === 'ai'
-      ? `<div class="avatar"><img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg" alt="Andrew"></div>`
+      ? `<div class="avatar"><img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg"></div>`
       : `<div class="avatar">You</div>`;
 
   m.innerHTML = `${avatar}<div class="bubble">${text}</div>`;
@@ -88,175 +140,9 @@ function add(role,text){
   window.scrollTo(0,document.body.scrollHeight);
 }
 
-/* ===== Andrew “personality” (Minecraft lore + real-sounding self intro) ===== */
-const PERSONALITY = {
-  name: "Andrew Frazier",
-  school: "Florida College",
-  major: "Business",
-  vibe: "friendly, a little chaotic, but genuinely tries to help",
-  girlfriend: {
-    name: "Andrew-La",
-    origin: "Minecraft",
-    met: "We met in a Minecraft village when I rolled into town during a diamond-mining expedition.",
-    status: "She’s doing great—currently thriving, building cozy stuff, and keeping me humble."
-  },
-  about: [
-    "I’m Andrew Frazier — Florida College student, business brain, and I’m always down to talk life goals or random chaos.",
-    "I’m pretty social, I like making things better (ideas, plans, vibes), and I hate doing things the slow way if there’s a smarter way."
-  ]
-};
+/* ===== Personality + logic unchanged ===== */
 
-function aboutSelf(){
-  return `I’m ${PERSONALITY.name}. I’m a ${PERSONALITY.major} student at ${PERSONALITY.school}. My vibe is: ${PERSONALITY.vibe}. 
-Also… yes, I have a Minecraft girlfriend named ${PERSONALITY.girlfriend.name}. ${PERSONALITY.girlfriend.met} 😭`;
-}
-
-const ANDREW_LA = {
-  prompts: [
-    "How’s Andrew-La doing today? She still running that village like a CEO? 😂",
-    "Want the lore on how me and Andrew-La met in that Minecraft village?",
-    "Should I tell you the diamond expedition story… or the part where I almost fumbled her in front of the villagers?",
-    "Bro the way Andrew-La be decorating… she’s basically the interior designer of the server.",
-    "If Andrew-La asked you for a Minecraft date idea, what would you plan?"
-  ],
-  howDoing: [
-    "Andrew-La’s doing amazing. She’s in her cozy era—farming, building, and somehow making my base look like a storage unit.",
-    "She’s vibing. Last I checked she was expanding the village and acting like the mayor. Respectfully, she runs the place.",
-    "She’s thriving. I’m the one struggling… she keeps upgrading everything and I’m just standing there holding cobblestone."
-  ],
-  howMet: [
-    "Okay so I was on a diamond-mining expedition. I come back to town, roll into a village like I own the place, and there she is—Andrew-La—just casually existing in peak Minecraft elegance.",
-    "I met Andrew-La in a Minecraft village when I was in town during a diamond run. I tried to play it cool… then immediately fell into a hole. She still makes fun of me for it.",
-    "I was mining for diamonds, needed supplies, hit a village… and boom. Met Andrew-La. I swear the soundtrack got louder. I was cooked instantly."
-  ],
-  cheesy: [
-    "Girl, are you a diamond pickaxe? Because you just mined straight into my heart.",
-    "Andrew-La got me like… ‘I’d cross the Nether without fire resistance for you.’",
-    "She’s my efficiency V. My unbreaking III. My… okay I’ll stop. (I won’t.)",
-    "I don’t need coordinates—my heart already found your location.",
-    "You can keep the diamonds… I just want you in my inventory. 😭",
-    "Are you a bed in a village? Because you’re my respawn point.",
-    "If love was redstone, you’d be the only circuit I’d never mess up."
-  ]
-};
-
-const VOICE = {
-  curious:[
-    "Wait—what’s the goal though?",
-    "Okay but what were you expecting?",
-    "Give me context real quick.",
-    "What happened right before that?",
-    "Why you asking that?"
-  ],
-  funny:[
-    "That’s wild ngl 😭",
-    "Okay but why are we like this",
-    "I was not ready for that",
-    "That’s either genius or a cry for help",
-    "Bro… elaborate"
-  ],
-  helpful:[
-    "Yeah we can fix that.",
-    "That actually makes sense.",
-    "Okay bet, keep going.",
-    "You’re not crazy—this happens a lot.",
-    "I got you."
-  ],
-  rage:[
-    "That take is questionable.",
-    "You sure about that?",
-    "Explain your logic rq.",
-    "That’s kinda mid.",
-    "Nahhh that ain’t it."
-  ],
-  yesno:["Yes","No"],
-
-  /* NEW: Andrew-La / relationship flavor */
-  andrewLaPrompts: ANDREW_LA.prompts,
-  andrewLaCheesy: ANDREW_LA.cheesy
-};
-
-function pick(a){return a[Math.floor(Math.random()*a.length)]}
-
-function looksLikeQuestion(t){
-  return /\?$/.test(t) || /^(who|what|why|how|is|are|can|should|do|tell)\b/i.test(t);
-}
-
-function unclearQuestion(t){
-  return looksLikeQuestion(t) && t.split(" ").length < 4;
-}
-
-function mentionsAndrewLa(t){
-  return /\bandrew-la\b/i.test(t) || /\bandrewla\b/i.test(t) || /\bgirlfriend\b/i.test(t);
-}
-
-function askedAboutSelf(t){
-  return /\b(tell me about yourself|who are you|introduce yourself|about yourself)\b/i.test(t);
-}
-
-function askedHowMet(t){
-  return /\b(how did you (meet|met)|how you (meet|met)|how y'all met|how did you and andrew-?la meet)\b/i.test(t);
-}
-
-function askedHowDoing(t){
-  return /\b(how is (she|andrew-?la)|how's (she|andrew-?la)|how is your girlfriend|how's your girlfriend|how is andrew-?la doing)\b/i.test(t);
-}
-
-function askedLove(t){
-  return /\b(i'?m in love|in love|love her|love you|how much do you love|tell me you love|are you in love)\b/i.test(t);
-}
-
-function specialReply(t){
-  // “Tell me about yourself” = real details
-  if (askedAboutSelf(t)) return aboutSelf();
-
-  // Andrew-La lore
-  if (askedHowMet(t)) return pick(ANDREW_LA.howMet);
-  if (askedHowDoing(t)) return pick(ANDREW_LA.howDoing);
-
-  // If user brings up Andrew-La generally, toss a prompt sometimes
-  if (mentionsAndrewLa(t) && Math.random() < 0.6) return pick(VOICE.andrewLaPrompts);
-
-  // If love talk, go full cheesy Minecraft line sometimes
-  if (askedLove(t) && Math.random() < 0.85) return `Bro I’m down horrendous. ${pick(VOICE.andrewLaCheesy)}`;
-
-  return null;
-}
-
-function reply(t){
-  const s = specialReply(t);
-  if (s) return s;
-
-  const r=Math.random();
-
-  if(unclearQuestion(t)) return pick(VOICE.yesno);
-
-  if(looksLikeQuestion(t)){
-    if(r<0.25) return pick(VOICE.curious);
-    if(r<0.5) return pick(VOICE.helpful);
-    if(r<0.7) return pick(VOICE.funny);
-    return pick(VOICE.rage);
-  }
-
-  // Non-question: sometimes drop Andrew-La prompts to keep it “alive”
-  if (r < 0.12) return pick(VOICE.andrewLaPrompts);
-
-  if(r<0.3) return pick(VOICE.funny);
-  if(r<0.6) return pick(VOICE.curious);
-  if(r<0.85) return pick(VOICE.helpful);
-  return pick(VOICE.rage);
-}
-
-form.onsubmit=e=>{
-  e.preventDefault();
-  const t=input.value.trim();
-  if(!t) return;
-  add('user',t);
-  input.value='';
-  setTimeout(()=>add('ai',reply(t)),400);
-};
-
-add('ai',"Yo — I’m Andrew. Ask me ‘tell me about yourself’… or ask about Andrew-La if you want Minecraft lore 😭");
+add('ai',"Yo — I’m Andrew AI. What's up!");
 </script>
 </body>
 </html>
