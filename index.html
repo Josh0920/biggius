@@ -1,1 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frazier AI</title>
+  <meta name="description" content="Frazier AI — conversational intelligence." />
 
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1720;
+      --ink:#e6edf3;
+      --muted:#9fb0c0;
+      --rule:rgba(255,255,255,.08);
+      --accent:#22c55e;
+      --radius:14px;
+      --max:860px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--ink);
+      background:radial-gradient(1000px 500px at 30% -10%, rgba(34,197,94,.18), transparent 60%), var(--bg);
+    }
+
+    .app{display:flex;height:100%}
+
+    /* Sidebar */
+    .sidebar{
+      width:280px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-right:1px solid var(--rule);
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:8px;
+    }
+    .dot{
+      width:12px;height:12px;border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 4px rgba(34,197,94,.2);
+    }
+    .brand h1{
+      font-size:14px;
+      margin:0;
+      letter-spacing:.3px;
+    }
+
+    .newchat{
+      border:1px solid var(--rule);
+      border-radius:12px;
+      padding:10px;
+      background:rgba(255,255,255,.04);
+      cursor:pointer;
+      font-size:13px;
+    }
+    .newchat:hover{background:rgba(255,255,255,.06)}
+
+    .threads{
+      margin-top:6px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      overflow:auto;
+    }
+    .thread{
+      padding:10px;
+      border-radius:10px;
+      background:rgba(255,255,255,.03);
+      font-size:13px;
+      cursor:pointer;
+    }
+    .thread:hover{background:rgba(255,255,255,.05)}
+
+    /* Main */
+    .main{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      position:relative;
+    }
+
+    .topbar{
+      padding:12px 16px;
+      border-bottom:1px solid var(--rule);
+      background:rgba(15,23,32,.6);
+      backdrop-filter:blur(10px);
+      font-size:14px;
+    }
+
+    .content{
+      flex:1;
+      overflow:auto;
+      padding:24px 16px 140px;
+    }
+
+    .wrap{max-width:var(--max);margin:0 auto}
+
+    /* Empty homepage */
+    .empty{text-align:center}
+    .empty h2{
+      font-size:28px;
+      margin-bottom:10px;
+      letter-spacing:-.02em;
+    }
+    .empty p{
+      max-width:520px;
+      margin:0 auto 20px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .hero{
+      max-width:680px;
+      margin:20px auto;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--rule);
+      background:rgba(255,255,255,.03);
+    }
+    .hero img{width:100%;display:block}
+
+    /* Messages */
+    .messages{display:flex;flex-direction:column;gap:12px}
+    .msg{display:flex;gap:12px}
+    .avatar{
+      width:32px;height:32px;border-radius:50%;
+      border:1px solid var(--rule);
+      display:grid;place-items:center;
+      font-size:12px;color:var(--muted);
+    }
+    .bubble{
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--rule);
+      background:rgba(255,255,255,.04);
+      font-size:15px;
+      line-height:1.5;
+      white-space:pre-wrap;
+    }
+    .user .bubble{
+      background:rgba(34,197,94,.12);
+      border-color:rgba(34,197,94,.3);
+    }
+
+    /* Composer */
+    .composerWrap{
+      position:absolute;
+      bottom:0;left:0;right:0;
+      padding:14px;
+      background:linear-gradient(180deg, transparent, rgba(11,15,20,.9));
+      border-top:1px solid var(--rule);
+    }
+    .composer{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+      align-items:flex-end;
+      border:1px solid var(--rule);
+      border-radius:18px;
+      padding:10px;
+      background:rgba(15,23,32,.85);
+    }
+    textarea{
+      flex:1;
+      background:transparent;
+      border:none;
+      resize:none;
+      color:var(--ink);
+      font-size:15px;
+      outline:none;
+      min-height:40px;
+      max-height:160px;
+    }
+    button{
+      background:var(--accent);
+      border:none;
+      border-radius:12px;
+      padding:10px 14px;
+      cursor:pointer;
+      color:#022c22;
+      font-weight:600;
+    }
+
+    @media(max-width:900px){
+      .sidebar{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="dot"></div>
+        <h1>Frazier AI</h1>
+      </div>
+
+      <div class="newchat">＋ New chat</div>
+
+      <div class="threads">
+        <div class="thread">Welcome to Frazier AI</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">Frazier AI</div>
+
+      <div class="content">
+        <div class="wrap empty">
+          <h2>Welcome to Frazier AI</h2>
+          <p>Ask questions, explore ideas, and chat naturally with AI.</p>
+
+          <div class="hero">
+            <img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg" alt="Frazier AI Chat" />
+          </div>
+        </div>
+
+        <div class="wrap messages" id="messages"></div>
+      </div>
+
+      <div class="composerWrap">
+        <form class="composer" id="chatForm">
+          <textarea id="input" placeholder="Message Frazier AI…"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    const form = document.getElementById('chatForm');
+    const input = document.getElementById('input');
+    const messages = document.getElementById('messages');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if(!input.value.trim()) return;
+
+      const msg = document.createElement('div');
+      msg.className = 'msg user';
+      msg.innerHTML = `
+        <div class="avatar">You</div>
+        <div class="bubble">${input.value}</div>
+      `;
+      messages.appendChild(msg);
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+    });
+  </script>
+</body>
+</html>
