@@ -21,7 +21,6 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      
       margin:0;
       font-family:var(--font);
       color:var(--ink);
@@ -277,6 +276,7 @@
     }
   });
 
+  // --- basic safety-ish filter (your existing style) ---
   const OFFENSIVE_WORDS = [
     "stupid","idiot","moron","dumb","trash","garbage","loser",
     "shut up","kys","kill yourself",
@@ -288,10 +288,11 @@
     "fuck","shit","bitch","asshole","bastard","dick","pussy"
   ];
 
+  // auto-rage triggers (more modern “21yo” pokes)
   const RAGE_AUTO_ON = [
     "youre dumb","you are dumb","dumb","idiot","stupid","moron",
     "trash","garbage","loser","shut up","cringe","sucks","worst",
-    "mid","lame","npc","bot","youre a bot","you are a bot"
+    "mid","lame","npc","bot","youre a bot","you are a bot","cap","capped","cope"
   ];
 
   const RAGE_AUTO_OFF = [
@@ -383,17 +384,68 @@
     "THAT'S NOT VERY FUNNY."
   ];
 
-  // Ragebait responses (non-hateful, non-threatening)
+  // ===== Andrew-ish “college business student” vibe (casual, curious, practical, friendly) =====
+  // We do it by:
+  // 1) Random prompts in the placeholder (funny/rage/helpful/chaotic)
+  // 2) Replies that feel like a chill college friend: short, curious follow-ups, occasional jokes,
+  //    and light roasting ONLY in ragebait mode.
+
+  const PROMPTS = {
+    funny: [
+      "Say something unhinged so I can judge you 😭",
+      "What’s your most controversial food opinion?",
+      "Give me a random word. I’ll make it a vibe.",
+      "Drop your last 3 emojis and I’ll psychoanalyze you.",
+      "What’s the funniest thing you’ve seen today?"
+    ],
+    rage: [
+      "Drop your hottest take. I’m in hater mode.",
+      "Argue with me about something dumb. I’m bored.",
+      "Type “ragebait me” if you want smoke.",
+      "Tell me a take you KNOW will start drama.",
+      "What’s one opinion you’d defend in the group chat?"
+    ],
+    helpful: [
+      "What are you trying to do right now?",
+      "Give me the goal in one sentence.",
+      "What happened vs what you expected?",
+      "Okay bet — what’s the problem?",
+      "What’s the main thing you want fixed?"
+    ],
+    chaotic: [
+      "Pick one: roast you / help you / both.",
+      "I can be nice or I can be honest. Choose.",
+      "Match my energy: chill, funny, or toxic-lite?",
+      "Rate your day 1–10.",
+      "Type “heat 5” if you’re feeling brave."
+    ]
+  };
+
+  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+
+  function randomPrompt(){
+    const roll = Math.random();
+    if(roll < 0.28) return pick(PROMPTS.funny);
+    if(roll < 0.44) return pick(PROMPTS.rage);
+    if(roll < 0.78) return pick(PROMPTS.helpful);
+    return pick(PROMPTS.chaotic);
+  }
+
+  function setRandomPlaceholder(){
+    input.placeholder = randomPrompt();
+  }
+
+  // Ragebait replies (non-hateful, non-threatening)
   const RAGE = {
     soft: [
       "Okayyyyy tough guy. What’s your point though?",
       "That’s cute. Try again with logic.",
-      "You sayin that with your whole chest, huh?",
+      "You said that with your whole chest, huh?",
       "Respectfully… nah.",
       "Alright buddy. Explain it."
     ],
     medium: [
-      "That take is straight from the clearance aisle.",
+      "That take is from the clearance aisle 💀",
       "You really typed that and hit send. Iconic.",
       "If confidence paid rent, you’d be a homeowner.",
       "That’s not even wrong, it’s just… loud.",
@@ -401,10 +453,10 @@
     ],
     spicy: [
       "Bro your brain is buffering.",
-      "You’re speedrunning Ls like it’s a hobby.",
+      "You’re speedrunning Ls like it’s cardio.",
       "That’s the kind of take that gets benched in practice.",
       "I’ve seen better thinking from a microwave timer.",
-      "Your source is 100% ‘I made it up’ and we both know it."
+      "Your source is ‘I made it up’ and we both know it."
     ],
     cooldown: [
       "Aight chill. What do you actually need?",
@@ -412,40 +464,6 @@
       "Okay okay. What’s the real question?"
     ]
   };
-
-  // NEW: prompt / suggestions that appear randomly (ragebait / funny / helpful / chaotic)
-  const PROMPTS = {
-    funny: [
-      "Say something unhinged so I can judge you.",
-      "What’s your most controversial food opinion?",
-      "Give me a random word and I’ll make it a vibe.",
-      "Tell me your last 3 emojis and I’ll psychoanalyze you.",
-      "What’s the funniest thing you’ve seen today?"
-    ],
-    rage: [
-      "Drop your hottest take. I’m in hater mode.",
-      "Argue with me about something dumb. I’m bored.",
-      "Say ‘ragebait me’ if you want smoke.",
-      "Tell me a take you KNOW is gonna start drama.",
-      "You got one bad opinion in you? Let’s hear it."
-    ],
-    helpful: [
-      "What are you trying to fix right now?",
-      "Give me the problem in one sentence.",
-      "Paste the error message and I’ll translate it.",
-      "What’s the goal: faster, cleaner, or funnier?",
-      "Tell me what you expected vs what happened."
-    ],
-    chaotic: [
-      "Pick: 1) roast you 2) help you 3) both.",
-      "I can be nice or I can be honest. Choose.",
-      "Say one sentence and I’ll match your energy.",
-      "Type ‘heat 5’ if you’re feeling brave.",
-      "Rate your day 1–10 and I’ll respond accordingly."
-    ]
-  };
-
-  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
 
   function looksLikeQuestion(t){
     return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are|will|would|could)\b/i.test(t.trim());
@@ -461,33 +479,20 @@
     if(text) modePill.textContent = text;
   }
 
-  // NEW: random placeholder prompt (some ragebait, some funny, some helpful, etc.)
-  function randomPrompt(){
-    const roll = Math.random();
-    if(roll < 0.25) return pick(PROMPTS.funny);
-    if(roll < 0.45) return pick(PROMPTS.rage);
-    if(roll < 0.75) return pick(PROMPTS.helpful);
-    return pick(PROMPTS.chaotic);
-  }
-
-  // set a random prompt on load + after each send
-  function setRandomPlaceholder(){
-    input.placeholder = randomPrompt();
-  }
-
   // Commands:
+  // "ragebait on"  -> enable
+  // "ragebait off" -> disable
+  // "heat 0..5"    -> set heat
   function handleCommands(t){
     const s = t.trim().toLowerCase();
     if(s === "ragebait on" || s === '"rage bait me"' || s === "rage bait me" || s === "ragebait"){
       RAGEBAIT = true;
       heat = Math.max(1, heat);
-      updateModePill();
       return "Ragebait mode: ON. (Type “ragebait off” to disable.)";
     }
     if(s === "ragebait off"){
       RAGEBAIT = false;
       heat = 0;
-      updateModePill();
       return "Ragebait mode: OFF.";
     }
     const m = s.match(/^heat\s+([0-5])$/);
@@ -495,28 +500,82 @@
       heat = Number(m[1]);
       if(heat === 0) RAGEBAIT = false;
       else RAGEBAIT = true;
-      updateModePill();
       return `Heat set to ${heat}.`;
     }
     return null;
   }
 
+  // If someone asks a question that has no clear response -> "Yes" or "No"
   function isUnclearQuestion(userText){
     const t = normalize(userText);
     if(!t) return false;
     if(!looksLikeQuestion(userText)) return false;
 
-    const KNOWN = [
+    // If it looks like a concrete question (common “problem-solving” topics), treat as clear.
+    const CLEAR_ENOUGH = [
       /error|bug|failed|not working|doesn t work|doesnt work|broken|issue|crash|console/i,
       /code|html|css|javascript|js|website|page|button|layout|mobile|iphone|android/i,
       /help|how do i|can you|should i|what is|why is|where is|when is|explain/i,
-      /price|cost|pay|subscription|account|login|password/i
+      /price|cost|pay|subscription|account|login|password/i,
+      /time|date|schedule|when|tomorrow|today|yesterday/i
     ];
-    for(const rx of KNOWN){
+    for(const rx of CLEAR_ENOUGH){
       if(rx.test(userText)) return false;
     }
+
+    // Super short vague questions are unclear.
+    if(t.split(' ').length <= 3) return true;
+
+    // Otherwise: likely unclear.
     return true;
   }
+
+  // “Andrew-ish” reply buckets (short, casual, curious, practical; not template-y)
+  const VOICE = {
+    greetings: [
+      "Yo what’s good 😭",
+      "Sup bro. Talk to me.",
+      "Heyyy. What’s the move?",
+      "Aight I’m here. What you need?",
+      "What’s up. Don’t scare me."
+    ],
+    acknowledgements: [
+      "Bet.",
+      "Got you.",
+      "Say less.",
+      "Facts.",
+      "Okay okay."
+    ],
+    curious: [
+      "Wait — what’s the goal though?",
+      "Give me context. What happened right before that?",
+      "What were you expecting it to do?",
+      "Okay, quick question: phone or laptop?",
+      "What’s the one part that’s annoying you most?"
+    ],
+    funny: [
+      "That’s crazy. I was literally minding my business.",
+      "I’m listening… unfortunately 😭",
+      "You just spawned a new problem in the chat.",
+      "This is either genius or a cry for help.",
+      "Okay but why are we like this 💀"
+    ],
+    supportive: [
+      "Nah you’re good. We can fix it.",
+      "That’s a solid start, lowkey.",
+      "Okay bet — we’ll figure it out.",
+      "You’re not crazy, that happens a lot.",
+      "We can make this clean. I got you."
+    ],
+    endings: [
+      "Alright, what’s next?",
+      "Send the next message.",
+      "Okay, keep going.",
+      "Bet — hit me with the next part.",
+      "What do you want it to do after that?"
+    ],
+    yesno: ["Yes","No"]
+  };
 
   function makeRandomReply(userText){
     const t = userText.trim();
@@ -543,23 +602,9 @@
       return pick(OFFENDED_REPLIES);
     }
 
-    // If it’s a question but unclear -> Yes/No
-    if(isUnclearQuestion(t)){
-      return Math.random() < 0.5 ? "Yes" : "No";
-    }
-
-    // Normal responses: more random + less “template helpful”
-    const vibeRoll = Math.random();
-
     // greetings
     if(/^(hi|hello|yo|hey|sup|what's up|whats up)\b/i.test(t)){
-      return pick([
-        "Yo what’s good 😭",
-        "Sup bro. Talk to me.",
-        "Heyyy. What’s the move?",
-        "Aight I’m here. What you need?",
-        "What’s up. Don’t scare me."
-      ]);
+      return pick(VOICE.greetings);
     }
 
     // thanks
@@ -573,42 +618,26 @@
       ]);
     }
 
-    // question: respond with a random mix (funny/helpful/rage-ish but safe)
-    if(looksLikeQuestion(t)){
-      if(vibeRoll < 0.20) return pick(PROMPTS.funny);
-      if(vibeRoll < 0.35) return pick(RAGE.soft);
-      if(vibeRoll < 0.75) {
-        return pick([
-          "Okay. Give me one detail: what’s the goal?",
-          "Depends. What did you try already?",
-          "I need context — what platform is this on?",
-          "Lowkey I can help, but what’s the exact issue?",
-          "What’s the expected result?"
-        ]);
-      }
-      return pick([
-        "Hmm… maybe.",
-        "Honestly? Could be.",
-        "I’d say yeah… probably.",
-        "Nahhhh not really.",
-        "It’s giving ‘it depends’."
-      ]);
+    // unclear question -> Yes/No
+    if(isUnclearQuestion(t)){
+      return pick(VOICE.yesno);
     }
 
-    // non-question: just be random (funny/chaotic) instead of “copy-paste prompts”
-    if(vibeRoll < 0.35) return pick(PROMPTS.chaotic);
-    if(vibeRoll < 0.65) return pick(PROMPTS.funny);
-    if(vibeRoll < 0.85) return pick([
-      "Okay but why are we like this 😭",
-      "Alright… continue.",
-      "Say more. I’m listening.",
-      "That’s wild. Elaborate.",
-      "I’m intrigued. Keep going."
-    ]);
-    return pick([
-      "Yes",
-      "No"
-    ]);
+    // question -> random mix of curious / supportive / funny (Andrew-ish)
+    if(looksLikeQuestion(t)){
+      const r = Math.random();
+      if(r < 0.20) return pick(VOICE.funny);
+      if(r < 0.55) return pick(VOICE.curious);
+      if(r < 0.85) return pick(VOICE.supportive);
+      return pick(VOICE.endings);
+    }
+
+    // non-question -> keep it random + human (no copy-paste “templates”)
+    const roll = Math.random();
+    if(roll < 0.25) return pick(VOICE.funny);
+    if(roll < 0.55) return pick(VOICE.curious);
+    if(roll < 0.80) return pick(VOICE.supportive);
+    return pick(VOICE.endings);
   }
 
   async function typeLikeBot(bubbleEl, finalText){
@@ -635,12 +664,12 @@
       await typeLikeBot(placeholder, reply);
     } finally {
       setSending(false);
-      setRandomPlaceholder(); // NEW: random prompt after each send
+      setRandomPlaceholder();
     }
   });
 
-  addMessage('ai', 'Hello, my name is Frazier AI. How can I help you?');
-  setRandomPlaceholder(); // NEW: random prompt on load
+  addMessage('ai', 'Yo — I’m Frazier AI. What’s the move?');
+  setRandomPlaceholder();
 </script>
 </body>
 </html>
