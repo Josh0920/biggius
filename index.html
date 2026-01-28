@@ -295,15 +295,17 @@
     async function callBackend(userText){
       // Your server should accept: { message: string, history: [{role, content}] }
       // And return: { reply: string }
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: userText,
-          history: history.slice(-12) // last few turns only
-        })
-      });
-
+      const res = await fetch('https://bvdkggyrfrnvahfywxic.supabase.co/functions/v1/chat', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2ZGtnZ3lyZnJudmFoZnl3eGljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NzIyMDUsImV4cCI6MjA4NTE0ODIwNX0.tLRXG1kgfZkblth2gmIV8Y9AvYTcTCXbP5GcE6PD4Sg'
+  },
+  body: JSON.stringify({
+    message: userText,
+    history: history.slice(-12)
+  })
+});
       if(!res.ok) throw new Error('Backend error: ' + res.status);
       const data = await res.json();
       if(!data || typeof data.reply !== 'string') throw new Error('Invalid backend response');
