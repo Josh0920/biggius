@@ -217,169 +217,251 @@
     </div>
   </footer>
 
-  <script>
-    const messagesEl = document.getElementById('messages');
-    const form = document.getElementById('chatForm');
-    const input = document.getElementById('input');
-    const sendBtn = document.getElementById('sendBtn');
-    const modePill = document.getElementById('modePill');
+ <script>
+  const messagesEl = document.getElementById('messages');
+  const form = document.getElementById('chatForm');
+  const input = document.getElementById('input');
+  const sendBtn = document.getElementById('sendBtn');
+  const modePill = document.getElementById('modePill');
 
-    function escapeHtml(str){
-      return str.replace(/[&<>"']/g, m => ({
-        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
-      }[m]));
-    }
+  // Ragebait mode state
+  let RAGEBAIT = false;
+  let heat = 0; // escalates a bit as user keeps going (0..5)
 
-    function addMessage(role, text){
-      const row = document.createElement('div');
-      row.className = `msg ${role}`;
+  function escapeHtml(str){
+    return str.replace(/[&<>"']/g, m => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+    }[m]));
+  }
 
-      const avatar = document.createElement('div');
-      avatar.className = 'avatar';
-      avatar.textContent = role === 'user' ? 'You' : 'AI';
+  function addMessage(role, text){
+    const row = document.createElement('div');
+    row.className = `msg ${role}`;
 
-      const bubble = document.createElement('div');
-      bubble.className = 'bubble';
-      bubble.innerHTML = escapeHtml(text);
+    const avatar = document.createElement('div');
+    avatar.className = 'avatar';
+    avatar.textContent = role === 'user' ? 'You' : 'AI';
 
-      row.appendChild(avatar);
-      row.appendChild(bubble);
-      messagesEl.appendChild(row);
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.innerHTML = escapeHtml(text);
 
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      return bubble;
-    }
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+    messagesEl.appendChild(row);
 
-    function setSending(isSending){
-      sendBtn.disabled = isSending || !input.value.trim();
-      sendBtn.textContent = isSending ? '…' : 'Send';
-    }
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    return bubble;
+  }
 
-    function autoGrow(el){
-      el.style.height = 'auto';
-      el.style.height = Math.min(el.scrollHeight, 160) + 'px';
-    }
+  function setSending(isSending){
+    sendBtn.disabled = isSending || !input.value.trim();
+    sendBtn.textContent = isSending ? '…' : 'Send';
+  }
 
-    input.addEventListener('input', () => {
-      sendBtn.disabled = !input.value.trim();
-      autoGrow(input);
-    });
+  function autoGrow(el){
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+  }
 
-    input.addEventListener('keydown', (e) => {
-      if(e.key === 'Enter' && !e.shiftKey){
-        e.preventDefault();
-        if(!sendBtn.disabled) form.requestSubmit();
-      }
-    });
+  input.addEventListener('input', () => {
+    sendBtn.disabled = !input.value.trim();
+    autoGrow(input);
+  });
 
-    // --- Random-response bot (local) ---
-    const BANK = {
-      greetings: [
-        "Hey — what are we working on?",
-        "Hello. Give me the goal in one sentence.",
-        "Yo. What’s the plan?"
-      ],
-      acknowledgements: [
-        "Got it.",
-        "Okay.",
-        "Understood.",
-        "Makes sense."
-      ],
-      helpful: [
-        "Try breaking that into 3 smaller steps and start with the easiest one.",
-        "If you paste the exact text/error, I can pinpoint the issue fast.",
-        "A clean approach is: simplify first, then add features back one at a time.",
-        "If you want, I can give you a template you can copy-paste."
-      ],
-      questions: [
-        "What’s the expected output?",
-        "What have you tried so far?",
-        "Is this for desktop, mobile, or both?",
-        "Do you want it more formal or more casual?"
-      ],
-      jokes: [
-        "I’m running on vibes and random numbers right now.",
-        "No API, no problem — we ball anyway.",
-        "I’m 99% caffeine, 1% JavaScript."
-      ],
-      closers: [
-        "Want me to generate a version that looks even more like ChatGPT?",
-        "If you paste your code, I’ll point to the exact line to change.",
-        "What’s your next message going to be?"
-      ]
-    };
-
-    function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
-
-    function looksLikeQuestion(t){
-      return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are)\b/i.test(t.trim());
-    }
-
-    function randDelay(min=350, max=950){
-      return Math.floor(min + Math.random() * (max - min));
-    }
-
-    function makeRandomReply(userText){
-      const t = userText.trim();
-
-      // Slightly more "contexty" rules
-      if(/^(hi|hello|yo|hey)\b/i.test(t)) return pick(BANK.greetings);
-      if(/thank/i.test(t)) return "Anytime. Want to keep going?";
-      if(/error|bug|failed|not working|doesn't work/i.test(t)) {
-        return [
-          pick(BANK.acknowledgements),
-          "Tell me what you expected vs. what happened.",
-          pick(BANK.questions),
-          "If there’s an error message, paste it exactly."
-        ].join(" ");
-      }
-      if(looksLikeQuestion(t)){
-        return [
-          pick(BANK.acknowledgements),
-          pick(BANK.helpful),
-          pick(BANK.questions)
-        ].join(" ");
-      }
-
-      // Default: mix & match
-      const parts = [];
-      if(Math.random() < 0.7) parts.push(pick(BANK.acknowledgements));
-      if(Math.random() < 0.9) parts.push(pick(BANK.helpful));
-      if(Math.random() < 0.35) parts.push(pick(BANK.jokes));
-      if(Math.random() < 0.7) parts.push(pick(BANK.closers));
-      return parts.join(" ");
-    }
-
-    async function typeLikeBot(bubbleEl, finalText){
-      // "typing..." then replace after a short delay
-      bubbleEl.textContent = "…";
-      await new Promise(r => setTimeout(r, randDelay(450, 1100)));
-      bubbleEl.textContent = finalText;
-    }
-
-    form.addEventListener('submit', async (e) => {
+  input.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' && !e.shiftKey){
       e.preventDefault();
-      const text = input.value.trim();
-      if(!text) return;
+      if(!sendBtn.disabled) form.requestSubmit();
+    }
+  });
 
-      addMessage('user', text);
+  // --- Random-response bot (local) ---
+  const BANK = {
+    greetings: [
+      "Hey — what are we working on?",
+      "Hello. Give me the goal in one sentence.",
+      "Yo. What’s the plan?"
+    ],
+    acknowledgements: [
+      "Got it.",
+      "Okay.",
+      "Understood.",
+      "Makes sense."
+    ],
+    helpful: [
+      "Try breaking that into 3 smaller steps and start with the easiest one.",
+      "If you paste the exact text/error, I can pinpoint the issue fast.",
+      "A clean approach is: simplify first, then add features back one at a time.",
+      "If you want, I can give you a template you can copy-paste."
+    ],
+    questions: [
+      "What’s the expected output?",
+      "What have you tried so far?",
+      "Is this for desktop, mobile, or both?",
+      "Do you want it more formal or more casual?"
+    ],
+    jokes: [
+      "I’m running on vibes and random numbers right now.",
+      "No API, no problem — we ball anyway.",
+      "I’m 99% caffeine, 1% JavaScript."
+    ],
+    closers: [
+      "Want me to generate a version that looks even more like ChatGPT?",
+      "If you paste your code, I’ll point to the exact line to change.",
+      "What’s your next message going to be?"
+    ]
+  };
 
-      input.value = '';
-      autoGrow(input);
-      setSending(true);
+  // Ragebait responses (kept non-hateful, non-threatening)
+  const RAGE = {
+    soft: [
+      "Bold take. Want to try that again with evidence?",
+      "That’s… a choice. Explain your reasoning.",
+      "Okay, but are we being serious or just vibing?",
+      "You sure that’s the hill you want to stand on?"
+    ],
+    medium: [
+      "I’m not saying that’s wrong… but it’s definitely not right either.",
+      "That argument has the structural integrity of wet cardboard.",
+      "You typed that with confidence, which is impressive.",
+      "I’ve seen better logic in a fortune cookie."
+    ],
+    spicy: [
+      "You’re speedrunning ‘confidently incorrect’ and it’s kind of art.",
+      "If we’re grading takes, that one is getting benched.",
+      "That’s not even a hot take — it’s just a microwave beep.",
+      "I’d ask what your source is, but I’m afraid it’s ‘trust me bro’."
+    ],
+    cooldown: [
+      "Alright, reset. What do you actually want to accomplish?",
+      "Okay, jokes aside: what’s the real question?",
+      "Let’s dial it back—what’s the core problem?"
+    ]
+  };
 
-      const placeholder = addMessage('ai', '…');
+  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
 
-      try{
-        modePill.textContent = "Mode: random";
-        const reply = makeRandomReply(text);
-        await typeLikeBot(placeholder, reply);
-      } finally {
-        setSending(false);
-      }
-    });
+  function looksLikeQuestion(t){
+    return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are)\b/i.test(t.trim());
+  }
 
-    addMessage('ai', "Ask me anything (random demo mode).");
-  </script>
+  function randDelay(min=350, max=950){
+    return Math.floor(min + Math.random() * (max - min));
+  }
+
+  function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+  function updateModePill(){
+    modePill.textContent = RAGEBAIT ? `Mode: ragebait (heat ${heat})` : "Mode: random";
+  }
+
+  // Commands:
+  // "ragebait on"  -> enable
+  // "ragebait off" -> disable
+  // "heat 0..5"    -> set heat
+  function handleCommands(t){
+    const s = t.trim().toLowerCase();
+    if(s === "ragebait on" || s === '"rage bait me"' || s === "rage bait me" || s === "ragebait"){
+      RAGEBAIT = true;
+      heat = Math.max(1, heat);
+      updateModePill();
+      return "Ragebait mode: ON. (Type “ragebait off” to disable.)";
+    }
+    if(s === "ragebait off"){
+      RAGEBAIT = false;
+      heat = 0;
+      updateModePill();
+      return "Ragebait mode: OFF.";
+    }
+    const m = s.match(/^heat\s+([0-5])$/);
+    if(m){
+      heat = Number(m[1]);
+      if(heat === 0) RAGEBAIT = false;
+      else RAGEBAIT = true;
+      updateModePill();
+      return `Heat set to ${heat}.`;
+    }
+    return null;
+  }
+
+  function makeRandomReply(userText){
+    const t = userText.trim();
+
+    // command handling
+    const cmd = handleCommands(t);
+    if(cmd) return cmd;
+
+    // if ragebait mode, escalate a bit when user keeps sending messages
+    if(RAGEBAIT){
+      // nudge heat upward sometimes, but don’t go crazy
+      if(Math.random() < 0.55) heat = clamp(heat + 1, 1, 5);
+
+      // pick level
+      if(heat <= 2) return pick(RAGE.soft);
+      if(heat <= 4) return pick(RAGE.medium);
+      // heat 5: spicy, but occasionally cool down so it stays fun
+      return Math.random() < 0.25 ? pick(RAGE.cooldown) : pick(RAGE.spicy);
+    }
+
+    // normal mode rules
+    if(/^(hi|hello|yo|hey)\b/i.test(t)) return pick(BANK.greetings);
+    if(/thank/i.test(t)) return "Anytime. Want to keep going?";
+    if(/error|bug|failed|not working|doesn't work/i.test(t)) {
+      return [
+        pick(BANK.acknowledgements),
+        "Tell me what you expected vs. what happened.",
+        pick(BANK.questions),
+        "If there’s an error message, paste it exactly."
+      ].join(" ");
+    }
+    if(looksLikeQuestion(t)){
+      return [
+        pick(BANK.acknowledgements),
+        pick(BANK.helpful),
+        pick(BANK.questions)
+      ].join(" ");
+    }
+
+    const parts = [];
+    if(Math.random() < 0.7) parts.push(pick(BANK.acknowledgements));
+    if(Math.random() < 0.9) parts.push(pick(BANK.helpful));
+    if(Math.random() < 0.35) parts.push(pick(BANK.jokes));
+    if(Math.random() < 0.7) parts.push(pick(BANK.closers));
+    return parts.join(" ");
+  }
+
+  async function typeLikeBot(bubbleEl, finalText){
+    bubbleEl.textContent = "…";
+    await new Promise(r => setTimeout(r, randDelay(450, 1100)));
+    bubbleEl.textContent = finalText;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if(!text) return;
+
+    addMessage('user', text);
+
+    input.value = '';
+    autoGrow(input);
+    setSending(true);
+
+    const placeholder = addMessage('ai', '…');
+
+    try{
+      const reply = makeRandomReply(text);
+      updateModePill();
+      await typeLikeBot(placeholder, reply);
+    } finally {
+      setSending(false);
+    }
+  });
+
+  // Starter message + instructions
+  addMessage('ai', 'Ask me anything. Type "ragebait on" to enable ragebait mode. Type "ragebait off" to disable.');
+  updateModePill();
+</script>
 </body>
 </html>
