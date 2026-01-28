@@ -400,63 +400,202 @@
   // --- Random-response bot (local) ---
   const BANK = {
     greetings: [
-      "Hey — what are we working on?",
-      "Hello. Give me the goal in one sentence.",
-      "Yo. What’s the plan?"
+      "Yo — what’s good? What are we doing today?",
+      "Heyyy. What do you need?",
+      "Sup. Hit me with it.",
+      "Aight I’m here. What’s the move?",
+      "What’s up — ask me anything.",
+      "Yo. Give me the goal in one sentence.",
+      "Hello. What are we building/fixing?",
+      "Hey — you tryna get help or just vibing?",
+      "Bet. What’s the situation?",
+      "Say less. What do you want done?"
     ],
     acknowledgements: [
-      "Got it.",
-      "Okay.",
-      "Understood.",
-      "Makes sense."
+      "Got you.",
+      "Bet.",
+      "Okay okay.",
+      "Say less.",
+      "I hear you.",
+      "Copy that.",
+      "Facts.",
+      "Alright.",
+      "Noted.",
+      "Understood."
     ],
     helpful: [
-      "Try breaking that into 3 smaller steps and start with the easiest one.",
-      "If you paste the exact text/error, I can pinpoint the issue fast.",
-      "A clean approach is: simplify first, then add features back one at a time.",
-      "If you want, I can give you a template you can copy-paste."
+      "If you paste the exact text/error, I can lock in and fix it fast.",
+      "Tell me what you expected vs what happened — that’s the cheat code.",
+      "Give me the goal + what you’ve tried and I’ll point to the exact line.",
+      "Simplify it first, then add stuff back one piece at a time.",
+      "Drop the screenshot/error message and we’ll cook.",
+      "If this is on mobile too, tell me iPhone/Android and I’ll adjust it.",
+      "If it’s code, paste the whole block around the problem (like 20 lines).",
+      "If it’s a setting, tell me what app + version you’re on.",
+      "If it’s a website issue, tell me: desktop, iPhone, or both?",
+      "If you want, I can give you a copy-paste template."
     ],
     questions: [
-      "What’s the expected output?",
-      "What have you tried so far?",
-      "Is this for desktop, mobile, or both?",
-      "Do you want it more formal or more casual?"
+      "What’s the end result supposed to look like?",
+      "What exactly did you type/click before it broke?",
+      "Is this happening on iPhone, desktop, or both?",
+      "Do you want it more serious or more funny?",
+      "Is there an error message? Paste it word for word.",
+      "What’s the main goal: fix, redesign, or add features?",
+      "What’s the one thing that’s annoying you the most?",
+      "Is this a one-time thing or do you want it reusable?",
+      "Do you want short answers or more explanation?",
+      "What’s your ideal response style from the bot?"
     ],
     jokes: [
-      "I’m running on vibes and random numbers right now.",
-      "No API, no problem — we ball anyway.",
-      "I’m 99% caffeine, 1% JavaScript."
+      "I’m running on vibes and JavaScript right now.",
+      "No API? We still ball.",
+      "I’m 99% caffeine, 1% logic.",
+      "If this breaks, it’s not my fault (it is).",
+      "I’m basically a calculator with feelings."
     ],
     closers: [
-      "Want me to generate a version that looks even more like ChatGPT?",
-      "If you paste your code, I’ll point to the exact line to change.",
-      "What’s your next message going to be?"
+      "Send the next message and I’ll keep going.",
+      "Want me to make it look more like ChatGPT?",
+      "If you paste your code, I’ll tell you exactly what to change.",
+      "What’s the next thing you want the bot to do?",
+      "You want the fast version or the clean version?"
     ]
   };
+
+  // NEW: 100 "request choices" when the bot needs a clearer request
+  const REQUEST_CHOICES = [
+    "Fix my code (paste it).",
+    "Make the site look cleaner.",
+    "Make it work on iPhone.",
+    "Help me debug an error message.",
+    "Add a dark mode toggle.",
+    "Add a language toggle (EN/ES).",
+    "Make the chat look like ChatGPT.",
+    "Make the chat bubbles nicer.",
+    "Add typing dots / typing indicator.",
+    "Add message timestamps.",
+    "Save chat history (localStorage).",
+    "Add a clear chat button.",
+    "Add a copy-to-clipboard button.",
+    "Add quick reply buttons.",
+    "Add “suggestions” under the input.",
+    "Add a “thinking” animation.",
+    "Make the send button smarter.",
+    "Make Enter send / Shift+Enter new line.",
+    "Add mobile-friendly padding.",
+    "Stop the page from jumping on send.",
+    "Make the header sticky and clean.",
+    "Make the hero image responsive.",
+    "Fix spacing on the whole page.",
+    "Make the font look more modern.",
+    "Add an emoji mood mode.",
+    "Add a “ragebait” mode toggle.",
+    "Tone down the ragebait mode.",
+    "Make the bot more polite.",
+    "Make the bot more savage (but safe).",
+    "Make the bot talk like a 21yo dude.",
+    "Make the bot talk more professional.",
+    "Add “help” command that lists features.",
+    "Add “about” command.",
+    "Add “commands” list.",
+    "Add a mode switch pill that actually changes behavior.",
+    "Make replies longer.",
+    "Make replies shorter.",
+    "Make replies more random.",
+    "Make replies less random.",
+    "Detect questions better.",
+    "Detect greetings better.",
+    "Detect thanks better.",
+    "Detect anger better.",
+    "Detect compliments better.",
+    "Detect sarcasm better.",
+    "Detect “help me” better.",
+    "Detect “I need advice” better.",
+    "Detect “I’m sad” better.",
+    "Make it encourage the user more.",
+    "Make it roast the user lightly.",
+    "Add “Yes/No” mode for unclear questions.",
+    "Add “maybe” mode (if allowed).",
+    "Add a “coin flip” command.",
+    "Add a “random number” command.",
+    "Add a “pick one” command.",
+    "Add a “summarize” command.",
+    "Add a “rewrite this” command.",
+    "Add a “check grammar” command.",
+    "Add a “generate ideas” command.",
+    "Add a “make a to-do list” command.",
+    "Add a “study plan” command.",
+    "Add a “workout plan” command.",
+    "Add a “meal plan” command.",
+    "Add a “budget tips” command.",
+    "Add a “travel plan” command.",
+    "Add a “what should I do today” command.",
+    "Add a “what’s the move” vibe.",
+    "Add a “relationship advice” vibe.",
+    "Add a “school help” vibe.",
+    "Add a “college bro” vibe.",
+    "Add a “sports talk” vibe.",
+    "Add a “music recs” vibe.",
+    "Add a “movie recs” vibe.",
+    "Add a “game recs” vibe.",
+    "Add a “tech support” vibe.",
+    "Add a “web dev assistant” vibe.",
+    "Add a “resume help” vibe.",
+    "Add a “cover letter help” vibe.",
+    "Add a “interview prep” vibe.",
+    "Add a “text reply generator” vibe.",
+    "Add a “DM reply” vibe.",
+    "Add a “caption ideas” vibe.",
+    "Add a “tweet ideas” vibe.",
+    "Add a “YouTube title ideas” vibe.",
+    "Add a “podcast ideas” vibe.",
+    "Add a “news headline ideas” vibe.",
+    "Add a “SEO headline ideas” vibe.",
+    "Add a “make it funnier” vibe.",
+    "Add a “make it calmer” vibe.",
+    "Add a “make it more direct” vibe.",
+    "Add a “make it more detailed” vibe.",
+    "Add a “step-by-step walkthrough” vibe.",
+    "Add a “just do it for me” vibe.",
+    "Add a “only change what must” vibe.",
+    "Fix an image not showing.",
+    "Fix a broken link.",
+    "Fix CSS not applying.",
+    "Fix JS not running.",
+    "Fix a button not working.",
+    "Fix a layout bug on mobile.",
+    "Explain what my code is doing.",
+    "Refactor my code (keep same look).",
+    "Add comments to my code.",
+    "Make it faster / smoother.",
+    "Make it more accessible.",
+    "Make it keyboard-friendly."
+  ];
 
   // Ragebait responses (kept non-hateful, non-threatening)
   const RAGE = {
     soft: [
-      "Bold take. Want to try that again with evidence?",
-      "That’s… a choice. Explain your reasoning.",
-      "Okay, but are we being serious or just vibing?",
-      "You sure that’s the hill you want to stand on?"
+      "Bold take. Wanna run that back with receipts?",
+      "That’s… a choice. Explain your logic.",
+      "Okay but are we serious or just yappin?",
+      "You sure that’s the hill you wanna stand on?"
     ],
     medium: [
-      "I’m not saying that’s wrong… but it’s definitely not right either.",
-      "That argument has the structural integrity of wet cardboard.",
-      "You typed that with confidence, which is impressive.",
+      "I’m not saying that’s wrong… but it’s not right either.",
+      "That argument has the strength of wet cardboard.",
+      "You typed that with confidence. Respect, lowkey.",
       "I’ve seen better logic in a fortune cookie."
     ],
     spicy: [
-      "You’re speedrunning ‘confidently incorrect’ and it’s kind of art.",
-      "If we’re grading takes, that one is getting benched.",
-      "That’s not even a hot take — it’s just a microwave beep.",
-      "I’d ask what your source is, but I’m afraid it’s ‘trust me bro’."
+      "You’re speedrunning ‘confidently incorrect’ and it’s kinda art.",
+      "If we’re grading takes, that one got benched.",
+      "That’s not even a hot take — that’s a microwave beep.",
+      "I’d ask your source but I’m scared it’s ‘trust me bro’."
     ],
     cooldown: [
-      "Alright, reset. What do you actually want to accomplish?",
-      "Okay, jokes aside: what’s the real question?",
+      "Aight reset. What do you actually want to get done?",
+      "Jokes aside: what’s the real question?",
       "Let’s dial it back—what’s the core problem?"
     ]
   };
@@ -464,7 +603,7 @@
   function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
 
   function looksLikeQuestion(t){
-    return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are)\b/i.test(t.trim());
+    return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are|will|would|could)\b/i.test(t.trim());
   }
 
   function randDelay(min=350, max=950){
@@ -507,6 +646,35 @@
     return null;
   }
 
+  // NEW: if a question is unclear -> must answer "Yes" or "No"
+  function isUnclearQuestion(userText){
+    const t = normalize(userText);
+    if(!t) return false;
+    if(!looksLikeQuestion(userText)) return false;
+
+    // If it matches ANY "known topic", we treat it as clear enough to do normal helpful behavior.
+    const KNOWN = [
+      /error|bug|failed|not working|doesn t work|doesnt work|broken|issue|crash|console/i,
+      /code|html|css|javascript|js|website|page|button|layout|mobile|iphone|android/i,
+      /help|how do i|can you|should i|what is|why is|where is|when is|explain/i,
+      /price|cost|pay|subscription|account|login|password/i
+    ];
+    for(const rx of KNOWN){
+      if(rx.test(userText)) return false;
+    }
+    // Otherwise: unclear question -> Yes/No
+    return true;
+  }
+
+  // NEW: format the 100 choices
+  function requestChoicesText(){
+    let out = "What do you want me to do? Pick one:\n";
+    for(let i=0;i<REQUEST_CHOICES.length;i++){
+      out += `${i+1}. ${REQUEST_CHOICES[i]}\n`;
+    }
+    return out.trim();
+  }
+
   function makeRandomReply(userText){
     const t = userText.trim();
 
@@ -514,7 +682,7 @@
     const cmd = handleCommands(t);
     if(cmd) return cmd;
 
-    // NEW: auto-toggle ragebait silently based on what user says
+    // auto-toggle ragebait silently based on what user says
     autoRageToggle(t);
 
     // If it's "hard offense" -> offended reply
@@ -538,9 +706,15 @@
     }
 
     // normal mode rules
-    if(/^(hi|hello|yo|hey)\b/i.test(t)) return pick(BANK.greetings);
-    if(/thank/i.test(t)) return "Anytime. Want to keep going?";
-    if(/error|bug|failed|not working|doesn't work/i.test(t)) {
+    if(/^(hi|hello|yo|hey|sup|what's up|whats up)\b/i.test(t)) return pick(BANK.greetings);
+    if(/thank/i.test(t)) return pick([
+      "Anytime bro.",
+      "Got you.",
+      "No problem.",
+      "Yessir. Need anything else?"
+    ]);
+
+    if(/error|bug|failed|not working|doesn't work|doesnt work|broken|issue/i.test(t)) {
       return [
         pick(BANK.acknowledgements),
         "Tell me what you expected vs. what happened.",
@@ -548,6 +722,12 @@
         "If there’s an error message, paste it exactly."
       ].join(" ");
     }
+
+    // If it’s a question but unclear -> MUST say Yes/No
+    if(isUnclearQuestion(t)){
+      return Math.random() < 0.5 ? "Yes" : "No";
+    }
+
     if(looksLikeQuestion(t)){
       return [
         pick(BANK.acknowledgements),
@@ -556,9 +736,8 @@
       ].join(" ");
     }
 
-    // ✅ ONLY CHANGE FOR YOUR REQUEST:
-    // When the bot doesn't quite know how to respond, say "I'm fat"
-    return "I'm fat";
+    // If the bot doesn't know what the user wants (not a question), give 100 request choices
+    return requestChoicesText();
   }
 
   async function typeLikeBot(bubbleEl, finalText){
