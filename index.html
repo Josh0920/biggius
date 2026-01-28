@@ -290,6 +290,25 @@
     "fuck","shit","bitch","asshole","bastard","dick","pussy"
   ];
 
+  // NEW (minimal): phrases that should AUTO-ENABLE ragebait (instead of "offended")
+  const RAGE_AUTO_ON = [
+    "youre dumb","you are dumb","dumb","idiot","stupid","moron",
+    "trash","garbage","loser","shut up","cringe","sucks","worst"
+  ];
+
+  // NEW (minimal): phrases that should AUTO-DISABLE ragebait
+  const RAGE_AUTO_OFF = [
+    "sorry","my bad","i apologize","apologize",
+    "help me","can you help","please help",
+    "real question","serious question","for real",
+    "thanks","thank you"
+  ];
+
+  // NEW (minimal): "hard" stuff that triggers OFFENDED_REPLIES no matter what
+  const HARD_OFFENSE = [
+    "kys","kill yourself","go die","die"
+  ];
+
   function normalize(s){
     return s.toLowerCase()
       .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width junk
@@ -321,10 +340,55 @@
     return false;
   }
 
+  // NEW (minimal): decide if it's "hard offensive"
+  function isHardOffense(userText){
+    const t = normalize(userText);
+    if(!t) return false;
+
+    for(const h of HARD_OFFENSE){
+      if(t.includes(normalize(h))) return true;
+    }
+    // treat profanity as "hard" too
+    for(const p of PROFANITY){
+      if(t.includes(p)) return true;
+    }
+    return false;
+  }
+
+  // NEW (minimal): auto toggle ragebait silently
+  function autoRageToggle(userText){
+    const t = normalize(userText);
+    if(!t) return;
+
+    // hard offense always disables ragebait
+    if(isHardOffense(userText)){
+      RAGEBAIT = false;
+      heat = 0;
+      return;
+    }
+
+    // if user is being nice / serious, turn off
+    for(const off of RAGE_AUTO_OFF){
+      if(t.includes(normalize(off))){
+        RAGEBAIT = false;
+        heat = 0;
+        return;
+      }
+    }
+
+    // if user is poking/insulting, turn on
+    for(const on of RAGE_AUTO_ON){
+      if(t.includes(normalize(on))){
+        RAGEBAIT = true;
+        heat = Math.max(2, heat);
+        return;
+      }
+    }
+  }
+
   const OFFENDED_REPLIES = [
     "STOP IT!",
-    "HEY! YOU KNOW I'M FAT! BE NICER!.",
-    "HEY. I'M GOING TO HURT YOU.",
+    "HEY! YOU KNOW I'M FAT! BE NICER!",
     "ABSOLUTELY NOT.",
     "BRO. RELAX.",
     "I’M NOT ANSWERING THAT IF YOU’RE GONNA TALK LIKE THAT.",
@@ -409,8 +473,9 @@
 
   function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
 
+  // MINIMAL change: don't "announce" mode changes unless text explicitly provided
   function updateModePill(text){
-    modePill.textContent = text || (RAGEBAIT ? `Mode: ragebait (heat ${heat})` : "Mode: random");
+    if(text) modePill.textContent = text;
   }
 
   // Commands:
@@ -449,18 +514,27 @@
     const cmd = handleCommands(t);
     if(cmd) return cmd;
 
-    // ✅ Offensive auto-reply
-    if(isOffensive(t)){
+    // NEW: auto-toggle ragebait silently based on what user says
+    autoRageToggle(t);
+
+    // If it's "hard offense" -> offended reply
+    if(isHardOffense(t)){
       updateModePill("Mode: offended 😡");
       return pick(OFFENDED_REPLIES);
     }
 
-    // ragebait mode
+    // If it's a mild insult (offensive) and ragebait is now ON -> ragebait reply
     if(RAGEBAIT){
       if(Math.random() < 0.55) heat = clamp(heat + 1, 1, 5);
       if(heat <= 2) return pick(RAGE.soft);
       if(heat <= 4) return pick(RAGE.medium);
       return Math.random() < 0.25 ? pick(RAGE.cooldown) : pick(RAGE.spicy);
+    }
+
+    // Otherwise, if it’s offensive (but not hard) -> keep your offended replies
+    if(isOffensive(t)){
+      updateModePill("Mode: offended 😡");
+      return pick(OFFENDED_REPLIES);
     }
 
     // normal mode rules
@@ -510,22 +584,14 @@
     const placeholder = addMessage('ai', '…');
 
     try{
-      updateModePill(); // normal display before reply
       const reply = makeRandomReply(text);
       await typeLikeBot(placeholder, reply);
-      // after reply, return to normal mode label unless offended
-      if(modePill.textContent.startsWith("Mode: offended")) {
-        // keep it briefly then reset next message
-      } else {
-        updateModePill();
-      }
     } finally {
       setSending(false);
     }
   });
 
   addMessage('ai', 'Hello, my name is Frazier AI. How can I help you?');
-  updateModePill("Mode: random");
 </script>
 </body>
 </html>
