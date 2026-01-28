@@ -20,36 +20,164 @@
 
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--ink);
+      background:var(--bg);
+    }
 
-    .topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--rule);}
-    .topbar .inner{max-width:var(--max);margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .brand{display:flex;align-items:center;gap:10px;min-width:0;}
-    .mark{width:10px;height:10px;border-radius:999px;background:#000;flex:0 0 auto;}
-    .brand b{font-size:14px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-    .rightnote{font-size:12px;color:var(--muted);white-space:nowrap;}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#fff;
+      border-bottom:1px solid var(--rule);
+    }
+    .topbar .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .mark{
+      width:10px;height:10px;border-radius:999px;background:#000;
+      flex:0 0 auto;
+    }
+    .brand b{
+      font-size:14px;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .rightnote{
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
 
-    .content{max-width:var(--max);margin:0 auto;padding:18px 16px 140px;}
-    .hero{margin:10px auto 16px;border:1px solid var(--rule);border-radius:18px;overflow:hidden;background:#fff;}
+    .content{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 16px 140px;
+    }
+
+    .hero{
+      margin:10px auto 16px;
+      border:1px solid var(--rule);
+      border-radius:18px;
+      overflow:hidden;
+      background:#fff;
+    }
     .hero img{width:100%;display:block}
 
-    .hint{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.45;}
+    .hint{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
 
-    .messages{display:flex;flex-direction:column;gap:10px;}
-    .msg{display:flex;gap:10px;align-items:flex-start;}
-    .avatar{width:28px;height:28px;border-radius:999px;border:1px solid var(--rule);display:grid;place-items:center;font-size:11px;color:var(--muted);flex:0 0 auto;background:#fff;}
-    .bubble{border:1px solid var(--rule);background:var(--bubble);border-radius:16px;padding:10px 12px;font-size:15px;line-height:1.55;white-space:pre-wrap;word-break:break-word;max-width:100%;}
-    .msg.user .bubble{background:var(--bubble2);}
-    .msg.ai .avatar{background:#000;color:#fff;border-color:#000;}
+    .messages{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .msg{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .avatar{
+      width:28px;height:28px;border-radius:999px;
+      border:1px solid var(--rule);
+      display:grid;place-items:center;
+      font-size:11px;
+      color:var(--muted);
+      flex:0 0 auto;
+      background:#fff;
+    }
+    .bubble{
+      border:1px solid var(--rule);
+      background:var(--bubble);
+      border-radius:16px;
+      padding:10px 12px;
+      font-size:15px;
+      line-height:1.55;
+      white-space:pre-wrap;
+      word-break:break-word;
+      max-width:100%;
+    }
+    .msg.user .bubble{ background:var(--bubble2); }
+    .msg.ai .avatar{ background:#000; color:#fff; border-color:#000; }
 
-    .composerWrap{position:fixed;left:0;right:0;bottom:0;border-top:1px solid var(--rule);background:#fff;padding:12px 12px;}
-    .composer{max-width:var(--max);margin:0 auto;display:flex;gap:10px;align-items:flex-end;border:1px solid var(--rule);border-radius:18px;padding:10px;background:#fff;}
-    textarea{flex:1;border:none;resize:none;outline:none;font-family:var(--font);font-size:15px;line-height:1.4;min-height:42px;max-height:160px;}
-    .send{border:1px solid #000;background:#000;color:#fff;border-radius:12px;padding:10px 14px;cursor:pointer;font-weight:600;}
-    .send:disabled{opacity:.5;cursor:not-allowed;}
+    .composerWrap{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      border-top:1px solid var(--rule);
+      background:#fff;
+      padding:12px 12px;
+    }
+    .composer{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+      align-items:flex-end;
+      border:1px solid var(--rule);
+      border-radius:18px;
+      padding:10px;
+      background:#fff;
+    }
+    textarea{
+      flex:1;
+      border:none;
+      resize:none;
+      outline:none;
+      font-family:var(--font);
+      font-size:15px;
+      line-height:1.4;
+      min-height:42px;
+      max-height:160px;
+    }
+    .send{
+      border:1px solid #000;
+      background:#000;
+      color:#fff;
+      border-radius:12px;
+      padding:10px 14px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .send:disabled{ opacity:.5; cursor:not-allowed; }
 
-    .tiny{max-width:var(--max);margin:8px auto 0;padding:0 6px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-    .pill{border:1px solid var(--rule);padding:4px 8px;border-radius:999px;background:#fff;}
+    .tiny{
+      max-width:var(--max);
+      margin:8px auto 0;
+      padding:0 6px;
+      font-size:12px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      border:1px solid var(--rule);
+      padding:4px 8px;
+      border-radius:999px;
+      background:#fff;
+    }
   </style>
 </head>
 
@@ -60,7 +188,7 @@
         <div class="mark"></div>
         <b>Frazier AI</b>
       </div>
-      <div class="rightnote">Frazier AI</div>
+      <div class="rightnote">Offline demo</div>
     </div>
   </header>
 
@@ -70,8 +198,7 @@
     </div>
 
     <div class="hint">
-      Type a message below. This page calls a Supabase Edge Function for real AI replies.
-      <br><span style="font-size:12px;">If it fails, the error will show in the Mode pill.</span>
+      This is a <b>no-API</b> demo. It generates randomized responses locally (no Supabase, no OpenAI).
     </div>
 
     <div class="messages" id="messages"></div>
@@ -86,7 +213,7 @@
     <div class="tiny">
       <span class="pill">Enter = send</span>
       <span class="pill">Shift+Enter = new line</span>
-      <span class="pill" id="modePill">Mode: ready</span>
+      <span class="pill" id="modePill">Mode: random</span>
     </div>
   </footer>
 
@@ -96,11 +223,6 @@
     const input = document.getElementById('input');
     const sendBtn = document.getElementById('sendBtn');
     const modePill = document.getElementById('modePill');
-
-    const SUPABASE_CHAT_URL = "https://bvdkggyrfrnvahfywxic.supabase.co/functions/v1/chat";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2ZGtnZ3lyZnJudmFoZnl3eGljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1NzIyMDUsImV4cCI6MjA4NTE0ODIwNX0.tLRXG1kgfZkblth2gmIV8Y9AvYTcTCXbP5GcE6PD4Sg";
-
-    const history = [];
 
     function escapeHtml(str){
       return str.replace(/[&<>"']/g, m => ({
@@ -133,15 +255,15 @@
       sendBtn.textContent = isSending ? '…' : 'Send';
     }
 
-    input.addEventListener('input', () => {
-      sendBtn.disabled = !input.value.trim();
-      autoGrow(input);
-    });
-
     function autoGrow(el){
       el.style.height = 'auto';
       el.style.height = Math.min(el.scrollHeight, 160) + 'px';
     }
+
+    input.addEventListener('input', () => {
+      sendBtn.disabled = !input.value.trim();
+      autoGrow(input);
+    });
 
     input.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' && !e.shiftKey){
@@ -150,29 +272,89 @@
       }
     });
 
-    async function callBackend(userText){
-      const res = await fetch(SUPABASE_CHAT_URL, {
-        method: 'POST',
-        cache: 'no-store',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify({
-          message: userText,
-          history: history.slice(-12)
-        })
-      });
+    // --- Random-response bot (local) ---
+    const BANK = {
+      greetings: [
+        "Hey — what are we working on?",
+        "Hello. Give me the goal in one sentence.",
+        "Yo. What’s the plan?"
+      ],
+      acknowledgements: [
+        "Got it.",
+        "Okay.",
+        "Understood.",
+        "Makes sense."
+      ],
+      helpful: [
+        "Try breaking that into 3 smaller steps and start with the easiest one.",
+        "If you paste the exact text/error, I can pinpoint the issue fast.",
+        "A clean approach is: simplify first, then add features back one at a time.",
+        "If you want, I can give you a template you can copy-paste."
+      ],
+      questions: [
+        "What’s the expected output?",
+        "What have you tried so far?",
+        "Is this for desktop, mobile, or both?",
+        "Do you want it more formal or more casual?"
+      ],
+      jokes: [
+        "I’m running on vibes and random numbers right now.",
+        "No API, no problem — we ball anyway.",
+        "I’m 99% caffeine, 1% JavaScript."
+      ],
+      closers: [
+        "Want me to generate a version that looks even more like ChatGPT?",
+        "If you paste your code, I’ll point to the exact line to change.",
+        "What’s your next message going to be?"
+      ]
+    };
 
-      const raw = await res.text();
-      if(!res.ok) throw new Error(`${res.status} ${raw}`);
+    function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
 
-      let data;
-      try { data = JSON.parse(raw); }
-      catch { throw new Error(`Bad JSON from server: ${raw}`); }
+    function looksLikeQuestion(t){
+      return /\?\s*$/.test(t) || /^(who|what|when|where|why|how|can|should|do|does|is|are)\b/i.test(t.trim());
+    }
 
-      if(!data || typeof data.reply !== 'string') throw new Error(`Invalid response: ${raw}`);
-      return data.reply;
+    function randDelay(min=350, max=950){
+      return Math.floor(min + Math.random() * (max - min));
+    }
+
+    function makeRandomReply(userText){
+      const t = userText.trim();
+
+      // Slightly more "contexty" rules
+      if(/^(hi|hello|yo|hey)\b/i.test(t)) return pick(BANK.greetings);
+      if(/thank/i.test(t)) return "Anytime. Want to keep going?";
+      if(/error|bug|failed|not working|doesn't work/i.test(t)) {
+        return [
+          pick(BANK.acknowledgements),
+          "Tell me what you expected vs. what happened.",
+          pick(BANK.questions),
+          "If there’s an error message, paste it exactly."
+        ].join(" ");
+      }
+      if(looksLikeQuestion(t)){
+        return [
+          pick(BANK.acknowledgements),
+          pick(BANK.helpful),
+          pick(BANK.questions)
+        ].join(" ");
+      }
+
+      // Default: mix & match
+      const parts = [];
+      if(Math.random() < 0.7) parts.push(pick(BANK.acknowledgements));
+      if(Math.random() < 0.9) parts.push(pick(BANK.helpful));
+      if(Math.random() < 0.35) parts.push(pick(BANK.jokes));
+      if(Math.random() < 0.7) parts.push(pick(BANK.closers));
+      return parts.join(" ");
+    }
+
+    async function typeLikeBot(bubbleEl, finalText){
+      // "typing..." then replace after a short delay
+      bubbleEl.textContent = "…";
+      await new Promise(r => setTimeout(r, randDelay(450, 1100)));
+      bubbleEl.textContent = finalText;
     }
 
     form.addEventListener('submit', async (e) => {
@@ -181,28 +363,23 @@
       if(!text) return;
 
       addMessage('user', text);
-      history.push({ role: 'user', content: text });
 
       input.value = '';
       autoGrow(input);
       setSending(true);
 
-      const placeholder = addMessage('ai', '...');
+      const placeholder = addMessage('ai', '…');
 
       try{
-        modePill.textContent = "Mode: backend";
-        const reply = await callBackend(text);
-        placeholder.textContent = reply;
-        history.push({ role: 'assistant', content: reply });
-      }catch(err){
-        placeholder.textContent = "Backend error (see Mode pill).";
-        modePill.textContent = `Mode: error (${String(err.message || err)})`;
-      }finally{
+        modePill.textContent = "Mode: random";
+        const reply = makeRandomReply(text);
+        await typeLikeBot(placeholder, reply);
+      } finally {
         setSending(false);
       }
     });
 
-    addMessage('ai', "Ask me anything.");
+    addMessage('ai', "Ask me anything (random demo mode).");
   </script>
 </body>
 </html>
