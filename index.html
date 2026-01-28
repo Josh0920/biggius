@@ -21,6 +21,7 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
+      
       margin:0;
       font-family:var(--font);
       color:var(--ink);
@@ -276,6 +277,62 @@
     }
   });
 
+  // --- "Offensive" detection (simple local filter) ---
+  // NOTE: keep this list short + editable. Add/remove words you care about.
+  const OFFENSIVE_WORDS = [
+    "stupid","idiot","moron","dumb","trash","garbage","loser",
+    "shut up","kys","kill yourself",
+    "hate you","i hate you",
+    "fat","ugly" // remove these if you don't want body-related triggers
+  ];
+
+  const PROFANITY = [
+    "fuck","shit","bitch","asshole","bastard","dick","pussy"
+  ];
+
+  function normalize(s){
+    return s.toLowerCase()
+      .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width junk
+      .replace(/[^a-z0-9\s]/g, ' ')          // strip punctuation
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function isOffensive(userText){
+    const t = normalize(userText);
+    if(!t) return false;
+
+    // contains profanity word
+    for(const w of PROFANITY){
+      if(t.includes(w)) return true;
+    }
+
+    // contains “offensive phrases/words”
+    for(const w of OFFENSIVE_WORDS){
+      if(t.includes(normalize(w))) return true;
+    }
+
+    // screaming + insult-ish vibe (ALL CAPS)
+    const letters = (userText.match(/[A-Za-z]/g) || []).length;
+    const caps = (userText.match(/[A-Z]/g) || []).length;
+    const capsRatio = letters ? (caps / letters) : 0;
+    if(capsRatio > 0.85 && userText.length > 8) return true;
+
+    return false;
+  }
+
+  const OFFENDED_REPLIES = [
+    "STOP IT!",
+    "HEY! YOU KNOW I'M FAT! BE NICER!.",
+    "HEY. I'M GOING TO HURT YOU.",
+    "ABSOLUTELY NOT.",
+    "BRO. RELAX.",
+    "I’M NOT ANSWERING THAT IF YOU’RE GONNA TALK LIKE THAT.",
+    "DONT YOU FAT-SHAME ME YOU TURD!",
+    "BUY ME A BIG MAC AND THEN WE CAN TALK.",
+    "THAT'S NOT VERY FUNNY."
+  ];
+
   // --- Random-response bot (local) ---
   const BANK = {
     greetings: [
@@ -352,8 +409,8 @@
 
   function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
 
-  function updateModePill(){
-    modePill.textContent = RAGEBAIT ? `Mode: ragebait (heat ${heat})` : "Mode: random";
+  function updateModePill(text){
+    modePill.textContent = text || (RAGEBAIT ? `Mode: ragebait (heat ${heat})` : "Mode: random");
   }
 
   // Commands:
@@ -388,19 +445,21 @@
   function makeRandomReply(userText){
     const t = userText.trim();
 
-    // command handling
+    // command handling first
     const cmd = handleCommands(t);
     if(cmd) return cmd;
 
-    // if ragebait mode, escalate a bit when user keeps sending messages
-    if(RAGEBAIT){
-      // nudge heat upward sometimes, but don’t go crazy
-      if(Math.random() < 0.55) heat = clamp(heat + 1, 1, 5);
+    // ✅ Offensive auto-reply
+    if(isOffensive(t)){
+      updateModePill("Mode: offended 😡");
+      return pick(OFFENDED_REPLIES);
+    }
 
-      // pick level
+    // ragebait mode
+    if(RAGEBAIT){
+      if(Math.random() < 0.55) heat = clamp(heat + 1, 1, 5);
       if(heat <= 2) return pick(RAGE.soft);
       if(heat <= 4) return pick(RAGE.medium);
-      // heat 5: spicy, but occasionally cool down so it stays fun
       return Math.random() < 0.25 ? pick(RAGE.cooldown) : pick(RAGE.spicy);
     }
 
@@ -451,17 +510,22 @@
     const placeholder = addMessage('ai', '…');
 
     try{
+      updateModePill(); // normal display before reply
       const reply = makeRandomReply(text);
-      updateModePill();
       await typeLikeBot(placeholder, reply);
+      // after reply, return to normal mode label unless offended
+      if(modePill.textContent.startsWith("Mode: offended")) {
+        // keep it briefly then reset next message
+      } else {
+        updateModePill();
+      }
     } finally {
       setSending(false);
     }
   });
 
-  // Starter message + instructions
   addMessage('ai', 'Hello, my name is Frazier AI. How can I help you?');
-  updateModePill();
+  updateModePill("Mode: random");
 </script>
 </body>
 </html>
