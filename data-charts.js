@@ -1,6 +1,6 @@
 /* data-charts.js
    Copy-paste replacement file.
-   Purpose: verb conjugation “charts” data (Indicative only, as you’ve been doing).
+   Purpose: verb conjugation \u201Ccharts\u201D data (Indicative only, as you\u2019ve been doing).
    Person order everywhere: 1sg, 2sg, 3sg, 1pl, 2pl, 3pl
 */
 
@@ -18,63 +18,63 @@
     },
 
     verbs: {
-      "λύω": {
-        lemma: "λύω",
+      "\u03BB\u03CD\u03C9": {
+        lemma: "\u03BB\u03CD\u03C9",
         gloss: "I loose / untie / destroy",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["λύω", "λύεις", "λύει", "λύομεν", "λύετε", "λύουσι(ν)"]
+            forms: ["\u03BB\u03CD\u03C9", "\u03BB\u03CD\u03B5\u03B9\u03C2", "\u03BB\u03CD\u03B5\u03B9", "\u03BB\u03CD\u03BF\u03BC\u03B5\u03BD", "\u03BB\u03CD\u03B5\u03C4\u03B5", "\u03BB\u03CD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["λύομαι", "λύῃ", "λύεται", "λυόμεθα", "λύεσθε", "λύονται"]
+            forms: ["\u03BB\u03CD\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03CD\u1FC3", "\u03BB\u03CD\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03CD\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03CD\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔλυον", "ἔλυες", "ἔλυε(ν)", "ἐλύομεν", "ἐλύετε", "ἔλυον"]
+            forms: ["\u1F14\u03BB\u03C5\u03BF\u03BD", "\u1F14\u03BB\u03C5\u03B5\u03C2", "\u1F14\u03BB\u03C5\u03B5(\u03BD)", "\u1F10\u03BB\u03CD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03CD\u03B5\u03C4\u03B5", "\u1F14\u03BB\u03C5\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐλυόμην", "ἐλύου", "ἐλύετο", "ἐλυόμεθα", "ἐλύεσθε", "ἐλύοντο"]
+            forms: ["\u1F10\u03BB\u03C5\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BB\u03CD\u03BF\u03C5", "\u1F10\u03BB\u03CD\u03B5\u03C4\u03BF", "\u1F10\u03BB\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03CD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03CD\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["λύσω", "λύσεις", "λύσει", "λύσομεν", "λύσετε", "λύσουσι(ν)"]
+            forms: ["\u03BB\u03CD\u03C3\u03C9", "\u03BB\u03CD\u03C3\u03B5\u03B9\u03C2", "\u03BB\u03CD\u03C3\u03B5\u03B9", "\u03BB\u03CD\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BB\u03CD\u03C3\u03B5\u03C4\u03B5", "\u03BB\u03CD\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["λύσομαι", "λύσῃ", "λύσεται", "λυσόμεθα", "λύσεσθε", "λύσονται"]
+            forms: ["\u03BB\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03CD\u03C3\u1FC3", "\u03BB\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["λυθήσομαι", "λυθήσῃ", "λυθήσεται", "λυθησόμεθα", "λυθήσεσθε", "λυθήσονται"]
+            forms: ["\u03BB\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03C5\u03B8\u03AE\u03C3\u1FC3", "\u03BB\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03C5\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03C5\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03C5\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἔλυσα", "ἔλυσας", "ἔλυσε(ν)", "ἐλύσαμεν", "ἐλύσατε", "ἔλυσαν"]
+            forms: ["\u1F14\u03BB\u03C5\u03C3\u03B1", "\u1F14\u03BB\u03C5\u03C3\u03B1\u03C2", "\u1F14\u03BB\u03C5\u03C3\u03B5(\u03BD)", "\u1F10\u03BB\u03CD\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03CD\u03C3\u03B1\u03C4\u03B5", "\u1F14\u03BB\u03C5\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            forms: ["ἐλυσάμην", "ἐλύσω", "ἐλύσατο", "ἐλυσάμεθα", "ἐλύσασθε", "ἐλύσαντο"]
+            forms: ["\u1F10\u03BB\u03C5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03BB\u03CD\u03C3\u03C9", "\u1F10\u03BB\u03CD\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03BB\u03C5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03CD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03CD\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἐλύθην", "ἐλύθης", "ἐλύθη", "ἐλύθημεν", "ἐλύθητε", "ἐλύθησαν"]
+            forms: ["\u1F10\u03BB\u03CD\u03B8\u03B7\u03BD", "\u1F10\u03BB\u03CD\u03B8\u03B7\u03C2", "\u1F10\u03BB\u03CD\u03B8\u03B7", "\u1F10\u03BB\u03CD\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03CD\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03BB\u03CD\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["λέλυκα", "λέλυκας", "λέλυκε(ν)", "λελύκαμεν", "λελύκατε", "λελύκασι(ν)"]
+            forms: ["\u03BB\u03AD\u03BB\u03C5\u03BA\u03B1", "\u03BB\u03AD\u03BB\u03C5\u03BA\u03B1\u03C2", "\u03BB\u03AD\u03BB\u03C5\u03BA\u03B5(\u03BD)", "\u03BB\u03B5\u03BB\u03CD\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BB\u03B5\u03BB\u03CD\u03BA\u03B1\u03C4\u03B5", "\u03BB\u03B5\u03BB\u03CD\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative",
-            forms: ["λέλυμαι", "λέλυσαι", "λέλυται", "λελύμεθα", "λέλυσθε", "λέλυνται"]
+            forms: ["\u03BB\u03AD\u03BB\u03C5\u03BC\u03B1\u03B9", "\u03BB\u03AD\u03BB\u03C5\u03C3\u03B1\u03B9", "\u03BB\u03AD\u03BB\u03C5\u03C4\u03B1\u03B9", "\u03BB\u03B5\u03BB\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03AD\u03BB\u03C5\u03C3\u03B8\u03B5", "\u03BB\u03AD\u03BB\u03C5\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "ἀκούω": {
-        lemma: "ἀκούω",
+      "\u1F00\u03BA\u03BF\u03CD\u03C9": {
+        lemma: "\u1F00\u03BA\u03BF\u03CD\u03C9",
         gloss: "I hear",
         notes: [
           "Perfect Middle/Passive is rare in NT-style teaching, but included since you listed it."
@@ -82,1029 +82,1029 @@
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἀκούω", "ἀκούεις", "ἀκούει", "ἀκούομεν", "ἀκούετε", "ἀκούουσι(ν)"]
+            forms: ["\u1F00\u03BA\u03BF\u03CD\u03C9", "\u1F00\u03BA\u03BF\u03CD\u03B5\u03B9\u03C2", "\u1F00\u03BA\u03BF\u03CD\u03B5\u03B9", "\u1F00\u03BA\u03BF\u03CD\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03CD\u03B5\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03CD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["ἀκούομαι", "ἀκούῃ", "ἀκούεται", "ἀκουόμεθα", "ἀκούεσθε", "ἀκούονται"]
+            forms: ["\u1F00\u03BA\u03BF\u03CD\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03CD\u1FC3", "\u1F00\u03BA\u03BF\u03CD\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03CD\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03CD\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἤκουον", "ἤκουες", "ἤκουε(ν)", "ἠκούομεν", "ἠκούετε", "ἤκουον"]
+            forms: ["\u1F24\u03BA\u03BF\u03C5\u03BF\u03BD", "\u1F24\u03BA\u03BF\u03C5\u03B5\u03C2", "\u1F24\u03BA\u03BF\u03C5\u03B5(\u03BD)", "\u1F20\u03BA\u03BF\u03CD\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03B5\u03C4\u03B5", "\u1F24\u03BA\u03BF\u03C5\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἠκουόμην", "ἠκούου", "ἠκούετο", "ἠκουόμεθα", "ἠκούεσθε", "ἠκούοντο"]
+            forms: ["\u1F20\u03BA\u03BF\u03C5\u03CC\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03BF\u03C5", "\u1F20\u03BA\u03BF\u03CD\u03B5\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03CD\u03B5\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03CD\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἀκούσω", "ἀκούσεις", "ἀκούσει", "ἀκούσομεν", "ἀκούσετε", "ἀκούσουσι(ν)"]
+            forms: ["\u1F00\u03BA\u03BF\u03CD\u03C3\u03C9", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03B5\u03B9\u03C2", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03B5\u03B9", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03B5\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["ἀκούσομαι", "ἀκούσῃ", "ἀκούσεται", "ἀκουσόμεθα", "ἀκούσεσθε", "ἀκούσονται"]
+            forms: ["\u1F00\u03BA\u03BF\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03CD\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["ἀκουσθήσομαι", "ἀκουσθήσῃ", "ἀκουσθήσεται", "ἀκουσθησόμεθα", "ἀκουσθήσεσθε", "ἀκουσθήσονται"]
+            forms: ["\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἤκουσα", "ἤκουσας", "ἤκουσε(ν)", "ἠκούσαμεν", "ἠκούσατε", "ἤκουσαν"]
+            forms: ["\u1F24\u03BA\u03BF\u03C5\u03C3\u03B1", "\u1F24\u03BA\u03BF\u03C5\u03C3\u03B1\u03C2", "\u1F24\u03BA\u03BF\u03C5\u03C3\u03B5(\u03BD)", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B1\u03C4\u03B5", "\u1F24\u03BA\u03BF\u03C5\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            forms: ["ἠκουσάμην", "ἠκούσω", "ἠκούσατο", "ἠκουσάμεθα", "ἠκούσασθε", "ἠκούσαντο"]
+            forms: ["\u1F20\u03BA\u03BF\u03C5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03C9", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B1\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03C5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἠκούσθην", "ἠκούσθης", "ἠκούσθη", "ἠκούσθημεν", "ἠκούσθητε", "ἠκούσθησαν"]
+            forms: ["\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7\u03C2", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03CD\u03C3\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἀκήκοα", "ἀκήκοας", "ἀκήκοε(ν)", "ἀκηκόαμεν", "ἀκηκόατε", "ἀκήκοασι(ν)"]
+            forms: ["\u1F00\u03BA\u03AE\u03BA\u03BF\u03B1", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03B1\u03C2", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03B5(\u03BD)", "\u1F00\u03BA\u03B7\u03BA\u03CC\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03B7\u03BA\u03CC\u03B1\u03C4\u03B5", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative (rare)",
             // corrected spellings vs what you pasted earlier
-            forms: ["ἀκήκοσμαι", "ἀκήκοσαι", "ἀκήκοσται", "ἀκηκόσμεθα", "ἀκήκοσθε", "ἀκήκοσνται"]
+            forms: ["\u1F00\u03BA\u03AE\u03BA\u03BF\u03C3\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03C3\u03B1\u03B9", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03C3\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03B7\u03BA\u03CC\u03C3\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03AE\u03BA\u03BF\u03C3\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "βλέπω": {
-        lemma: "βλέπω",
+      "\u03B2\u03BB\u03AD\u03C0\u03C9": {
+        lemma: "\u03B2\u03BB\u03AD\u03C0\u03C9",
         gloss: "I see / look at",
         notes: [
-          "Important: εἶδον / ἑώρακα belong to ὁράω, not βλέπω.",
-          "So the aorist & perfect here use the βλέπ- system."
+          "Important: \u03B5\u1F36\u03B4\u03BF\u03BD / \u1F11\u03CE\u03C1\u03B1\u03BA\u03B1 belong to \u1F41\u03C1\u03AC\u03C9, not \u03B2\u03BB\u03AD\u03C0\u03C9.",
+          "So the aorist & perfect here use the \u03B2\u03BB\u03AD\u03C0- system."
         ],
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["βλέπω", "βλέπεις", "βλέπει", "βλέπομεν", "βλέπετε", "βλέπουσι(ν)"]
+            forms: ["\u03B2\u03BB\u03AD\u03C0\u03C9", "\u03B2\u03BB\u03AD\u03C0\u03B5\u03B9\u03C2", "\u03B2\u03BB\u03AD\u03C0\u03B5\u03B9", "\u03B2\u03BB\u03AD\u03C0\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03BB\u03AD\u03C0\u03B5\u03C4\u03B5", "\u03B2\u03BB\u03AD\u03C0\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["βλέπομαι", "βλέπῃ", "βλέπεται", "βλεπόμεθα", "βλέπεσθε", "βλέπονται"]
+            forms: ["\u03B2\u03BB\u03AD\u03C0\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03BB\u03AD\u03C0\u1FC3", "\u03B2\u03BB\u03AD\u03C0\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03BB\u03B5\u03C0\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03BB\u03AD\u03C0\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03BB\u03AD\u03C0\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔβλεπον", "ἔβλεπες", "ἔβλεπε(ν)", "ἐβλέπομεν", "ἐβλέπετε", "ἔβλεπον"]
+            forms: ["\u1F14\u03B2\u03BB\u03B5\u03C0\u03BF\u03BD", "\u1F14\u03B2\u03BB\u03B5\u03C0\u03B5\u03C2", "\u1F14\u03B2\u03BB\u03B5\u03C0\u03B5(\u03BD)", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03B5\u03C4\u03B5", "\u1F14\u03B2\u03BB\u03B5\u03C0\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐβλεπόμην", "ἐβλέπου", "ἐβλέπετο", "ἐβλεπόμεθα", "ἐβλέπεσθε", "ἐβλέποντο"]
+            forms: ["\u1F10\u03B2\u03BB\u03B5\u03C0\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03BF\u03C5", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03B5\u03C4\u03BF", "\u1F10\u03B2\u03BB\u03B5\u03C0\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B2\u03BB\u03AD\u03C0\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["βλέψω", "βλέψεις", "βλέψει", "βλέψομεν", "βλέψετε", "βλέψουσι(ν)"]
+            forms: ["\u03B2\u03BB\u03AD\u03C8\u03C9", "\u03B2\u03BB\u03AD\u03C8\u03B5\u03B9\u03C2", "\u03B2\u03BB\u03AD\u03C8\u03B5\u03B9", "\u03B2\u03BB\u03AD\u03C8\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03BB\u03AD\u03C8\u03B5\u03C4\u03B5", "\u03B2\u03BB\u03AD\u03C8\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["βλέψομαι", "βλέψῃ", "βλέψεται", "βλεψόμεθα", "βλέψεσθε", "βλέψονται"]
+            forms: ["\u03B2\u03BB\u03AD\u03C8\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03BB\u03AD\u03C8\u1FC3", "\u03B2\u03BB\u03AD\u03C8\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03BB\u03B5\u03C8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03BB\u03AD\u03C8\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03BB\u03AD\u03C8\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["βλεφθήσομαι", "βλεφθήσῃ", "βλεφθήσεται", "βλεφθησόμεθα", "βλεφθήσεσθε", "βλεφθήσονται"]
+            forms: ["\u03B2\u03BB\u03B5\u03C6\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03BB\u03B5\u03C6\u03B8\u03AE\u03C3\u1FC3", "\u03B2\u03BB\u03B5\u03C6\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03BB\u03B5\u03C6\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03BB\u03B5\u03C6\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03BB\u03B5\u03C6\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἔβλεψα", "ἔβλεψας", "ἔβλεψε(ν)", "ἐβλέψαμεν", "ἐβλέψατε", "ἔβλεψαν"]
+            forms: ["\u1F14\u03B2\u03BB\u03B5\u03C8\u03B1", "\u1F14\u03B2\u03BB\u03B5\u03C8\u03B1\u03C2", "\u1F14\u03B2\u03BB\u03B5\u03C8\u03B5(\u03BD)", "\u1F10\u03B2\u03BB\u03AD\u03C8\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03BB\u03AD\u03C8\u03B1\u03C4\u03B5", "\u1F14\u03B2\u03BB\u03B5\u03C8\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative (rare)",
-            // This perfect is much less common than ἑώρακα (ὁράω), but included as a “system” form.
-            forms: ["βέβλεφα", "βέβλεφας", "βέβλεφε(ν)", "βεβλέφαμεν", "βεβλέφατε", "βεβλέφασι(ν)"]
+            // This perfect is much less common than \u1F11\u03CE\u03C1\u03B1\u03BA\u03B1 (\u1F41\u03C1\u03AC\u03C9), but included as a \u201Csystem\u201D form.
+            forms: ["\u03B2\u03AD\u03B2\u03BB\u03B5\u03C6\u03B1", "\u03B2\u03AD\u03B2\u03BB\u03B5\u03C6\u03B1\u03C2", "\u03B2\u03AD\u03B2\u03BB\u03B5\u03C6\u03B5(\u03BD)", "\u03B2\u03B5\u03B2\u03BB\u03AD\u03C6\u03B1\u03BC\u03B5\u03BD", "\u03B2\u03B5\u03B2\u03BB\u03AD\u03C6\u03B1\u03C4\u03B5", "\u03B2\u03B5\u03B2\u03BB\u03AD\u03C6\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "ἔχω": {
-        lemma: "ἔχω",
+      "\u1F14\u03C7\u03C9": {
+        lemma: "\u1F14\u03C7\u03C9",
         gloss: "I have / hold",
         notes: ["Perfect middle/passive is usually not taught; omitted here on purpose."],
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἔχω", "ἔχεις", "ἔχει", "ἔχομεν", "ἔχετε", "ἔχουσι(ν)"]
+            forms: ["\u1F14\u03C7\u03C9", "\u1F14\u03C7\u03B5\u03B9\u03C2", "\u1F14\u03C7\u03B5\u03B9", "\u1F14\u03C7\u03BF\u03BC\u03B5\u03BD", "\u1F14\u03C7\u03B5\u03C4\u03B5", "\u1F14\u03C7\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["ἔχομαι", "ἔχῃ", "ἔχεται", "ἐχόμεθα", "ἔχεσθε", "ἔχονται"]
+            forms: ["\u1F14\u03C7\u03BF\u03BC\u03B1\u03B9", "\u1F14\u03C7\u1FC3", "\u1F14\u03C7\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["εἶχον", "εἶχες", "εἶχε(ν)", "εἴχομεν", "εἴχετε", "εἶχον"]
+            forms: ["\u03B5\u1F36\u03C7\u03BF\u03BD", "\u03B5\u1F36\u03C7\u03B5\u03C2", "\u03B5\u1F36\u03C7\u03B5(\u03BD)", "\u03B5\u1F34\u03C7\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F34\u03C7\u03B5\u03C4\u03B5", "\u03B5\u1F36\u03C7\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["εἰχόμην", "εἴχου", "εἴχετο", "εἰχόμεθα", "εἴχεσθε", "εἴχοντο"]
+            forms: ["\u03B5\u1F30\u03C7\u03CC\u03BC\u03B7\u03BD", "\u03B5\u1F34\u03C7\u03BF\u03C5", "\u03B5\u1F34\u03C7\u03B5\u03C4\u03BF", "\u03B5\u1F30\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B5\u1F34\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03B5\u1F34\u03C7\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἕξω", "ἕξεις", "ἕξει", "ἕξομεν", "ἕξετε", "ἕξουσι(ν)"]
+            forms: ["\u1F15\u03BE\u03C9", "\u1F15\u03BE\u03B5\u03B9\u03C2", "\u1F15\u03BE\u03B5\u03B9", "\u1F15\u03BE\u03BF\u03BC\u03B5\u03BD", "\u1F15\u03BE\u03B5\u03C4\u03B5", "\u1F15\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["ἕξομαι", "ἕξῃ", "ἕξεται", "ἑξόμεθα", "ἕξεσθε", "ἕξονται"]
+            forms: ["\u1F15\u03BE\u03BF\u03BC\u03B1\u03B9", "\u1F15\u03BE\u1FC3", "\u1F15\u03BE\u03B5\u03C4\u03B1\u03B9", "\u1F11\u03BE\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F15\u03BE\u03B5\u03C3\u03B8\u03B5", "\u1F15\u03BE\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔσχον", "ἔσχες", "ἔσχε(ν)", "ἔσχομεν", "ἔσχετε", "ἔσχον"]
+            forms: ["\u1F14\u03C3\u03C7\u03BF\u03BD", "\u1F14\u03C3\u03C7\u03B5\u03C2", "\u1F14\u03C3\u03C7\u03B5(\u03BD)", "\u1F14\u03C3\u03C7\u03BF\u03BC\u03B5\u03BD", "\u1F14\u03C3\u03C7\u03B5\u03C4\u03B5", "\u1F14\u03C3\u03C7\u03BF\u03BD"]
           },
           aorist_middle_indicative: {
             label: "Aorist Middle Indicative",
-            forms: ["ἐσχόμην", "ἔσχου", "ἔσχετο", "ἐσχόμεθα", "ἔσχεσθε", "ἔσχοντο"]
+            forms: ["\u1F10\u03C3\u03C7\u03CC\u03BC\u03B7\u03BD", "\u1F14\u03C3\u03C7\u03BF\u03C5", "\u1F14\u03C3\u03C7\u03B5\u03C4\u03BF", "\u1F10\u03C3\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03C3\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03C3\u03C7\u03BF\u03BD\u03C4\u03BF"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἔσχηκα", "ἔσχηκας", "ἔσχηκε(ν)", "ἐσχήκαμεν", "ἐσχήκατε", "ἔσχηκασι(ν)"]
+            forms: ["\u1F14\u03C3\u03C7\u03B7\u03BA\u03B1", "\u1F14\u03C3\u03C7\u03B7\u03BA\u03B1\u03C2", "\u1F14\u03C3\u03C7\u03B7\u03BA\u03B5(\u03BD)", "\u1F10\u03C3\u03C7\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C3\u03C7\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F14\u03C3\u03C7\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "λέγω": {
-        lemma: "λέγω",
+      "\u03BB\u03AD\u03B3\u03C9": {
+        lemma: "\u03BB\u03AD\u03B3\u03C9",
         gloss: "I say / speak",
-        notes: ["Aorist Middle is usually omitted; keeping only the standard εἶπον aorist active."],
+        notes: ["Aorist Middle is usually omitted; keeping only the standard \u03B5\u1F36\u03C0\u03BF\u03BD aorist active."],
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["λέγω", "λέγεις", "λέγει", "λέγομεν", "λέγετε", "λέγουσι(ν)"]
+            forms: ["\u03BB\u03AD\u03B3\u03C9", "\u03BB\u03AD\u03B3\u03B5\u03B9\u03C2", "\u03BB\u03AD\u03B3\u03B5\u03B9", "\u03BB\u03AD\u03B3\u03BF\u03BC\u03B5\u03BD", "\u03BB\u03AD\u03B3\u03B5\u03C4\u03B5", "\u03BB\u03AD\u03B3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["λέγομαι", "λέγῃ", "λέγεται", "λεγόμεθα", "λέγεσθε", "λέγονται"]
+            forms: ["\u03BB\u03AD\u03B3\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03AD\u03B3\u1FC3", "\u03BB\u03AD\u03B3\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03B5\u03B3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03AD\u03B3\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03AD\u03B3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔλεγον", "ἔλεγες", "ἔλεγε(ν)", "ἐλέγομεν", "ἐλέγετε", "ἔλεγον"]
+            forms: ["\u1F14\u03BB\u03B5\u03B3\u03BF\u03BD", "\u1F14\u03BB\u03B5\u03B3\u03B5\u03C2", "\u1F14\u03BB\u03B5\u03B3\u03B5(\u03BD)", "\u1F10\u03BB\u03AD\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03AD\u03B3\u03B5\u03C4\u03B5", "\u1F14\u03BB\u03B5\u03B3\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐλεγόμην", "ἐλέγου", "ἐλέγετο", "ἐλεγόμεθα", "ἐλέγεσθε", "ἐλέγοντο"]
+            forms: ["\u1F10\u03BB\u03B5\u03B3\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BB\u03AD\u03B3\u03BF\u03C5", "\u1F10\u03BB\u03AD\u03B3\u03B5\u03C4\u03BF", "\u1F10\u03BB\u03B5\u03B3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03AD\u03B3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03AD\u03B3\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἐρῶ", "ἐρεῖς", "ἐρεῖ", "ἐροῦμεν", "ἐρεῖτε", "ἐροῦσι(ν)"]
+            forms: ["\u1F10\u03C1\u1FF6", "\u1F10\u03C1\u03B5\u1FD6\u03C2", "\u1F10\u03C1\u03B5\u1FD6", "\u1F10\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["ἐροῦμαι", "ἐρῇ", "ἐρεῖται", "ἐρούμεθα", "ἐρεῖσθε", "ἐροῦνται"]
+            forms: ["\u1F10\u03C1\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F10\u03C1\u1FC7", "\u1F10\u03C1\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C1\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03C1\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["ῥηθήσομαι", "ῥηθήσῃ", "ῥηθήσεται", "ῥηθησόμεθα", "ῥηθήσεσθε", "ῥηθήσονται"]
+            forms: ["\u1FE5\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1FE5\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1FE5\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1FE5\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1FE5\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1FE5\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["εἶπον", "εἶπες", "εἶπε(ν)", "εἴπομεν", "εἴπετε", "εἶπον"]
+            forms: ["\u03B5\u1F36\u03C0\u03BF\u03BD", "\u03B5\u1F36\u03C0\u03B5\u03C2", "\u03B5\u1F36\u03C0\u03B5(\u03BD)", "\u03B5\u1F34\u03C0\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F34\u03C0\u03B5\u03C4\u03B5", "\u03B5\u1F36\u03C0\u03BF\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["εἴρηκα", "εἴρηκας", "εἴρηκε(ν)", "εἰρήκαμεν", "εἰρήκατε", "εἴρηκασι(ν)"]
+            forms: ["\u03B5\u1F34\u03C1\u03B7\u03BA\u03B1", "\u03B5\u1F34\u03C1\u03B7\u03BA\u03B1\u03C2", "\u03B5\u1F34\u03C1\u03B7\u03BA\u03B5(\u03BD)", "\u03B5\u1F30\u03C1\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B5\u1F30\u03C1\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03B5\u1F34\u03C1\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative",
-            forms: ["εἴρημαι", "εἴρησαι", "εἴρηται", "εἰρήμεθα", "εἴρησθε", "εἴρηνται"]
+            forms: ["\u03B5\u1F34\u03C1\u03B7\u03BC\u03B1\u03B9", "\u03B5\u1F34\u03C1\u03B7\u03C3\u03B1\u03B9", "\u03B5\u1F34\u03C1\u03B7\u03C4\u03B1\u03B9", "\u03B5\u1F30\u03C1\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03B5\u1F34\u03C1\u03B7\u03C3\u03B8\u03B5", "\u03B5\u1F34\u03C1\u03B7\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "πιστεύω": {
-        lemma: "πιστεύω",
+      "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C9": {
+        lemma: "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C9",
         gloss: "I believe / trust",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["πιστεύω", "πιστεύεις", "πιστεύει", "πιστεύομεν", "πιστεύετε", "πιστεύουσι(ν)"]
+            forms: ["\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03B9\u03C2", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C4\u03B5", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["πιστεύομαι", "πιστεύῃ", "πιστεύεται", "πιστευόμεθα", "πιστεύεσθε", "πιστεύονται"]
+            forms: ["\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u1FC3", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐπίστευον", "ἐπίστευες", "ἐπίστευε(ν)", "ἐπιστεύομεν", "ἐπιστεύετε", "ἐπίστευον"]
+            forms: ["\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BF\u03BD", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03B5\u03C2", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03B5(\u03BD)", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C4\u03B5", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐπιστευόμην", "ἐπιστεύου", "ἐπιστεύετο", "ἐπιστευόμεθα", "ἐπιστεύεσθε", "ἐπιστεύοντο"]
+            forms: ["\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03C5", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C4\u03BF", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["πιστεύσω", "πιστεύσεις", "πιστεύσει", "πιστεύσομεν", "πιστεύσετε", "πιστεύσουσι(ν)"]
+            forms: ["\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03C9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B5\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["πιστεύσομαι", "πιστεύσῃ", "πιστεύσεται", "πιστευσόμεθα", "πιστεύσεσθε", "πιστεύσονται"]
+            forms: ["\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u1FC3", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["πιστευθήσομαι", "πιστευθήσῃ", "πιστευθήσεται", "πιστευθησόμεθα", "πιστευθήσεσθε", "πιστευθήσονται"]
+            forms: ["\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐπίστευσα", "ἐπίστευσας", "ἐπίστευσε(ν)", "ἐπιστεύσαμεν", "ἐπιστεύσατε", "ἐπίστευσαν"]
+            forms: ["\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B1", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B1\u03C2", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B5(\u03BD)", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            // corrected 2sg from your pasted “ἐπίστευσω” → “ἐπιστεύσω”
-            forms: ["ἐπιστευσάμην", "ἐπιστεύσω", "ἐπιστεύσατο", "ἐπιστευσάμεθα", "ἐπιστεύσασθε", "ἐπιστεύσαντο"]
+            // corrected 2sg from your pasted \u201C\u1F10\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03C9\u201D \u2192 \u201C\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03C9\u201D
+            forms: ["\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03C9", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03C5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἐπιστεύθην", "ἐπιστεύθης", "ἐπιστεύθη", "ἐπιστεύθημεν", "ἐπιστεύθητε", "ἐπιστεύθησαν"]
+            forms: ["\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7\u03C2", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["πεπίστευκα", "πεπίστευκας", "πεπίστευκε(ν)", "πεπιστεύκαμεν", "πεπιστεύκατε", "πεπίστευκασι(ν)"]
+            forms: ["\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BA\u03B1", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BA\u03B1\u03C2", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative",
-            forms: ["πεπίστευμαι", "πεπίστευσαι", "πεπίστευται", "πεπιστεύμεθα", "πεπίστευσθε", "πεπίστευνται"]
+            forms: ["\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C0\u03AF\u03C3\u03C4\u03B5\u03C5\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "ἀγαπάω": {
-        lemma: "ἀγαπάω",
-        gloss: "I love / cherish (α-contract)",
+      "\u1F00\u03B3\u03B1\u03C0\u03AC\u03C9": {
+        lemma: "\u1F00\u03B3\u03B1\u03C0\u03AC\u03C9",
+        gloss: "I love / cherish (\u03B1-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἀγαπῶ", "ἀγαπᾷς", "ἀγαπᾷ", "ἀγαπῶμεν", "ἀγαπᾶτε", "ἀγαπῶσι(ν)"]
+            forms: ["\u1F00\u03B3\u03B1\u03C0\u1FF6", "\u1F00\u03B3\u03B1\u03C0\u1FB7\u03C2", "\u1F00\u03B3\u03B1\u03C0\u1FB7", "\u1F00\u03B3\u03B1\u03C0\u1FF6\u03BC\u03B5\u03BD", "\u1F00\u03B3\u03B1\u03C0\u1FB6\u03C4\u03B5", "\u1F00\u03B3\u03B1\u03C0\u1FF6\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["ἀγαπῶμαι", "ἀγαπᾷ", "ἀγαπᾶται", "ἀγαπώμεθα", "ἀγαπᾶσθε", "ἀγαπῶνται"]
+            forms: ["\u1F00\u03B3\u03B1\u03C0\u1FF6\u03BC\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u1FB7", "\u1F00\u03B3\u03B1\u03C0\u1FB6\u03C4\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03B3\u03B1\u03C0\u1FB6\u03C3\u03B8\u03B5", "\u1F00\u03B3\u03B1\u03C0\u1FF6\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἠγάπων", "ἠγάπας", "ἠγάπα", "ἠγαπῶμεν", "ἠγαπᾶτε", "ἠγάπων"]
+            forms: ["\u1F20\u03B3\u03AC\u03C0\u03C9\u03BD", "\u1F20\u03B3\u03AC\u03C0\u03B1\u03C2", "\u1F20\u03B3\u03AC\u03C0\u03B1", "\u1F20\u03B3\u03B1\u03C0\u1FF6\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B1\u03C0\u1FB6\u03C4\u03B5", "\u1F20\u03B3\u03AC\u03C0\u03C9\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἠγαπώμην", "ἠγάπου", "ἠγαπᾶτο", "ἠγαπώμεθα", "ἠγαπᾶσθε", "ἠγαπῶντο"]
+            forms: ["\u1F20\u03B3\u03B1\u03C0\u03CE\u03BC\u03B7\u03BD", "\u1F20\u03B3\u03AC\u03C0\u03BF\u03C5", "\u1F20\u03B3\u03B1\u03C0\u1FB6\u03C4\u03BF", "\u1F20\u03B3\u03B1\u03C0\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03B3\u03B1\u03C0\u1FB6\u03C3\u03B8\u03B5", "\u1F20\u03B3\u03B1\u03C0\u1FF6\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἀγαπήσω", "ἀγαπήσεις", "ἀγαπήσει", "ἀγαπήσομεν", "ἀγαπήσετε", "ἀγαπήσουσι(ν)"]
+            forms: ["\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03C9", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03B5\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["ἀγαπήσομαι", "ἀγαπήσῃ", "ἀγαπήσεται", "ἀγαπησόμεθα", "ἀγαπήσεσθε", "ἀγαπήσονται"]
+            forms: ["\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u1FC3", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03B3\u03B1\u03C0\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["ἀγαπηθήσομαι", "ἀγαπηθήσῃ", "ἀγαπηθήσεται", "ἀγαπηθησόμεθα", "ἀγαπηθήσεσθε", "ἀγαπηθήσονται"]
+            forms: ["\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03B3\u03B1\u03C0\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἠγάπησα", "ἠγάπησας", "ἠγάπησε(ν)", "ἠγαπήσαμεν", "ἠγαπήσατε", "ἠγάπησαν"]
+            forms: ["\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B1", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B1\u03C2", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B5(\u03BD)", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            forms: ["ἠγαπησάμην", "ἠγαπήσω", "ἠγαπήσατο", "ἠγαπησάμεθα", "ἠγαπήσασθε", "ἠγαπήσαντο"]
+            forms: ["\u1F20\u03B3\u03B1\u03C0\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03C9", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F20\u03B3\u03B1\u03C0\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἠγαπήθην", "ἠγαπήθης", "ἠγαπήθη", "ἠγαπήθημεν", "ἠγαπήθητε", "ἠγαπήθησαν"]
+            forms: ["\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7\u03BD", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7\u03C2", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            // vowel-initial reduplication by lengthening: ἀ- → ἠ-
-            forms: ["ἠγάπηκα", "ἠγάπηκας", "ἠγάπηκε(ν)", "ἠγαπήκαμεν", "ἠγαπήκατε", "ἠγάπηκασι(ν)"]
+            // vowel-initial reduplication by lengthening: \u1F00- \u2192 \u1F20-
+            forms: ["\u1F20\u03B3\u03AC\u03C0\u03B7\u03BA\u03B1", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03BA\u03B1\u03C2", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03BA\u03B5(\u03BD)", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative",
-            forms: ["ἠγάπημαι", "ἠγάπησαι", "ἠγάπηται", "ἠγαπήμεθα", "ἠγάπησθε", "ἠγάπηνται"]
+            forms: ["\u1F20\u03B3\u03AC\u03C0\u03B7\u03BC\u03B1\u03B9", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B1\u03B9", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C4\u03B1\u03B9", "\u1F20\u03B3\u03B1\u03C0\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03C3\u03B8\u03B5", "\u1F20\u03B3\u03AC\u03C0\u03B7\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "ζητέω": {
-        lemma: "ζητέω",
-        gloss: "I seek / look for / desire (ε-contract)",
+      "\u03B6\u03B7\u03C4\u03AD\u03C9": {
+        lemma: "\u03B6\u03B7\u03C4\u03AD\u03C9",
+        gloss: "I seek / look for / desire (\u03B5-contract)",
         charts: {
-          present_active_indicative: { label: "Present Active Indicative", forms: ["ζητῶ", "ζητεῖς", "ζητεῖ", "ζητοῦμεν", "ζητεῖτε", "ζητοῦσι(ν)"] },
-          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["ζητοῦμαι", "ζητεῖ", "ζητεῖται", "ζητούμεθα", "ζητεῖσθε", "ζητοῦνται"] },
-          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["ἐζήτουν", "ἐζήτεις", "ἐζήτει", "ἐζητοῦμεν", "ἐζητεῖτε", "ἐζήτουν"] },
-          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["ἐζητούμην", "ἐζητοῦ", "ἐζητεῖτο", "ἐζητούμεθα", "ἐζητεῖσθε", "ἐζητοῦντο"] },
-          future_active_indicative: { label: "Future Active Indicative", forms: ["ζητήσω", "ζητήσεις", "ζητήσει", "ζητήσομεν", "ζητήσετε", "ζητήσουσι(ν)"] },
-          future_middle_indicative: { label: "Future Middle Indicative", forms: ["ζητήσομαι", "ζητήσῃ", "ζητήσεται", "ζητησόμεθα", "ζητήσεσθε", "ζητήσονται"] },
-          future_passive_indicative: { label: "Future Passive Indicative", forms: ["ζητηθήσομαι", "ζητηθήσῃ", "ζητηθήσεται", "ζητηθησόμεθα", "ζητηθήσεσθε", "ζητηθήσονται"] },
-          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["ἐζήτησα", "ἐζήτησας", "ἐζήτησε(ν)", "ἐζητήσαμεν", "ἐζητήσατε", "ἐζήτησαν"] },
-          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["ἐζητησάμην", "ἐζητήσω", "ἐζητήσατο", "ἐζητησάμεθα", "ἐζητήσασθε", "ἐζητήσαντο"] },
-          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["ἐζητήθην", "ἐζητήθης", "ἐζητήθη", "ἐζητήθημεν", "ἐζητήθητε", "ἐζητήθησαν"] },
-          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["ἐζήτηκα", "ἐζήτηκας", "ἐζήτηκε(ν)", "ἐζητήκαμεν", "ἐζητήκατε", "ἐζήτηκασι(ν)"] },
-          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["ἐζήτημαι", "ἐζήτησαι", "ἐζήτηται", "ἐζητήμεθα", "ἐζήτησθε", "ἐζήτηνται"] }
+          present_active_indicative: { label: "Present Active Indicative", forms: ["\u03B6\u03B7\u03C4\u1FF6", "\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C2", "\u03B6\u03B7\u03C4\u03B5\u1FD6", "\u03B6\u03B7\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03B6\u03B7\u03C4\u03BF\u1FE6\u03C3\u03B9(\u03BD)"] },
+          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["\u03B6\u03B7\u03C4\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03B5\u1FD6", "\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03B6\u03B7\u03C4\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"] },
+          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["\u1F10\u03B6\u03AE\u03C4\u03BF\u03C5\u03BD", "\u1F10\u03B6\u03AE\u03C4\u03B5\u03B9\u03C2", "\u1F10\u03B6\u03AE\u03C4\u03B5\u03B9", "\u1F10\u03B6\u03B7\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03B6\u03AE\u03C4\u03BF\u03C5\u03BD"] },
+          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["\u1F10\u03B6\u03B7\u03C4\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03BF\u1FE6", "\u1F10\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03B6\u03B7\u03C4\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B6\u03B7\u03C4\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03B6\u03B7\u03C4\u03BF\u1FE6\u03BD\u03C4\u03BF"] },
+          future_active_indicative: { label: "Future Active Indicative", forms: ["\u03B6\u03B7\u03C4\u03AE\u03C3\u03C9", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03B5\u03B9", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"] },
+          future_middle_indicative: { label: "Future Middle Indicative", forms: ["\u03B6\u03B7\u03C4\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03AE\u03C3\u1FC3", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B6\u03B7\u03C4\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          future_passive_indicative: { label: "Future Passive Indicative", forms: ["\u03B6\u03B7\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03B6\u03B7\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B6\u03B7\u03C4\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B6\u03B7\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B6\u03B7\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B1", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B1\u03BD"] },
+          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["\u1F10\u03B6\u03B7\u03C4\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03C9", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03B6\u03B7\u03C4\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"] },
+          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"] },
+          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["\u1F10\u03B6\u03AE\u03C4\u03B7\u03BA\u03B1", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03BA\u03B1\u03C2", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03BA\u03B5(\u03BD)", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"] },
+          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["\u1F10\u03B6\u03AE\u03C4\u03B7\u03BC\u03B1\u03B9", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B1\u03B9", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C4\u03B1\u03B9", "\u1F10\u03B6\u03B7\u03C4\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03C3\u03B8\u03B5", "\u1F10\u03B6\u03AE\u03C4\u03B7\u03BD\u03C4\u03B1\u03B9"] }
         }
       },
 
-      "καλέω": {
-        lemma: "καλέω",
-        gloss: "I call / invite / name (ε-contract)",
+      "\u03BA\u03B1\u03BB\u03AD\u03C9": {
+        lemma: "\u03BA\u03B1\u03BB\u03AD\u03C9",
+        gloss: "I call / invite / name (\u03B5-contract)",
         charts: {
-          present_active_indicative: { label: "Present Active Indicative", forms: ["καλῶ", "καλεῖς", "καλεῖ", "καλοῦμεν", "καλεῖτε", "καλοῦσι(ν)"] },
-          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["καλοῦμαι", "καλεῖ", "καλεῖται", "καλούμεθα", "καλεῖσθε", "καλοῦνται"] },
-          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["ἐκάλουν", "ἐκάλεις", "ἐκάλει", "ἐκαλοῦμεν", "ἐκαλεῖτε", "ἐκάλουν"] },
-          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["ἐκαλούμην", "ἐκαλοῦ", "ἐκαλεῖτο", "ἐκαλούμεθα", "ἐκαλεῖσθε", "ἐκαλοῦντο"] },
-          future_active_indicative: { label: "Future Active Indicative", forms: ["καλέσω", "καλέσεις", "καλέσει", "καλέσομεν", "καλέσετε", "καλέσουσι(ν)"] },
-          future_middle_indicative: { label: "Future Middle Indicative", forms: ["καλέσομαι", "καλέσῃ", "καλέσεται", "καλεσόμεθα", "καλέσεσθε", "καλέσονται"] },
-          future_passive_indicative: { label: "Future Passive Indicative", forms: ["κληθήσομαι", "κληθήσῃ", "κληθήσεται", "κληθησόμεθα", "κληθήσεσθε", "κληθήσονται"] },
-          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["ἐκάλεσα", "ἐκάλεσας", "ἐκάλεσε(ν)", "ἐκαλέσαμεν", "ἐκαλέσατε", "ἐκάλεσαν"] },
-          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["ἐκαλεσάμην", "ἐκάλεσω", "ἐκαλέσατο", "ἐκαλεσάμεθα", "ἐκαλέσασθε", "ἐκαλέσαντο"] },
-          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["ἐκλήθην", "ἐκλήθης", "ἐκλήθη", "ἐκλήθημεν", "ἐκλήθητε", "ἐκλήθησαν"] },
-          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["κέκληκα", "κέκληκας", "κέκληκε(ν)", "κεκλήκαμεν", "κεκλήκατε", "κέκληκασι(ν)"] },
-          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["κέκλημαι", "κέκλησαι", "κέκληται", "κεκλήμεθα", "κέκλησθε", "κέκληνται"] }
+          present_active_indicative: { label: "Present Active Indicative", forms: ["\u03BA\u03B1\u03BB\u1FF6", "\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u03BA\u03B1\u03BB\u03B5\u1FD6", "\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03BA\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"] },
+          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03BB\u03B5\u1FD6", "\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"] },
+          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["\u1F10\u03BA\u03AC\u03BB\u03BF\u03C5\u03BD", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03B9\u03C2", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03B9", "\u1F10\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03BA\u03AC\u03BB\u03BF\u03C5\u03BD"] },
+          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["\u1F10\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03BA\u03B1\u03BB\u03BF\u1FE6", "\u1F10\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03BF"] },
+          future_active_indicative: { label: "Future Active Indicative", forms: ["\u03BA\u03B1\u03BB\u03AD\u03C3\u03C9", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03B9\u03C2", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03B9", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C4\u03B5", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"] },
+          future_middle_indicative: { label: "Future Middle Indicative", forms: ["\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03BB\u03AD\u03C3\u1FC3", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03BB\u03B5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          future_passive_indicative: { label: "Future Passive Indicative", forms: ["\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03BB\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["\u1F10\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1\u03C2", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03C3\u03B5(\u03BD)", "\u1F10\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1\u03BD"] },
+          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["\u1F10\u03BA\u03B1\u03BB\u03B5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03BA\u03AC\u03BB\u03B5\u03C3\u03C9", "\u1F10\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03BA\u03B1\u03BB\u03B5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03BD\u03C4\u03BF"] },
+          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7", "\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03BA\u03BB\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"] },
+          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["\u03BA\u03AD\u03BA\u03BB\u03B7\u03BA\u03B1", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03BA\u03B1\u03C2", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u03BA\u03B5\u03BA\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BA\u03B5\u03BA\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"] },
+          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["\u03BA\u03AD\u03BA\u03BB\u03B7\u03BC\u03B1\u03B9", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03C3\u03B1\u03B9", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03C4\u03B1\u03B9", "\u03BA\u03B5\u03BA\u03BB\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03C3\u03B8\u03B5", "\u03BA\u03AD\u03BA\u03BB\u03B7\u03BD\u03C4\u03B1\u03B9"] }
         }
       },
 
-      "λαλέω": {
-        lemma: "λαλέω",
-        gloss: "I speak / talk / say (ε-contract)",
+      "\u03BB\u03B1\u03BB\u03AD\u03C9": {
+        lemma: "\u03BB\u03B1\u03BB\u03AD\u03C9",
+        gloss: "I speak / talk / say (\u03B5-contract)",
         charts: {
-          present_active_indicative: { label: "Present Active Indicative", forms: ["λαλῶ", "λαλεῖς", "λαλεῖ", "λαλοῦμεν", "λαλεῖτε", "λαλοῦσι(ν)"] },
-          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["λαλοῦμαι", "λαλεῖ", "λαλεῖται", "λαλούμεθα", "λαλεῖσθε", "λαλοῦνται"] },
-          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["ἐλάλουν", "ἐλάλεις", "ἐλάλει", "ἐλαλοῦμεν", "ἐλαλεῖτε", "ἐλάλουν"] },
-          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["ἐλαλούμην", "ἐλαλοῦ", "ἐλαλεῖτο", "ἐλαλούμεθα", "ἐλαλεῖσθε", "ἐλαλοῦντο"] },
-          future_active_indicative: { label: "Future Active Indicative", forms: ["λαλήσω", "λαλήσεις", "λαλήσει", "λαλήσομεν", "λαλήσετε", "λαλήσουσι(ν)"] },
-          future_middle_indicative: { label: "Future Middle Indicative", forms: ["λαλήσομαι", "λαλήσῃ", "λαλήσεται", "λαλησόμεθα", "λαλήσεσθε", "λαλήσονται"] },
-          future_passive_indicative: { label: "Future Passive Indicative", forms: ["λαληθήσομαι", "λαληθήσῃ", "λαληθήσεται", "λαληθησόμεθα", "λαληθήσεσθε", "λαληθήσονται"] },
-          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["ἐλάλησα", "ἐλάλησας", "ἐλάλησε(ν)", "ἐλαλήσαμεν", "ἐλαλήσατε", "ἐλάλησαν"] },
-          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["ἐλαλησάμην", "ἐλάλησω", "ἐλαλήσατο", "ἐλαλησάμεθα", "ἐλαλήσασθε", "ἐλαλήσαντο"] },
-          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["ἐλαλήθην", "ἐλαλήθης", "ἐλαλήθη", "ἐλαλήθημεν", "ἐλαλήθητε", "ἐλαλήθησαν"] },
-          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["λελάληκα", "λελάληκας", "λελάληκε(ν)", "λελαλήκαμεν", "λελαλήκατε", "λελάληκασι(ν)"] },
-          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["λελάλημαι", "λελάλησαι", "λελάληται", "λελαλήμεθα", "λελάλησθε", "λελάληνται"] }
+          present_active_indicative: { label: "Present Active Indicative", forms: ["\u03BB\u03B1\u03BB\u1FF6", "\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u03BB\u03B1\u03BB\u03B5\u1FD6", "\u03BB\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03BB\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"] },
+          present_middle_passive_indicative: { label: "Present Middle/Passive Indicative", forms: ["\u03BB\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03B5\u1FD6", "\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03BB\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"] },
+          imperfect_active_indicative: { label: "Imperfect Active Indicative", forms: ["\u1F10\u03BB\u03AC\u03BB\u03BF\u03C5\u03BD", "\u1F10\u03BB\u03AC\u03BB\u03B5\u03B9\u03C2", "\u1F10\u03BB\u03AC\u03BB\u03B5\u03B9", "\u1F10\u03BB\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03BB\u03AC\u03BB\u03BF\u03C5\u03BD"] },
+          imperfect_middle_passive_indicative: { label: "Imperfect Middle/Passive Indicative", forms: ["\u1F10\u03BB\u03B1\u03BB\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03BB\u03B1\u03BB\u03BF\u1FE6", "\u1F10\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03BB\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03BF"] },
+          future_active_indicative: { label: "Future Active Indicative", forms: ["\u03BB\u03B1\u03BB\u03AE\u03C3\u03C9", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03B5\u03B9", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"] },
+          future_middle_indicative: { label: "Future Middle Indicative", forms: ["\u03BB\u03B1\u03BB\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03AE\u03C3\u1FC3", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03B1\u03BB\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          future_passive_indicative: { label: "Future Passive Indicative", forms: ["\u03BB\u03B1\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03BB\u03B1\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03B1\u03BB\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03B1\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03B1\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"] },
+          aorist_active_indicative: { label: "First Aorist Active Indicative", forms: ["\u1F10\u03BB\u03AC\u03BB\u03B7\u03C3\u03B1", "\u1F10\u03BB\u03AC\u03BB\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03BB\u03AC\u03BB\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03BB\u03AC\u03BB\u03B7\u03C3\u03B1\u03BD"] },
+          aorist_middle_indicative: { label: "First Aorist Middle Indicative", forms: ["\u1F10\u03BB\u03B1\u03BB\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03BB\u03AC\u03BB\u03B7\u03C3\u03C9", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03BB\u03B1\u03BB\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"] },
+          aorist_passive_indicative: { label: "First Aorist Passive Indicative", forms: ["\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03BB\u03B1\u03BB\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"] },
+          perfect_active_indicative: { label: "Perfect Active Indicative", forms: ["\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BA\u03B1", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BA\u03B1\u03C2", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u03BB\u03B5\u03BB\u03B1\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BB\u03B5\u03BB\u03B1\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"] },
+          perfect_middle_passive_indicative: { label: "Perfect Middle/Passive Indicative", forms: ["\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BC\u03B1\u03B9", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03C3\u03B1\u03B9", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03C4\u03B1\u03B9", "\u03BB\u03B5\u03BB\u03B1\u03BB\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03C3\u03B8\u03B5", "\u03BB\u03B5\u03BB\u03AC\u03BB\u03B7\u03BD\u03C4\u03B1\u03B9"] }
         }
       },
 
-      "οἶδα": {
-        lemma: "οἶδα",
+      "\u03BF\u1F36\u03B4\u03B1": {
+        lemma: "\u03BF\u1F36\u03B4\u03B1",
         gloss: "I know / understand (perfect in form, present in meaning)",
         charts: {
           oida_present_meaning: {
             label: "Present Meaning (Perfect Active Indicative)",
-            forms: ["οἶδα", "οἶδας", "οἶδε(ν)", "οἴδαμεν", "οἴδατε", "οἴδασι(ν)"]
+            forms: ["\u03BF\u1F36\u03B4\u03B1", "\u03BF\u1F36\u03B4\u03B1\u03C2", "\u03BF\u1F36\u03B4\u03B5(\u03BD)", "\u03BF\u1F34\u03B4\u03B1\u03BC\u03B5\u03BD", "\u03BF\u1F34\u03B4\u03B1\u03C4\u03B5", "\u03BF\u1F34\u03B4\u03B1\u03C3\u03B9(\u03BD)"]
           },
           oida_past_meaning: {
             label: "Past Meaning (Pluperfect / imperfect sense)",
-            forms: ["ᾔδειν", "ᾔδεις", "ᾔδει", "ᾔδειμεν", "ᾔδειτε", "ᾔδεισαν"],
+            forms: ["\u1F94\u03B4\u03B5\u03B9\u03BD", "\u1F94\u03B4\u03B5\u03B9\u03C2", "\u1F94\u03B4\u03B5\u03B9", "\u1F94\u03B4\u03B5\u03B9\u03BC\u03B5\u03BD", "\u1F94\u03B4\u03B5\u03B9\u03C4\u03B5", "\u1F94\u03B4\u03B5\u03B9\u03C3\u03B1\u03BD"],
             notes: ["Plural forms vary in some traditions/grammars; keeping your learned set."]
           },
           oida_future_indicative: {
             label: "Future Indicative",
-            forms: ["εἴσομαι", "εἴσῃ", "εἴσεται", "εἰσόμεθα", "εἴσεσθε", "εἴσονται"]
+            forms: ["\u03B5\u1F34\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B5\u1F34\u03C3\u1FC3", "\u03B5\u1F34\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B5\u1F30\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B5\u1F34\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B5\u1F34\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           oida_imperative: {
             label: "Imperative",
-            forms: ["ἴσθι", "—", "—", "—", "ἴστε", "—"],
+            forms: ["\u1F34\u03C3\u03B8\u03B9", "\u2014", "\u2014", "\u2014", "\u1F34\u03C3\u03C4\u03B5", "\u2014"],
             notes: ["Imperative does not map cleanly to all 6 persons; stored in a 6-slot array for UI consistency."]
           },
           oida_infinitive: {
             label: "Infinitive",
-            forms: ["εἰδέναι", "", "", "", "", ""],
+            forms: ["\u03B5\u1F30\u03B4\u03AD\u03BD\u03B1\u03B9", "", "", "", "", ""],
             notes: ["Infinitive stored in 6-slot array for UI consistency."]
           }
         }
       },
 
-"πληρόω": {
-  lemma: "πληρόω",
-  gloss: "I fill / complete / fulfill (ο-contract)",
+"\u03C0\u03BB\u03B7\u03C1\u03CC\u03C9": {
+  lemma: "\u03C0\u03BB\u03B7\u03C1\u03CC\u03C9",
+  gloss: "I fill / complete / fulfill (\u03BF-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["πληρῶ", "πληροῖς", "πληροῖ", "πληροῦμεν", "πληροῦτε", "πληροῦσι(ν)"]
+      forms: ["\u03C0\u03BB\u03B7\u03C1\u1FF6", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FD6\u03C2", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FD6", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C4\u03B5", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["πληροῦμαι", "πληροῖ", "πληροῦται", "πληρούμεθα", "πληροῦσθε", "πληροῦνται"]
+      forms: ["\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FD6", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C4\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C3\u03B8\u03B5", "\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐπλήρουν", "ἐπλήρου", "ἐπλήρου", "ἐπληροῦμεν", "ἐπληροῦτε", "ἐπλήρουν"]
+      forms: ["\u1F10\u03C0\u03BB\u03AE\u03C1\u03BF\u03C5\u03BD", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03BF\u03C5", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03BF\u03C5", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C4\u03B5", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐπληρούμην", "ἐπληροῦ", "ἐπληροῦτο", "ἐπληρούμεθα", "ἐπληροῦσθε", "ἐπληροῦντο"]
+      forms: ["\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C4\u03BF", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["πληρώσω", "πληρώσεις", "πληρώσει", "πληρώσομεν", "πληρώσετε", "πληρώσουσι(ν)"]
+      forms: ["\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03C9", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["πληρώσομαι", "πληρώσῃ", "πληρώσεται", "πληρωσόμεθα", "πληρώσεσθε", "πληρώσονται"]
+      forms: ["\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u1FC3", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["πληρωθήσομαι", "πληρωθήσῃ", "πληρωθήσεται", "πληρωθησόμεθα", "πληρωθήσεσθε", "πληρωθήσονται"]
+      forms: ["\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BB\u03B7\u03C1\u03C9\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐπλήρωσα", "ἐπλήρωσας", "ἐπλήρωσε(ν)", "ἐπληρώσαμεν", "ἐπληρώσατε", "ἐπλήρωσαν"]
+      forms: ["\u1F10\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B1", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B1\u03C2", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B5(\u03BD)", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐπληρωσάμην", "ἐπλήρωσω", "ἐπληρώσατο", "ἐπληρωσάμεθα", "ἐπληρώσασθε", "ἐπληρώσαντο"]
+      forms: ["\u1F10\u03C0\u03BB\u03B7\u03C1\u03C9\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03C9", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03C9\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐπληρώθην", "ἐπληρώθης", "ἐπληρώθη", "ἐπληρώθημεν", "ἐπληρώθητε", "ἐπληρώθησαν"]
+      forms: ["\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03BD", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03C2", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["πεπλήρωκα", "πεπλήρωκας", "πεπλήρωκε(ν)", "πεπληρώκαμεν", "πεπληρώκατε", "πεπλήρωκασι(ν)"]
+      forms: ["\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BA\u03B1", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BA\u03B1\u03C2", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C0\u03BB\u03B7\u03C1\u03CE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C0\u03BB\u03B7\u03C1\u03CE\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["πεπλήρωμαι", "πεπλήρωσαι", "πεπλήρωται", "πεπληρώμεθα", "πεπλήρωσθε", "πεπλήρωνται"]
+      forms: ["\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BB\u03B7\u03C1\u03CE\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C0\u03BB\u03AE\u03C1\u03C9\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
 
-"ποιέω": {
-  lemma: "ποιέω",
-  gloss: "I do / make (ε-contract)",
+"\u03C0\u03BF\u03B9\u03AD\u03C9": {
+  lemma: "\u03C0\u03BF\u03B9\u03AD\u03C9",
+  gloss: "I do / make (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ποιῶ", "ποιεῖς", "ποιεῖ", "ποιοῦμεν", "ποιεῖτε", "ποιοῦσι(ν)"]
+      forms: ["\u03C0\u03BF\u03B9\u1FF6", "\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C2", "\u03C0\u03BF\u03B9\u03B5\u1FD6", "\u03C0\u03BF\u03B9\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C4\u03B5", "\u03C0\u03BF\u03B9\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ποιοῦμαι", "ποιεῖ", "ποιεῖται", "ποιούμεθα", "ποιεῖσθε", "ποιοῦνται"]
+      forms: ["\u03C0\u03BF\u03B9\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03B5\u1FD6", "\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C0\u03BF\u03B9\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐποίουν", "ἐποίεις", "ἐποίει", "ἐποιοῦμεν", "ἐποιεῖτε", "ἐποίουν"]
+      forms: ["\u1F10\u03C0\u03BF\u03AF\u03BF\u03C5\u03BD", "\u1F10\u03C0\u03BF\u03AF\u03B5\u03B9\u03C2", "\u1F10\u03C0\u03BF\u03AF\u03B5\u03B9", "\u1F10\u03C0\u03BF\u03B9\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C0\u03BF\u03AF\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐποιούμην", "ἐποιοῦ", "ἐποιεῖτο", "ἐποιούμεθα", "ἐποιεῖσθε", "ἐποιοῦντο"]
+      forms: ["\u1F10\u03C0\u03BF\u03B9\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BF\u03B9\u03BF\u1FE6", "\u1F10\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03C0\u03BF\u03B9\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BF\u03B9\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BF\u03B9\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ποιήσω", "ποιήσεις", "ποιήσει", "ποιήσομεν", "ποιήσετε", "ποιήσουσι(ν)"]
+      forms: ["\u03C0\u03BF\u03B9\u03AE\u03C3\u03C9", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03B9", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ποιήσομαι", "ποιήσῃ", "ποιήσεται", "ποιησόμεθα", "ποιήσεσθε", "ποιήσονται"]
+      forms: ["\u03C0\u03BF\u03B9\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03AE\u03C3\u1FC3", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BF\u03B9\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ποιηθήσομαι", "ποιηθήσῃ", "ποιηθήσεται", "ποιηθησόμεθα", "ποιηθήσεσθε", "ποιηθήσονται"]
+      forms: ["\u03C0\u03BF\u03B9\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03BF\u03B9\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BF\u03B9\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BF\u03B9\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BF\u03B9\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐποίησα", "ἐποίησας", "ἐποίησε(ν)", "ἐποιήσαμεν", "ἐποιήσατε", "ἐποίησαν"]
+      forms: ["\u1F10\u03C0\u03BF\u03AF\u03B7\u03C3\u03B1", "\u1F10\u03C0\u03BF\u03AF\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C0\u03BF\u03AF\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C0\u03BF\u03AF\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐποιησάμην", "ἐποίησω", "ἐποιήσατο", "ἐποιησάμεθα", "ἐποιήσασθε", "ἐποιήσαντο"]
+      forms: ["\u1F10\u03C0\u03BF\u03B9\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BF\u03AF\u03B7\u03C3\u03C9", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03BF\u03B9\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐποιήθην", "ἐποιήθης", "ἐποιήθη", "ἐποιήθημεν", "ἐποιήθητε", "ἐποιήθησαν"]
+      forms: ["\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["πεποίηκα", "πεποίηκας", "πεποίηκε(ν)", "πεποιήκαμεν", "πεποιήκατε", "πεποίηκασι(ν)"]
+      forms: ["\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BA\u03B1", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BA\u03B1\u03C2", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C0\u03BF\u03B9\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C0\u03BF\u03B9\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["πεποίημαι", "πεποίησαι", "πεποίηται", "πεποιήμεθα", "πεποίησθε", "πεποίηνται"]
+      forms: ["\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03C3\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03BF\u03B9\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C0\u03BF\u03AF\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
 
-"τηρέω": {
-  lemma: "τηρέω",
-  gloss: "I keep / guard / observe (ε-contract)",
+"\u03C4\u03B7\u03C1\u03AD\u03C9": {
+  lemma: "\u03C4\u03B7\u03C1\u03AD\u03C9",
+  gloss: "I keep / guard / observe (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["τηρῶ", "τηρεῖς", "τηρεῖ", "τηροῦμεν", "τηρεῖτε", "τηροῦσι(ν)"]
+      forms: ["\u03C4\u03B7\u03C1\u1FF6", "\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C2", "\u03C4\u03B7\u03C1\u03B5\u1FD6", "\u03C4\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u03C4\u03B7\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["τηροῦμαι", "τηρεῖ", "τηρεῖται", "τηρούμεθα", "τηρεῖσθε", "τηροῦνται"]
+      forms: ["\u03C4\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03B5\u1FD6", "\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C4\u03B7\u03C1\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐτήρουν", "ἐτήρεις", "ἐτήρει", "ἐτηροῦμεν", "ἐτηρεῖτε", "ἐτήρουν"]
+      forms: ["\u1F10\u03C4\u03AE\u03C1\u03BF\u03C5\u03BD", "\u1F10\u03C4\u03AE\u03C1\u03B5\u03B9\u03C2", "\u1F10\u03C4\u03AE\u03C1\u03B5\u03B9", "\u1F10\u03C4\u03B7\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C4\u03AE\u03C1\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐτηρούμην", "ἐτηροῦ", "ἐτηρεῖτο", "ἐτηρούμεθα", "ἐτηρεῖσθε", "ἐτηροῦντο"]
+      forms: ["\u1F10\u03C4\u03B7\u03C1\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03C4\u03B7\u03C1\u03BF\u1FE6", "\u1F10\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03C4\u03B7\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C4\u03B7\u03C1\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03C4\u03B7\u03C1\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["τηρήσω", "τηρήσεις", "τηρήσει", "τηρήσομεν", "τηρήσετε", "τηρήσουσι(ν)"]
+      forms: ["\u03C4\u03B7\u03C1\u03AE\u03C3\u03C9", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03B9", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["τηρήσομαι", "τηρήσῃ", "τηρήσεται", "τηρησόμεθα", "τηρήσεσθε", "τηρήσονται"]
+      forms: ["\u03C4\u03B7\u03C1\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03AE\u03C3\u1FC3", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C4\u03B7\u03C1\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["τηρηθήσομαι", "τηρηθήσῃ", "τηρηθήσεται", "τηρηθησόμεθα", "τηρηθήσεσθε", "τηρηθήσονται"]
+      forms: ["\u03C4\u03B7\u03C1\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03C4\u03B7\u03C1\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C4\u03B7\u03C1\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C4\u03B7\u03C1\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C4\u03B7\u03C1\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐτήρησα", "ἐτήρησας", "ἐτήρησε(ν)", "ἐτηρήσαμεν", "ἐτηρήσατε", "ἐτήρησαν"]
+      forms: ["\u1F10\u03C4\u03AE\u03C1\u03B7\u03C3\u03B1", "\u1F10\u03C4\u03AE\u03C1\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C4\u03AE\u03C1\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C4\u03AE\u03C1\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐτηρησάμην", "ἐτήρησω", "ἐτηρήσατο", "ἐτηρησάμεθα", "ἐτηρήσασθε", "ἐτηρήσαντο"]
+      forms: ["\u1F10\u03C4\u03B7\u03C1\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C4\u03AE\u03C1\u03B7\u03C3\u03C9", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C4\u03B7\u03C1\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐτηρήθην", "ἐτηρήθης", "ἐτηρήθη", "ἐτηρήθημεν", "ἐτηρήθητε", "ἐτηρήθησαν"]
+      forms: ["\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C4\u03B7\u03C1\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["τετήρηκα", "τετήρηκας", "τετήρηκε(ν)", "τετηρήκαμεν", "τετηρήκατε", "τετήρηκασι(ν)"]
+      forms: ["\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BA\u03B1", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BA\u03B1\u03C2", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BA\u03B5(\u03BD)", "\u03C4\u03B5\u03C4\u03B7\u03C1\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C4\u03B5\u03C4\u03B7\u03C1\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["τετήρημαι", "τετήρησαι", "τετήρηται", "τετηρήμεθα", "τετήρησθε", "τετήρηνται"]
+      forms: ["\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BC\u03B1\u03B9", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03C3\u03B1\u03B9", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03C4\u03B1\u03B9", "\u03C4\u03B5\u03C4\u03B7\u03C1\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03C3\u03B8\u03B5", "\u03C4\u03B5\u03C4\u03AE\u03C1\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
 
-"ἀποκρίνομαι": {
-  lemma: "ἀποκρίνομαι",
+"\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9",
   gloss: "I answer (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["ἀποκρίνομαι", "ἀποκρίνῃ", "ἀποκρίνεται", "ἀποκρινόμεθα", "ἀποκρίνεσθε", "ἀποκρίνονται"]
+      forms: ["\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u1FC3", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03AF\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἀπεκρινόμην", "ἀπεκρίνου", "ἀπεκρίνετο", "ἀπεκρινόμεθα", "ἀπεκρίνεσθε", "ἀπεκρίνοντο"]
+      forms: ["\u1F00\u03C0\u03B5\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03BF\u03C5", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03BF", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["ἀποκρινοῦμαι", "ἀποκρινῇ", "ἀποκρινεῖται", "ἀποκρινούμεθα", "ἀποκρινεῖσθε", "ἀποκρινοῦνται"]
+      forms: ["\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u1FC7", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03BF\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἀπεκρινάμην", "ἀπεκρίνω", "ἀπεκρίνατο", "ἀπεκρινάμεθα", "ἀπεκρίνασθε", "ἀπεκρίναντο"]
+      forms: ["\u1F00\u03C0\u03B5\u03BA\u03C1\u03B9\u03BD\u03AC\u03BC\u03B7\u03BD", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03C9", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03B1\u03C4\u03BF", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03B9\u03BD\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03B1\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03B5\u03BA\u03C1\u03AF\u03BD\u03B1\u03BD\u03C4\u03BF"]
     }
   }
 },
 
-"δύναμαι": {
-  lemma: "δύναμαι",
+"\u03B4\u03CD\u03BD\u03B1\u03BC\u03B1\u03B9": {
+  lemma: "\u03B4\u03CD\u03BD\u03B1\u03BC\u03B1\u03B9",
   gloss: "I am able (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["δύναμαι", "δύνῃ", "δύναται", "δυνάμεθα", "δύνασθε", "δύνανται"]
+      forms: ["\u03B4\u03CD\u03BD\u03B1\u03BC\u03B1\u03B9", "\u03B4\u03CD\u03BD\u1FC3", "\u03B4\u03CD\u03BD\u03B1\u03C4\u03B1\u03B9", "\u03B4\u03C5\u03BD\u03AC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03CD\u03BD\u03B1\u03C3\u03B8\u03B5", "\u03B4\u03CD\u03BD\u03B1\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἐδυνάμην", "ἐδύνου", "ἐδύνατο", "ἐδυνάμεθα", "ἐδύνασθε", "ἐδύναντο"]
+      forms: ["\u1F10\u03B4\u03C5\u03BD\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B4\u03CD\u03BD\u03BF\u03C5", "\u1F10\u03B4\u03CD\u03BD\u03B1\u03C4\u03BF", "\u1F10\u03B4\u03C5\u03BD\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B4\u03CD\u03BD\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B4\u03CD\u03BD\u03B1\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["δυνήσομαι", "δυνήσῃ", "δυνήσεται", "δυνησόμεθα", "δυνήσεσθε", "δυνήσονται"]
+      forms: ["\u03B4\u03C5\u03BD\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03C5\u03BD\u03AE\u03C3\u1FC3", "\u03B4\u03C5\u03BD\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03C5\u03BD\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03C5\u03BD\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03C5\u03BD\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἐδυνήθην", "ἐδυνήθης", "ἐδυνήθη", "ἐδυνήθημεν", "ἐδυνήθητε", "ἐδυνήθησαν"]
+      forms: ["\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7", "\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B4\u03C5\u03BD\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"ἔρχομαι": {
-  lemma: "ἔρχομαι",
+"\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
   gloss: "I come / go (deponent, irregular)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["ἔρχομαι", "ἔρχῃ", "ἔρχεται", "ἐρχόμεθα", "ἔρχεσθε", "ἔρχονται"]
+      forms: ["\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u1F14\u03C1\u03C7\u1FC3", "\u1F14\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἠρχόμην", "ἤρχου", "ἤρχετο", "ἠρχόμεθα", "ἤρχεσθε", "ἤρχοντο"]
+      forms: ["\u1F20\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u1F24\u03C1\u03C7\u03BF\u03C5", "\u1F24\u03C1\u03C7\u03B5\u03C4\u03BF", "\u1F20\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F24\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F24\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["ἐλεύσομαι", "ἐλεύσῃ", "ἐλεύσεται", "ἐλευσόμεθα", "ἐλεύσεσθε", "ἐλεύσονται"]
+      forms: ["\u1F10\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἦλθον", "ἦλθες", "ἦλθε(ν)", "ἤλθομεν", "ἤλθετε", "ἦλθον"]
+      forms: ["\u1F26\u03BB\u03B8\u03BF\u03BD", "\u1F26\u03BB\u03B8\u03B5\u03C2", "\u1F26\u03BB\u03B8\u03B5(\u03BD)", "\u1F24\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u1F24\u03BB\u03B8\u03B5\u03C4\u03B5", "\u1F26\u03BB\u03B8\u03BF\u03BD"]
     },
     perfect_indicative: {
       label: "Perfect Indicative",
-      forms: ["ἐλήλυθα", "ἐλήλυθας", "ἐλήλυθε(ν)", "ἐληλύθαμεν", "ἐληλύθατε", "ἐλήλυθασι(ν)"]
+      forms: ["\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u1F10\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"πορεύομαι": {
-  lemma: "πορεύομαι",
+"\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03BC\u03B1\u03B9",
   gloss: "I go / travel / proceed (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["πορεύομαι", "πορεύῃ", "πορεύεται", "πορευόμεθα", "πορεύεσθε", "πορεύονται"]
+      forms: ["\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BF\u03C1\u03B5\u03CD\u1FC3", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BF\u03C1\u03B5\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἐπορευόμην", "ἐπορεύου", "ἐπορεύετο", "ἐπορευόμεθα", "ἐπορεύεσθε", "ἐπορεύοντο"]
+      forms: ["\u1F10\u03C0\u03BF\u03C1\u03B5\u03C5\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03C5", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03B5\u03C4\u03BF", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03C5\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["πορεύσομαι", "πορεύσῃ", "πορεύσεται", "πορευσόμεθα", "πορεύσεσθε", "πορεύσονται"]
+      forms: ["\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u1FC3", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03BF\u03C1\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἐπορευσάμην", "ἐπορεύσω", "ἐπορεύσατο", "ἐπορευσάμεθα", "ἐπορεύσασθε", "ἐπορεύσαντο"]
+      forms: ["\u1F10\u03C0\u03BF\u03C1\u03B5\u03C5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03C9", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03C5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03BF\u03C1\u03B5\u03CD\u03C3\u03B1\u03BD\u03C4\u03BF"]
     }
   }
 },
-"ἀπέρχομαι": {
-  lemma: "ἀπέρχομαι",
+"\u1F00\u03C0\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u1F00\u03C0\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
   gloss: "I go away / depart (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["ἀπέρχομαι", "ἀπέρχῃ", "ἀπέρχεται", "ἀπερχόμεθα", "ἀπέρχεσθε", "ἀπέρχονται"]
+      forms: ["\u1F00\u03C0\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03C0\u03AD\u03C1\u03C7\u1FC3", "\u1F00\u03C0\u03AD\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03C0\u03B5\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03AD\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἀπηρχόμην", "ἀπήρχου", "ἀπήρχετο", "ἀπηρχόμεθα", "ἀπήρχεσθε", "ἀπήρχοντο"]
+      forms: ["\u1F00\u03C0\u03B7\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u1F00\u03C0\u03AE\u03C1\u03C7\u03BF\u03C5", "\u1F00\u03C0\u03AE\u03C1\u03C7\u03B5\u03C4\u03BF", "\u1F00\u03C0\u03B7\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03AE\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03AE\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["ἀπελεύσομαι", "ἀπελεύσῃ", "ἀπελεύσεται", "ἀπελευσόμεθα", "ἀπελεύσεσθε", "ἀπελεύσονται"]
+      forms: ["\u1F00\u03C0\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03C0\u03B5\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u1F00\u03C0\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03C0\u03B5\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C0\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C0\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἀπῆλθον", "ἀπῆλθες", "ἀπῆλθε(ν)", "ἀπῆλθομεν", "ἀπῆλθετε", "ἀπῆλθον"]
+      forms: ["\u1F00\u03C0\u1FC6\u03BB\u03B8\u03BF\u03BD", "\u1F00\u03C0\u1FC6\u03BB\u03B8\u03B5\u03C2", "\u1F00\u03C0\u1FC6\u03BB\u03B8\u03B5(\u03BD)", "\u1F00\u03C0\u1FC6\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03C0\u1FC6\u03BB\u03B8\u03B5\u03C4\u03B5", "\u1F00\u03C0\u1FC6\u03BB\u03B8\u03BF\u03BD"]
     },
     perfect_indicative: {
       label: "Perfect Indicative",
-      forms: ["ἀπελήλυθα", "ἀπελήλυθας", "ἀπελήλυθε(ν)", "ἀπεληλύθαμεν", "ἀπεληλύθατε", "ἀπελήλυθασι(ν)"]
+      forms: ["\u1F00\u03C0\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u1F00\u03C0\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u1F00\u03C0\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u1F00\u03C0\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"γράφω": {
-  lemma: "γράφω",
+"\u03B3\u03C1\u03AC\u03C6\u03C9": {
+  lemma: "\u03B3\u03C1\u03AC\u03C6\u03C9",
   gloss: "I write",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["γράφω", "γράφεις", "γράφει", "γράφομεν", "γράφετε", "γράφουσι(ν)"]
+      forms: ["\u03B3\u03C1\u03AC\u03C6\u03C9", "\u03B3\u03C1\u03AC\u03C6\u03B5\u03B9\u03C2", "\u03B3\u03C1\u03AC\u03C6\u03B5\u03B9", "\u03B3\u03C1\u03AC\u03C6\u03BF\u03BC\u03B5\u03BD", "\u03B3\u03C1\u03AC\u03C6\u03B5\u03C4\u03B5", "\u03B3\u03C1\u03AC\u03C6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔγραφον", "ἔγραφες", "ἔγραφε(ν)", "ἐγράφομεν", "ἐγράφετε", "ἔγραφον"]
+      forms: ["\u1F14\u03B3\u03C1\u03B1\u03C6\u03BF\u03BD", "\u1F14\u03B3\u03C1\u03B1\u03C6\u03B5\u03C2", "\u1F14\u03B3\u03C1\u03B1\u03C6\u03B5(\u03BD)", "\u1F10\u03B3\u03C1\u03AC\u03C6\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03C1\u03AC\u03C6\u03B5\u03C4\u03B5", "\u1F14\u03B3\u03C1\u03B1\u03C6\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["γράψω", "γράψεις", "γράψει", "γράψομεν", "γράψετε", "γράψουσι(ν)"]
+      forms: ["\u03B3\u03C1\u03AC\u03C8\u03C9", "\u03B3\u03C1\u03AC\u03C8\u03B5\u03B9\u03C2", "\u03B3\u03C1\u03AC\u03C8\u03B5\u03B9", "\u03B3\u03C1\u03AC\u03C8\u03BF\u03BC\u03B5\u03BD", "\u03B3\u03C1\u03AC\u03C8\u03B5\u03C4\u03B5", "\u03B3\u03C1\u03AC\u03C8\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (1st Aorist)",
-      forms: ["ἔγραψα", "ἔγραψας", "ἔγραψε(ν)", "ἐγράψαμεν", "ἐγράψατε", "ἔγραψαν"]
+      forms: ["\u1F14\u03B3\u03C1\u03B1\u03C8\u03B1", "\u1F14\u03B3\u03C1\u03B1\u03C8\u03B1\u03C2", "\u1F14\u03B3\u03C1\u03B1\u03C8\u03B5(\u03BD)", "\u1F10\u03B3\u03C1\u03AC\u03C8\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03C1\u03AC\u03C8\u03B1\u03C4\u03B5", "\u1F14\u03B3\u03C1\u03B1\u03C8\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["γέγραφα", "γέγραφας", "γέγραφε(ν)", "γεγράφαμεν", "γεγράφατε", "γέγραφασι(ν)"]
+      forms: ["\u03B3\u03AD\u03B3\u03C1\u03B1\u03C6\u03B1", "\u03B3\u03AD\u03B3\u03C1\u03B1\u03C6\u03B1\u03C2", "\u03B3\u03AD\u03B3\u03C1\u03B1\u03C6\u03B5(\u03BD)", "\u03B3\u03B5\u03B3\u03C1\u03AC\u03C6\u03B1\u03BC\u03B5\u03BD", "\u03B3\u03B5\u03B3\u03C1\u03AC\u03C6\u03B1\u03C4\u03B5", "\u03B3\u03AD\u03B3\u03C1\u03B1\u03C6\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"δοξάζω": {
-  lemma: "δοξάζω",
+"\u03B4\u03BF\u03BE\u03AC\u03B6\u03C9": {
+  lemma: "\u03B4\u03BF\u03BE\u03AC\u03B6\u03C9",
   gloss: "I glorify",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["δοξάζω", "δοξάζεις", "δοξάζει", "δοξάζομεν", "δοξάζετε", "δοξάζουσι(ν)"]
+      forms: ["\u03B4\u03BF\u03BE\u03AC\u03B6\u03C9", "\u03B4\u03BF\u03BE\u03AC\u03B6\u03B5\u03B9\u03C2", "\u03B4\u03BF\u03BE\u03AC\u03B6\u03B5\u03B9", "\u03B4\u03BF\u03BE\u03AC\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03BF\u03BE\u03AC\u03B6\u03B5\u03C4\u03B5", "\u03B4\u03BF\u03BE\u03AC\u03B6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐδόξαζον", "ἐδόξαζες", "ἐδόξαζε(ν)", "ἐδοξάζομεν", "ἐδοξάζετε", "ἐδόξαζον"]
+      forms: ["\u1F10\u03B4\u03CC\u03BE\u03B1\u03B6\u03BF\u03BD", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03B6\u03B5\u03C2", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03B6\u03B5(\u03BD)", "\u1F10\u03B4\u03BF\u03BE\u03AC\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03BF\u03BE\u03AC\u03B6\u03B5\u03C4\u03B5", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03B6\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["δοξάσω", "δοξάσεις", "δοξάσει", "δοξάσομεν", "δοξάσετε", "δοξάσουσι(ν)"]
+      forms: ["\u03B4\u03BF\u03BE\u03AC\u03C3\u03C9", "\u03B4\u03BF\u03BE\u03AC\u03C3\u03B5\u03B9\u03C2", "\u03B4\u03BF\u03BE\u03AC\u03C3\u03B5\u03B9", "\u03B4\u03BF\u03BE\u03AC\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03BF\u03BE\u03AC\u03C3\u03B5\u03C4\u03B5", "\u03B4\u03BF\u03BE\u03AC\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐδόξασα", "ἐδόξασας", "ἐδόξασε(ν)", "ἐδοξάσαμεν", "ἐδοξάσατε", "ἐδόξασαν"]
+      forms: ["\u1F10\u03B4\u03CC\u03BE\u03B1\u03C3\u03B1", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03C3\u03B1\u03C2", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03C3\u03B5(\u03BD)", "\u1F10\u03B4\u03BF\u03BE\u03AC\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03BF\u03BE\u03AC\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B4\u03CC\u03BE\u03B1\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["δεδόξακα", "δεδόξακας", "δεδόξακε(ν)", "δεδοξάκαμεν", "δεδοξάκατε", "δεδόξακασι(ν)"]
+      forms: ["\u03B4\u03B5\u03B4\u03CC\u03BE\u03B1\u03BA\u03B1", "\u03B4\u03B5\u03B4\u03CC\u03BE\u03B1\u03BA\u03B1\u03C2", "\u03B4\u03B5\u03B4\u03CC\u03BE\u03B1\u03BA\u03B5(\u03BD)", "\u03B4\u03B5\u03B4\u03BF\u03BE\u03AC\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B4\u03B5\u03B4\u03BF\u03BE\u03AC\u03BA\u03B1\u03C4\u03B5", "\u03B4\u03B5\u03B4\u03CC\u03BE\u03B1\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"κηρύσσω": {
-  lemma: "κηρύσσω",
+"\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03C9": {
+  lemma: "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03C9",
   gloss: "I proclaim / preach",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["κηρύσσω", "κηρύσσεις", "κηρύσσει", "κηρύσσομεν", "κηρύσσετε", "κηρύσσουσι(ν)"]
+      forms: ["\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03C9", "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03B5\u03B9\u03C2", "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03B5\u03B9", "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03B5\u03C4\u03B5", "\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐκήρυσσον", "ἐκήρυσσες", "ἐκήρυσσε(ν)", "ἐκηρύσσομεν", "ἐκηρύσσετε", "ἐκήρυσσον"]
+      forms: ["\u1F10\u03BA\u03AE\u03C1\u03C5\u03C3\u03C3\u03BF\u03BD", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03C3\u03C3\u03B5\u03C2", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03C3\u03C3\u03B5(\u03BD)", "\u1F10\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B7\u03C1\u03CD\u03C3\u03C3\u03B5\u03C4\u03B5", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03C3\u03C3\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["κηρύξω", "κηρύξεις", "κηρύξει", "κηρύξομεν", "κηρύξετε", "κηρύξουσι(ν)"]
+      forms: ["\u03BA\u03B7\u03C1\u03CD\u03BE\u03C9", "\u03BA\u03B7\u03C1\u03CD\u03BE\u03B5\u03B9\u03C2", "\u03BA\u03B7\u03C1\u03CD\u03BE\u03B5\u03B9", "\u03BA\u03B7\u03C1\u03CD\u03BE\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03B7\u03C1\u03CD\u03BE\u03B5\u03C4\u03B5", "\u03BA\u03B7\u03C1\u03CD\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative",
-      forms: ["ἐκήρυξα", "ἐκήρυξας", "ἐκήρυξε(ν)", "ἐκηρύξαμεν", "ἐκηρύξατε", "ἐκήρυξαν"]
+      forms: ["\u1F10\u03BA\u03AE\u03C1\u03C5\u03BE\u03B1", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03BE\u03B1\u03C2", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03BE\u03B5(\u03BD)", "\u1F10\u03BA\u03B7\u03C1\u03CD\u03BE\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B7\u03C1\u03CD\u03BE\u03B1\u03C4\u03B5", "\u1F10\u03BA\u03AE\u03C1\u03C5\u03BE\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["κεκήρυχα", "κεκήρυχας", "κεκήρυχε(ν)", "κεκηρύχαμεν", "κεκηρύχατε", "κεκήρυχασι(ν)"]
+      forms: ["\u03BA\u03B5\u03BA\u03AE\u03C1\u03C5\u03C7\u03B1", "\u03BA\u03B5\u03BA\u03AE\u03C1\u03C5\u03C7\u03B1\u03C2", "\u03BA\u03B5\u03BA\u03AE\u03C1\u03C5\u03C7\u03B5(\u03BD)", "\u03BA\u03B5\u03BA\u03B7\u03C1\u03CD\u03C7\u03B1\u03BC\u03B5\u03BD", "\u03BA\u03B5\u03BA\u03B7\u03C1\u03CD\u03C7\u03B1\u03C4\u03B5", "\u03BA\u03B5\u03BA\u03AE\u03C1\u03C5\u03C7\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"πίνω": {
-  lemma: "πίνω",
+"\u03C0\u03AF\u03BD\u03C9": {
+  lemma: "\u03C0\u03AF\u03BD\u03C9",
   gloss: "I drink",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["πίνω", "πίνεις", "πίνει", "πίνομεν", "πίνετε", "πίνουσι(ν)"]
+      forms: ["\u03C0\u03AF\u03BD\u03C9", "\u03C0\u03AF\u03BD\u03B5\u03B9\u03C2", "\u03C0\u03AF\u03BD\u03B5\u03B9", "\u03C0\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03AF\u03BD\u03B5\u03C4\u03B5", "\u03C0\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔπινον", "ἔπινες", "ἔπινε(ν)", "ἐπίνομεν", "ἐπίνετε", "ἔπινον"]
+      forms: ["\u1F14\u03C0\u03B9\u03BD\u03BF\u03BD", "\u1F14\u03C0\u03B9\u03BD\u03B5\u03C2", "\u1F14\u03C0\u03B9\u03BD\u03B5(\u03BD)", "\u1F10\u03C0\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F14\u03C0\u03B9\u03BD\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["πίομαι", "πίῃ", "πίεται", "πιόμεθα", "πίεσθε", "πίονται"]
+      forms: ["\u03C0\u03AF\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03AF\u1FC3", "\u03C0\u03AF\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B9\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03AF\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03AF\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (2nd Aorist)",
-      forms: ["ἔπιον", "ἔπιες", "ἔπιε(ν)", "ἐπίομεν", "ἐπίετε", "ἔπιον"]
+      forms: ["\u1F14\u03C0\u03B9\u03BF\u03BD", "\u1F14\u03C0\u03B9\u03B5\u03C2", "\u1F14\u03C0\u03B9\u03B5(\u03BD)", "\u1F10\u03C0\u03AF\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03AF\u03B5\u03C4\u03B5", "\u1F14\u03C0\u03B9\u03BF\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["πέπωκα", "πέπωκας", "πέπωκε(ν)", "πεπώκαμεν", "πεπώκατε", "πέπωκασι(ν)"]
+      forms: ["\u03C0\u03AD\u03C0\u03C9\u03BA\u03B1", "\u03C0\u03AD\u03C0\u03C9\u03BA\u03B1\u03C2", "\u03C0\u03AD\u03C0\u03C9\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C0\u03CE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C0\u03CE\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03AD\u03C0\u03C9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"ἄγω": {
-  lemma: "ἄγω",
+"\u1F04\u03B3\u03C9": {
+  lemma: "\u1F04\u03B3\u03C9",
   gloss: "I lead / bring",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἄγω", "ἄγεις", "ἄγει", "ἄγομεν", "ἄγετε", "ἄγουσι(ν)"]
+      forms: ["\u1F04\u03B3\u03C9", "\u1F04\u03B3\u03B5\u03B9\u03C2", "\u1F04\u03B3\u03B5\u03B9", "\u1F04\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F04\u03B3\u03B5\u03C4\u03B5", "\u1F04\u03B3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἦγον", "ἦγες", "ἦγε(ν)", "ἤγομεν", "ἤγετε", "ἦγον"]
+      forms: ["\u1F26\u03B3\u03BF\u03BD", "\u1F26\u03B3\u03B5\u03C2", "\u1F26\u03B3\u03B5(\u03BD)", "\u1F24\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F24\u03B3\u03B5\u03C4\u03B5", "\u1F26\u03B3\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἄξω", "ἄξεις", "ἄξει", "ἄξομεν", "ἄξετε", "ἄξουσι(ν)"]
+      forms: ["\u1F04\u03BE\u03C9", "\u1F04\u03BE\u03B5\u03B9\u03C2", "\u1F04\u03BE\u03B5\u03B9", "\u1F04\u03BE\u03BF\u03BC\u03B5\u03BD", "\u1F04\u03BE\u03B5\u03C4\u03B5", "\u1F04\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (2nd Aorist)",
-      forms: ["ἤγαγον", "ἤγαγες", "ἤγαγε(ν)", "ἠγάγομεν", "ἠγάγετε", "ἤγαγον"]
+      forms: ["\u1F24\u03B3\u03B1\u03B3\u03BF\u03BD", "\u1F24\u03B3\u03B1\u03B3\u03B5\u03C2", "\u1F24\u03B3\u03B1\u03B3\u03B5(\u03BD)", "\u1F20\u03B3\u03AC\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5", "\u1F24\u03B3\u03B1\u03B3\u03BF\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἦχα", "ἦχας", "ἦχε(ν)", "ἤχαμεν", "ἤχατε", "ἦχασι(ν)"]
+      forms: ["\u1F26\u03C7\u03B1", "\u1F26\u03C7\u03B1\u03C2", "\u1F26\u03C7\u03B5(\u03BD)", "\u1F24\u03C7\u03B1\u03BC\u03B5\u03BD", "\u1F24\u03C7\u03B1\u03C4\u03B5", "\u1F26\u03C7\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"ὑπάγω": {
-  lemma: "ὑπάγω",
+"\u1F51\u03C0\u03AC\u03B3\u03C9": {
+  lemma: "\u1F51\u03C0\u03AC\u03B3\u03C9",
   gloss: "I go / depart",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ὑπάγω", "ὑπάγεις", "ὑπάγει", "ὑπάγομεν", "ὑπάγετε", "ὑπάγουσι(ν)"]
+      forms: ["\u1F51\u03C0\u03AC\u03B3\u03C9", "\u1F51\u03C0\u03AC\u03B3\u03B5\u03B9\u03C2", "\u1F51\u03C0\u03AC\u03B3\u03B5\u03B9", "\u1F51\u03C0\u03AC\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03AC\u03B3\u03B5\u03C4\u03B5", "\u1F51\u03C0\u03AC\u03B3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ὑπῆγον", "ὑπῆγες", "ὑπῆγε(ν)", "ὑπήγομεν", "ὑπήγετε", "ὑπῆγον"]
+      forms: ["\u1F51\u03C0\u1FC6\u03B3\u03BF\u03BD", "\u1F51\u03C0\u1FC6\u03B3\u03B5\u03C2", "\u1F51\u03C0\u1FC6\u03B3\u03B5(\u03BD)", "\u1F51\u03C0\u03AE\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03AE\u03B3\u03B5\u03C4\u03B5", "\u1F51\u03C0\u1FC6\u03B3\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ὑπάξω", "ὑπάξεις", "ὑπάξει", "ὑπάξομεν", "ὑπάξετε", "ὑπάξουσι(ν)"]
+      forms: ["\u1F51\u03C0\u03AC\u03BE\u03C9", "\u1F51\u03C0\u03AC\u03BE\u03B5\u03B9\u03C2", "\u1F51\u03C0\u03AC\u03BE\u03B5\u03B9", "\u1F51\u03C0\u03AC\u03BE\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03AC\u03BE\u03B5\u03C4\u03B5", "\u1F51\u03C0\u03AC\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative",
-      forms: ["ὑπῆξα", "ὑπῆξας", "ὑπῆξε(ν)", "ὑπήξαμεν", "ὑπήξατε", "ὑπῆξαν"]
+      forms: ["\u1F51\u03C0\u1FC6\u03BE\u03B1", "\u1F51\u03C0\u1FC6\u03BE\u03B1\u03C2", "\u1F51\u03C0\u1FC6\u03BE\u03B5(\u03BD)", "\u1F51\u03C0\u03AE\u03BE\u03B1\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03AE\u03BE\u03B1\u03C4\u03B5", "\u1F51\u03C0\u1FC6\u03BE\u03B1\u03BD"]
     }
   }
 },
 
-"φοβέομαι": {
-  lemma: "φοβέομαι",
+"\u03C6\u03BF\u03B2\u03AD\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u03C6\u03BF\u03B2\u03AD\u03BF\u03BC\u03B1\u03B9",
   gloss: "I fear (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["φοβοῦμαι", "φοβῇ", "φοβεῖται", "φοβούμεθα", "φοβεῖσθε", "φοβοῦνται"]
+      forms: ["\u03C6\u03BF\u03B2\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C6\u03BF\u03B2\u1FC7", "\u03C6\u03BF\u03B2\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03C6\u03BF\u03B2\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C6\u03BF\u03B2\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C6\u03BF\u03B2\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἐφοβούμην", "ἐφοβοῦ", "ἐφοβεῖτο", "ἐφοβούμεθα", "ἐφοβεῖσθε", "ἐφοβοῦντο"]
+      forms: ["\u1F10\u03C6\u03BF\u03B2\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F10\u03C6\u03BF\u03B2\u03BF\u1FE6", "\u1F10\u03C6\u03BF\u03B2\u03B5\u1FD6\u03C4\u03BF", "\u1F10\u03C6\u03BF\u03B2\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C6\u03BF\u03B2\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03C6\u03BF\u03B2\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["φοβηθήσομαι", "φοβηθήσῃ", "φοβηθήσεται", "φοβηθησόμεθα", "φοβηθήσεσθε", "φοβηθήσονται"]
+      forms: ["\u03C6\u03BF\u03B2\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C6\u03BF\u03B2\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03C6\u03BF\u03B2\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C6\u03BF\u03B2\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C6\u03BF\u03B2\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C6\u03BF\u03B2\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_indicative: {
       label: "Aorist Indicative",
-      forms: ["ἐφοβήθην", "ἐφοβήθης", "ἐφοβήθη", "ἐφοβήθημεν", "ἐφοβήθητε", "ἐφοβήθησαν"]
+      forms: ["\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7", "\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C6\u03BF\u03B2\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"χαίρω": {
-  lemma: "χαίρω",
+"\u03C7\u03B1\u03AF\u03C1\u03C9": {
+  lemma: "\u03C7\u03B1\u03AF\u03C1\u03C9",
   gloss: "I rejoice",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["χαίρω", "χαίρεις", "χαίρει", "χαίρομεν", "χαίρετε", "χαίρουσι(ν)"]
+      forms: ["\u03C7\u03B1\u03AF\u03C1\u03C9", "\u03C7\u03B1\u03AF\u03C1\u03B5\u03B9\u03C2", "\u03C7\u03B1\u03AF\u03C1\u03B5\u03B9", "\u03C7\u03B1\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u03C7\u03B1\u03AF\u03C1\u03B5\u03C4\u03B5", "\u03C7\u03B1\u03AF\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔχαιρον", "ἔχαιρες", "ἔχαιρε(ν)", "ἐχαίρομεν", "ἐχαίρετε", "ἔχαιρον"]
+      forms: ["\u1F14\u03C7\u03B1\u03B9\u03C1\u03BF\u03BD", "\u1F14\u03C7\u03B1\u03B9\u03C1\u03B5\u03C2", "\u1F14\u03C7\u03B1\u03B9\u03C1\u03B5(\u03BD)", "\u1F10\u03C7\u03B1\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C7\u03B1\u03AF\u03C1\u03B5\u03C4\u03B5", "\u1F14\u03C7\u03B1\u03B9\u03C1\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["χαρήσομαι", "χαρήσῃ", "χαρήσεται", "χαρησόμεθα", "χαρήσεσθε", "χαρήσονται"]
+      forms: ["\u03C7\u03B1\u03C1\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C7\u03B1\u03C1\u03AE\u03C3\u1FC3", "\u03C7\u03B1\u03C1\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C7\u03B1\u03C1\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C7\u03B1\u03C1\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C7\u03B1\u03C1\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative",
-      forms: ["ἐχάρην", "ἐχάρης", "ἐχάρη", "ἐχάρημεν", "ἐχάρητε", "ἐχάρησαν"]
+      forms: ["\u1F10\u03C7\u03AC\u03C1\u03B7\u03BD", "\u1F10\u03C7\u03AC\u03C1\u03B7\u03C2", "\u1F10\u03C7\u03AC\u03C1\u03B7", "\u1F10\u03C7\u03AC\u03C1\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C7\u03AC\u03C1\u03B7\u03C4\u03B5", "\u1F10\u03C7\u03AC\u03C1\u03B7\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"αἰτέω": {
-  lemma: "αἰτέω",
-  gloss: "I ask / request (ε-contract)",
+"\u03B1\u1F30\u03C4\u03AD\u03C9": {
+  lemma: "\u03B1\u1F30\u03C4\u03AD\u03C9",
+  gloss: "I ask / request (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["αἰτῶ", "αἰτεῖς", "αἰτεῖ", "αἰτοῦμεν", "αἰτεῖτε", "αἰτοῦσι(ν)"]
+      forms: ["\u03B1\u1F30\u03C4\u1FF6", "\u03B1\u1F30\u03C4\u03B5\u1FD6\u03C2", "\u03B1\u1F30\u03C4\u03B5\u1FD6", "\u03B1\u1F30\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03B1\u1F30\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03B1\u1F30\u03C4\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ᾔτουν", "ᾔτεις", "ᾔτει", "ᾐτοῦμεν", "ᾐτεῖτε", "ᾔτουν"]
+      forms: ["\u1F94\u03C4\u03BF\u03C5\u03BD", "\u1F94\u03C4\u03B5\u03B9\u03C2", "\u1F94\u03C4\u03B5\u03B9", "\u1F90\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F90\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u1F94\u03C4\u03BF\u03C5\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["αἰτήσω", "αἰτήσεις", "αἰτήσει", "αἰτήσομεν", "αἰτήσετε", "αἰτήσουσι(ν)"]
+      forms: ["\u03B1\u1F30\u03C4\u03AE\u03C3\u03C9", "\u03B1\u1F30\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B1\u1F30\u03C4\u03AE\u03C3\u03B5\u03B9", "\u03B1\u1F30\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B1\u1F30\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B1\u1F30\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ᾔτησα", "ᾔτησας", "ᾔτησε(ν)", "ᾐτήσαμεν", "ᾐτήσατε", "ᾔτησαν"]
+      forms: ["\u1F94\u03C4\u03B7\u03C3\u03B1", "\u1F94\u03C4\u03B7\u03C3\u03B1\u03C2", "\u1F94\u03C4\u03B7\u03C3\u03B5(\u03BD)", "\u1F90\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F90\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F94\u03C4\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ᾔτηκα", "ᾔτηκας", "ᾔτηκε(ν)", "ᾐτήκαμεν", "ᾐτήκατε", "ᾔτηκασι(ν)"]
+      forms: ["\u1F94\u03C4\u03B7\u03BA\u03B1", "\u1F94\u03C4\u03B7\u03BA\u03B1\u03C2", "\u1F94\u03C4\u03B7\u03BA\u03B5(\u03BD)", "\u1F90\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F90\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F94\u03C4\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"μαρτυρέω": {
-  lemma: "μαρτυρέω",
-  gloss: "I bear witness (ε-contract)",
+"\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AD\u03C9": {
+  lemma: "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AD\u03C9",
+  gloss: "I bear witness (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["μαρτυρῶ", "μαρτυρεῖς", "μαρτυρεῖ", "μαρτυροῦμεν", "μαρτυρεῖτε", "μαρτυροῦσι(ν)"]
+      forms: ["\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u1FF6", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03B5\u1FD6\u03C2", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03B5\u1FD6", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐμαρτύρουν", "ἐμαρτύρεις", "ἐμαρτύρει", "ἐμαρτυροῦμεν", "ἐμαρτυρεῖτε", "ἐμαρτύρουν"]
+      forms: ["\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03BF\u03C5\u03BD", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B5\u03B9\u03C2", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B5\u03B9", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03BF\u03C5\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["μαρτυρήσω", "μαρτυρήσεις", "μαρτυρήσει", "μαρτυρήσομεν", "μαρτυρήσετε", "μαρτυρήσουσι(ν)"]
+      forms: ["\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03C9", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03B5\u03B9", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐμαρτύρησα", "ἐμαρτύρησας", "ἐμαρτύρησε(ν)", "ἐμαρτυρήσαμεν", "ἐμαρτυρήσατε", "ἐμαρτύρησαν"]
+      forms: ["\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03C3\u03B1", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["μεμαρτύρηκα", "μεμαρτύρηκας", "μεμαρτύρηκε(ν)", "μεμαρτυρήκαμεν", "μεμαρτυρήκατε", "μεμαρτύρηκασι(ν)"]
+      forms: ["\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03BA\u03B1", "\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03BA\u03B1\u03C2", "\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03BA\u03B5(\u03BD)", "\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03C5\u03C1\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BC\u03B5\u03BC\u03B1\u03C1\u03C4\u03CD\u03C1\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     }
   }
 },
 
-"ἀναβαίνω": {
-  lemma: "ἀναβαίνω",
+"\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9": {
+  lemma: "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9",
   gloss: "I go up / ascend",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἀναβαίνω", "ἀναβαίνεις", "ἀναβαίνει", "ἀναβαίνομεν", "ἀναβαίνετε", "ἀναβαίνουσι(ν)"]
+      forms: ["\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9", "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03B9\u03C2", "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03B9", "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F00\u03BD\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἀνέβαινον", "ἀνέβαινες", "ἀνέβαινε(ν)", "ἀνεβαίνομεν", "ἀνεβαίνετε", "ἀνέβαινον"]
+      forms: ["\u1F00\u03BD\u03AD\u03B2\u03B1\u03B9\u03BD\u03BF\u03BD", "\u1F00\u03BD\u03AD\u03B2\u03B1\u03B9\u03BD\u03B5\u03C2", "\u1F00\u03BD\u03AD\u03B2\u03B1\u03B9\u03BD\u03B5(\u03BD)", "\u1F00\u03BD\u03B5\u03B2\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BD\u03B5\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F00\u03BD\u03AD\u03B2\u03B1\u03B9\u03BD\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἀναβήσομαι", "ἀναβήσῃ", "ἀναβήσεται", "ἀναβησόμεθα", "ἀναβήσεσθε", "ἀναβήσονται"]
+      forms: ["\u1F00\u03BD\u03B1\u03B2\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BD\u03B1\u03B2\u03AE\u03C3\u1FC3", "\u1F00\u03BD\u03B1\u03B2\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BD\u03B1\u03B2\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BD\u03B1\u03B2\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BD\u03B1\u03B2\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (2nd Aorist)",
-      forms: ["ἀνέβην", "ἀνέβης", "ἀνέβη", "ἀνέβημεν", "ἀνέβητε", "ἀνέβησαν"]
+      forms: ["\u1F00\u03BD\u03AD\u03B2\u03B7\u03BD", "\u1F00\u03BD\u03AD\u03B2\u03B7\u03C2", "\u1F00\u03BD\u03AD\u03B2\u03B7", "\u1F00\u03BD\u03AD\u03B2\u03B7\u03BC\u03B5\u03BD", "\u1F00\u03BD\u03AD\u03B2\u03B7\u03C4\u03B5", "\u1F00\u03BD\u03AD\u03B2\u03B7\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"εὐαγγελίζω": {
-  lemma: "εὐαγγελίζω",
+"\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03C9": {
+  lemma: "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03C9",
   gloss: "I proclaim good news / preach gospel",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["εὐαγγελίζω", "εὐαγγελίζεις", "εὐαγγελίζει", "εὐαγγελίζομεν", "εὐαγγελίζετε", "εὐαγγελίζουσι(ν)"]
+      forms: ["\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03C9", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03B5\u03B9\u03C2", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03B5\u03B9", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03B5\u03C4\u03B5", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["εὐηγγέλιζον", "εὐηγγέλιζες", "εὐηγγέλιζε(ν)", "εὐηγγελίζομεν", "εὐηγγελίζετε", "εὐηγγέλιζον"]
+      forms: ["\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03B6\u03BF\u03BD", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03B6\u03B5\u03C2", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03B6\u03B5(\u03BD)", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03B5\u03BB\u03AF\u03B6\u03B5\u03C4\u03B5", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03B6\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["εὐαγγελιῶ", "εὐαγγελιεῖς", "εὐαγγελιεῖ", "εὐαγγελιοῦμεν", "εὐαγγελιεῖτε", "εὐαγγελιοῦσι(ν)"]
+      forms: ["\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u1FF6", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u03B5\u1FD6\u03C2", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u03B5\u1FD6", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u03B5\u1FD6\u03C4\u03B5", "\u03B5\u1F50\u03B1\u03B3\u03B3\u03B5\u03BB\u03B9\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["εὐηγγέλισα", "εὐηγγέλισας", "εὐηγγέλισε(ν)", "εὐηγγελίσαμεν", "εὐηγγελίσατε", "εὐηγγέλισαν"]
+      forms: ["\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03C3\u03B1", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03C3\u03B1\u03C2", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03C3\u03B5(\u03BD)", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03B5\u03BB\u03AF\u03C3\u03B1\u03BC\u03B5\u03BD", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03B5\u03BB\u03AF\u03C3\u03B1\u03C4\u03B5", "\u03B5\u1F50\u03B7\u03B3\u03B3\u03AD\u03BB\u03B9\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"θεωρέω": {
-  lemma: "θεωρέω",
-  gloss: "I see / behold / observe (ε-contract)",
+"\u03B8\u03B5\u03C9\u03C1\u03AD\u03C9": {
+  lemma: "\u03B8\u03B5\u03C9\u03C1\u03AD\u03C9",
+  gloss: "I see / behold / observe (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["θεωρῶ", "θεωρεῖς", "θεωρεῖ", "θεωροῦμεν", "θεωρεῖτε", "θεωροῦσι(ν)"]
+      forms: ["\u03B8\u03B5\u03C9\u03C1\u1FF6", "\u03B8\u03B5\u03C9\u03C1\u03B5\u1FD6\u03C2", "\u03B8\u03B5\u03C9\u03C1\u03B5\u1FD6", "\u03B8\u03B5\u03C9\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03B8\u03B5\u03C9\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u03B8\u03B5\u03C9\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐθεώρουν", "ἐθεώρεις", "ἐθεώρει", "ἐθεωροῦμεν", "ἐθεωρεῖτε", "ἐθεώρουν"]
+      forms: ["\u1F10\u03B8\u03B5\u03CE\u03C1\u03BF\u03C5\u03BD", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03B5\u03B9\u03C2", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03B5\u03B9", "\u1F10\u03B8\u03B5\u03C9\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03B8\u03B5\u03C9\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03BF\u03C5\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["θεωρήσω", "θεωρήσεις", "θεωρήσει", "θεωρήσομεν", "θεωρήσετε", "θεωρήσουσι(ν)"]
+      forms: ["\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03C9", "\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03B5\u03B9", "\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐθεώρησα", "ἐθεώρησας", "ἐθεώρησε(ν)", "ἐθεωρήσαμεν", "ἐθεωρήσατε", "ἐθεώρησαν"]
+      forms: ["\u1F10\u03B8\u03B5\u03CE\u03C1\u03B7\u03C3\u03B1", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B8\u03B5\u03C9\u03C1\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B8\u03B5\u03CE\u03C1\u03B7\u03C3\u03B1\u03BD"]
     }
   }
 },
 
-"κάθημαι": {
-  lemma: "κάθημαι",
+"\u03BA\u03AC\u03B8\u03B7\u03BC\u03B1\u03B9": {
+  lemma: "\u03BA\u03AC\u03B8\u03B7\u03BC\u03B1\u03B9",
   gloss: "I sit / am seated (deponent)",
   charts: {
     present_indicative: {
       label: "Present Indicative",
-      forms: ["κάθημαι", "κάθησαι", "κάθηται", "καθήμεθα", "κάθησθε", "κάθηνται"]
+      forms: ["\u03BA\u03AC\u03B8\u03B7\u03BC\u03B1\u03B9", "\u03BA\u03AC\u03B8\u03B7\u03C3\u03B1\u03B9", "\u03BA\u03AC\u03B8\u03B7\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03B8\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03AC\u03B8\u03B7\u03C3\u03B8\u03B5", "\u03BA\u03AC\u03B8\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_indicative: {
       label: "Imperfect Indicative",
-      forms: ["ἐκαθήμην", "ἐκάθησο", "ἐκάθητο", "ἐκαθήμεθα", "ἐκάθησθε", "ἐκάθηντο"]
+      forms: ["\u1F10\u03BA\u03B1\u03B8\u03AE\u03BC\u03B7\u03BD", "\u1F10\u03BA\u03AC\u03B8\u03B7\u03C3\u03BF", "\u1F10\u03BA\u03AC\u03B8\u03B7\u03C4\u03BF", "\u1F10\u03BA\u03B1\u03B8\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03AC\u03B8\u03B7\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03AC\u03B8\u03B7\u03BD\u03C4\u03BF"]
     },
     future_indicative: {
       label: "Future Indicative",
-      forms: ["καθήσομαι", "καθήσῃ", "καθήσεται", "καθησόμεθα", "καθήσεσθε", "καθήσονται"]
+      forms: ["\u03BA\u03B1\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03B8\u03AE\u03C3\u1FC3", "\u03BA\u03B1\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-      "συνάγω": {
-        lemma: "συνάγω",
+      "\u03C3\u03C5\u03BD\u03AC\u03B3\u03C9": {
+        lemma: "\u03C3\u03C5\u03BD\u03AC\u03B3\u03C9",
         gloss: "I gather together / bring together",
         notes: [
           "compound verb; irregular aorist",
@@ -1112,270 +1112,270 @@
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["συνάγω", "συνάγεις", "συνάγει", "συνάγομεν", "συνάγετε", "συνάγουσι(ν)"]
+            forms: ["\u03C3\u03C5\u03BD\u03AC\u03B3\u03C9", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03B5\u03B9\u03C2", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03B5\u03B9", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03B5\u03C4\u03B5", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["συνάγομαι", "συνάγῃ", "συνάγεται", "συναγόμεθα", "συνάγεσθε", "συνάγονται"]
+            forms: ["\u03C3\u03C5\u03BD\u03AC\u03B3\u03BF\u03BC\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03AC\u03B3\u1FC3", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03B5\u03C4\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03B1\u03B3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C5\u03BD\u03AC\u03B3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["συνῆγον", "συνῆγες", "συνῆγε(ν)", "συνήγομεν", "συνήγετε", "συνῆγον"]
+            forms: ["\u03C3\u03C5\u03BD\u1FC6\u03B3\u03BF\u03BD", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03B5\u03C2", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03B5(\u03BD)", "\u03C3\u03C5\u03BD\u03AE\u03B3\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03AE\u03B3\u03B5\u03C4\u03B5", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["συνηγόμην", "συνῆγου", "συνῆγετο", "συνηγόμεθα", "συνῆγεσθε", "συνῆγοντο"]
+            forms: ["\u03C3\u03C5\u03BD\u03B7\u03B3\u03CC\u03BC\u03B7\u03BD", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03BF\u03C5", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03B5\u03C4\u03BF", "\u03C3\u03C5\u03BD\u03B7\u03B3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C5\u03BD\u1FC6\u03B3\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["συνάξω", "συνάξεις", "συνάξει", "συνάξομεν", "συνάξετε", "συνάξουσι(ν)"]
+            forms: ["\u03C3\u03C5\u03BD\u03AC\u03BE\u03C9", "\u03C3\u03C5\u03BD\u03AC\u03BE\u03B5\u03B9\u03C2", "\u03C3\u03C5\u03BD\u03AC\u03BE\u03B5\u03B9", "\u03C3\u03C5\u03BD\u03AC\u03BE\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03AC\u03BE\u03B5\u03C4\u03B5", "\u03C3\u03C5\u03BD\u03AC\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["συνήγαγον", "συνήγαγες", "συνήγαγε(ν)", "συνηγάγομεν", "συνηγάγετε", "συνήγαγον"]
+            forms: ["\u03C3\u03C5\u03BD\u03AE\u03B3\u03B1\u03B3\u03BF\u03BD", "\u03C3\u03C5\u03BD\u03AE\u03B3\u03B1\u03B3\u03B5\u03C2", "\u03C3\u03C5\u03BD\u03AE\u03B3\u03B1\u03B3\u03B5(\u03BD)", "\u03C3\u03C5\u03BD\u03B7\u03B3\u03AC\u03B3\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03B7\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5", "\u03C3\u03C5\u03BD\u03AE\u03B3\u03B1\u03B3\u03BF\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["συνῆχα", "συνῆχας", "συνῆχε(ν)", "συνήχαμεν", "συνήχατε", "συνῆχασι(ν)"]
+            forms: ["\u03C3\u03C5\u03BD\u1FC6\u03C7\u03B1", "\u03C3\u03C5\u03BD\u1FC6\u03C7\u03B1\u03C2", "\u03C3\u03C5\u03BD\u1FC6\u03C7\u03B5(\u03BD)", "\u03C3\u03C5\u03BD\u03AE\u03C7\u03B1\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03AE\u03C7\u03B1\u03C4\u03B5", "\u03C3\u03C5\u03BD\u1FC6\u03C7\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "γεννάω": {
-        lemma: "γεννάω",
-        gloss: "I beget / bear / give birth to (α-contract)",
+      "\u03B3\u03B5\u03BD\u03BD\u03AC\u03C9": {
+        lemma: "\u03B3\u03B5\u03BD\u03BD\u03AC\u03C9",
+        gloss: "I beget / bear / give birth to (\u03B1-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["γεννῶ", "γεννᾷς", "γεννᾷ", "γεννῶμεν", "γεννᾶτε", "γεννῶσι(ν)"]
+            forms: ["\u03B3\u03B5\u03BD\u03BD\u1FF6", "\u03B3\u03B5\u03BD\u03BD\u1FB7\u03C2", "\u03B3\u03B5\u03BD\u03BD\u1FB7", "\u03B3\u03B5\u03BD\u03BD\u1FF6\u03BC\u03B5\u03BD", "\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C4\u03B5", "\u03B3\u03B5\u03BD\u03BD\u1FF6\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["γεννῶμαι", "γεννᾷ", "γεννᾶται", "γεννώμεθα", "γεννᾶσθε", "γεννῶνται"]
+            forms: ["\u03B3\u03B5\u03BD\u03BD\u1FF6\u03BC\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u1FB7", "\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C4\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03CE\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C3\u03B8\u03B5", "\u03B3\u03B5\u03BD\u03BD\u1FF6\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐγέννων", "ἐγέννας", "ἐγέννα", "ἐγεννῶμεν", "ἐγεννᾶτε", "ἐγέννων"]
+            forms: ["\u1F10\u03B3\u03AD\u03BD\u03BD\u03C9\u03BD", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B1\u03C2", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B1", "\u1F10\u03B3\u03B5\u03BD\u03BD\u1FF6\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C4\u03B5", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03C9\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐγεννώμην", "ἐγέννου", "ἐγεννᾶτο", "ἐγεννώμεθα", "ἐγεννᾶσθε", "ἐγεννῶντο"]
+            forms: ["\u1F10\u03B3\u03B5\u03BD\u03BD\u03CE\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03BF\u03C5", "\u1F10\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C4\u03BF", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03BD\u03BD\u1FB6\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03BD\u03BD\u1FF6\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["γεννήσω", "γεννήσεις", "γεννήσει", "γεννήσομεν", "γεννήσετε", "γεννήσουσι(ν)"]
+            forms: ["\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03C9", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B5\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["γεννήσομαι", "γεννήσῃ", "γεννήσεται", "γεννησόμεθα", "γεννήσεσθε", "γεννήσονται"]
+            forms: ["\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u1FC3", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["γεννηθήσομαι", "γεννηθήσῃ", "γεννηθήσεται", "γεννηθησόμεθα", "γεννηθήσεσθε", "γεννηθήσονται"]
+            forms: ["\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03B5\u03BD\u03BD\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐγέννησα", "ἐγέννησας", "ἐγέννησε(ν)", "ἐγεννήσαμεν", "ἐγεννήσατε", "ἐγέννησαν"]
+            forms: ["\u1F10\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B1", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            forms: ["ἐγεννησάμην", "ἐγέννησω", "ἐγεννήσατο", "ἐγεννησάμεθα", "ἐγεννήσασθε", "ἐγεννήσαντο"]
+            forms: ["\u1F10\u03B3\u03B5\u03BD\u03BD\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03C9", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἐγεννήθην", "ἐγεννήθης", "ἐγεννήθη", "ἐγεννήθημεν", "ἐγεννήθητε", "ἐγεννήθησαν"]
+            forms: ["\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B3\u03B5\u03BD\u03BD\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["γεγέννηκα", "γεγέννηκας", "γεγέννηκε(ν)", "γεγεννήκαμεν", "γεγεννήκατε", "γεγέννηκασι(ν)"]
+            forms: ["\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BA\u03B1", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BA\u03B1\u03C2", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BA\u03B5(\u03BD)", "\u03B3\u03B5\u03B3\u03B5\u03BD\u03BD\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B3\u03B5\u03B3\u03B5\u03BD\u03BD\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           },
           perfect_middle_passive_indicative: {
             label: "Perfect Middle/Passive Indicative",
-            forms: ["γεγέννημαι", "γεγέννησαι", "γεγέννηται", "γεγεννήμεθα", "γεγέννησθε", "γεγέννηνται"]
+            forms: ["\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BC\u03B1\u03B9", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B1\u03B9", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03C4\u03B1\u03B9", "\u03B3\u03B5\u03B3\u03B5\u03BD\u03BD\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B8\u03B5", "\u03B3\u03B5\u03B3\u03AD\u03BD\u03BD\u03B7\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "ζάω": {
-        lemma: "ζάω",
-        gloss: "I live (α-contract)",
+      "\u03B6\u03AC\u03C9": {
+        lemma: "\u03B6\u03AC\u03C9",
+        gloss: "I live (\u03B1-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ζῶ", "ζῇς", "ζῇ", "ζῶμεν", "ζῆτε", "ζῶσι(ν)"]
+            forms: ["\u03B6\u1FF6", "\u03B6\u1FC7\u03C2", "\u03B6\u1FC7", "\u03B6\u1FF6\u03BC\u03B5\u03BD", "\u03B6\u1FC6\u03C4\u03B5", "\u03B6\u1FF6\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["ζῶμαι", "ζῇ", "ζῆται", "ζώμεθα", "ζῆσθε", "ζῶνται"]
+            forms: ["\u03B6\u1FF6\u03BC\u03B1\u03B9", "\u03B6\u1FC7", "\u03B6\u1FC6\u03C4\u03B1\u03B9", "\u03B6\u03CE\u03BC\u03B5\u03B8\u03B1", "\u03B6\u1FC6\u03C3\u03B8\u03B5", "\u03B6\u1FF6\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔζων", "ἔζας", "ἔζα", "ἐζῶμεν", "ἐζᾶτε", "ἔζων"]
+            forms: ["\u1F14\u03B6\u03C9\u03BD", "\u1F14\u03B6\u03B1\u03C2", "\u1F14\u03B6\u03B1", "\u1F10\u03B6\u1FF6\u03BC\u03B5\u03BD", "\u1F10\u03B6\u1FB6\u03C4\u03B5", "\u1F14\u03B6\u03C9\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐζώμην", "ἔζου", "ἐζᾶτο", "ἐζώμεθα", "ἐζᾶσθε", "ἐζῶντο"]
+            forms: ["\u1F10\u03B6\u03CE\u03BC\u03B7\u03BD", "\u1F14\u03B6\u03BF\u03C5", "\u1F10\u03B6\u1FB6\u03C4\u03BF", "\u1F10\u03B6\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B6\u1FB6\u03C3\u03B8\u03B5", "\u1F10\u03B6\u1FF6\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ζήσω", "ζήσεις", "ζήσει", "ζήσομεν", "ζήσετε", "ζήσουσι(ν)"]
+            forms: ["\u03B6\u03AE\u03C3\u03C9", "\u03B6\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B6\u03AE\u03C3\u03B5\u03B9", "\u03B6\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B6\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B6\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           future_middle_indicative: {
             label: "Future Middle Indicative",
-            forms: ["ζήσομαι", "ζήσῃ", "ζήσεται", "ζησόμεθα", "ζήσεσθε", "ζήσονται"]
+            forms: ["\u03B6\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B6\u03AE\u03C3\u1FC3", "\u03B6\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B6\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B6\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B6\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative",
-            forms: ["ζηθήσομαι", "ζηθήσῃ", "ζηθήσεται", "ζηθησόμεθα", "ζηθήσεσθε", "ζηθήσονται"]
+            forms: ["\u03B6\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B6\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03B6\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B6\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B6\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B6\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἔζησα", "ἔζησας", "ἔζησε(ν)", "ἐζήσαμεν", "ἐζήσατε", "ἔζησαν"]
+            forms: ["\u1F14\u03B6\u03B7\u03C3\u03B1", "\u1F14\u03B6\u03B7\u03C3\u03B1\u03C2", "\u1F14\u03B6\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03B6\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F14\u03B6\u03B7\u03C3\u03B1\u03BD"]
           },
           aorist_middle_indicative: {
             label: "First Aorist Middle Indicative",
-            forms: ["ἐζησάμην", "ἔζησω", "ἐζήσατο", "ἐζησάμεθα", "ἐζήσασθε", "ἐζήσαντο"]
+            forms: ["\u1F10\u03B6\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F14\u03B6\u03B7\u03C3\u03C9", "\u1F10\u03B6\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03B6\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B6\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B6\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
           },
           aorist_passive_indicative: {
             label: "First Aorist Passive Indicative",
-            forms: ["ἐζήθην", "ἐζήθης", "ἐζήθη", "ἐζήθημεν", "ἐζήθητε", "ἐζήθησαν"]
+            forms: ["\u1F10\u03B6\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03B6\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03B6\u03AE\u03B8\u03B7", "\u1F10\u03B6\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B6\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἔζηκα", "ἔζηκας", "ἔζηκε(ν)", "ἐζήκαμεν", "ἐζήκατε", "ἔζηκασι(ν)"]
+            forms: ["\u1F14\u03B6\u03B7\u03BA\u03B1", "\u1F14\u03B6\u03B7\u03BA\u03B1\u03C2", "\u1F14\u03B6\u03B7\u03BA\u03B5(\u03BD)", "\u1F10\u03B6\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B6\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F14\u03B6\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
 
-      "ἀποκτείνω": {
-        lemma: "ἀποκτείνω",
+      "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03C9": {
+        lemma: "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03C9",
         gloss: "I kill / put to death",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἀποκτείνω", "ἀποκτείνεις", "ἀποκτείνει", "ἀποκτείνομεν", "ἀποκτείνετε", "ἀποκτείνουσι(ν)"]
+            forms: ["\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03C9", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03B5\u03B9\u03C2", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03B5\u03B9", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἀπέκτεινον", "ἀπέκτεινες", "ἀπέκτεινε(ν)", "ἀπεκτείνομεν", "ἀπεκτείνετε", "ἀπέκτεινον"]
+            forms: ["\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03BF\u03BD", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B5\u03C2", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03B5\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03B5\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἀποκτενῶ", "ἀποκτενεῖς", "ἀποκτενεῖ", "ἀποκτενοῦμεν", "ἀποκτενεῖτε", "ἀποκτενοῦσι(ν)"]
+            forms: ["\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u1FF6", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u03B5\u1FD6\u03C2", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u03B5\u1FD6", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u1F00\u03C0\u03BF\u03BA\u03C4\u03B5\u03BD\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἀπέκτεινα", "ἀπέκτεινας", "ἀπέκτεινε(ν)", "ἀπεκτείναμεν", "ἀπεκτείνατε", "ἀπέκτειναν"]
+            forms: ["\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B1", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B1\u03C2", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03B5\u03AF\u03BD\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03B5\u03AF\u03BD\u03B1\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03B5\u03B9\u03BD\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἀπέκτονα", "ἀπέκτονας", "ἀπέκτονε(ν)", "ἀπεκτόναμεν", "ἀπεκτόνατε", "ἀπέκτονασι(ν)"]
+            forms: ["\u1F00\u03C0\u03AD\u03BA\u03C4\u03BF\u03BD\u03B1", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03BF\u03BD\u03B1\u03C2", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03BF\u03BD\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03CC\u03BD\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03BA\u03C4\u03CC\u03BD\u03B1\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03BA\u03C4\u03BF\u03BD\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "γινώσκω": {
-        lemma: "γινώσκω",
+      "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9": {
+        lemma: "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9",
         gloss: "I know / come to know / learn",
         notes: [
-          "liquid future: γνώσομαι etc. (your list had it as a note)",
+          "liquid future: \u03B3\u03BD\u03CE\u03C3\u03BF\u03BC\u03B1\u03B9 etc. (your list had it as a note)",
         ],
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["γινώσκω", "γινώσκεις", "γινώσκει", "γινώσκομεν", "γινώσκετε", "γινώσκουσι(ν)"]
+            forms: ["\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03B9\u03C2", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03B9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B5", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["γινώσκομαι", "γινώσκῃ", "γινώσκεται", "γινωσκόμεθα", "γινώσκεσθε", "γινώσκονται"]
+            forms: ["\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u1FC3", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐγίνωσκον", "ἐγίνωσκες", "ἐγίνωσκε(ν)", "ἐγινώσκομεν", "ἐγινώσκετε", "ἐγίνωσκον"]
+            forms: ["\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03BD", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5\u03C2", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5(\u03BD)", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B5", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἐγινωσκόμην", "ἐγίνωσκου", "ἐγίνωσκετο", "ἐγινωσκόμεθα", "ἐγίνωσκεσθε", "ἐγίνωσκοντο"]
+            forms: ["\u1F10\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03C5", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5\u03C4\u03BF", "\u1F10\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative (Liquid Future)",
-            forms: ["γνώσομαι", "γνώσῃ", "γνώσεται", "γνωσόμεθα", "γνώσεσθε", "γνώσονται"]
+            forms: ["\u03B3\u03BD\u03CE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03BD\u03CE\u03C3\u1FC3", "\u03B3\u03BD\u03CE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03BD\u03C9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03BD\u03CE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03BD\u03CE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
        
-      "ἐκβάλλω": {
-        lemma: "ἐκβάλλω",
+      "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9": {
+        lemma: "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9",
         gloss: "I throw out / cast out / drive out",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἐκβάλλω", "ἐκβάλλεις", "ἐκβάλλει", "ἐκβάλλομεν", "ἐκβάλλετε", "ἐκβάλλουσι(ν)"]
+            forms: ["\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9\u03C2", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐξέβαλλον", "ἐξέβαλλες", "ἐξέβαλλε(ν)", "ἐξεβάλλομεν", "ἐξεβάλλετε", "ἐξέβαλλον"]
+            forms: ["\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03B5\u03C2", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03B5(\u03BD)", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἐκβαλῶ", "ἐκβαλεῖς", "ἐκβαλεῖ", "ἐκβαλοῦμεν", "ἐκβαλεῖτε", "ἐκβαλοῦσι(ν)"]
+            forms: ["\u1F10\u03BA\u03B2\u03B1\u03BB\u1FF6", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἐξέβαλον", "ἐξέβαλες", "ἐξέβαλε(ν)", "ἐξεβάλομεν", "ἐξεβάλετε", "ἐξέβαλον"]
+            forms: ["\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03BD", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5\u03C2", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5(\u03BD)", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἐκβέβληκα", "ἐκβέβληκας", "ἐκβέβληκε(ν)", "ἐκβεβλήκαμεν", "ἐκβεβλήκατε", "ἐκβέβληκασι(ν)"]
+            forms: ["\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C2", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u1F10\u03BA\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
-      "κρίνω": {
-  lemma: "κρίνω",
+      "\u03BA\u03C1\u03AF\u03BD\u03C9": {
+  lemma: "\u03BA\u03C1\u03AF\u03BD\u03C9",
   gloss: "I judge / decide / evaluate",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["κρίνω", "κρίνεις", "κρίνει", "κρίνομεν", "κρίνετε", "κρίνουσι"]
+      forms: ["\u03BA\u03C1\u03AF\u03BD\u03C9", "\u03BA\u03C1\u03AF\u03BD\u03B5\u03B9\u03C2", "\u03BA\u03C1\u03AF\u03BD\u03B5\u03B9", "\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u03BA\u03C1\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["κρίνομαι", "κρίνῃ", "κρίνεται", "κρινόμεθα", "κρίνεσθε", "κρίνονται"]
+      forms: ["\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03C1\u03AF\u03BD\u1FC3", "\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03C1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03C1\u03AF\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔκρινον", "ἔκρινες", "ἔκρινε", "ἐκρίνομεν", "ἐκρίνετε", "ἔκρινον"]
+      forms: ["\u1F14\u03BA\u03C1\u03B9\u03BD\u03BF\u03BD", "\u1F14\u03BA\u03C1\u03B9\u03BD\u03B5\u03C2", "\u1F14\u03BA\u03C1\u03B9\u03BD\u03B5", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F14\u03BA\u03C1\u03B9\u03BD\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐκρινόμην", "ἐκρίνου", "ἐκρίνετο", "ἐκρινόμεθα", "ἐκρίνεσθε", "ἐκρίνοντο"]
+      forms: ["\u1F10\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03BF\u03C5", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03BA\u03C1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03C1\u03AF\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["κρινῶ", "κρινεῖς", "κρινεῖ", "κρινοῦμεν", "κρινεῖτε", "κρινοῦσι"]
+      forms: ["\u03BA\u03C1\u03B9\u03BD\u1FF6", "\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C2", "\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6", "\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["κρινοῦμαι", "κρινῇ", "κρινεῖται", "κρινούμεθα", "κρινεῖσθε", "κρινοῦνται"]
+      forms: ["\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03BA\u03C1\u03B9\u03BD\u1FC7", "\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03BA\u03C1\u03B9\u03BD\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03C1\u03B9\u03BD\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03BA\u03C1\u03B9\u03BD\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["κριθήσομαι", "κριθήσῃ", "κριθήσεται", "κριθησόμεθα", "κριθήσεσθε", "κριθήσονται"]
+      forms: ["\u03BA\u03C1\u03B9\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03C1\u03B9\u03B8\u03AE\u03C3\u1FC3", "\u03BA\u03C1\u03B9\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03C1\u03B9\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03C1\u03B9\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03C1\u03B9\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["κέκρικα", "κέκρικας", "κέκρικε", "κεκρίκαμεν", "κεκρίκατε", "κέκρικασι"]
+      forms: ["\u03BA\u03AD\u03BA\u03C1\u03B9\u03BA\u03B1", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03BA\u03B1\u03C2", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03BA\u03B5", "\u03BA\u03B5\u03BA\u03C1\u03AF\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BA\u03B5\u03BA\u03C1\u03AF\u03BA\u03B1\u03C4\u03B5", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["κέκριμαι", "κέκρισαι", "κέκριται", "κεκρίμεθα", "κέκρισθε", "κέκρινται"]
+      forms: ["\u03BA\u03AD\u03BA\u03C1\u03B9\u03BC\u03B1\u03B9", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03C3\u03B1\u03B9", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03C4\u03B1\u03B9", "\u03BA\u03B5\u03BA\u03C1\u03AF\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03C3\u03B8\u03B5", "\u03BA\u03AD\u03BA\u03C1\u03B9\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"μένω": {
-  lemma: "μένω",
+"\u03BC\u03AD\u03BD\u03C9": {
+  lemma: "\u03BC\u03AD\u03BD\u03C9",
   gloss: "I remain / stay / abide / continue",
   notes: [
     "Future Passive Indicative: incomplete in source; padded blanks.",
@@ -1383,1779 +1383,1779 @@
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["μένω", "μένεις", "μένει", "μένομεν", "μένετε", "μένουσι"]
+      forms: ["\u03BC\u03AD\u03BD\u03C9", "\u03BC\u03AD\u03BD\u03B5\u03B9\u03C2", "\u03BC\u03AD\u03BD\u03B5\u03B9", "\u03BC\u03AD\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BC\u03AD\u03BD\u03B5\u03C4\u03B5", "\u03BC\u03AD\u03BD\u03BF\u03C5\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["μένομαι", "μένῃ", "μένεται", "μενόμεθα", "μένεσθε", "μένονται"]
+      forms: ["\u03BC\u03AD\u03BD\u03BF\u03BC\u03B1\u03B9", "\u03BC\u03AD\u03BD\u1FC3", "\u03BC\u03AD\u03BD\u03B5\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03AD\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03BC\u03AD\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔμενον", "ἔμενες", "ἔμενε", "ἐμένομεν", "ἐμένετε", "ἔμενον"]
+      forms: ["\u1F14\u03BC\u03B5\u03BD\u03BF\u03BD", "\u1F14\u03BC\u03B5\u03BD\u03B5\u03C2", "\u1F14\u03BC\u03B5\u03BD\u03B5", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C4\u03B5", "\u1F14\u03BC\u03B5\u03BD\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐμενόμην", "ἐμένου", "ἐμένετο", "ἐμενόμεθα", "ἐμένεσθε", "ἐμένοντο"]
+      forms: ["\u1F10\u03BC\u03B5\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03C5", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03BC\u03B5\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["μενῶ", "μενεῖς", "μενεῖ", "μενοῦμεν", "μενεῖτε", "μενοῦσι"]
+      forms: ["\u03BC\u03B5\u03BD\u1FF6", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C2", "\u03BC\u03B5\u03BD\u03B5\u1FD6", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["μενοῦμαι", "μενῇ", "μενεῖται", "μενούμεθα", "μενεῖσθε", "μενοῦνται"]
+      forms: ["\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BD\u1FC7", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["μενηθήσομαι", "μενηθήσῃ", "μενηθήσεται", "", "", ""]
+      forms: ["\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "", "", ""]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative",
-      forms: ["ἔμεινα", "ἔμεινας", "ἔμεινε", "ἐμείναμεν", "ἐμείνατε", "ἔμειναν"]
+      forms: ["\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1\u03C2", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B5", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03C4\u03B5", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["μεμένηκα", "μεμένηκας", "μεμένηκε", "μεμενήκαμεν", "μεμενήκατε", "μεμένηκασι"]
+      forms: ["\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1\u03C2", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B5", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["μεμένημαι", "μεμένησαι", "μεμένηται", "μεμενήμεθα", "μεμένησθε", "μεμένηνται"]
+      forms: ["\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C3\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C3\u03B8\u03B5", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"ὁράω": {
-  lemma: "ὁράω",
+"\u1F41\u03C1\u03AC\u03C9": {
+  lemma: "\u1F41\u03C1\u03AC\u03C9",
   gloss: "I see (irregular)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ὁρῶ", "ὁρᾷς", "ὁρᾷ", "ὁρῶμεν", "ὁρᾶτε", "ὁρῶσι"]
+      forms: ["\u1F41\u03C1\u1FF6", "\u1F41\u03C1\u1FB7\u03C2", "\u1F41\u03C1\u1FB7", "\u1F41\u03C1\u1FF6\u03BC\u03B5\u03BD", "\u1F41\u03C1\u1FB6\u03C4\u03B5", "\u1F41\u03C1\u1FF6\u03C3\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἑώρων", "ἑώρας", "ἑώρα", "ἑωρῶμεν", "ἑωρᾶτε", "ἑώρων"]
+      forms: ["\u1F11\u03CE\u03C1\u03C9\u03BD", "\u1F11\u03CE\u03C1\u03B1\u03C2", "\u1F11\u03CE\u03C1\u03B1", "\u1F11\u03C9\u03C1\u1FF6\u03BC\u03B5\u03BD", "\u1F11\u03C9\u03C1\u1FB6\u03C4\u03B5", "\u1F11\u03CE\u03C1\u03C9\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ὄψομαι", "ὄψῃ", "ὄψεται", "ὀψόμεθα", "ὄψεσθε", "ὄψονται"]
+      forms: ["\u1F44\u03C8\u03BF\u03BC\u03B1\u03B9", "\u1F44\u03C8\u1FC3", "\u1F44\u03C8\u03B5\u03C4\u03B1\u03B9", "\u1F40\u03C8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F44\u03C8\u03B5\u03C3\u03B8\u03B5", "\u1F44\u03C8\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (2nd Aorist)",
-      forms: ["εἶδον", "εἶδες", "εἶδε", "εἴδομεν", "εἴδετε", "εἶδον"]
+      forms: ["\u03B5\u1F36\u03B4\u03BF\u03BD", "\u03B5\u1F36\u03B4\u03B5\u03C2", "\u03B5\u1F36\u03B4\u03B5", "\u03B5\u1F34\u03B4\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F34\u03B4\u03B5\u03C4\u03B5", "\u03B5\u1F36\u03B4\u03BF\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἑώρακα", "ἑώρακας", "ἑώρακε", "ἑωράκαμεν", "ἑωράκατε", "ἑώρακασι"]
+      forms: ["\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1\u03C2", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B5", "\u1F11\u03C9\u03C1\u03AC\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F11\u03C9\u03C1\u03AC\u03BA\u03B1\u03C4\u03B5", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1\u03C3\u03B9"]
     },
   }
 },
 
-"σῴζω": {
-  lemma: "σῴζω",
+"\u03C3\u1FF4\u03B6\u03C9": {
+  lemma: "\u03C3\u1FF4\u03B6\u03C9",
   gloss: "I save / rescue / heal",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["σῴζω", "σῴζεις", "σῴζει", "σῴζομεν", "σῴζετε", "σῴζουσι"]
+      forms: ["\u03C3\u1FF4\u03B6\u03C9", "\u03C3\u1FF4\u03B6\u03B5\u03B9\u03C2", "\u03C3\u1FF4\u03B6\u03B5\u03B9", "\u03C3\u1FF4\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03C3\u1FF4\u03B6\u03B5\u03C4\u03B5", "\u03C3\u1FF4\u03B6\u03BF\u03C5\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["σῴζομαι", "σῴζῃ", "σῴζεται", "σῳζόμεθα", "σῴζεσθε", "σῴζονται"]
+      forms: ["\u03C3\u1FF4\u03B6\u03BF\u03BC\u03B1\u03B9", "\u03C3\u1FF4\u03B6\u1FC3", "\u03C3\u1FF4\u03B6\u03B5\u03C4\u03B1\u03B9", "\u03C3\u1FF3\u03B6\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u1FF4\u03B6\u03B5\u03C3\u03B8\u03B5", "\u03C3\u1FF4\u03B6\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔσῴζον", "ἔσῴζες", "ἔσῴζε", "ἐσῴζομεν", "ἐσῴζετε", "ἔσῴζον"]
+      forms: ["\u1F14\u03C3\u1FF4\u03B6\u03BF\u03BD", "\u1F14\u03C3\u1FF4\u03B6\u03B5\u03C2", "\u1F14\u03C3\u1FF4\u03B6\u03B5", "\u1F10\u03C3\u1FF4\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C3\u1FF4\u03B6\u03B5\u03C4\u03B5", "\u1F14\u03C3\u1FF4\u03B6\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐσῳζόμην", "ἐσῴζου", "ἐσῴζετο", "ἐσῳζόμεθα", "ἐσῴζεσθε", "ἐσῴζοντο"]
+      forms: ["\u1F10\u03C3\u1FF3\u03B6\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03C3\u1FF4\u03B6\u03BF\u03C5", "\u1F10\u03C3\u1FF4\u03B6\u03B5\u03C4\u03BF", "\u1F10\u03C3\u1FF3\u03B6\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C3\u1FF4\u03B6\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C3\u1FF4\u03B6\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["σώσω", "σώσεις", "σώσει", "σώσομεν", "σώσετε", "σώσουσι"]
+      forms: ["\u03C3\u03CE\u03C3\u03C9", "\u03C3\u03CE\u03C3\u03B5\u03B9\u03C2", "\u03C3\u03CE\u03C3\u03B5\u03B9", "\u03C3\u03CE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03CE\u03C3\u03B5\u03C4\u03B5", "\u03C3\u03CE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["σώσομαι", "σώσῃ", "σώσεται", "σωσόμεθα", "σώσεσθε", "σώσονται"]
+      forms: ["\u03C3\u03CE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C3\u03CE\u03C3\u1FC3", "\u03C3\u03CE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C3\u03C9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03CE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03CE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["σωθήσομαι", "σωθήσῃ", "σωθήσεται", "σωθησόμεθα", "σωθήσεσθε", "σωθήσονται"]
+      forms: ["\u03C3\u03C9\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C3\u03C9\u03B8\u03AE\u03C3\u1FC3", "\u03C3\u03C9\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C3\u03C9\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C9\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C9\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἔσωσα", "ἔσωσας", "ἔσωσε", "ἐσώσαμεν", "ἐσώσατε", "ἔσωσαν"]
+      forms: ["\u1F14\u03C3\u03C9\u03C3\u03B1", "\u1F14\u03C3\u03C9\u03C3\u03B1\u03C2", "\u1F14\u03C3\u03C9\u03C3\u03B5", "\u1F10\u03C3\u03CE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C3\u03CE\u03C3\u03B1\u03C4\u03B5", "\u1F14\u03C3\u03C9\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐσωσάμην", "ἔσωσω", "ἐσώσατο", "ἐσωσάμεθα", "ἐσώσασθε", "ἐσώσαντο"]
+      forms: ["\u1F10\u03C3\u03C9\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F14\u03C3\u03C9\u03C3\u03C9", "\u1F10\u03C3\u03CE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C3\u03C9\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C3\u03CE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C3\u03CE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐσώθην", "ἐσώθης", "ἐσώθη", "ἐσώθημεν", "ἐσώθητε", "ἐσώθησαν"]
+      forms: ["\u1F10\u03C3\u03CE\u03B8\u03B7\u03BD", "\u1F10\u03C3\u03CE\u03B8\u03B7\u03C2", "\u1F10\u03C3\u03CE\u03B8\u03B7", "\u1F10\u03C3\u03CE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C3\u03CE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C3\u03CE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["σέσωκα", "σέσωκας", "σέσωκε", "σεσώκαμεν", "σεσώκατε", "σέσωκασι"]
+      forms: ["\u03C3\u03AD\u03C3\u03C9\u03BA\u03B1", "\u03C3\u03AD\u03C3\u03C9\u03BA\u03B1\u03C2", "\u03C3\u03AD\u03C3\u03C9\u03BA\u03B5", "\u03C3\u03B5\u03C3\u03CE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C3\u03B5\u03C3\u03CE\u03BA\u03B1\u03C4\u03B5", "\u03C3\u03AD\u03C3\u03C9\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["σέσωσμαι", "σέσωσαι", "σέσωσται", "σεσώσμεθα", "σέσωσθε", "σέσωσνται"]
+      forms: ["\u03C3\u03AD\u03C3\u03C9\u03C3\u03BC\u03B1\u03B9", "\u03C3\u03AD\u03C3\u03C9\u03C3\u03B1\u03B9", "\u03C3\u03AD\u03C3\u03C9\u03C3\u03C4\u03B1\u03B9", "\u03C3\u03B5\u03C3\u03CE\u03C3\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03AD\u03C3\u03C9\u03C3\u03B8\u03B5", "\u03C3\u03AD\u03C3\u03C9\u03C3\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"ἀκολουθέω": {
-  lemma: "ἀκολουθέω",
-  gloss: "I follow (ε-contract)",
+"\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AD\u03C9": {
+  lemma: "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AD\u03C9",
+  gloss: "I follow (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἀκολουθῶ", "ἀκολουθεῖς", "ἀκολουθεῖ", "ἀκολουθοῦμεν", "ἀκολουθεῖτε", "ἀκολουθοῦσι"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u1FF6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C2", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἀκολουθοῦμαι", "ἀκολουθεῖ", "ἀκολουθεῖται", "ἀκολουθούμεθα", "ἀκολουθεῖσθε", "ἀκολουθοῦνται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἠκολούθουν", "ἠκολούθεις", "ἠκολούθει", "ἠκολουθοῦμεν", "ἠκολουθεῖτε", "ἠκολούθουν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03BF\u03C5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B5\u03B9\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B5\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἠκολουθούμην", "ἠκολουθοῦ", "ἠκολουθεῖτο", "ἠκολουθούμεθα", "ἠκολουθεῖσθε", "ἠκολουθοῦντο"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἀκολουθήσω", "ἀκολουθήσεις", "ἀκολουθήσει", "ἀκολουθήσομεν", "ἀκολουθήσετε", "ἀκολουθήσουσι"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03C9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἀκολουθήσομαι", "ἀκολουθήσῃ", "ἀκολουθήσεται", "ἀκολουθησόμεθα", "ἀκολουθήσεσθε", "ἀκολουθήσονται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ἀκολουθηθήσομαι", "ἀκολουθηθήσῃ", "ἀκολουθηθήσεται", "ἀκολουθηθησόμεθα", "ἀκολουθηθήσεσθε", "ἀκολουθηθήσονται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἠκολούθησα", "ἠκολούθησας", "ἠκολούθησε", "ἠκολουθήσαμεν", "ἠκολουθήσατε", "ἠκολούθησαν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἠκολουθησάμην", "ἠκολούθησω", "ἠκολουθήσατο", "ἠκολουθησάμεθα", "ἠκολουθήσασθε", "ἠκολουθήσαντο"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03C9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἠκολουθήθην", "ἠκολουθήθης", "ἠκολουθήθη", "ἠκολουθήθημεν", "ἠκολουθήθητε", "ἠκολουθήθησαν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἠκολούθηκα", "ἠκολούθηκας", "ἠκολούθηκε", "ἠκολουθήκαμεν", "ἠκολουθήκατε", "ἠκολούθηκασι"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἠκολούθημαι", "ἠκολούθησαι", "ἠκολούθηται", "ἠκολουθήμεθα", "ἠκολούθησθε", "ἠκολούθηνται"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BC\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C4\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"διδάσκω": {
-  lemma: "διδάσκω",
+"\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9": {
+  lemma: "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9",
   gloss: "I teach",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["διδάσκω", "διδάσκεις", "διδάσκει", "διδάσκομεν", "διδάσκετε", "διδάσκουσι"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03B9\u03C2", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03C5\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["διδάσκομαι", "διδάσκῃ", "διδάσκεται", "διδασκόμεθα", "διδάσκεσθε", "διδάσκονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u1FC3", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐδίδασκον", "ἐδίδασκες", "ἐδίδασκε", "ἐδιδάσκομεν", "ἐδιδάσκετε", "ἐδίδασκον"]
+      forms: ["\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5\u03C2", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐδιδασκόμην", "ἐδίδασκου", "ἐδίδασκετο", "ἐδιδασκόμεθα", "ἐδίδασκεσθε", "ἐδίδασκοντο"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03C5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5\u03C4\u03BF", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["διδάξω", "διδάξεις", "διδάξει", "διδάξομεν", "διδάξετε", "διδάξουσι"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03BE\u03C9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03B9\u03C2", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C4\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["διδάξομαι", "διδάξῃ", "διδάξεται", "διδαξόμεθα", "διδάξεσθε", "διδάξονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u1FC3", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03BE\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["διδαχθήσομαι", "διδαχθήσῃ", "διδαχθήσεται", "διδαχθησόμεθα", "διδαχθήσεσθε", "διδαχθήσονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u1FC3", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Aorist Active Indicative (2nd Aorist)",
-      forms: ["ἐδίδαξα", "ἐδίδαξας", "ἐδίδαξε", "ἐδιδάξαμεν", "ἐδιδάξατε", "ἐδίδαξαν"]
+      forms: ["\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03C2", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03C4\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Aorist Middle Indicative",
-      forms: ["ἐδιδαξάμην", "ἐδίδαξω", "ἐδιδαξάτο", "ἐδιδαξάμεθα", "ἐδιδάξασθε", "ἐδιδαξάvτο"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03C9", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03AC\u03C4\u03BF", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03ACv\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "Aorist Passive Indicative",
-      forms: ["ἐδιδάχθην", "ἐδιδάχθης", "ἐδιδάχθη", "ἐδιδάχθημεν", "ἐδιδάχθητε", "ἐδιδάχθησαν"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C2", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["δεδίδαχα", "δεδίδαχας", "δεδίδαχε", "δεδιδαχάμεν", "δεδιδαχάτε", "δεδίδαχασι"]
+      forms: ["\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1\u03C2", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B5", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03B1\u03C7\u03AC\u03BC\u03B5\u03BD", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03B1\u03C7\u03AC\u03C4\u03B5", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["δεδίδαγμαι", "δεδίδαξαι", "δεδίδακται", "δεδιδαγμέθα", "δεδίδαχθε", "δεδίδαγνται"]
+      forms: ["\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03B3\u03BC\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03BA\u03C4\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03B1\u03B3\u03BC\u03AD\u03B8\u03B1", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B8\u03B5", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03B3\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"ἐπερωτάω": {
-  lemma: "ἐπερωτάω",
-  gloss: "I ask / inquire (α-contract)",
+"\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AC\u03C9": {
+  lemma: "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AC\u03C9",
+  gloss: "I ask / inquire (\u03B1-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἐπερωτῶ", "ἐπερωτᾷς", "ἐπερωτᾷ", "ἐπερωτῶμεν", "ἐπερωτᾶτε", "ἐπερωτῶσι"]
+      forms: ["\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FF6", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB7\u03C2", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB7", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B5", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FF6\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἐπερωτῶμαι", "ἐπερωτᾷ", "ἐπερωτᾶται", "ἐπερωτώμεθα", "ἐπερωτᾶσθε", "ἐπερωτῶνται"]
+      forms: ["\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB7", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FB6\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u1FF6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐπηρώτων", "ἐπηρώτας", "ἐπηρώτα", "ἐπηρωτῶμεν", "ἐπηρωτᾶτε", "ἐπηρώτων"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03C9\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B1\u03C2", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03C9\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐπηρωτώμην", "ἐπηρώτου", "ἐπηρωτᾶτο", "ἐπηρωτώμεθα", "ἐπηρωτᾶσθε", "ἐπηρωτῶντο"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03CE\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03BF\u03C5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u1FB6\u03C4\u03BF", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u1FB6\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u1FF6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἐπερωτήσω", "ἐπερωτήσεις", "ἐπερωτήσει", "ἐπερωτήσομεν", "ἐπερωτήσετε", "ἐπερωτήσουσι"]
+      forms: ["\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03C9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἐπερωτήσομαι", "ἐπερωτήσῃ", "ἐπερωτήσεται", "ἐπερωτησόμεθα", "ἐπερωτήσεσθε", "ἐπερωτήσονται"]
+      forms: ["\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u1FC3", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ἐπερωτηθήσομαι", "ἐπερωτηθήσῃ", "ἐπερωτηθήσεται", "ἐπερωτηθησόμεθα", "ἐπερωτηθήσεσθε", "ἐπερωτηθήσονται"]
+      forms: ["\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B5\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐπηρώτησα", "ἐπηρώτησας", "ἐπηρώτησε", "ἐπηρωτήσαμεν", "ἐπηρωτήσατε", "ἐπηρώτησαν"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐπηρωτησάμην", "ἐπηρώτησω", "ἐπηρωτήσατο", "ἐπηρωτησάμεθα", "ἐπηρωτήσασθε", "ἐπηρωτήσαντο"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03C9", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐπηρωτήθην", "ἐπηρωτήθης", "ἐπηρωτήθη", "ἐπηρωτήθημεν", "ἐπηρωτήθητε", "ἐπηρωτήθησαν"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C2", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἐπηρώτηκα", "ἐπηρώτηκας", "ἐπηρώτηκε", "ἐπηρωτήκαμεν", "ἐπηρωτήκατε", "ἐπηρώτηκασι"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1\u03C2", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BA\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἐπηρώτημαι", "ἐπηρώτησαι", "ἐπηρώτηται", "ἐπηρωτήμεθα", "ἐπηρώτησθε", "ἐπηρώτηνται"]
+      forms: ["\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BC\u03B1\u03B9", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03B9", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C4\u03B1\u03B9", "\u1F10\u03C0\u03B7\u03C1\u03C9\u03C4\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B7\u03C1\u03CE\u03C4\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"ἐρωτάω": {
-  lemma: "ἐρωτάω",
-  gloss: "I ask (α-contract)",
+"\u1F10\u03C1\u03C9\u03C4\u03AC\u03C9": {
+  lemma: "\u1F10\u03C1\u03C9\u03C4\u03AC\u03C9",
+  gloss: "I ask (\u03B1-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἐρωτῶ", "ἐρωτᾷς", "ἐρωτᾷ", "ἐρωτῶμεν", "ἐρωτᾶτε", "ἐρωτῶσι"]
+      forms: ["\u1F10\u03C1\u03C9\u03C4\u1FF6", "\u1F10\u03C1\u03C9\u03C4\u1FB7\u03C2", "\u1F10\u03C1\u03C9\u03C4\u1FB7", "\u1F10\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B5\u03BD", "\u1F10\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B5", "\u1F10\u03C1\u03C9\u03C4\u1FF6\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἐρωτῶμαι", "ἐρωτᾷ", "ἐρωτᾶται", "ἐρωτώμεθα", "ἐρωτᾶσθε", "ἐρωτῶνται"]
+      forms: ["\u1F10\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u1FB7", "\u1F10\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C1\u03C9\u03C4\u1FB6\u03C3\u03B8\u03B5", "\u1F10\u03C1\u03C9\u03C4\u1FF6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἠρώτων", "ἠρώτας", "ἠρώτα", "ἠρωτῶμεν", "ἠρωτᾶτε", "ἠρώτων"]
+      forms: ["\u1F20\u03C1\u03CE\u03C4\u03C9\u03BD", "\u1F20\u03C1\u03CE\u03C4\u03B1\u03C2", "\u1F20\u03C1\u03CE\u03C4\u03B1", "\u1F20\u03C1\u03C9\u03C4\u1FF6\u03BC\u03B5\u03BD", "\u1F20\u03C1\u03C9\u03C4\u1FB6\u03C4\u03B5", "\u1F20\u03C1\u03CE\u03C4\u03C9\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἠρωτώμην", "ἠρώτου", "ἠρωτᾶτο", "ἠρωτώμεθα", "ἠρωτᾶσθε", "ἠρωτῶντο"]
+      forms: ["\u1F20\u03C1\u03C9\u03C4\u03CE\u03BC\u03B7\u03BD", "\u1F20\u03C1\u03CE\u03C4\u03BF\u03C5", "\u1F20\u03C1\u03C9\u03C4\u1FB6\u03C4\u03BF", "\u1F20\u03C1\u03C9\u03C4\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03C1\u03C9\u03C4\u1FB6\u03C3\u03B8\u03B5", "\u1F20\u03C1\u03C9\u03C4\u1FF6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἐρωτήσω", "ἐρωτήσεις", "ἐρωτήσει", "ἐρωτήσομεν", "ἐρωτήσετε", "ἐρωτήσουσι"]
+      forms: ["\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03C9", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἐρωτήσομαι", "ἐρωτήσῃ", "ἐρωτήσεται", "ἐρωτησόμεθα", "ἐρωτήσεσθε", "ἐρωτήσονται"]
+      forms: ["\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u1FC3", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C1\u03C9\u03C4\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ἐρωτηθήσομαι", "ἐρωτηθήσῃ", "ἐρωτηθήσεται", "ἐρωτηθησόμεθα", "ἐρωτηθήσεσθε", "ἐρωτηθήσονται"]
+      forms: ["\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C1\u03C9\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἠρώτησα", "ἠρώτησας", "ἠρώτησε", "ἠρωτήσαμεν", "ἠρωτήσατε", "ἠρώτησαν"]
+      forms: ["\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03C2", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B5", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἠρωτησάμην", "ἠρώτησω", "ἠρωτήσατο", "ἠρωτησάμεθα", "ἠρωτήσασθε", "ἠρωτήσαντο"]
+      forms: ["\u1F20\u03C1\u03C9\u03C4\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03C9", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F20\u03C1\u03C9\u03C4\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἠρωτήθην", "ἠρωτήθης", "ἠρωτήθη", "ἠρωτήθημεν", "ἠρωτήθητε", "ἠρωτήθησαν"]
+      forms: ["\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03BD", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C2", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἠρώτηκα", "ἠρώτηκας", "ἠρώτηκε", "ἠρωτήκαμεν", "ἠρωτήκατε", "ἠρώτηκασι"]
+      forms: ["\u1F20\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1\u03C2", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03BA\u03B5", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἠρώτημαι", "ἠρώτησαι", "ἠρώτηται", "ἠρωτήμεθα", "ἠρώτησθε", "ἠρώτηνται"]
+      forms: ["\u1F20\u03C1\u03CE\u03C4\u03B7\u03BC\u03B1\u03B9", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B1\u03B9", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C4\u03B1\u03B9", "\u1F20\u03C1\u03C9\u03C4\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03C3\u03B8\u03B5", "\u1F20\u03C1\u03CE\u03C4\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
 
-"θέλω": {
-  lemma: "θέλω",
+"\u03B8\u03AD\u03BB\u03C9": {
+  lemma: "\u03B8\u03AD\u03BB\u03C9",
   gloss: "I want / desire / will",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["θέλω", "θέλεις", "θέλει", "θέλομεν", "θέλετε", "θέλουσι"]
+      forms: ["\u03B8\u03AD\u03BB\u03C9", "\u03B8\u03AD\u03BB\u03B5\u03B9\u03C2", "\u03B8\u03AD\u03BB\u03B5\u03B9", "\u03B8\u03AD\u03BB\u03BF\u03BC\u03B5\u03BD", "\u03B8\u03AD\u03BB\u03B5\u03C4\u03B5", "\u03B8\u03AD\u03BB\u03BF\u03C5\u03C3\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἤθελον", "ἤθελες", "ἤθελε", "ἠθέλομεν", "ἠθέλετε", "ἤθελον"]
+      forms: ["\u1F24\u03B8\u03B5\u03BB\u03BF\u03BD", "\u1F24\u03B8\u03B5\u03BB\u03B5\u03C2", "\u1F24\u03B8\u03B5\u03BB\u03B5", "\u1F20\u03B8\u03AD\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03B8\u03AD\u03BB\u03B5\u03C4\u03B5", "\u1F24\u03B8\u03B5\u03BB\u03BF\u03BD"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["θελήσω", "θελήσεις", "θελήσει", "θελήσομεν", "θελήσετε", "θελήσουσι"]
+      forms: ["\u03B8\u03B5\u03BB\u03AE\u03C3\u03C9", "\u03B8\u03B5\u03BB\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03B8\u03B5\u03BB\u03AE\u03C3\u03B5\u03B9", "\u03B8\u03B5\u03BB\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B8\u03B5\u03BB\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03B8\u03B5\u03BB\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἠθέλησα", "ἠθέλησας", "ἠθέλησε", "ἠθελήσαμεν", "ἠθελήσατε", "ἠθέλησαν"]
+      forms: ["\u1F20\u03B8\u03AD\u03BB\u03B7\u03C3\u03B1", "\u1F20\u03B8\u03AD\u03BB\u03B7\u03C3\u03B1\u03C2", "\u1F20\u03B8\u03AD\u03BB\u03B7\u03C3\u03B5", "\u1F20\u03B8\u03B5\u03BB\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03B8\u03B5\u03BB\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F20\u03B8\u03AD\u03BB\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["τεθέληκα", "τεθέληκας", "τεθέληκε", "τεθελήκαμεν", "τεθελήκατε", "τεθέληκασι"]
+      forms: ["\u03C4\u03B5\u03B8\u03AD\u03BB\u03B7\u03BA\u03B1", "\u03C4\u03B5\u03B8\u03AD\u03BB\u03B7\u03BA\u03B1\u03C2", "\u03C4\u03B5\u03B8\u03AD\u03BB\u03B7\u03BA\u03B5", "\u03C4\u03B5\u03B8\u03B5\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C4\u03B5\u03B8\u03B5\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03C4\u03B5\u03B8\u03AD\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
   }
 },
 
-"περιπατέω": {
-  lemma: "περιπατέω",
-  gloss: "I walk / live / conduct myself (ε-contract)",
+"\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AD\u03C9": {
+  lemma: "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AD\u03C9",
+  gloss: "I walk / live / conduct myself (\u03B5-contract)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["περιπατῶ", "περιπατεῖς", "περιπατεῖ", "περιπατοῦμεν", "περιπατεῖτε", "περιπατοῦσι"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u1FF6", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03BF\u1FE6\u03C3\u03B9"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["περιπατοῦμαι", "περιπατεῖ", "περιπατεῖται", "περιπατούμεθα", "περιπατεῖσθε", "περιπατοῦνται"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["περιεπάτουν", "περιεπάτεις", "περιεπάτει", "περιεπατοῦμεν", "περιεπατεῖτε", "περιεπάτουν"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03BF\u03C5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B5\u03B9\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B5\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["περιεπατούμην", "περιεπατοῦ", "περιεπάτειτο", "περιεπατούμεθα", "περιεπατεῖσθε", "περιεπατοῦντο"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03BF\u03CD\u03BC\u03B7\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03BF\u1FE6", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B5\u03B9\u03C4\u03BF", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["περιπατήσω", "περιπατήσεις", "περιπατήσει", "περιπατήσομεν", "περιπατήσετε", "περιπατήσουσι"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03C9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03B5\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["περιπατήσομαι", "περιπατήσῃ", "περιπατήσειται", "περιπατησόμεθα", "περιπατήσεσθε", "περιπατήσονται"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u1FC3", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03B5\u03B9\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["περιπατηθήσομαι", "περιπατηθήσῃ", "περιπατηθήσεται", "περιπατηθησόμεθα", "περιπατηθήσεσθε", "περιπατηθήσονται"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1\u03C4\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["περιεπάτησα", "περιεπάτησας", "περιεπάτησε", "περιεπατήσαμεν", "περιεπατήσατε", "περιεπάτησαν"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B1\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["περιεπατησάμην", "περιεπάτησω", "περιεπατήσατο", "περιεπατησάμεθα", "περιεπατήσασθε", "περιεπατήσαντο"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03C9", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03C3\u03B1\u03C4\u03BF", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["περιεπατήθην", "περιεπατήθης", "περιεπατήθη", "περιεπατήθημεν", "περιεπατήθητε", "περιεπατήθησαν"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03B5\u03C0\u03B1\u03C4\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["περιπεπάτηκα", "περιπεπάτηκας", "περιπεπάτηκε", "περιπεπατήκαμεν", "περιπεπατήκατε", "περιπεπάτηκασι"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BA\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BA\u03B1\u03C2", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BA\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03B1\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03B1\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BA\u03B1\u03C3\u03B9"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["περιπεπάτημαι", "περιπεπάτησαι", "περιπεπάτηται", "περιπεπατήμεθα", "περιπεπάτησθε", "περιπεπάτηνται"]
+      forms: ["\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03B1\u03C4\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03C1\u03B9\u03C0\u03B5\u03C0\u03AC\u03C4\u03B7\u03BD\u03C4\u03B1\u03B9"]
     },
   }
 },
-      "αἴρω": {
-        lemma: "αἴρω",
+      "\u03B1\u1F34\u03C1\u03C9": {
+        lemma: "\u03B1\u1F34\u03C1\u03C9",
         gloss: "I raise / take up / take away",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["αἴρω", "αἴρεις", "αἴρει", "αἴρομεν", "αἴρετε", "αἴρουσι(ν)"]
+            forms: ["\u03B1\u1F34\u03C1\u03C9", "\u03B1\u1F34\u03C1\u03B5\u03B9\u03C2", "\u03B1\u1F34\u03C1\u03B5\u03B9", "\u03B1\u1F34\u03C1\u03BF\u03BC\u03B5\u03BD", "\u03B1\u1F34\u03C1\u03B5\u03C4\u03B5", "\u03B1\u1F34\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["αἴρομαι", "αἴρῃ", "αἴρεται", "αἰρόμεθα", "αἴρεσθε", "αἴρονται"]
+            forms: ["\u03B1\u1F34\u03C1\u03BF\u03BC\u03B1\u03B9", "\u03B1\u1F34\u03C1\u1FC3", "\u03B1\u1F34\u03C1\u03B5\u03C4\u03B1\u03B9", "\u03B1\u1F30\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B1\u1F34\u03C1\u03B5\u03C3\u03B8\u03B5", "\u03B1\u1F34\u03C1\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ᾖρον", "ᾖρες", "ᾖρε(ν)", "ᾖρομεν", "ᾖρετε", "ᾖρον"]
+            forms: ["\u1F96\u03C1\u03BF\u03BD", "\u1F96\u03C1\u03B5\u03C2", "\u1F96\u03C1\u03B5(\u03BD)", "\u1F96\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F96\u03C1\u03B5\u03C4\u03B5", "\u1F96\u03C1\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ᾐρόμην", "ᾖρου", "ᾖρετο", "ᾐρόμεθα", "ᾖρεσθε", "ᾖροντο"]
+            forms: ["\u1F90\u03C1\u03CC\u03BC\u03B7\u03BD", "\u1F96\u03C1\u03BF\u03C5", "\u1F96\u03C1\u03B5\u03C4\u03BF", "\u1F90\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F96\u03C1\u03B5\u03C3\u03B8\u03B5", "\u1F96\u03C1\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἀρῶ", "ἀρεῖς", "ἀρεῖ", "ἀροῦμεν", "ἀρεῖτε", "ἀροῦσι(ν)"]
+            forms: ["\u1F00\u03C1\u1FF6", "\u1F00\u03C1\u03B5\u1FD6\u03C2", "\u1F00\u03C1\u03B5\u1FD6", "\u1F00\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F00\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F00\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative (rare)",
-            forms: ["ἀρθήσομαι", "ἀρθήσῃ", "ἀρθήσεται", "ἀρθησόμεθα", "ἀρθήσεσθε", "ἀρθήσονται"]
+            forms: ["\u1F00\u03C1\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03C1\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03C1\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03C1\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03C1\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03C1\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἦρα", "ἦρας", "ἦρε(ν)", "ἤραμεν", "ἤρατε", "ἦραν"]
+            forms: ["\u1F26\u03C1\u03B1", "\u1F26\u03C1\u03B1\u03C2", "\u1F26\u03C1\u03B5(\u03BD)", "\u1F24\u03C1\u03B1\u03BC\u03B5\u03BD", "\u1F24\u03C1\u03B1\u03C4\u03B5", "\u1F26\u03C1\u03B1\u03BD"]
           },
           aorist_passive_indicative: {
             label: "Aorist Passive Indicative (rare)",
-            forms: ["ἤρθην", "ἤρθης", "ἤρθη", "ἤρθημεν", "ἤρθητε", "ἤρθησαν"]
+            forms: ["\u1F24\u03C1\u03B8\u03B7\u03BD", "\u1F24\u03C1\u03B8\u03B7\u03C2", "\u1F24\u03C1\u03B8\u03B7", "\u1F24\u03C1\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F24\u03C1\u03B8\u03B7\u03C4\u03B5", "\u1F24\u03C1\u03B8\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἦρκα", "ἦρκας", "ἦρκε(ν)", "ἤρκαμεν", "ἤρκατε", "ἦρκασι(ν)"]
+            forms: ["\u1F26\u03C1\u03BA\u03B1", "\u1F26\u03C1\u03BA\u03B1\u03C2", "\u1F26\u03C1\u03BA\u03B5(\u03BD)", "\u1F24\u03C1\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F24\u03C1\u03BA\u03B1\u03C4\u03B5", "\u1F26\u03C1\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "ἀποστέλλω": {
-        lemma: "ἀποστέλλω",
+      "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03C9": {
+        lemma: "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03C9",
         gloss: "I send out",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἀποστέλλω", "ἀποστέλλεις", "ἀποστέλλει", "ἀποστέλλομεν", "ἀποστέλλετε", "ἀποστέλλουσι(ν)"]
+            forms: ["\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03C9", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03B5\u03B9\u03C2", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03B5\u03B9", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03AD\u03BB\u03BB\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἀπέστελλον", "ἀπέστελλες", "ἀπέστελλε(ν)", "ἀπεστέλλομεν", "ἀπεστέλλετε", "ἀπέστελλον"]
+            forms: ["\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03BB\u03BB\u03BF\u03BD", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03BB\u03BB\u03B5\u03C2", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03BB\u03BB\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03AD\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03AD\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03BB\u03BB\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἀποστελῶ", "ἀποστελεῖς", "ἀποστελεῖ", "ἀποστελοῦμεν", "ἀποστελεῖτε", "ἀποστελοῦσι(ν)"]
+            forms: ["\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u1FF6", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03B5\u1FD6\u03C2", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03B5\u1FD6", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F00\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἀπέστειλα", "ἀπέστειλας", "ἀπέστειλε(ν)", "ἀπεστείλαμεν", "ἀπεστείλατε", "ἀπέστειλαν"]
+            forms: ["\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03B9\u03BB\u03B1", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03B9\u03BB\u03B1\u03C2", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03B9\u03BB\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03B5\u03AF\u03BB\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03B5\u03AF\u03BB\u03B1\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B5\u03B9\u03BB\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἀπέσταλκα", "ἀπέσταλκας", "ἀπέσταλκε(ν)", "ἀπεστάλκαμεν", "ἀπεστάλκατε", "ἀπέσταλκασι(ν)"]
+            forms: ["\u1F00\u03C0\u03AD\u03C3\u03C4\u03B1\u03BB\u03BA\u03B1", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B1\u03BB\u03BA\u03B1\u03C2", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B1\u03BB\u03BA\u03B5(\u03BD)", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03AC\u03BB\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F00\u03C0\u03B5\u03C3\u03C4\u03AC\u03BB\u03BA\u03B1\u03C4\u03B5", "\u1F00\u03C0\u03AD\u03C3\u03C4\u03B1\u03BB\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "βαπτίζω": {
-        lemma: "βαπτίζω",
+      "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9": {
+        lemma: "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9",
         gloss: "I baptize",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["βαπτίζω", "βαπτίζεις", "βαπτίζει", "βαπτίζομεν", "βαπτίζετε", "βαπτίζουσι(ν)"]
+            forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03B9\u03C2", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐβάπτιζον", "ἐβάπτιζες", "ἐβάπτιζε(ν)", "ἐβαπτίζομεν", "ἐβαπτίζετε", "ἐβάπτιζον"]
+            forms: ["\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03BF\u03BD", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03B5\u03C2", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03B5(\u03BD)", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03B5", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["βαπτίσω", "βαπτίσεις", "βαπτίσει", "βαπτίσομεν", "βαπτίσετε", "βαπτίσουσι(ν)"]
+            forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03C9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03B9\u03C2", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03C4\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐβάπτισα", "ἐβάπτισας", "ἐβάπτισε(ν)", "ἐβαπτίσαμεν", "ἐβαπτίσατε", "ἐβάπτισαν"]
+            forms: ["\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1\u03C2", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B5(\u03BD)", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["βεβάπτικα", "βεβάπτικας", "βεβάπτικε(ν)", "βεβαπτίκαμεν", "βεβαπτίκατε", "βεβάπτικασι(ν)"]
+            forms: ["\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1\u03C2", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B5(\u03BD)", "\u03B2\u03B5\u03B2\u03B1\u03C0\u03C4\u03AF\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B2\u03B5\u03B2\u03B1\u03C0\u03C4\u03AF\u03BA\u03B1\u03C4\u03B5", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "γίνομαι": {
-        lemma: "γίνομαι",
+      "\u03B3\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9": {
+        lemma: "\u03B3\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9",
         gloss: "I become / happen / be",
         charts: {
           present_indicative: {
             label: "Present Indicative",
-            forms: ["γίνομαι", "γίνῃ", "γίνεται", "γινόμεθα", "γίνεσθε", "γίνονται"]
+            forms: ["\u03B3\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03AF\u03BD\u1FC3", "\u03B3\u03AF\u03BD\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03AF\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_indicative: {
             label: "Imperfect Indicative",
-            forms: ["ἐγινόμην", "ἐγίνου", "ἐγίνετο", "ἐγινόμεθα", "ἐγίνεσθε", "ἐγίνοντο"]
+            forms: ["\u1F10\u03B3\u03B9\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03AF\u03BD\u03BF\u03C5", "\u1F10\u03B3\u03AF\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03B3\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03AF\u03BD\u03BF\u03BD\u03C4\u03BF"]
           },
           future_indicative: {
             label: "Future Indicative",
-            forms: ["γενήσομαι", "γενήσῃ", "γενήσεται", "γενησόμεθα", "γενήσεσθε", "γενήσονται"]
+            forms: ["\u03B3\u03B5\u03BD\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03AE\u03C3\u1FC3", "\u03B3\u03B5\u03BD\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B5\u03BD\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B5\u03BD\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03B5\u03BD\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_indicative: {
             label: "Aorist Indicative",
-            forms: ["ἐγενόμην", "ἐγένου", "ἐγένετο", "ἐγενόμεθα", "ἐγένεσθε", "ἐγένοντο"]
+            forms: ["\u1F10\u03B3\u03B5\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03AD\u03BD\u03BF\u03C5", "\u1F10\u03B3\u03AD\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03B3\u03B5\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03AD\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03AD\u03BD\u03BF\u03BD\u03C4\u03BF"]
           },
           perfect_indicative: {
             label: "Perfect Indicative",
-            forms: ["γέγονα", "γέγονας", "γέγονε(ν)", "γεγόναμεν", "γεγόνατε", "γεγόνασι(ν)"]
+            forms: ["\u03B3\u03AD\u03B3\u03BF\u03BD\u03B1", "\u03B3\u03AD\u03B3\u03BF\u03BD\u03B1\u03C2", "\u03B3\u03AD\u03B3\u03BF\u03BD\u03B5(\u03BD)", "\u03B3\u03B5\u03B3\u03CC\u03BD\u03B1\u03BC\u03B5\u03BD", "\u03B3\u03B5\u03B3\u03CC\u03BD\u03B1\u03C4\u03B5", "\u03B3\u03B5\u03B3\u03CC\u03BD\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "δίδωμι": {
-        lemma: "δίδωμι",
+      "\u03B4\u03AF\u03B4\u03C9\u03BC\u03B9": {
+        lemma: "\u03B4\u03AF\u03B4\u03C9\u03BC\u03B9",
         gloss: "I give",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["δίδωμι", "δίδως", "δίδωσι(ν)", "δίδομεν", "δίδοτε", "διδόασι(ν)"]
+            forms: ["\u03B4\u03AF\u03B4\u03C9\u03BC\u03B9", "\u03B4\u03AF\u03B4\u03C9\u03C2", "\u03B4\u03AF\u03B4\u03C9\u03C3\u03B9(\u03BD)", "\u03B4\u03AF\u03B4\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03AF\u03B4\u03BF\u03C4\u03B5", "\u03B4\u03B9\u03B4\u03CC\u03B1\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐδίδουν", "ἐδίδους", "ἐδίδου", "ἐδίδομεν", "ἐδίδοτε", "ἐδίδουν"]
+            forms: ["\u1F10\u03B4\u03AF\u03B4\u03BF\u03C5\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03BF\u03C5\u03C2", "\u1F10\u03B4\u03AF\u03B4\u03BF\u03C5", "\u1F10\u03B4\u03AF\u03B4\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03BF\u03C4\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["δώσω", "δώσεις", "δώσει", "δώσομεν", "δώσετε", "δώσουσι(ν)"]
+            forms: ["\u03B4\u03CE\u03C3\u03C9", "\u03B4\u03CE\u03C3\u03B5\u03B9\u03C2", "\u03B4\u03CE\u03C3\u03B5\u03B9", "\u03B4\u03CE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03CE\u03C3\u03B5\u03C4\u03B5", "\u03B4\u03CE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔδωκα", "ἔδωκας", "ἔδωκε(ν)", "ἔδομεν", "ἔδοτε", "ἔδοσαν"]
+            forms: ["\u1F14\u03B4\u03C9\u03BA\u03B1", "\u1F14\u03B4\u03C9\u03BA\u03B1\u03C2", "\u1F14\u03B4\u03C9\u03BA\u03B5(\u03BD)", "\u1F14\u03B4\u03BF\u03BC\u03B5\u03BD", "\u1F14\u03B4\u03BF\u03C4\u03B5", "\u1F14\u03B4\u03BF\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["δέδωκα", "δέδωκας", "δέδωκε(ν)", "δεδώκαμεν", "δεδώκατε", "δεδώκασι(ν)"]
+            forms: ["\u03B4\u03AD\u03B4\u03C9\u03BA\u03B1", "\u03B4\u03AD\u03B4\u03C9\u03BA\u03B1\u03C2", "\u03B4\u03AD\u03B4\u03C9\u03BA\u03B5(\u03BD)", "\u03B4\u03B5\u03B4\u03CE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B4\u03B5\u03B4\u03CE\u03BA\u03B1\u03C4\u03B5", "\u03B4\u03B5\u03B4\u03CE\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "εἰμί": {
-        lemma: "εἰμί",
+      "\u03B5\u1F30\u03BC\u03AF": {
+        lemma: "\u03B5\u1F30\u03BC\u03AF",
         gloss: "I am",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["εἰμί", "εἶ", "ἐστίν", "ἐσμέν", "ἐστέ", "εἰσίν"]
+            forms: ["\u03B5\u1F30\u03BC\u03AF", "\u03B5\u1F36", "\u1F10\u03C3\u03C4\u03AF\u03BD", "\u1F10\u03C3\u03BC\u03AD\u03BD", "\u1F10\u03C3\u03C4\u03AD", "\u03B5\u1F30\u03C3\u03AF\u03BD"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἤμην", "ἦς", "ἦν", "ἦμεν", "ἦτε", "ἦσαν"]
+            forms: ["\u1F24\u03BC\u03B7\u03BD", "\u1F26\u03C2", "\u1F26\u03BD", "\u1F26\u03BC\u03B5\u03BD", "\u1F26\u03C4\u03B5", "\u1F26\u03C3\u03B1\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἔσομαι", "ἔσῃ", "ἔσται", "ἐσόμεθα", "ἔσεσθε", "ἔσονται"]
+            forms: ["\u1F14\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F14\u03C3\u1FC3", "\u1F14\u03C3\u03C4\u03B1\u03B9", "\u1F10\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           }
         }
       },
 
-      "ἐγείρω": {
-        lemma: "ἐγείρω",
+      "\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9": {
+        lemma: "\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9",
         gloss: "I raise / wake up",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἐγείρω", "ἐγείρεις", "ἐγείρει", "ἐγείρομεν", "ἐγείρετε", "ἐγείρουσι(ν)"]
+            forms: ["\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03B9\u03C2", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03B9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B5", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           present_middle_passive_indicative: {
             label: "Present Middle/Passive Indicative",
-            forms: ["ἐγείρομαι", "ἐγείρῃ", "ἐγείρεται", "ἐγειρόμεθα", "ἐγείρεσθε", "ἐγείρονται"]
+            forms: ["\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u1FC3", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἤγειρον", "ἤγειρες", "ἤγειρε(ν)", "ἠγείρομεν", "ἠγείρετε", "ἤγειρον"]
+            forms: ["\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03BD", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5\u03C2", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5(\u03BD)", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03BD"]
           },
           imperfect_middle_passive_indicative: {
             label: "Imperfect Middle/Passive Indicative",
-            forms: ["ἠγειρόμην", "ἠγείρου", "ἠγείρετο", "ἠγειρόμεθα", "ἠγείρεσθε", "ἠγείροντο"]
+            forms: ["\u1F20\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B7\u03BD", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03BF\u03C5", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03BF", "\u1F20\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B5\u03C3\u03B8\u03B5", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03BF\u03BD\u03C4\u03BF"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἐγερῶ", "ἐγερεῖς", "ἐγερεῖ", "ἐγεροῦμεν", "ἐγερεῖτε", "ἐγεροῦσι(ν)"]
+            forms: ["\u1F10\u03B3\u03B5\u03C1\u1FF6", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C2", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6", "\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           future_passive_indicative: {
             label: "Future Passive Indicative (rare)",
-            forms: ["ἐγερθήσομαι", "ἐγερθήσῃ", "ἐγερθήσεται", "ἐγερθησόμεθα", "ἐγερθήσεσθε", "ἐγερθήσονται"]
+            forms: ["\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἤγειρα", "ἤγειρας", "ἤγειρε(ν)", "ἠγείραμεν", "ἠγείρατε", "ἤγειραν"]
+            forms: ["\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1\u03C2", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5(\u03BD)", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03C4\u03B5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1\u03BD"]
           },
           aorist_passive_indicative: {
             label: "Aorist Passive Indicative",
-            forms: ["ἠγέρθην", "ἠγέρθης", "ἠγέρθη", "ἠγέρθημεν", "ἠγέρθητε", "ἠγέρθησαν"]
+            forms: ["\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03BD", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C2", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C3\u03B1\u03BD"]
           }
         }
       },
 
-      "λαμβάνω": {
-        lemma: "λαμβάνω",
+      "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03C9": {
+        lemma: "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03C9",
         gloss: "I take / receive",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["λαμβάνω", "λαμβάνεις", "λαμβάνει", "λαμβάνομεν", "λαμβάνετε", "λαμβάνουσι(ν)"]
+            forms: ["\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03C9", "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03B9\u03C2", "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03B9", "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03C4\u03B5", "\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐλάμβανον", "ἐλάμβανες", "ἐλάμβανε(ν)", "ἐλαμβάνομεν", "ἐλαμβάνετε", "ἐλάμβανον"]
+            forms: ["\u1F10\u03BB\u03AC\u03BC\u03B2\u03B1\u03BD\u03BF\u03BD", "\u1F10\u03BB\u03AC\u03BC\u03B2\u03B1\u03BD\u03B5\u03C2", "\u1F10\u03BB\u03AC\u03BC\u03B2\u03B1\u03BD\u03B5(\u03BD)", "\u1F10\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03C4\u03B5", "\u1F10\u03BB\u03AC\u03BC\u03B2\u03B1\u03BD\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["λήμψομαι", "λήμψῃ", "λήμψεται", "λημψόμεθα", "λήμψεσθε", "λήμψονται"]
+            forms: ["\u03BB\u03AE\u03BC\u03C8\u03BF\u03BC\u03B1\u03B9", "\u03BB\u03AE\u03BC\u03C8\u1FC3", "\u03BB\u03AE\u03BC\u03C8\u03B5\u03C4\u03B1\u03B9", "\u03BB\u03B7\u03BC\u03C8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BB\u03AE\u03BC\u03C8\u03B5\u03C3\u03B8\u03B5", "\u03BB\u03AE\u03BC\u03C8\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔλαβον", "ἔλαβες", "ἔλαβε(ν)", "ἐλάβομεν", "ἐλάβετε", "ἔλαβον"]
+            forms: ["\u1F14\u03BB\u03B1\u03B2\u03BF\u03BD", "\u1F14\u03BB\u03B1\u03B2\u03B5\u03C2", "\u1F14\u03BB\u03B1\u03B2\u03B5(\u03BD)", "\u1F10\u03BB\u03AC\u03B2\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03AC\u03B2\u03B5\u03C4\u03B5", "\u1F14\u03BB\u03B1\u03B2\u03BF\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["εἴληφα", "εἴληφας", "εἴληφε(ν)", "εἰλήφαμεν", "εἰλήφατε", "εἰλήφασι(ν)"]
+            forms: ["\u03B5\u1F34\u03BB\u03B7\u03C6\u03B1", "\u03B5\u1F34\u03BB\u03B7\u03C6\u03B1\u03C2", "\u03B5\u1F34\u03BB\u03B7\u03C6\u03B5(\u03BD)", "\u03B5\u1F30\u03BB\u03AE\u03C6\u03B1\u03BC\u03B5\u03BD", "\u03B5\u1F30\u03BB\u03AE\u03C6\u03B1\u03C4\u03B5", "\u03B5\u1F30\u03BB\u03AE\u03C6\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "προσέρχομαι": {
-        lemma: "προσέρχομαι",
+      "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+        lemma: "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
         gloss: "I come to / approach (deponent)",
         charts: {
           present_indicative: {
             label: "Present Indicative",
-            forms: ["προσέρχομαι", "προσέρχῃ", "προσέρχεται", "προσερχόμεθα", "προσέρχεσθε", "προσέρχονται"]
+            forms: ["\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_indicative: {
             label: "Imperfect Indicative",
-            forms: ["προσηρχόμην", "προσήρχου", "προσήρχετο", "προσηρχόμεθα", "προσήρχεσθε", "προσήρχοντο"]
+            forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03BF\u03C5", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03B5\u03C4\u03BF", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
           },
           future_indicative: {
             label: "Future Indicative",
-            forms: ["προσελεύσομαι", "προσελεύσῃ", "προσελεύσεται", "προσελευσόμεθα", "προσελεύσεσθε", "προσελεύσονται"]
+            forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_indicative: {
             label: "Aorist Indicative (2nd Aorist)",
-            forms: ["προσῆλθον", "προσῆλθες", "προσῆλθε(ν)", "προσῆλθομεν", "προσῆλθετε", "προσῆλθον"]
+            forms: ["\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BD", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5\u03C2", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5(\u03BD)", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5\u03C4\u03B5", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BD"]
           },
           perfect_indicative: {
             label: "Perfect Indicative",
-            forms: ["προσελήλυθα", "προσελήλυθας", "προσελήλυθε(ν)", "προσεληλύθαμεν", "προσεληλύθατε", "προσελήλυθασι(ν)"]
+            forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "συνέρχομαι": {
-        lemma: "συνέρχομαι",
+      "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+        lemma: "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
         gloss: "I come together / assemble (deponent)",
         charts: {
           present_indicative: {
             label: "Present Indicative",
-            forms: ["συνέρχομαι", "συνέρχῃ", "συνέρχεται", "συνερχόμεθα", "συνέρχεσθε", "συνέρχονται"]
+            forms: ["\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u1FC3", "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03B5\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C5\u03BD\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_indicative: {
             label: "Imperfect Indicative",
-            forms: ["συνηρχόμην", "συνήρχου", "συνήρχετο", "συνηρχόμεθα", "συνήρχεσθε", "συνήρχοντο"]
+            forms: ["\u03C3\u03C5\u03BD\u03B7\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u03C3\u03C5\u03BD\u03AE\u03C1\u03C7\u03BF\u03C5", "\u03C3\u03C5\u03BD\u03AE\u03C1\u03C7\u03B5\u03C4\u03BF", "\u03C3\u03C5\u03BD\u03B7\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u03AE\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C5\u03BD\u03AE\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
           },
           future_indicative: {
             label: "Future Indicative",
-            forms: ["συνελεύσομαι", "συνελεύσῃ", "συνελεύσεται", "συνελευσόμεθα", "συνελεύσεσθε", "συνελεύσονται"]
+            forms: ["\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_indicative: {
             label: "Aorist Indicative (2nd Aorist)",
-            forms: ["συνῆλθον", "συνῆλθες", "συνῆλθε(ν)", "συνῆλθομεν", "συνῆλθετε", "συνῆλθον"]
+            forms: ["\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03BF\u03BD", "\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03B5\u03C2", "\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03B5(\u03BD)", "\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03B5\u03C4\u03B5", "\u03C3\u03C5\u03BD\u1FC6\u03BB\u03B8\u03BF\u03BD"]
           },
           perfect_indicative: {
             label: "Perfect Indicative",
-            forms: ["συνελήλυθα", "συνελήλυθας", "συνελήλυθε(ν)", "συνεληλύθαμεν", "συνεληλύθατε", "συνελήλυθασι(ν)"]
+            forms: ["\u03C3\u03C5\u03BD\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u03C3\u03C5\u03BD\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "ἵστημι": {
-        lemma: "ἵστημι",
+      "\u1F35\u03C3\u03C4\u03B7\u03BC\u03B9": {
+        lemma: "\u1F35\u03C3\u03C4\u03B7\u03BC\u03B9",
         gloss: "I stand / I set / place",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἵστημι", "ἵστης", "ἵστησι(ν)", "ἵσταμεν", "ἵστατε", "ἱστᾶσι(ν)"]
+            forms: ["\u1F35\u03C3\u03C4\u03B7\u03BC\u03B9", "\u1F35\u03C3\u03C4\u03B7\u03C2", "\u1F35\u03C3\u03C4\u03B7\u03C3\u03B9(\u03BD)", "\u1F35\u03C3\u03C4\u03B1\u03BC\u03B5\u03BD", "\u1F35\u03C3\u03C4\u03B1\u03C4\u03B5", "\u1F31\u03C3\u03C4\u1FB6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἵστην", "ἵστης", "ἵστη", "ἵσταμεν", "ἵστατε", "ἵστασαν"]
+            forms: ["\u1F35\u03C3\u03C4\u03B7\u03BD", "\u1F35\u03C3\u03C4\u03B7\u03C2", "\u1F35\u03C3\u03C4\u03B7", "\u1F35\u03C3\u03C4\u03B1\u03BC\u03B5\u03BD", "\u1F35\u03C3\u03C4\u03B1\u03C4\u03B5", "\u1F35\u03C3\u03C4\u03B1\u03C3\u03B1\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["στήσω", "στήσεις", "στήσει", "στήσομεν", "στήσετε", "στήσουσι(ν)"]
+            forms: ["\u03C3\u03C4\u03AE\u03C3\u03C9", "\u03C3\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C3\u03C4\u03AE\u03C3\u03B5\u03B9", "\u03C3\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C3\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C3\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἔστησα", "ἔστησας", "ἔστησε(ν)", "ἐστήσαμεν", "ἐστήσατε", "ἔστησαν"]
+            forms: ["\u1F14\u03C3\u03C4\u03B7\u03C3\u03B1", "\u1F14\u03C3\u03C4\u03B7\u03C3\u03B1\u03C2", "\u1F14\u03C3\u03C4\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C3\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C3\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F14\u03C3\u03C4\u03B7\u03C3\u03B1\u03BD"]
           },
           aorist_active_indicative_2: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔστην", "ἔστης", "ἔστη", "ἔστημεν", "ἔστητε", "ἔστησαν"]
+            forms: ["\u1F14\u03C3\u03C4\u03B7\u03BD", "\u1F14\u03C3\u03C4\u03B7\u03C2", "\u1F14\u03C3\u03C4\u03B7", "\u1F14\u03C3\u03C4\u03B7\u03BC\u03B5\u03BD", "\u1F14\u03C3\u03C4\u03B7\u03C4\u03B5", "\u1F14\u03C3\u03C4\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["ἕστηκα", "ἕστηκας", "ἕστηκε(ν)", "ἑστήκαμεν", "ἑστήκατε", "ἑστήκασι(ν)"]
+            forms: ["\u1F15\u03C3\u03C4\u03B7\u03BA\u03B1", "\u1F15\u03C3\u03C4\u03B7\u03BA\u03B1\u03C2", "\u1F15\u03C3\u03C4\u03B7\u03BA\u03B5(\u03BD)", "\u1F11\u03C3\u03C4\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F11\u03C3\u03C4\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F11\u03C3\u03C4\u03AE\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "ἐσθίω": {
-        lemma: "ἐσθίω",
+      "\u1F10\u03C3\u03B8\u03AF\u03C9": {
+        lemma: "\u1F10\u03C3\u03B8\u03AF\u03C9",
         gloss: "I eat",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ἐσθίω", "ἐσθίεις", "ἐσθίει", "ἐσθίομεν", "ἐσθίετε", "ἐσθίουσι(ν)"]
+            forms: ["\u1F10\u03C3\u03B8\u03AF\u03C9", "\u1F10\u03C3\u03B8\u03AF\u03B5\u03B9\u03C2", "\u1F10\u03C3\u03B8\u03AF\u03B5\u03B9", "\u1F10\u03C3\u03B8\u03AF\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C3\u03B8\u03AF\u03B5\u03C4\u03B5", "\u1F10\u03C3\u03B8\u03AF\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἤσθιον", "ἤσθιες", "ἤσθιε(ν)", "ἠσθίομεν", "ἠσθίετε", "ἤσθιον"]
+            forms: ["\u1F24\u03C3\u03B8\u03B9\u03BF\u03BD", "\u1F24\u03C3\u03B8\u03B9\u03B5\u03C2", "\u1F24\u03C3\u03B8\u03B9\u03B5(\u03BD)", "\u1F20\u03C3\u03B8\u03AF\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03C3\u03B8\u03AF\u03B5\u03C4\u03B5", "\u1F24\u03C3\u03B8\u03B9\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ἔδομαι", "ἔδῃ", "ἔδεται", "ἐδόμεθα", "ἔδεσθε", "ἔδονται"]
+            forms: ["\u1F14\u03B4\u03BF\u03BC\u03B1\u03B9", "\u1F14\u03B4\u1FC3", "\u1F14\u03B4\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03B4\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03B4\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03B4\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔφαγον", "ἔφαγες", "ἔφαγε(ν)", "ἐφάγομεν", "ἐφάγετε", "ἔφαγον"]
+            forms: ["\u1F14\u03C6\u03B1\u03B3\u03BF\u03BD", "\u1F14\u03C6\u03B1\u03B3\u03B5\u03C2", "\u1F14\u03C6\u03B1\u03B3\u03B5(\u03BD)", "\u1F10\u03C6\u03AC\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03AC\u03B3\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03B1\u03B3\u03BF\u03BD"]
           }
         }
       },
 
-      "ἔρχομαι": {
-        lemma: "ἔρχομαι",
+      "\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+        lemma: "\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
         gloss: "I come / go (deponent, irregular)",
         charts: {
           present_indicative: {
             label: "Present Indicative",
-            forms: ["ἔρχομαι", "ἔρχῃ", "ἔρχεται", "ἐρχόμεθα", "ἔρχεσθε", "ἔρχονται"]
+            forms: ["\u1F14\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u1F14\u03C1\u03C7\u1FC3", "\u1F14\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           imperfect_indicative: {
             label: "Imperfect Indicative",
-            forms: ["ἠρχόμην", "ἤρχου", "ἤρχετο", "ἠρχόμεθα", "ἤρχεσθε", "ἤρχοντο"]
+            forms: ["\u1F20\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u1F24\u03C1\u03C7\u03BF\u03C5", "\u1F24\u03C1\u03C7\u03B5\u03C4\u03BF", "\u1F20\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F24\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F24\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
           },
           future_indicative: {
             label: "Future Indicative",
-            forms: ["ἐλεύσομαι", "ἐλεύσῃ", "ἐλεύσεται", "ἐλευσόμεθα", "ἐλεύσεσθε", "ἐλεύσονται"]
+            forms: ["\u1F10\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_indicative: {
             label: "Aorist Indicative",
-            forms: ["ἦλθον", "ἦλθες", "ἦλθε(ν)", "ἤλθομεν", "ἤλθετε", "ἦλθον"]
+            forms: ["\u1F26\u03BB\u03B8\u03BF\u03BD", "\u1F26\u03BB\u03B8\u03B5\u03C2", "\u1F26\u03BB\u03B8\u03B5(\u03BD)", "\u1F24\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u1F24\u03BB\u03B8\u03B5\u03C4\u03B5", "\u1F26\u03BB\u03B8\u03BF\u03BD"]
           },
           perfect_indicative: {
             label: "Perfect Indicative",
-            forms: ["ἐλήλυθα", "ἐλήλυθας", "ἐλήλυθε(ν)", "ἐληλύθαμεν", "ἐληλύθατε", "ἐλήλυθασι(ν)"]
+            forms: ["\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u1F10\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u1F10\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "ὀνομάζω": {
-        lemma: "ὀνομάζω",
+      "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03C9": {
+        lemma: "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03C9",
         gloss: "I name / call",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ὀνομάζω", "ὀνομάζεις", "ὀνομάζει", "ὀνομάζομεν", "ὀνομάζετε", "ὀνομάζουσι(ν)"]
+            forms: ["\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03C9", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03B5\u03B9\u03C2", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03B5\u03B9", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03B5\u03C4\u03B5", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03B6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ὠνόμαζον", "ὠνόμαζες", "ὠνόμαζε(ν)", "ὠνομάζομεν", "ὠνομάζετε", "ὠνόμαζον"]
+            forms: ["\u1F60\u03BD\u03CC\u03BC\u03B1\u03B6\u03BF\u03BD", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03B6\u03B5\u03C2", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03B6\u03B5(\u03BD)", "\u1F60\u03BD\u03BF\u03BC\u03AC\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F60\u03BD\u03BF\u03BC\u03AC\u03B6\u03B5\u03C4\u03B5", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03B6\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ὀνομάσω", "ὀνομάσεις", "ὀνομάσει", "ὀνομάσομεν", "ὀνομάσετε", "ὀνομάσουσι(ν)"]
+            forms: ["\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03C9", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03B5\u03B9\u03C2", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03B5\u03B9", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03B5\u03C4\u03B5", "\u1F40\u03BD\u03BF\u03BC\u03AC\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ὠνόμασα", "ὠνόμασας", "ὠνόμασε(ν)", "ὠνομάσαμεν", "ὠνομάσατε", "ὠνόμασαν"]
+            forms: ["\u1F60\u03BD\u03CC\u03BC\u03B1\u03C3\u03B1", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03C3\u03B1\u03C2", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03C3\u03B5(\u03BD)", "\u1F60\u03BD\u03BF\u03BC\u03AC\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F60\u03BD\u03BF\u03BC\u03AC\u03C3\u03B1\u03C4\u03B5", "\u1F60\u03BD\u03CC\u03BC\u03B1\u03C3\u03B1\u03BD"]
           }
         }
       },
 
-      "ὑποτάσσω": {
-        lemma: "ὑποτάσσω",
+      "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03C9": {
+        lemma: "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03C9",
         gloss: "I submit / subject",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ὑποτάσσω", "ὑποτάσσεις", "ὑποτάσσει", "ὑποτάσσομεν", "ὑποτάσσετε", "ὑποτάσσουσι(ν)"]
+            forms: ["\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03C9", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03B5\u03B9\u03C2", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03B5\u03B9", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03B5\u03C4\u03B5", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03C3\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ὑπέτασσον", "ὑπέτασσες", "ὑπέτασσε(ν)", "ὑπετάσσομεν", "ὑπετάσσετε", "ὑπέτασσον"]
+            forms: ["\u1F51\u03C0\u03AD\u03C4\u03B1\u03C3\u03C3\u03BF\u03BD", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03C3\u03C3\u03B5\u03C2", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03C3\u03C3\u03B5(\u03BD)", "\u1F51\u03C0\u03B5\u03C4\u03AC\u03C3\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03B5\u03C4\u03AC\u03C3\u03C3\u03B5\u03C4\u03B5", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03C3\u03C3\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ὑποτάξω", "ὑποτάξεις", "ὑποτάξει", "ὑποτάξομεν", "ὑποτάξετε", "ὑποτάξουσι(ν)"]
+            forms: ["\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03C9", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03B5\u03B9\u03C2", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03B5\u03B9", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03BF\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03B5\u03C4\u03B5", "\u1F51\u03C0\u03BF\u03C4\u03AC\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ὑπέταξα", "ὑπέταξας", "ὑπέταξε(ν)", "ὑπετάξαμεν", "ὑπετάξατε", "ὑπέταξαν"]
+            forms: ["\u1F51\u03C0\u03AD\u03C4\u03B1\u03BE\u03B1", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03BE\u03B1\u03C2", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03BE\u03B5(\u03BD)", "\u1F51\u03C0\u03B5\u03C4\u03AC\u03BE\u03B1\u03BC\u03B5\u03BD", "\u1F51\u03C0\u03B5\u03C4\u03AC\u03BE\u03B1\u03C4\u03B5", "\u1F51\u03C0\u03AD\u03C4\u03B1\u03BE\u03B1\u03BD"]
           }
         }
       },
 
-      "υἱοθετέω": {
-        lemma: "υἱοθετέω",
-        gloss: "I adopt (ε-contract)",
+      "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AD\u03C9": {
+        lemma: "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AD\u03C9",
+        gloss: "I adopt (\u03B5-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["υἱοθετῶ", "υἱοθετεῖς", "υἱοθετεῖ", "υἱοθετοῦμεν", "υἱοθετεῖτε", "υἱοθετοῦσι(ν)"]
+            forms: ["\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u1FF6", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03B5\u1FD6\u03C2", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03B5\u1FD6", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["υἱοθέτουν", "υἱοθέτεις", "υἱοθέτει", "υἱοθετοῦμεν", "υἱοθετεῖτε", "υἱοθέτουν"]
+            forms: ["\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03BF\u03C5\u03BD", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B5\u03B9\u03C2", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B5\u03B9", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03B5\u1FD6\u03C4\u03B5", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["υἱοθετήσω", "υἱοθετήσεις", "υἱοθετήσει", "υἱοθετήσομεν", "υἱοθετήσετε", "υἱοθετήσουσι(ν)"]
+            forms: ["\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03C9", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03B5\u03B9", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["υἱοθέτησα", "υἱοθέτησας", "υἱοθέτησε(ν)", "υἱοθετήσαμεν", "υἱοθετήσατε", "υἱοθέτησαν"]
+            forms: ["\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B7\u03C3\u03B1", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B7\u03C3\u03B1\u03C2", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B7\u03C3\u03B5(\u03BD)", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u03C5\u1F31\u03BF\u03B8\u03B5\u03C4\u03AE\u03C3\u03B1\u03C4\u03B5", "\u03C5\u1F31\u03BF\u03B8\u03AD\u03C4\u03B7\u03C3\u03B1\u03BD"]
           }
         }
       },
 
-      "φίλεω": {
-        lemma: "φίλεω",
-        gloss: "I love (ε-contract)",
+      "\u03C6\u03AF\u03BB\u03B5\u03C9": {
+        lemma: "\u03C6\u03AF\u03BB\u03B5\u03C9",
+        gloss: "I love (\u03B5-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φιλῶ", "φιλεῖς", "φιλεῖ", "φιλοῦμεν", "φιλεῖτε", "φιλοῦσι(ν)"]
+            forms: ["\u03C6\u03B9\u03BB\u1FF6", "\u03C6\u03B9\u03BB\u03B5\u1FD6\u03C2", "\u03C6\u03B9\u03BB\u03B5\u1FD6", "\u03C6\u03B9\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C6\u03B9\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03C6\u03B9\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐφίλουν", "ἐφίλεις", "ἐφίλει", "ἐφιλοῦμεν", "ἐφιλεῖτε", "ἐφίλουν"]
+            forms: ["\u1F10\u03C6\u03AF\u03BB\u03BF\u03C5\u03BD", "\u1F10\u03C6\u03AF\u03BB\u03B5\u03B9\u03C2", "\u1F10\u03C6\u03AF\u03BB\u03B5\u03B9", "\u1F10\u03C6\u03B9\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03B9\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C6\u03AF\u03BB\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["φιλήσω", "φιλήσεις", "φιλήσει", "φιλήσομεν", "φιλήσετε", "φιλήσουσι(ν)"]
+            forms: ["\u03C6\u03B9\u03BB\u03AE\u03C3\u03C9", "\u03C6\u03B9\u03BB\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C6\u03B9\u03BB\u03AE\u03C3\u03B5\u03B9", "\u03C6\u03B9\u03BB\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03B9\u03BB\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C6\u03B9\u03BB\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐφίλησα", "ἐφίλησας", "ἐφίλησε(ν)", "ἐφιλήσαμεν", "ἐφιλήσατε", "ἐφίλησαν"]
+            forms: ["\u1F10\u03C6\u03AF\u03BB\u03B7\u03C3\u03B1", "\u1F10\u03C6\u03AF\u03BB\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C6\u03AF\u03BB\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C6\u03B9\u03BB\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03B9\u03BB\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C6\u03AF\u03BB\u03B7\u03C3\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["πεφίληκα", "πεφίληκας", "πεφίληκε(ν)", "πεφιλήκαμεν", "πεφιλήκατε", "πεφίληκασι(ν)"]
+            forms: ["\u03C0\u03B5\u03C6\u03AF\u03BB\u03B7\u03BA\u03B1", "\u03C0\u03B5\u03C6\u03AF\u03BB\u03B7\u03BA\u03B1\u03C2", "\u03C0\u03B5\u03C6\u03AF\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C6\u03B9\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C6\u03B9\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B5\u03C6\u03AF\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "φαίνω": {
-        lemma: "φαίνω",
+      "\u03C6\u03B1\u03AF\u03BD\u03C9": {
+        lemma: "\u03C6\u03B1\u03AF\u03BD\u03C9",
         gloss: "I show / appear",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φαίνω", "φαίνεις", "φαίνει", "φαίνομεν", "φαίνετε", "φαίνουσι(ν)"]
+            forms: ["\u03C6\u03B1\u03AF\u03BD\u03C9", "\u03C6\u03B1\u03AF\u03BD\u03B5\u03B9\u03C2", "\u03C6\u03B1\u03AF\u03BD\u03B5\u03B9", "\u03C6\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u03C6\u03B1\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔφαινον", "ἔφαινεις", "ἔφαινε(ν)", "ἐφαίνομεν", "ἐφαίνετε", "ἔφαινον"]
+            forms: ["\u1F14\u03C6\u03B1\u03B9\u03BD\u03BF\u03BD", "\u1F14\u03C6\u03B1\u03B9\u03BD\u03B5\u03B9\u03C2", "\u1F14\u03C6\u03B1\u03B9\u03BD\u03B5(\u03BD)", "\u1F10\u03C6\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03B1\u03B9\u03BD\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["φανῶ", "φανεῖς", "φανεῖ", "φανοῦμεν", "φανεῖτε", "φανοῦσι(ν)"]
+            forms: ["\u03C6\u03B1\u03BD\u1FF6", "\u03C6\u03B1\u03BD\u03B5\u1FD6\u03C2", "\u03C6\u03B1\u03BD\u03B5\u1FD6", "\u03C6\u03B1\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C6\u03B1\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03C6\u03B1\u03BD\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔφηνα", "ἔφηνας", "ἔφηνε(ν)", "ἐφήναμεν", "ἐφήνατε", "ἔφηναν"]
+            forms: ["\u1F14\u03C6\u03B7\u03BD\u03B1", "\u1F14\u03C6\u03B7\u03BD\u03B1\u03C2", "\u1F14\u03C6\u03B7\u03BD\u03B5(\u03BD)", "\u1F10\u03C6\u03AE\u03BD\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03AE\u03BD\u03B1\u03C4\u03B5", "\u1F14\u03C6\u03B7\u03BD\u03B1\u03BD"]
           },
           perfect_active_indicative: {
             label: "Perfect Active Indicative",
-            forms: ["πέφαγκα", "πέφαγκας", "πέφαγκε(ν)", "πεφάγκαμεν", "πεφάγκατε", "πέφαγκασι(ν)"]
+            forms: ["\u03C0\u03AD\u03C6\u03B1\u03B3\u03BA\u03B1", "\u03C0\u03AD\u03C6\u03B1\u03B3\u03BA\u03B1\u03C2", "\u03C0\u03AD\u03C6\u03B1\u03B3\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C6\u03AC\u03B3\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C6\u03AC\u03B3\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03AD\u03C6\u03B1\u03B3\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
           }
         }
       },
 
-      "φέρω": {
-        lemma: "φέρω",
+      "\u03C6\u03AD\u03C1\u03C9": {
+        lemma: "\u03C6\u03AD\u03C1\u03C9",
         gloss: "I bring / carry",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φέρω", "φέρεις", "φέρει", "φέρομεν", "φέρετε", "φέρουσι(ν)"]
+            forms: ["\u03C6\u03AD\u03C1\u03C9", "\u03C6\u03AD\u03C1\u03B5\u03B9\u03C2", "\u03C6\u03AD\u03C1\u03B5\u03B9", "\u03C6\u03AD\u03C1\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03AD\u03C1\u03B5\u03C4\u03B5", "\u03C6\u03AD\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔφερον", "ἔφερες", "ἔφερε(ν)", "ἐφέρομεν", "ἐφέρετε", "ἔφερον"]
+            forms: ["\u1F14\u03C6\u03B5\u03C1\u03BF\u03BD", "\u1F14\u03C6\u03B5\u03C1\u03B5\u03C2", "\u1F14\u03C6\u03B5\u03C1\u03B5(\u03BD)", "\u1F10\u03C6\u03AD\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03AD\u03C1\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03B5\u03C1\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["οἴσω", "οἴσεις", "οἴσει", "οἴσομεν", "οἴσετε", "οἴσουσι(ν)"]
+            forms: ["\u03BF\u1F34\u03C3\u03C9", "\u03BF\u1F34\u03C3\u03B5\u03B9\u03C2", "\u03BF\u1F34\u03C3\u03B5\u03B9", "\u03BF\u1F34\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BF\u1F34\u03C3\u03B5\u03C4\u03B5", "\u03BF\u1F34\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἤνεγκα", "ἤνεγκας", "ἤνεγκε(ν)", "ἠνέγκαμεν", "ἠνέγκατε", "ἤνεγκαν"]
+            forms: ["\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1\u03C2", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B5(\u03BD)", "\u1F20\u03BD\u03AD\u03B3\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BD\u03AD\u03B3\u03BA\u03B1\u03C4\u03B5", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1\u03BD"]
           }
         }
       },
 
-      "φέρω": {
-        lemma: "φέρω",
+      "\u03C6\u03AD\u03C1\u03C9": {
+        lemma: "\u03C6\u03AD\u03C1\u03C9",
         gloss: "I bring / carry",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φέρω", "φέρεις", "φέρει", "φέρομεν", "φέρετε", "φέρουσι(ν)"]
+            forms: ["\u03C6\u03AD\u03C1\u03C9", "\u03C6\u03AD\u03C1\u03B5\u03B9\u03C2", "\u03C6\u03AD\u03C1\u03B5\u03B9", "\u03C6\u03AD\u03C1\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03AD\u03C1\u03B5\u03C4\u03B5", "\u03C6\u03AD\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔφερον", "ἔφερες", "ἔφερε(ν)", "ἐφέρομεν", "ἐφέρετε", "ἔφερον"]
+            forms: ["\u1F14\u03C6\u03B5\u03C1\u03BF\u03BD", "\u1F14\u03C6\u03B5\u03C1\u03B5\u03C2", "\u1F14\u03C6\u03B5\u03C1\u03B5(\u03BD)", "\u1F10\u03C6\u03AD\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03AD\u03C1\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03B5\u03C1\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["οἴσω", "οἴσεις", "οἴσει", "οἴσομεν", "οἴσετε", "οἴσουσι(ν)"]
+            forms: ["\u03BF\u1F34\u03C3\u03C9", "\u03BF\u1F34\u03C3\u03B5\u03B9\u03C2", "\u03BF\u1F34\u03C3\u03B5\u03B9", "\u03BF\u1F34\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03BF\u1F34\u03C3\u03B5\u03C4\u03B5", "\u03BF\u1F34\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἤνεγκα", "ἤνεγκας", "ἤνεγκε(ν)", "ἠνέγκαμεν", "ἠνέγκατε", "ἤνεγκαν"]
+            forms: ["\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1\u03C2", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B5(\u03BD)", "\u1F20\u03BD\u03AD\u03B3\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BD\u03AD\u03B3\u03BA\u03B1\u03C4\u03B5", "\u1F24\u03BD\u03B5\u03B3\u03BA\u03B1\u03BD"]
           }
         }
       },
 
-      "φεύγω": {
-        lemma: "φεύγω",
+      "\u03C6\u03B5\u03CD\u03B3\u03C9": {
+        lemma: "\u03C6\u03B5\u03CD\u03B3\u03C9",
         gloss: "I flee",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φεύγω", "φεύγεις", "φεύγει", "φεύγομεν", "φεύγετε", "φεύγουσι(ν)"]
+            forms: ["\u03C6\u03B5\u03CD\u03B3\u03C9", "\u03C6\u03B5\u03CD\u03B3\u03B5\u03B9\u03C2", "\u03C6\u03B5\u03CD\u03B3\u03B5\u03B9", "\u03C6\u03B5\u03CD\u03B3\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03B5\u03CD\u03B3\u03B5\u03C4\u03B5", "\u03C6\u03B5\u03CD\u03B3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἔφευγον", "ἔφευγες", "ἔφευγε(ν)", "ἐφεύγομεν", "ἐφεύγετε", "ἔφευγον"]
+            forms: ["\u1F14\u03C6\u03B5\u03C5\u03B3\u03BF\u03BD", "\u1F14\u03C6\u03B5\u03C5\u03B3\u03B5\u03C2", "\u1F14\u03C6\u03B5\u03C5\u03B3\u03B5(\u03BD)", "\u1F10\u03C6\u03B5\u03CD\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03B5\u03CD\u03B3\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03B5\u03C5\u03B3\u03BF\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["φεύξομαι", "φεύξῃ", "φεύξεται", "φευξόμεθα", "φεύξεσθε", "φεύξονται"]
+            forms: ["\u03C6\u03B5\u03CD\u03BE\u03BF\u03BC\u03B1\u03B9", "\u03C6\u03B5\u03CD\u03BE\u1FC3", "\u03C6\u03B5\u03CD\u03BE\u03B5\u03C4\u03B1\u03B9", "\u03C6\u03B5\u03C5\u03BE\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C6\u03B5\u03CD\u03BE\u03B5\u03C3\u03B8\u03B5", "\u03C6\u03B5\u03CD\u03BE\u03BF\u03BD\u03C4\u03B1\u03B9"]
           },
           aorist_active_indicative: {
             label: "Aorist Active Indicative (2nd Aorist)",
-            forms: ["ἔφυγον", "ἔφυγες", "ἔφυγε(ν)", "ἐφύγομεν", "ἐφύγετε", "ἔφυγον"]
+            forms: ["\u1F14\u03C6\u03C5\u03B3\u03BF\u03BD", "\u1F14\u03C6\u03C5\u03B3\u03B5\u03C2", "\u1F14\u03C6\u03C5\u03B3\u03B5(\u03BD)", "\u1F10\u03C6\u03CD\u03B3\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03CD\u03B3\u03B5\u03C4\u03B5", "\u1F14\u03C6\u03C5\u03B3\u03BF\u03BD"]
           }
         }
       },
 
-      "φρονέω": {
-        lemma: "φρονέω",
-        gloss: "I think / have an attitude (ε-contract)",
+      "\u03C6\u03C1\u03BF\u03BD\u03AD\u03C9": {
+        lemma: "\u03C6\u03C1\u03BF\u03BD\u03AD\u03C9",
+        gloss: "I think / have an attitude (\u03B5-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φρονῶ", "φρονεῖς", "φρονεῖ", "φρονοῦμεν", "φρονεῖτε", "φρονοῦσι(ν)"]
+            forms: ["\u03C6\u03C1\u03BF\u03BD\u1FF6", "\u03C6\u03C1\u03BF\u03BD\u03B5\u1FD6\u03C2", "\u03C6\u03C1\u03BF\u03BD\u03B5\u1FD6", "\u03C6\u03C1\u03BF\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C6\u03C1\u03BF\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03C6\u03C1\u03BF\u03BD\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐφρόνουν", "ἐφρόνεις", "ἐφρόνει", "ἐφρονοῦμεν", "ἐφρονεῖτε", "ἐφρόνουν"]
+            forms: ["\u1F10\u03C6\u03C1\u03CC\u03BD\u03BF\u03C5\u03BD", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03B5\u03B9\u03C2", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03B5\u03B9", "\u1F10\u03C6\u03C1\u03BF\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03C1\u03BF\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["φρονήσω", "φρονήσεις", "φρονήσει", "φρονήσομεν", "φρονήσετε", "φρονήσουσι(ν)"]
+            forms: ["\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03C9", "\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03B5\u03B9", "\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐφρόνησα", "ἐφρόνησας", "ἐφρόνησε(ν)", "ἐφρονήσαμεν", "ἐφρονήσατε", "ἐφρόνησαν"]
+            forms: ["\u1F10\u03C6\u03C1\u03CC\u03BD\u03B7\u03C3\u03B1", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03C1\u03BF\u03BD\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C6\u03C1\u03CC\u03BD\u03B7\u03C3\u03B1\u03BD"]
           }
         }
       },
 
-      "φωνέω": {
-        lemma: "φωνέω",
-        gloss: "I call / cry out (ε-contract)",
+      "\u03C6\u03C9\u03BD\u03AD\u03C9": {
+        lemma: "\u03C6\u03C9\u03BD\u03AD\u03C9",
+        gloss: "I call / cry out (\u03B5-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["φωνῶ", "φωνεῖς", "φωνεῖ", "φωνοῦμεν", "φωνεῖτε", "φωνοῦσι(ν)"]
+            forms: ["\u03C6\u03C9\u03BD\u1FF6", "\u03C6\u03C9\u03BD\u03B5\u1FD6\u03C2", "\u03C6\u03C9\u03BD\u03B5\u1FD6", "\u03C6\u03C9\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C6\u03C9\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03C6\u03C9\u03BD\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ἐφώνουν", "ἐφώνεις", "ἐφώνει", "ἐφωνοῦμεν", "ἐφωνεῖτε", "ἐφώνουν"]
+            forms: ["\u1F10\u03C6\u03CE\u03BD\u03BF\u03C5\u03BD", "\u1F10\u03C6\u03CE\u03BD\u03B5\u03B9\u03C2", "\u1F10\u03C6\u03CE\u03BD\u03B5\u03B9", "\u1F10\u03C6\u03C9\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03C9\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03C6\u03CE\u03BD\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["φωνήσω", "φωνήσεις", "φωνήσει", "φωνήσομεν", "φωνήσετε", "φωνήσουσι(ν)"]
+            forms: ["\u03C6\u03C9\u03BD\u03AE\u03C3\u03C9", "\u03C6\u03C9\u03BD\u03AE\u03C3\u03B5\u03B9\u03C2", "\u03C6\u03C9\u03BD\u03AE\u03C3\u03B5\u03B9", "\u03C6\u03C9\u03BD\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C6\u03C9\u03BD\u03AE\u03C3\u03B5\u03C4\u03B5", "\u03C6\u03C9\u03BD\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ἐφώνησα", "ἐφώνησας", "ἐφώνησε(ν)", "ἐφωνήσαμεν", "ἐφωνήσατε", "ἐφώνησαν"]
+            forms: ["\u1F10\u03C6\u03CE\u03BD\u03B7\u03C3\u03B1", "\u1F10\u03C6\u03CE\u03BD\u03B7\u03C3\u03B1\u03C2", "\u1F10\u03C6\u03CE\u03BD\u03B7\u03C3\u03B5(\u03BD)", "\u1F10\u03C6\u03C9\u03BD\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C6\u03C9\u03BD\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03C6\u03CE\u03BD\u03B7\u03C3\u03B1\u03BD"]
           }
         }
       },
 
-      "ὠφελέω": {
-        lemma: "ὠφελέω",
-        gloss: "I benefit / help (ε-contract)",
+      "\u1F60\u03C6\u03B5\u03BB\u03AD\u03C9": {
+        lemma: "\u1F60\u03C6\u03B5\u03BB\u03AD\u03C9",
+        gloss: "I benefit / help (\u03B5-contract)",
         charts: {
           present_active_indicative: {
             label: "Present Active Indicative",
-            forms: ["ὠφελῶ", "ὠφελεῖς", "ὠφελεῖ", "ὠφελοῦμεν", "ὠφελεῖτε", "ὠφελοῦσι(ν)"]
+            forms: ["\u1F60\u03C6\u03B5\u03BB\u1FF6", "\u1F60\u03C6\u03B5\u03BB\u03B5\u1FD6\u03C2", "\u1F60\u03C6\u03B5\u03BB\u03B5\u1FD6", "\u1F60\u03C6\u03B5\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F60\u03C6\u03B5\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F60\u03C6\u03B5\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
           },
           imperfect_active_indicative: {
             label: "Imperfect Active Indicative",
-            forms: ["ὠφέλουν", "ὠφέλεις", "ὠφέλει", "ὠφελοῦμεν", "ὠφελεῖτε", "ὠφέλουν"]
+            forms: ["\u1F60\u03C6\u03AD\u03BB\u03BF\u03C5\u03BD", "\u1F60\u03C6\u03AD\u03BB\u03B5\u03B9\u03C2", "\u1F60\u03C6\u03AD\u03BB\u03B5\u03B9", "\u1F60\u03C6\u03B5\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F60\u03C6\u03B5\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F60\u03C6\u03AD\u03BB\u03BF\u03C5\u03BD"]
           },
           future_active_indicative: {
             label: "Future Active Indicative",
-            forms: ["ὠφελήσω", "ὠφελήσεις", "ὠφελήσει", "ὠφελήσομεν", "ὠφελήσετε", "ὠφελήσουσι(ν)"]
+            forms: ["\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03C9", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03B5\u03B9", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
           },
           aorist_active_indicative: {
             label: "First Aorist Active Indicative",
-            forms: ["ὠφέλησα", "ὠφέλησας", "ὠφέλησε(ν)", "ὠφελήσαμεν", "ὠφελήσατε", "ὠφέλησαν"]
+            forms: ["\u1F60\u03C6\u03AD\u03BB\u03B7\u03C3\u03B1", "\u1F60\u03C6\u03AD\u03BB\u03B7\u03C3\u03B1\u03C2", "\u1F60\u03C6\u03AD\u03BB\u03B7\u03C3\u03B5(\u03BD)", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F60\u03C6\u03B5\u03BB\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F60\u03C6\u03AD\u03BB\u03B7\u03C3\u03B1\u03BD"]
           }
         }
       }
 
     }
   };
-"ἀκολουθέω": {
-  lemma: "ἀκολουθέω",
+"\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AD\u03C9": {
+  lemma: "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AD\u03C9",
   gloss: "I follow / accompany",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἀκολουθῶ", "ἀκολουθεῖς", "ἀκολουθεῖ", "ἀκολουθοῦμεν", "ἀκολουθεῖτε", "ἀκολουθοῦσι(ν)"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u1FF6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C2", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἀκολουθοῦμαι", "ἀκολουθεῖ", "ἀκολουθεῖται", "ἀκολουθούμεθα", "ἀκολουθεῖσθε", "ἀκολουθοῦνται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἠκολούθουν", "ἠκολούθεις", "ἠκολούθει", "ἠκολουθοῦμεν", "ἠκολουθεῖτε", "ἠκολούθουν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03BF\u03C5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B5\u03B9\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B5\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἠκολουθούμην", "ἠκολουθοῦ", "ἠκολουθεῖτο", "ἠκολουθούμεθα", "ἠκολουθεῖσθε", "ἠκολουθοῦντο"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["ἀκολουθήσω", "ἀκολουθήσεις", "ἀκολουθήσει", "ἀκολουθήσομεν", "ἀκολουθήσετε", "ἀκολουθήσουσι(ν)"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03C9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03B9\u03C2", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B5\u03BD", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἀκολουθήσομαι", "ἀκολουθήσῃ", "ἀκολουθήσεται", "ἀκολουθησόμεθα", "ἀκολουθήσεσθε", "ἀκολουθήσονται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative (Rare)",
-      forms: ["ἀκολουθηθήσομαι", "ἀκολουθηθήσῃ", "ἀκολουθηθήσεται", "ἀκολουθηθησόμεθα", "ἀκολουθηθήσεσθε", "ἀκολουθηθήσονται"]
+      forms: ["\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F00\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἠκολούθησα", "ἠκολούθησας", "ἠκολούθησε(ν)", "ἠκολουθήσαμεν", "ἠκολουθήσατε", "ἠκολούθησαν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B5(\u03BD)", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἠκολουθησάμην", "ἠκολουθήσω", "ἠκολουθήσατο", "ἠκολουθησάμεθα", "ἠκολουθήσασθε", "ἠκολουθήσαντο"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03C9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C4\u03BF", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03B7\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative (Very Rare)",
-      forms: ["ἠκολουθήθην", "ἠκολουθήθης", "ἠκολουθήθη", "ἠκολουθήθημεν", "ἠκολουθήθητε", "ἠκολουθήθησαν"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἠκολούθηκα", "ἠκολούθηκας", "ἠκολούθηκε(ν)", "ἠκολουθήκαμεν", "ἠκολουθήκατε", "ἠκολούθηκασι(ν)"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1\u03C2", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B5(\u03BD)", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἠκολούθημαι", "ἠκολούθησαι", "ἠκολούθηται", "ἠκολουθήμεθα", "ἠκολουθήσθε", "ἠκολούθηνται"]
+      forms: ["\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BC\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C3\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03C4\u03B1\u03B9", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03C5\u03B8\u03AE\u03C3\u03B8\u03B5", "\u1F20\u03BA\u03BF\u03BB\u03BF\u03CD\u03B8\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
- "βάλλω": {
-  lemma: "βάλλω",
+ "\u03B2\u03AC\u03BB\u03BB\u03C9": {
+  lemma: "\u03B2\u03AC\u03BB\u03BB\u03C9",
   gloss: "I throw / cast / put",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["βάλλω", "βάλλεις", "βάλλει", "βάλλομεν", "βάλλετε", "βάλλουσι(ν)"]
+      forms: ["\u03B2\u03AC\u03BB\u03BB\u03C9", "\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9\u03C2", "\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9", "\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u03B2\u03AC\u03BB\u03BB\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["βάλλομαι", "βάλλῃ", "βάλλεται", "βαλλόμεθα", "βάλλεσθε", "βάλλονται"]
+      forms: ["\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03AC\u03BB\u03BB\u1FC3", "\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03AC\u03BB\u03BB\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03AC\u03BB\u03BB\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔβαλλον", "ἔβαλλες", "ἔβαλλε(ν)", "ἐβάλλομεν", "ἐβάλλετε", "ἔβαλλον"]
+      forms: ["\u1F14\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD", "\u1F14\u03B2\u03B1\u03BB\u03BB\u03B5\u03C2", "\u1F14\u03B2\u03B1\u03BB\u03BB\u03B5(\u03BD)", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F14\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐβαλλόμην", "ἐβάλλου", "ἐβάλλετο", "ἐβαλλόμεθα", "ἐβάλλεσθε", "ἐβάλλοντο"]
+      forms: ["\u1F10\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03BF\u03C5", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03BF", "\u1F10\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B2\u03AC\u03BB\u03BB\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["βαλῶ", "βαλεῖς", "βαλεῖ", "βαλοῦμεν", "βαλεῖτε", "βαλοῦσι(ν)"]
+      forms: ["\u03B2\u03B1\u03BB\u1FF6", "\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u03B2\u03B1\u03BB\u03B5\u1FD6", "\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03B2\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["βαλοῦμαι", "βαλῇ", "βαλεῖται", "βαλούμεθα", "βαλεῖσθε", "βαλοῦνται"]
+      forms: ["\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03B2\u03B1\u03BB\u1FC7", "\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03B2\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["βληθήσομαι", "βληθήσῃ", "βληθήσεται", "βληθησόμεθα", "βληθήσεσθε", "βληθήσονται"]
+      forms: ["\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03BB\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["ἔβαλον", "ἔβαλες", "ἔβαλε(ν)", "ἐβάλομεν", "ἐβάλετε", "ἔβαλον"]
+      forms: ["\u1F14\u03B2\u03B1\u03BB\u03BF\u03BD", "\u1F14\u03B2\u03B1\u03BB\u03B5\u03C2", "\u1F14\u03B2\u03B1\u03BB\u03B5(\u03BD)", "\u1F10\u03B2\u03AC\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03AC\u03BB\u03B5\u03C4\u03B5", "\u1F14\u03B2\u03B1\u03BB\u03BF\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["ἐβαλόμην", "ἔβαλου", "ἔβαλετο", "ἐβαλόμεθα", "ἔβαλεσθε", "ἔβαλοντο"]
+      forms: ["\u1F10\u03B2\u03B1\u03BB\u03CC\u03BC\u03B7\u03BD", "\u1F14\u03B2\u03B1\u03BB\u03BF\u03C5", "\u1F14\u03B2\u03B1\u03BB\u03B5\u03C4\u03BF", "\u1F10\u03B2\u03B1\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03B2\u03B1\u03BB\u03B5\u03C3\u03B8\u03B5", "\u1F14\u03B2\u03B1\u03BB\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["βέβληκα", "βέβληκας", "βέβληκε(ν)", "βεβλήκαμεν", "βεβλήκατε", "βέβληκασι(ν)"]
+      forms: ["\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C2", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["βέβλημαι", "βέβλησαι", "βέβληται", "βεβλήμεθα", "βέβλησθε", "βέβληνται"]
+      forms: ["\u03B2\u03AD\u03B2\u03BB\u03B7\u03BC\u03B1\u03B9", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03C3\u03B1\u03B9", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03C4\u03B1\u03B9", "\u03B2\u03B5\u03B2\u03BB\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03C3\u03B8\u03B5", "\u03B2\u03AD\u03B2\u03BB\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"βαπτίζω": {
-  lemma: "βαπτίζω",
+"\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9": {
+  lemma: "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9",
   gloss: "I baptize / immerse / dip",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["βαπτίζω", "βαπτίζεις", "βαπτίζει", "βαπτίζομεν", "βαπτίζετε", "βαπτίζουσι(ν)"]
+      forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03C9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03B9\u03C2", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["βαπτίζομαι", "βαπτίζῃ", "βαπτίζεται", "βαπτιζόμεθα", "βαπτίζεσθε", "βαπτίζονται"]
+      forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u1FC3", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03B6\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐβάπτιζον", "ἐβάπτιζες", "ἐβάπτιζε(ν)", "ἐβαπτίζομεν", "ἐβαπτίζετε", "ἐβάπτιζον"]
+      forms: ["\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03BF\u03BD", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03B5\u03C2", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03B5(\u03BD)", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03B5", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03B6\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐβαπτιζόμην", "ἐβαπτίζου", "ἐβαπτίζετο", "ἐβαπτιζόμεθα", "ἐβαπτίζεσθε", "ἐβαπτίζοντο"]
+      forms: ["\u1F10\u03B2\u03B1\u03C0\u03C4\u03B9\u03B6\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03C5", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C4\u03BF", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03B9\u03B6\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03B6\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["βαπτίσω", "βαπτίσεις", "βαπτίσει", "βαπτίσομεν", "βαπτίσετε", "βαπτίσουσι(ν)"]
+      forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03C9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03B9\u03C2", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03C4\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["βαπτίσομαι", "βαπτίσῃ", "βαπτίσεται", "βαπτισόμεθα", "βαπτίσεσθε", "βαπτίσονται"]
+      forms: ["\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u1FC3", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["βαπτισθήσομαι", "βαπτισθήσῃ", "βαπτισθήσεται", "βαπτισθησόμεθα", "βαπτισθήσεσθε", "βαπτισθήσονται"]
+      forms: ["\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐβάπτισα", "ἐβάπτισας", "ἐβάπτισε(ν)", "ἐβαπτίσαμεν", "ἐβαπτίσατε", "ἐβάπτισαν"]
+      forms: ["\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1\u03C2", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B5(\u03BD)", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03C4\u03B5", "\u1F10\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐβαπτισάμην", "ἐβαπτίσω", "ἐβαπτίσατο", "ἐβαπτισάμεθα", "ἐβαπτίσασθε", "ἐβαπτίσαντο"]
+      forms: ["\u1F10\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03C9", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03B9\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐβαπτίσθην", "ἐβαπτίσθης", "ἐβαπτίσθη", "ἐβαπτίσθημεν", "ἐβαπτίσθητε", "ἐβαπτίσθησαν"]
+      forms: ["\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7\u03C2", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["βεβάπτικα", "βεβάπτικας", "βεβάπτικε(ν)", "βεβαπτίκαμεν", "βεβαπτίκατε", "βεβάπτικασι(ν)"]
+      forms: ["\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1\u03C2", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B5(\u03BD)", "\u03B2\u03B5\u03B2\u03B1\u03C0\u03C4\u03AF\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03B2\u03B5\u03B2\u03B1\u03C0\u03C4\u03AF\u03BA\u03B1\u03C4\u03B5", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["βεβάπτισμαι", "βεβάπτισαι", "βεβάπτισται", "βεβαπτίσμεθα", "βεβάπτισθε", "βεβάπτισνται"]
+      forms: ["\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03BC\u03B1\u03B9", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B1\u03B9", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03C4\u03B1\u03B9", "\u03B2\u03B5\u03B2\u03B1\u03C0\u03C4\u03AF\u03C3\u03BC\u03B5\u03B8\u03B1", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03B8\u03B5", "\u03B2\u03B5\u03B2\u03AC\u03C0\u03C4\u03B9\u03C3\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"διδάσκω": {
-  lemma: "διδάσκω",
+"\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9": {
+  lemma: "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9",
   gloss: "I teach / instruct",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["διδάσκω", "διδάσκεις", "διδάσκει", "διδάσκομεν", "διδάσκετε", "διδάσκουσι(ν)"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03C9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03B9\u03C2", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["διδάσκομαι", "διδάσκῃ", "διδάσκεται", "διδασκόμεθα", "διδάσκεσθε", "διδάσκονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u1FC3", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐδίδασκον", "ἐδίδασκες", "ἐδίδασκε(ν)", "ἐδιδάσκομεν", "ἐδιδάσκετε", "ἐδίδασκον"]
+      forms: ["\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5\u03C2", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03B5(\u03BD)", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03C3\u03BA\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐδιδασκόμην", "ἐδιδάσκου", "ἐδιδάσκετο", "ἐδιδασκόμεθα", "ἐδιδάσκεσθε", "ἐδιδάσκοντο"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03C5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C4\u03BF", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C3\u03BA\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["διδάξω", "διδάξεις", "διδάξει", "διδάξομεν", "διδάξετε", "διδάξουσι(ν)"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03BE\u03C9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03B9\u03C2", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BC\u03B5\u03BD", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C4\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["διδάξομαι", "διδάξῃ", "διδάξεται", "διδαξόμεθα", "διδάξεσθε", "διδάξονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03AC\u03BE\u1FC3", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03BE\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03AC\u03BE\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["διδαχθήσομαι", "διδαχθήσῃ", "διδαχθήσεται", "διδαχθησόμεθα", "διδαχθήσεσθε", "διδαχθήσονται"]
+      forms: ["\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u1FC3", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B4\u03B9\u03B4\u03B1\u03C7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἐδίδαξα", "ἐδίδαξας", "ἐδίδαξε(ν)", "ἐδιδάξαμεν", "ἐδιδάξατε", "ἐδίδαξαν"]
+      forms: ["\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03C2", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B5(\u03BD)", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03C4\u03B5", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐδιδαξάμην", "ἐδίδαξω", "ἐδιδάξατο", "ἐδιδαξάμεθα", "ἐδιδάξασθε", "ἐδιδάξαντο"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03AC\u03BC\u03B7\u03BD", "\u1F10\u03B4\u03AF\u03B4\u03B1\u03BE\u03C9", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03C4\u03BF", "\u1F10\u03B4\u03B9\u03B4\u03B1\u03BE\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03BE\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐδιδάχθην", "ἐδιδάχθης", "ἐδιδάχθη", "ἐδιδάχθημεν", "ἐδιδάχθητε", "ἐδιδάχθησαν"]
+      forms: ["\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C2", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03B4\u03B9\u03B4\u03AC\u03C7\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["δεδίδαχα", "δεδίδαχας", "δεδίδαχε(ν)", "δεδιδάχαμεν", "δεδιδάχατε", "δεδίδαχασι(ν)"]
+      forms: ["\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1\u03C2", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B5(\u03BD)", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03AC\u03C7\u03B1\u03BC\u03B5\u03BD", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03AC\u03C7\u03B1\u03C4\u03B5", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["δεδίδαγμαι", "δεδίδαξαι", "δεδίδακται", "δεδιδάγμεθα", "δεδίδαχθε", "δεδίδαγνται"]
+      forms: ["\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03B3\u03BC\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03BE\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03BA\u03C4\u03B1\u03B9", "\u03B4\u03B5\u03B4\u03B9\u03B4\u03AC\u03B3\u03BC\u03B5\u03B8\u03B1", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03C7\u03B8\u03B5", "\u03B4\u03B5\u03B4\u03AF\u03B4\u03B1\u03B3\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"ἐγείρω": {
-  lemma: "ἐγείρω",
+"\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9": {
+  lemma: "\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9",
   gloss: "I raise / awaken / lift up",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἐγείρω", "ἐγείρεις", "ἐγείρει", "ἐγείρομεν", "ἐγείρετε", "ἐγείρουσι(ν)"]
+      forms: ["\u1F10\u03B3\u03B5\u03AF\u03C1\u03C9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03B9\u03C2", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03B9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B5", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἐγείρομαι", "ἐγείρῃ", "ἐγείρεται", "ἐγειρόμεθα", "ἐγείρεσθε", "ἐγείρονται"]
+      forms: ["\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03AF\u03C1\u1FC3", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03AF\u03C1\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἤγειρον", "ἤγειρες", "ἤγειρε(ν)", "ἠγείρομεν", "ἠγείρετε", "ἤγειρον"]
+      forms: ["\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03BD", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5\u03C2", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5(\u03BD)", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03BF\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B5\u03C4\u03B5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἠγειρόμην", "ἤγειρου", "ἤγειρετο", "ἠγειρόμεθα", "ἤγειρεσθε", "ἤγειροντο"]
+      forms: ["\u1F20\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B7\u03BD", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03C5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5\u03C4\u03BF", "\u1F20\u03B3\u03B5\u03B9\u03C1\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5\u03C3\u03B8\u03B5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative (Liquid Future)",
-      forms: ["ἐγερῶ", "ἐγερεῖς", "ἐγερεῖ", "ἐγεροῦμεν", "ἐγερεῖτε", "ἐγεροῦσι(ν)"]
+      forms: ["\u1F10\u03B3\u03B5\u03C1\u1FF6", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C2", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6", "\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἐγεροῦμαι", "ἐγερῇ", "ἐγερεῖται", "ἐγερούμεθα", "ἐγερεῖσθε", "ἐγεροῦνται"]
+      forms: ["\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u1FC7", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03C1\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03C1\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ἐγερθήσομαι", "ἐγερθήσῃ", "ἐγερθήσεται", "ἐγερθησόμεθα", "ἐγερθήσεσθε", "ἐγερθήσονται"]
+      forms: ["\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B5\u03C1\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἤγειρα", "ἤγειρας", "ἤγειρε(ν)", "ἠγείραμεν", "ἠγείρατε", "ἤγειραν"]
+      forms: ["\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1\u03C2", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B5(\u03BD)", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03C4\u03B5", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἠγειράμην", "ἤγειρω", "ἠγείρατο", "ἠγειράμεθα", "ἠγείρασθε", "ἠγείραντο"]
+      forms: ["\u1F20\u03B3\u03B5\u03B9\u03C1\u03AC\u03BC\u03B7\u03BD", "\u1F24\u03B3\u03B5\u03B9\u03C1\u03C9", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03C4\u03BF", "\u1F20\u03B3\u03B5\u03B9\u03C1\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03C3\u03B8\u03B5", "\u1F20\u03B3\u03B5\u03AF\u03C1\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἠγέρθην", "ἠγέρθης", "ἠγέρθη", "ἠγέρθημεν", "ἠγέρθητε", "ἠγέρθησαν"]
+      forms: ["\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03BD", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C2", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C4\u03B5", "\u1F20\u03B3\u03AD\u03C1\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἐγήγερκα", "ἐγήγερκας", "ἐγήγερκε(ν)", "ἐγηγήρκαμεν", "ἐγηγήρκατε", "ἐγήγερκασι(ν)"]
+      forms: ["\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BA\u03B1", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BA\u03B1\u03C2", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BA\u03B5(\u03BD)", "\u1F10\u03B3\u03B7\u03B3\u03AE\u03C1\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B7\u03B3\u03AE\u03C1\u03BA\u03B1\u03C4\u03B5", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἐγήγερμαι", "ἐγήγερσαι", "ἐγήγερται", "ἐγηγήρμεθα", "ἐγήγερσθε", "ἐγήγερνται"]
+      forms: ["\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BC\u03B1\u03B9", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03C3\u03B1\u03B9", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03B7\u03B3\u03AE\u03C1\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03AE\u03B3\u03B5\u03C1\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"ἐκβάλλω": {
-  lemma: "ἐκβάλλω",
+"\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9": {
+  lemma: "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9",
   gloss: "I cast out / throw out / drive out",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["ἐκβάλλω", "ἐκβάλλεις", "ἐκβάλλει", "ἐκβάλλομεν", "ἐκβάλλετε", "ἐκβάλλουσι(ν)"]
+      forms: ["\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03C9", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9\u03C2", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03B9", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἐκβάλλομαι", "ἐκβάλλῃ", "ἐκβάλλεται", "ἐκβαλλόμεθα", "ἐκβάλλεσθε", "ἐκβάλλονται"]
+      forms: ["\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u1FC3", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B2\u03AC\u03BB\u03BB\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐξέβαλλον", "ἐξέβαλλες", "ἐξέβαλλε(ν)", "ἐξεβάλλομεν", "ἐξεβάλλετε", "ἐξέβαλλον"]
+      forms: ["\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03B5\u03C2", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03B5(\u03BD)", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BB\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐξεβαλλόμην", "ἐξεβάλλου", "ἐξεβάλλετο", "ἐξεβαλλόμεθα", "ἐξεβάλλεσθε", "ἐξεβάλλοντο"]
+      forms: ["\u1F10\u03BE\u03B5\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03BF\u03C5", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03B5\u03C4\u03BF", "\u1F10\u03BE\u03B5\u03B2\u03B1\u03BB\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BB\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative (Liquid Future)",
-      forms: ["ἐκβαλῶ", "ἐκβαλεῖς", "ἐκβαλεῖ", "ἐκβαλοῦμεν", "ἐκβαλεῖτε", "ἐκβαλοῦσι(ν)"]
+      forms: ["\u1F10\u03BA\u03B2\u03B1\u03BB\u1FF6", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἐκβαλοῦμαι", "ἐκβαλῇ", "ἐκβαλεῖται", "ἐκβαλούμεθα", "ἐκβαλεῖσθε", "ἐκβαλοῦνται"]
+      forms: ["\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03B1\u03BB\u1FC7", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B2\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ἐκβληθήσομαι", "ἐκβληθήσῃ", "ἐκβληθήσεται", "ἐκβληθησόμεθα", "ἐκβληθήσεσθε", "ἐκβληθήσονται"]
+      forms: ["\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B2\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["ἐξέβαλον", "ἐξέβαλες", "ἐξέβαλε(ν)", "ἐξεβάλομεν", "ἐξεβάλετε", "ἐξέβαλον"]
+      forms: ["\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03BD", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5\u03C2", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5(\u03BD)", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03B5\u03B2\u03AC\u03BB\u03B5\u03C4\u03B5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["ἐξεβαλόμην", "ἐξέβαλου", "ἐξέβαλετο", "ἐξεβαλόμεθα", "ἐξέβαλεσθε", "ἐξέβαλοντο"]
+      forms: ["\u1F10\u03BE\u03B5\u03B2\u03B1\u03BB\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03C5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5\u03C4\u03BF", "\u1F10\u03BE\u03B5\u03B2\u03B1\u03BB\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03AD\u03B2\u03B1\u03BB\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἐκβέβληκα", "ἐκβέβληκας", "ἐκβέβληκε(ν)", "ἐκβεβλήκαμεν", "ἐκβεβλήκατε", "ἐκβέβληκασι(ν)"]
+      forms: ["\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C2", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B5(\u03BD)", "\u1F10\u03BA\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BA\u03B2\u03B5\u03B2\u03BB\u03AE\u03BA\u03B1\u03C4\u03B5", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἐκβέβλημαι", "ἐκβέβλησαι", "ἐκβέβληται", "ἐκβεβλήμεθα", "ἐκβέβλησθε", "ἐκβέβληνται"]
+      forms: ["\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BC\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03C3\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03C4\u03B1\u03B9", "\u1F10\u03BA\u03B2\u03B5\u03B2\u03BB\u03AE\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03C3\u03B8\u03B5", "\u1F10\u03BA\u03B2\u03AD\u03B2\u03BB\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"γινώσκω": {
-  lemma: "γινώσκω",
+"\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9": {
+  lemma: "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9",
   gloss: "I know / come to know / learn / realize",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["γινώσκω", "γινώσκεις", "γινώσκει", "γινώσκομεν", "γινώσκετε", "γινώσκουσι(ν)"]
+      forms: ["\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03C9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03B9\u03C2", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03B9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B5", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["γινώσκομαι", "γινώσκῃ", "γινώσκεται", "γινωσκόμεθα", "γινώσκεσθε", "γινώσκονται"]
+      forms: ["\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u1FC3", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἐγίνωσκον", "ἐγίνωσκες", "ἐγίνωσκε(ν)", "ἐγινώσκομεν", "ἐγινώσκετε", "ἐγίνωσκον"]
+      forms: ["\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03BD", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5\u03C2", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03B5(\u03BD)", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03B5", "\u1F10\u03B3\u03AF\u03BD\u03C9\u03C3\u03BA\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐγινωσκόμην", "ἐγινώσκου", "ἐγινώσκετο", "ἐγινωσκόμεθα", "ἐγινώσκεσθε", "ἐγινώσκοντο"]
+      forms: ["\u1F10\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03C5", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C4\u03BF", "\u1F10\u03B3\u03B9\u03BD\u03C9\u03C3\u03BA\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03B9\u03BD\u03CE\u03C3\u03BA\u03BF\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative (Deponent)",
-      forms: ["γνώσομαι", "γνώσῃ", "γνώσεται", "γνωσόμεθα", "γνώσεσθε", "γνώσονται"]
+      forms: ["\u03B3\u03BD\u03CE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03BD\u03CE\u03C3\u1FC3", "\u03B3\u03BD\u03CE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03BD\u03C9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03BD\u03CE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03BD\u03CE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["γνωσθήσομαι", "γνωσθήσῃ", "γνωσθήσεται", "γνωσθησόμεθα", "γνωσθήσεσθε", "γνωσθήσονται"]
+      forms: ["\u03B3\u03BD\u03C9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03B3\u03BD\u03C9\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u03B3\u03BD\u03C9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03B3\u03BD\u03C9\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B3\u03BD\u03C9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03B3\u03BD\u03C9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["ἔγνων", "ἔγνως", "ἔγνω", "ἔγνωμεν", "ἔγνωτε", "ἔγνωσαν"]
+      forms: ["\u1F14\u03B3\u03BD\u03C9\u03BD", "\u1F14\u03B3\u03BD\u03C9\u03C2", "\u1F14\u03B3\u03BD\u03C9", "\u1F14\u03B3\u03BD\u03C9\u03BC\u03B5\u03BD", "\u1F14\u03B3\u03BD\u03C9\u03C4\u03B5", "\u1F14\u03B3\u03BD\u03C9\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["ἐγνόμην", "ἔγνου", "ἔγνετο", "ἐγνόμεθα", "ἔγνεσθε", "ἐγνοντο"]
+      forms: ["\u1F10\u03B3\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F14\u03B3\u03BD\u03BF\u03C5", "\u1F14\u03B3\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03B3\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03B3\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03B3\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἔγνωκα", "ἔγνωκας", "ἔγνωκε(ν)", "ἐγνώκαμεν", "ἐγνώκατε", "ἔγνωκασι(ν)"]
+      forms: ["\u1F14\u03B3\u03BD\u03C9\u03BA\u03B1", "\u1F14\u03B3\u03BD\u03C9\u03BA\u03B1\u03C2", "\u1F14\u03B3\u03BD\u03C9\u03BA\u03B5(\u03BD)", "\u1F10\u03B3\u03BD\u03CE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03B3\u03BD\u03CE\u03BA\u03B1\u03C4\u03B5", "\u1F14\u03B3\u03BD\u03C9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἔγνωσμαι", "ἔγνωσαι", "ἔγνωσται", "ἐγνώσμεθα", "ἔγνωσθε", "ἔγνωσντα"]
+      forms: ["\u1F14\u03B3\u03BD\u03C9\u03C3\u03BC\u03B1\u03B9", "\u1F14\u03B3\u03BD\u03C9\u03C3\u03B1\u03B9", "\u1F14\u03B3\u03BD\u03C9\u03C3\u03C4\u03B1\u03B9", "\u1F10\u03B3\u03BD\u03CE\u03C3\u03BC\u03B5\u03B8\u03B1", "\u1F14\u03B3\u03BD\u03C9\u03C3\u03B8\u03B5", "\u1F14\u03B3\u03BD\u03C9\u03C3\u03BD\u03C4\u03B1"]
     }
   }
 },
-"καταβαίνω": {
-  lemma: "καταβαίνω",
+"\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9": {
+  lemma: "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9",
   gloss: "I go down / descend",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["καταβαίνω", "καταβαίνεις", "καταβαίνει", "καταβαίνομεν", "καταβαίνετε", "καταβαίνουσι(ν)"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03C9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03B9\u03C2", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["καταβαίνομαι", "καταβαίνῃ", "καταβαίνεται", "καταβαινόμεθα", "καταβαίνεσθε", "καταβαίνονται"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u1FC3", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B1\u03AF\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["κατέβαινον", "κατέβαινες", "κατέβαινε(ν)", "κατεβαίνομεν", "κατεβαίνετε", "κατέβαινον"]
+      forms: ["\u03BA\u03B1\u03C4\u03AD\u03B2\u03B1\u03B9\u03BD\u03BF\u03BD", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B1\u03B9\u03BD\u03B5\u03C2", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B1\u03B9\u03BD\u03B5(\u03BD)", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03AF\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03B5", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B1\u03B9\u03BD\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["κατεβαινόμην", "κατεβαίνου", "κατεβαίνετο", "κατεβαινόμεθα", "κατεβαίνεσθε", "κατέβαινοντο"]
+      forms: ["\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03B9\u03BD\u03CC\u03BC\u03B7\u03BD", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03AF\u03BD\u03BF\u03C5", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03AF\u03BD\u03B5\u03C4\u03BF", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03B9\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03C4\u03B5\u03B2\u03B1\u03AF\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B1\u03B9\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative (Deponent)",
-      forms: ["καταβήσομαι", "καταβήσῃ", "καταβήσεται", "καταβησόμεθα", "καταβήσεσθε", "καταβήσονται"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AE\u03C3\u1FC3", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["καταβηθήσομαι", "καταβηθήσῃ", "καταβηθήσεται", "καταβηθησόμεθα", "καταβηθήσεσθε", "καταβηθήσονται"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["κατέβην", "κατέβης", "κατέβη", "κατέβημεν", "κατέβητε", "κατέβησαν"]
+      forms: ["\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7\u03BD", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7\u03C2", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7\u03C4\u03B5", "\u03BA\u03B1\u03C4\u03AD\u03B2\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["καταβέβηκα", "καταβέβηκας", "καταβέβηκε(ν)", "καταβεβήκαμεν", "καταβεβήκατε", "καταβέβηκασι(ν)"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BA\u03B1", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BA\u03B1\u03C2", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BA\u03B5(\u03BD)", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B5\u03B2\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B5\u03B2\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["καταβέβημαι", "καταβέβησαι", "καταβέβηται", "καταβεβήμεθα", "καταβέβησθε", "καταβέβηνται"]
+      forms: ["\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BC\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03C3\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03C4\u03B1\u03B9", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03B5\u03B2\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03C3\u03B8\u03B5", "\u03BA\u03B1\u03C4\u03B1\u03B2\u03AD\u03B2\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"μένω": {
-  lemma: "μένω",
+"\u03BC\u03AD\u03BD\u03C9": {
+  lemma: "\u03BC\u03AD\u03BD\u03C9",
   gloss: "I remain / stay / abide / continue",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["μένω", "μένεις", "μένει", "μένομεν", "μένετε", "μένουσι(ν)"]
+      forms: ["\u03BC\u03AD\u03BD\u03C9", "\u03BC\u03AD\u03BD\u03B5\u03B9\u03C2", "\u03BC\u03AD\u03BD\u03B5\u03B9", "\u03BC\u03AD\u03BD\u03BF\u03BC\u03B5\u03BD", "\u03BC\u03AD\u03BD\u03B5\u03C4\u03B5", "\u03BC\u03AD\u03BD\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["μένομαι", "μένῃ", "μένεται", "μενόμεθα", "μένεσθε", "μένονται"]
+      forms: ["\u03BC\u03AD\u03BD\u03BF\u03BC\u03B1\u03B9", "\u03BC\u03AD\u03BD\u1FC3", "\u03BC\u03AD\u03BD\u03B5\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03AD\u03BD\u03B5\u03C3\u03B8\u03B5", "\u03BC\u03AD\u03BD\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔμενον", "ἔμενες", "ἔμενε(ν)", "ἐμένομεν", "ἐμένετε", "ἔμενον"]
+      forms: ["\u1F14\u03BC\u03B5\u03BD\u03BF\u03BD", "\u1F14\u03BC\u03B5\u03BD\u03B5\u03C2", "\u1F14\u03BC\u03B5\u03BD\u03B5(\u03BD)", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C4\u03B5", "\u1F14\u03BC\u03B5\u03BD\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐμενόμην", "ἐμένου", "ἐμένετο", "ἐμενόμεθα", "ἐμένεσθε", "ἐμένοντο"]
+      forms: ["\u1F10\u03BC\u03B5\u03BD\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03C5", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C4\u03BF", "\u1F10\u03BC\u03B5\u03BD\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BC\u03AD\u03BD\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BC\u03AD\u03BD\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative (Liquid Future)",
-      forms: ["μενῶ", "μενεῖς", "μενεῖ", "μενοῦμεν", "μενεῖτε", "μενοῦσι(ν)"]
+      forms: ["\u03BC\u03B5\u03BD\u1FF6", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C2", "\u03BC\u03B5\u03BD\u03B5\u1FD6", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C4\u03B5", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["μενοῦμαι", "μενῇ", "μενεῖται", "μενούμεθα", "μενεῖσθε", "μενοῦνται"]
+      forms: ["\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BD\u1FC7", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03B5\u03BD\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03BC\u03B5\u03BD\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative (Rare)",
-      forms: ["μενηθήσομαι", "μενηθήσῃ", "μενηθήσεται", "μενηθησόμεθα", "μενηθήσεσθε", "μενηθήσονται"]
+      forms: ["\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03BC\u03B5\u03BD\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἔμεινα", "ἔμεινας", "ἔμεινε(ν)", "ἐμείναμεν", "ἐμείνατε", "ἔμειναν"]
+      forms: ["\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1\u03C2", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B5(\u03BD)", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03C4\u03B5", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐμεινάμην", "ἔμεινω", "ἐμείνατο", "ἐμεινάμεθα", "ἐμείνασθε", "ἐμείναντο"]
+      forms: ["\u1F10\u03BC\u03B5\u03B9\u03BD\u03AC\u03BC\u03B7\u03BD", "\u1F14\u03BC\u03B5\u03B9\u03BD\u03C9", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03C4\u03BF", "\u1F10\u03BC\u03B5\u03B9\u03BD\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03BC\u03B5\u03AF\u03BD\u03B1\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["μεμένηκα", "μεμένηκας", "μεμένηκε(ν)", "μεμενήκαμεν", "μεμενήκατε", "μεμένηκασι(ν)"]
+      forms: ["\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1\u03C2", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B5(\u03BD)", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BA\u03B1\u03C4\u03B5", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["μεμένημαι", "μεμένησαι", "μεμένηται", "μεμενήμεθα", "μεμένησθε", "μεμένηνται"]
+      forms: ["\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BC\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C3\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C4\u03B1\u03B9", "\u03BC\u03B5\u03BC\u03B5\u03BD\u03AE\u03BC\u03B5\u03B8\u03B1", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03C3\u03B8\u03B5", "\u03BC\u03B5\u03BC\u03AD\u03BD\u03B7\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"πείθω": {
-  lemma: "πείθω",
+"\u03C0\u03B5\u03AF\u03B8\u03C9": {
+  lemma: "\u03C0\u03B5\u03AF\u03B8\u03C9",
   gloss: "I persuade / convince (middle: I trust / obey)",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["πείθω", "πείθεις", "πείθει", "πείθομεν", "πείθετε", "πείθουσι(ν)"]
+      forms: ["\u03C0\u03B5\u03AF\u03B8\u03C9", "\u03C0\u03B5\u03AF\u03B8\u03B5\u03B9\u03C2", "\u03C0\u03B5\u03AF\u03B8\u03B5\u03B9", "\u03C0\u03B5\u03AF\u03B8\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03AF\u03B8\u03B5\u03C4\u03B5", "\u03C0\u03B5\u03AF\u03B8\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["πείθομαι", "πείθῃ", "πείθεται", "πειθόμεθα", "πείθεσθε", "πείθονται"]
+      forms: ["\u03C0\u03B5\u03AF\u03B8\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03AF\u03B8\u1FC3", "\u03C0\u03B5\u03AF\u03B8\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03B9\u03B8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03AF\u03B8\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03AF\u03B8\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἔπειθον", "ἔπειθες", "ἔπειθε(ν)", "ἐπείθομεν", "ἐπείθετε", "ἔπειθον"]
+      forms: ["\u1F14\u03C0\u03B5\u03B9\u03B8\u03BF\u03BD", "\u1F14\u03C0\u03B5\u03B9\u03B8\u03B5\u03C2", "\u1F14\u03C0\u03B5\u03B9\u03B8\u03B5(\u03BD)", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03B5\u03C4\u03B5", "\u1F14\u03C0\u03B5\u03B9\u03B8\u03BF\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἐπειθόμην", "ἐπείθου", "ἐπείθετο", "ἐπειθόμεθα", "ἐπείθεσθε", "ἐπείθοντο"]
+      forms: ["\u1F10\u03C0\u03B5\u03B9\u03B8\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03BF\u03C5", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03B5\u03C4\u03BF", "\u1F10\u03C0\u03B5\u03B9\u03B8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B5\u03AF\u03B8\u03BF\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["πείσω", "πείσεις", "πείσει", "πείσομεν", "πείσετε", "πείσουσι(ν)"]
+      forms: ["\u03C0\u03B5\u03AF\u03C3\u03C9", "\u03C0\u03B5\u03AF\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03B5\u03AF\u03C3\u03B5\u03B9", "\u03C0\u03B5\u03AF\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03B5\u03AF\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["πείσομαι", "πείσῃ", "πείσεται", "πεισόμεθα", "πείσεσθε", "πείσονται"]
+      forms: ["\u03C0\u03B5\u03AF\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03AF\u03C3\u1FC3", "\u03C0\u03B5\u03AF\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03B9\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03AF\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03AF\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["πεισθήσομαι", "πεισθήσῃ", "πεισθήσεται", "πεισθησόμεθα", "πεισθήσεσθε", "πεισθήσονται"]
+      forms: ["\u03C0\u03B5\u03B9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B5\u03B9\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03B5\u03B9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03B9\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B5\u03B9\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B5\u03B9\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["ἔπεισα", "ἔπεισας", "ἔπεισε(ν)", "ἐπείσαμεν", "ἐπείσατε", "ἔπεισαν"]
+      forms: ["\u1F14\u03C0\u03B5\u03B9\u03C3\u03B1", "\u1F14\u03C0\u03B5\u03B9\u03C3\u03B1\u03C2", "\u1F14\u03C0\u03B5\u03B9\u03C3\u03B5(\u03BD)", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B1\u03C4\u03B5", "\u1F14\u03C0\u03B5\u03B9\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["ἐπεισάμην", "ἔπεισω", "ἐπείσατο", "ἐπεισάμεθα", "ἐπείσασθε", "ἐπείσαντο"]
+      forms: ["\u1F10\u03C0\u03B5\u03B9\u03C3\u03AC\u03BC\u03B7\u03BD", "\u1F14\u03C0\u03B5\u03B9\u03C3\u03C9", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B1\u03C4\u03BF", "\u1F10\u03C0\u03B5\u03B9\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B1\u03C3\u03B8\u03B5", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["ἐπείσθην", "ἐπείσθης", "ἐπείσθη", "ἐπείσθημεν", "ἐπείσθητε", "ἐπείσθησαν"]
+      forms: ["\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7\u03BD", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7\u03C2", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7\u03BC\u03B5\u03BD", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7\u03C4\u03B5", "\u1F10\u03C0\u03B5\u03AF\u03C3\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["πέπεικα", "πέπεικας", "πέπεικε(ν)", "πεπείκαμεν", "πεπείκατε", "πέπεικασι(ν)"]
+      forms: ["\u03C0\u03AD\u03C0\u03B5\u03B9\u03BA\u03B1", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03BA\u03B1\u03C2", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03BA\u03B5(\u03BD)", "\u03C0\u03B5\u03C0\u03B5\u03AF\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B5\u03C0\u03B5\u03AF\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["πέπεισμαι", "πέπεισαι", "πέπεισται", "πεπείσμεθα", "πέπεισθε", "πέπεισνται"]
+      forms: ["\u03C0\u03AD\u03C0\u03B5\u03B9\u03C3\u03BC\u03B1\u03B9", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03C3\u03B1\u03B9", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03C3\u03C4\u03B1\u03B9", "\u03C0\u03B5\u03C0\u03B5\u03AF\u03C3\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03C3\u03B8\u03B5", "\u03C0\u03AD\u03C0\u03B5\u03B9\u03C3\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"παρακαλέω": {
-  lemma: "παρακαλέω",
+"\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C9": {
+  lemma: "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C9",
   gloss: "I exhort / urge / encourage / comfort",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative",
-      forms: ["παρακαλῶ", "παρακαλεῖς", "παρακαλεῖ", "παρακαλοῦμεν", "παρακαλεῖτε", "παρακαλοῦσι(ν)"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u1FF6", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C2", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03BF\u1FE6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["παρακαλοῦμαι", "παρακαλεῖ", "παρακαλεῖται", "παρακαλούμεθα", "παρακαλεῖσθε", "παρακαλοῦνται"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["παρεκάλουν", "παρεκάλεις", "παρεκάλει", "παρεκαλοῦμεν", "παρεκαλεῖτε", "παρεκάλουν"]
+      forms: ["\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03BF\u03C5\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03B9\u03C2", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03B9", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03BF\u03C5\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["παρεκαλούμην", "παρεκαλοῦ", "παρεκαλεῖτο", "παρεκαλούμεθα", "παρεκαλεῖσθε", "παρεκαλοῦντο"]
+      forms: ["\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B7\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03BF\u1FE6", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C4\u03BF", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03BF\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03B5\u1FD6\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03BF\u1FE6\u03BD\u03C4\u03BF"]
     },
     future_active_indicative: {
       label: "Future Active Indicative",
-      forms: ["παρακαλέσω", "παρακαλέσεις", "παρακαλέσει", "παρακαλέσομεν", "παρακαλέσετε", "παρακαλέσουσι(ν)"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03C9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03B9\u03C2", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03C5\u03C3\u03B9(\u03BD)"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["παρακαλέσομαι", "παρακαλέσῃ", "παρακαλέσεται", "παρακαλεσόμεθα", "παρακαλέσεσθε", "παρακαλέσονται"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u1FC3", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03B5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["παρακληθήσομαι", "παρακληθήσῃ", "παρακληθήσεται", "παρακληθησόμεθα", "παρακληθήσεσθε", "παρακληθήσονται"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03BB\u03B7\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "First Aorist Active Indicative",
-      forms: ["παρεκάλεσα", "παρεκάλεσας", "παρεκάλεσε(ν)", "παρεκαλέσαμεν", "παρεκαλέσατε", "παρεκάλεσαν"]
+      forms: ["\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1\u03C2", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B5(\u03BD)", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1\u03BD"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["παρεκαλεσάμην", "παρεκάλεσω", "παρεκαλέσατο", "παρεκαλεσάμεθα", "παρεκαλέσασθε", "παρεκαλέσαντο"]
+      forms: ["\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03B5\u03C3\u03AC\u03BC\u03B7\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03C9", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C4\u03BF", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03B5\u03C3\u03AC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative",
-      forms: ["παρεκλήθην", "παρεκλήθης", "παρεκλήθη", "παρεκλήθημεν", "παρεκλήθητε", "παρεκλήθησαν"]
+      forms: ["\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7\u03C2", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B5\u03BA\u03BB\u03AE\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["παρακεκάλεκα", "παρακεκάλεκας", "παρακεκάλεκε(ν)", "παρακεκαλέκαμεν", "παρακεκαλέκατε", "παρακεκάλεκασι(ν)"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03BA\u03B1", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03BA\u03B1\u03C2", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03BA\u03B5(\u03BD)", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03B1\u03BB\u03AD\u03BA\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03B1\u03BB\u03AD\u03BA\u03B1\u03C4\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["παρακεκάλεσμαι", "παρακεκάλεσαι", "παρακεκάλεσται", "παρακεκαλέσμεθα", "παρακεκάλεσθε", "παρακεκάλεσνται"]
+      forms: ["\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03BC\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03C4\u03B1\u03B9", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03B1\u03BB\u03AD\u03C3\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03B1\u03C1\u03B1\u03BA\u03B5\u03BA\u03AC\u03BB\u03B5\u03C3\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"προσεύχομαι": {
-  lemma: "προσεύχομαι",
+"\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03BF\u03BC\u03B1\u03B9",
   gloss: "I pray",
   charts: {
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["προσεύχομαι", "προσεύχῃ", "προσεύχεται", "προσευχόμεθα", "προσεύχεσθε", "προσεύχονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_middle_indicative: {
       label: "Imperfect Middle Indicative",
-      forms: ["προσηυχόμην", "προσηύχου", "προσηύχετο", "προσηυχόμεθα", "προσηύχεσθε", "προσηύχοντο"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03C5\u03C7\u03CC\u03BC\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03BF\u03C5", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B5\u03C4\u03BF", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03C5\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03BF\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["προσεύξομαι", "προσεύξῃ", "προσεύξεται", "προσευξόμεθα", "προσεύξεσθε", "προσεύξονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03BE\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03BE\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03BE\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03BE\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03BE\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative (Rare)",
-      forms: ["προσευξθήσομαι", "προσευξθήσῃ", "προσευξθήσεται", "προσευξθησόμεθα", "προσευξθήσεσθε", "προσευξθήσονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C5\u03BE\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_middle_indicative: {
       label: "First Aorist Middle Indicative",
-      forms: ["προσηυξάμην", "προσηύξω", "προσηύξατο", "προσηυξάμεθα", "προσηύξασθε", "προσηύξαντο"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03C5\u03BE\u03AC\u03BC\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03BE\u03C9", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03BE\u03B1\u03C4\u03BF", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03C5\u03BE\u03AC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03BE\u03B1\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03BE\u03B1\u03BD\u03C4\u03BF"]
     },
     aorist_passive_indicative: {
       label: "First Aorist Passive Indicative (Rare)",
-      forms: ["προσηύχθην", "προσηύχθης", "προσηύχθη", "προσηύχθημεν", "προσηύχθητε", "προσηύχθησαν"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7\u03C2", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7\u03BC\u03B5\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7\u03C4\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03CD\u03C7\u03B8\u03B7\u03C3\u03B1\u03BD"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative (Rare)",
-      forms: ["προσεύγμαι", "προσεύγσαι", "προσεύγται", "προσεύγμεθα", "προσεύγσθε", "προσεύγνται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03C3\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03CD\u03B3\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"προσέρχομαι": {
-  lemma: "προσέρχομαι",
+"\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
   gloss: "I come/go to / approach",
   charts: {
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["προσέρχομαι", "προσέρχῃ", "προσέρχεται", "προσερχόμεθα", "προσέρχεσθε", "προσέρχονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_middle_indicative: {
       label: "Imperfect Middle Indicative",
-      forms: ["προσηρχόμην", "προσήρχου", "προσήρχετο", "προσηρχόμεθα", "προσήρχεσθε", "προσήρχοντο"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03BF\u03C5", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03B5\u03C4\u03BF", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["προσελεύσομαι", "προσελεύσῃ", "προσελεύσεται", "προσελευσόμεθα", "προσελεύσεσθε", "προσελεύσονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative (Rare)",
-      forms: ["προσελευσθήσομαι", "προσελευσθήσῃ", "προσελευσθήσεται", "προσελευσθησόμεθα", "προσελευσθήσεσθε", "προσελευσθήσονται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["προσῆλθον", "προσῆλθες", "προσῆλθε(ν)", "προσήλθομεν", "προσήλθετε", "προσῆλθον"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BD", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5\u03C2", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5(\u03BD)", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03AE\u03BB\u03B8\u03B5\u03C4\u03B5", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["προσηλθόμην", "προσῆλθου", "προσῆλθετο", "προσηλθόμεθα", "προσῆλθεσθε", "προσῆλθοντο"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B7\u03BB\u03B8\u03CC\u03BC\u03B7\u03BD", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03C5", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5\u03C4\u03BF", "\u03C0\u03C1\u03BF\u03C3\u03B7\u03BB\u03B8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03B5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u1FC6\u03BB\u03B8\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["προσελήλυθα", "προσελήλυθας", "προσελήλυθε(ν)", "προσεληλύθαμεν", "προσεληλύθατε", "προσελήλυθασι(ν)"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative (Rare)",
-      forms: ["προσελήλυμαι", "προσελήλυσαι", "προσελήλυται", "προσεληλύμεθα", "προσελήλυσθε", "προσελήλυνται"]
+      forms: ["\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03BC\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03C3\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03C4\u03B1\u03B9", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03B7\u03BB\u03CD\u03BC\u03B5\u03B8\u03B1", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03C3\u03B8\u03B5", "\u03C0\u03C1\u03BF\u03C3\u03B5\u03BB\u03AE\u03BB\u03C5\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"ἐξέρχομαι": {
-  lemma: "ἐξέρχομαι",
+"\u1F10\u03BE\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9": {
+  lemma: "\u1F10\u03BE\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9",
   gloss: "I go out / depart",
   charts: {
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ἐξέρχομαι", "ἐξέρχῃ", "ἐξέρχεται", "ἐξερχόμεθα", "ἐξέρχεσθε", "ἐξέρχονται"]
+      forms: ["\u1F10\u03BE\u03AD\u03C1\u03C7\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BE\u03AD\u03C1\u03C7\u1FC3", "\u1F10\u03BE\u03AD\u03C1\u03C7\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03AD\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03AD\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_middle_indicative: {
       label: "Imperfect Middle Indicative",
-      forms: ["ἐξηρχόμην", "ἐξήρχου", "ἐξήρχετο", "ἐξηρχόμεθα", "ἐξήρχεσθε", "ἐξήρχοντο"]
+      forms: ["\u1F10\u03BE\u03B7\u03C1\u03C7\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BE\u03AE\u03C1\u03C7\u03BF\u03C5", "\u1F10\u03BE\u03AE\u03C1\u03C7\u03B5\u03C4\u03BF", "\u1F10\u03BE\u03B7\u03C1\u03C7\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03AE\u03C1\u03C7\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03AE\u03C1\u03C7\u03BF\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative",
-      forms: ["ἐξελεύσομαι", "ἐξελεύσῃ", "ἐξελεύσεται", "ἐξελευσόμεθα", "ἐξελεύσεσθε", "ἐξελεύσονται"]
+      forms: ["\u1F10\u03BE\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03CD\u03C3\u1FC3", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03CD\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03CD\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative (Rare)",
-      forms: ["ἐξελευσθήσομαι", "ἐξελευσθήσῃ", "ἐξελευσθήσεται", "ἐξελευσθησόμεθα", "ἐξελευσθήσεσθε", "ἐξελευσθήσονται"]
+      forms: ["\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u1FC3", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03B5\u03BB\u03B5\u03C5\u03C3\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["ἐξῆλθον", "ἐξῆλθες", "ἐξῆλθε(ν)", "ἐξήλθομεν", "ἐξήλθετε", "ἐξῆλθον"]
+      forms: ["\u1F10\u03BE\u1FC6\u03BB\u03B8\u03BF\u03BD", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03B5\u03C2", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03B5(\u03BD)", "\u1F10\u03BE\u03AE\u03BB\u03B8\u03BF\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03AE\u03BB\u03B8\u03B5\u03C4\u03B5", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03BF\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["ἐξηλθόμην", "ἐξῆλθου", "ἐξῆλθετο", "ἐξηλθόμεθα", "ἐξῆλθεσθε", "ἐξῆλθοντο"]
+      forms: ["\u1F10\u03BE\u03B7\u03BB\u03B8\u03CC\u03BC\u03B7\u03BD", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03BF\u03C5", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03B5\u03C4\u03BF", "\u1F10\u03BE\u03B7\u03BB\u03B8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03B5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u1FC6\u03BB\u03B8\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἐξελήλυθα", "ἐξελήλυθας", "ἐξελήλυθε(ν)", "ἐξεληλύθαμεν", "ἐξεληλύθατε", "ἐξελήλυθασι(ν)"]
+      forms: ["\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C2", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B5(\u03BD)", "\u1F10\u03BE\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03BC\u03B5\u03BD", "\u1F10\u03BE\u03B5\u03BB\u03B7\u03BB\u03CD\u03B8\u03B1\u03C4\u03B5", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03B8\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative (Rare)",
-      forms: ["ἐξελήλυμαι", "ἐξελήλυσαι", "ἐξελήλυται", "ἐξεληλύμεθα", "ἐξελήλυσθε", "ἐξελήλυνται"]
+      forms: ["\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03BC\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03C3\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03C4\u03B1\u03B9", "\u1F10\u03BE\u03B5\u03BB\u03B7\u03BB\u03CD\u03BC\u03B5\u03B8\u03B1", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03C3\u03B8\u03B5", "\u1F10\u03BE\u03B5\u03BB\u03AE\u03BB\u03C5\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
-"ὁράω": {
-  lemma: "ὁράω",
+"\u1F41\u03C1\u03AC\u03C9": {
+  lemma: "\u1F41\u03C1\u03AC\u03C9",
   gloss: "I see / behold / perceive",
   charts: {
     present_active_indicative: {
       label: "Present Active Indicative (Alpha Contract)",
-      forms: ["ὁρῶ", "ὁρᾷς", "ὁρᾷ", "ὁρῶμεν", "ὁρᾶτε", "ὁρῶσι(ν)"]
+      forms: ["\u1F41\u03C1\u1FF6", "\u1F41\u03C1\u1FB7\u03C2", "\u1F41\u03C1\u1FB7", "\u1F41\u03C1\u1FF6\u03BC\u03B5\u03BD", "\u1F41\u03C1\u1FB6\u03C4\u03B5", "\u1F41\u03C1\u1FF6\u03C3\u03B9(\u03BD)"]
     },
     present_middle_passive_indicative: {
       label: "Present Middle/Passive Indicative",
-      forms: ["ὁρῶμαι", "ὁρᾷ", "ὁρᾶται", "ὁρώμεθα", "ὁρᾶσθε", "ὁρῶνται"]
+      forms: ["\u1F41\u03C1\u1FF6\u03BC\u03B1\u03B9", "\u1F41\u03C1\u1FB7", "\u1F41\u03C1\u1FB6\u03C4\u03B1\u03B9", "\u1F41\u03C1\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F41\u03C1\u1FB6\u03C3\u03B8\u03B5", "\u1F41\u03C1\u1FF6\u03BD\u03C4\u03B1\u03B9"]
     },
     imperfect_active_indicative: {
       label: "Imperfect Active Indicative",
-      forms: ["ἑώρων", "ἑώρας", "ἑώρα", "ἑωρῶμεν", "ἑωρᾶτε", "ἑώρων"]
+      forms: ["\u1F11\u03CE\u03C1\u03C9\u03BD", "\u1F11\u03CE\u03C1\u03B1\u03C2", "\u1F11\u03CE\u03C1\u03B1", "\u1F11\u03C9\u03C1\u1FF6\u03BC\u03B5\u03BD", "\u1F11\u03C9\u03C1\u1FB6\u03C4\u03B5", "\u1F11\u03CE\u03C1\u03C9\u03BD"]
     },
     imperfect_middle_passive_indicative: {
       label: "Imperfect Middle/Passive Indicative",
-      forms: ["ἑωρώμην", "ἑώρω", "ἑωρᾶτο", "ἑωρώμεθα", "ἑωρᾶσθε", "ἑωρῶντο"]
+      forms: ["\u1F11\u03C9\u03C1\u03CE\u03BC\u03B7\u03BD", "\u1F11\u03CE\u03C1\u03C9", "\u1F11\u03C9\u03C1\u1FB6\u03C4\u03BF", "\u1F11\u03C9\u03C1\u03CE\u03BC\u03B5\u03B8\u03B1", "\u1F11\u03C9\u03C1\u1FB6\u03C3\u03B8\u03B5", "\u1F11\u03C9\u03C1\u1FF6\u03BD\u03C4\u03BF"]
     },
     future_middle_indicative: {
       label: "Future Middle Indicative (Irregular)",
-      forms: ["ὄψομαι", "ὄψῃ", "ὄψεται", "ὀψόμεθα", "ὄψεσθε", "ὄψονται"]
+      forms: ["\u1F44\u03C8\u03BF\u03BC\u03B1\u03B9", "\u1F44\u03C8\u1FC3", "\u1F44\u03C8\u03B5\u03C4\u03B1\u03B9", "\u1F40\u03C8\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F44\u03C8\u03B5\u03C3\u03B8\u03B5", "\u1F44\u03C8\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     future_passive_indicative: {
       label: "Future Passive Indicative",
-      forms: ["ὀφθήσομαι", "ὀφθήσῃ", "ὀφθήσεται", "ὀφθησόμεθα", "ὀφθήσεσθε", "ὀφθήσονται"]
+      forms: ["\u1F40\u03C6\u03B8\u03AE\u03C3\u03BF\u03BC\u03B1\u03B9", "\u1F40\u03C6\u03B8\u03AE\u03C3\u1FC3", "\u1F40\u03C6\u03B8\u03AE\u03C3\u03B5\u03C4\u03B1\u03B9", "\u1F40\u03C6\u03B8\u03B7\u03C3\u03CC\u03BC\u03B5\u03B8\u03B1", "\u1F40\u03C6\u03B8\u03AE\u03C3\u03B5\u03C3\u03B8\u03B5", "\u1F40\u03C6\u03B8\u03AE\u03C3\u03BF\u03BD\u03C4\u03B1\u03B9"]
     },
     aorist_active_indicative: {
       label: "Second Aorist Active Indicative",
-      forms: ["εἶδον", "εἶδες", "εἶδε(ν)", "εἴδομεν", "εἴδετε", "εἶδον"]
+      forms: ["\u03B5\u1F36\u03B4\u03BF\u03BD", "\u03B5\u1F36\u03B4\u03B5\u03C2", "\u03B5\u1F36\u03B4\u03B5(\u03BD)", "\u03B5\u1F34\u03B4\u03BF\u03BC\u03B5\u03BD", "\u03B5\u1F34\u03B4\u03B5\u03C4\u03B5", "\u03B5\u1F36\u03B4\u03BF\u03BD"]
     },
     aorist_middle_indicative: {
       label: "Second Aorist Middle Indicative",
-      forms: ["εἰδόμην", "εἶδου", "εἶδετο", "εἰδόμεθα", "εἶδεσθε", "εἶδοντο"]
+      forms: ["\u03B5\u1F30\u03B4\u03CC\u03BC\u03B7\u03BD", "\u03B5\u1F36\u03B4\u03BF\u03C5", "\u03B5\u1F36\u03B4\u03B5\u03C4\u03BF", "\u03B5\u1F30\u03B4\u03CC\u03BC\u03B5\u03B8\u03B1", "\u03B5\u1F36\u03B4\u03B5\u03C3\u03B8\u03B5", "\u03B5\u1F36\u03B4\u03BF\u03BD\u03C4\u03BF"]
     },
     perfect_active_indicative: {
       label: "Perfect Active Indicative",
-      forms: ["ἑώρακα", "ἑώρακας", "ἑώρακε(ν)", "ἑωράκαμεν", "ἑωράκατε", "ἑώρακασι(ν)"]
+      forms: ["\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1\u03C2", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B5(\u03BD)", "\u1F11\u03C9\u03C1\u03AC\u03BA\u03B1\u03BC\u03B5\u03BD", "\u1F11\u03C9\u03C1\u03AC\u03BA\u03B1\u03C4\u03B5", "\u1F11\u03CE\u03C1\u03B1\u03BA\u03B1\u03C3\u03B9(\u03BD)"]
     },
     perfect_middle_passive_indicative: {
       label: "Perfect Middle/Passive Indicative",
-      forms: ["ἑώραμαι", "ἑώρασαι", "ἑώραται", "ἑωράμεθα", "ἑώρασθε", "ἑώρανται"]
+      forms: ["\u1F11\u03CE\u03C1\u03B1\u03BC\u03B1\u03B9", "\u1F11\u03CE\u03C1\u03B1\u03C3\u03B1\u03B9", "\u1F11\u03CE\u03C1\u03B1\u03C4\u03B1\u03B9", "\u1F11\u03C9\u03C1\u03AC\u03BC\u03B5\u03B8\u03B1", "\u1F11\u03CE\u03C1\u03B1\u03C3\u03B8\u03B5", "\u1F11\u03CE\u03C1\u03B1\u03BD\u03C4\u03B1\u03B9"]
     }
   }
 },
