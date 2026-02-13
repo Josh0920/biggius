@@ -176,23 +176,6 @@
     }
     .muted{ color: var(--muted); font-size: 13px; margin-top: 8px; }
 
-    .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
-
-    .btn{
-      border: 1px solid var(--line);
-      background:#fff;
-      color: var(--text);
-      padding: 10px 12px;
-      border-radius: 12px;
-      cursor:pointer;
-      font-size: 13px;
-      transition: .12s ease;
-    }
-    .btn:hover{ background:#f7f7f7; }
-    .btn.primary{ background:#111; color:#fff; border-color:#111; }
-    .btn.primary:hover{ background:#000; }
-    .btn:disabled{ opacity:.45; cursor:not-allowed; }
-
     .toast{
       position: fixed;
       right: 16px;
@@ -203,7 +186,7 @@
       border-radius: 14px;
       padding: 10px 12px;
       box-shadow: var(--shadow);
-      max-width: 360px;
+      max-width: 380px;
       opacity: 0;
       transform: translateY(10px);
       pointer-events:none;
@@ -213,7 +196,6 @@
     .toast strong{ display:block; margin-bottom: 3px; }
     .toast .tmuted{ color: var(--muted); font-size: 12px; }
 
-    /* Simple error box */
     .errorBox{
       border: 1px solid rgba(180,35,24,.35);
       background: rgba(180,35,24,.06);
@@ -221,8 +203,9 @@
       padding: 16px;
     }
     .errorBox h3{ margin: 0 0 8px; font-size: 14px; }
+    .errorBox ul{ margin:8px 0 0; padding-left:18px; color: var(--muted); font-size: 13px; }
     .errorBox pre{
-      margin: 10px 0 0;
+      margin: 12px 0 0;
       background:#fff;
       border: 1px solid var(--line);
       border-radius: 12px;
@@ -231,7 +214,16 @@
       font-size: 12px;
       font-family: var(--mono);
       color: var(--text);
-      max-height: 240px;
+      max-height: 260px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .okBox{
+      border: 1px solid rgba(26,127,55,.35);
+      background: rgba(26,127,55,.06);
+      border-radius: 18px;
+      padding: 16px;
     }
   </style>
 </head>
@@ -278,7 +270,7 @@
         <div class="topRow">
           <div class="titleBlock">
             <h2 id="mainTitle">Koine Greek</h2>
-            <p id="mainSub">Loading your study activities…</p>
+            <p id="mainSub">Booting modules…</p>
           </div>
           <div class="stats">
             <span class="pill"><strong id="statProgress">0/0</strong> <span id="statProgressLabel">items</span></span>
@@ -292,7 +284,9 @@
       <div class="content" id="content">
         <div class="card">
           <div class="bigGreek">Ἑτοιμάζω…</div>
-          <div class="muted">Preparing the app. If this never loads, your <code>app.js</code> (or one of its imports) is failing.</div>
+          <div class="muted">
+            Loading: <code>data-activities.js</code>, <code>data-charts.js</code>, <code>data-vocab.js</code>, <code>verb-engine.js</code>, then <code>app.js</code>.
+          </div>
         </div>
       </div>
     </main>
@@ -303,9 +297,11 @@
     <div class="tmuted" id="toastMsg">—</div>
   </div>
 
-  <!-- App entry (safe loader so you don't get a blank page on JS errors) -->
   <script type="module">
     const content = document.getElementById("content");
+    const mainSub = document.getElementById("mainSub");
+    const sideMeta = document.getElementById("sideMeta");
+
     const toast = document.getElementById("toast");
     const toastTitle = document.getElementById("toastTitle");
     const toastMsg = document.getElementById("toastMsg");
@@ -315,39 +311,77 @@
       toastTitle.textContent = title;
       toastMsg.textContent = msg;
       toast.classList.add("show");
-      setTimeout(()=>toast.classList.remove("show"), 3800);
+      setTimeout(()=>toast.classList.remove("show"), 4200);
     }
 
-    // Try to load your real app. If it fails, show an on-page error instead of "blank".
-    import("./app.js").catch((err) => {
-      console.error("Failed to load ./app.js", err);
+    function esc(s){
+      return String(s ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;");
+    }
 
-      showToast("App failed to load", "Check console for details (missing file / import error).");
+    function showFatal(modulePath, err){
+      console.error("Module load failure:", modulePath, err);
 
-      if (content) {
-        const safeMsg = (err && (err.stack || err.message)) ? (err.stack || err.message) : String(err);
+      if (mainSub) mainSub.textContent = "Startup failed (module load error).";
+      if (sideMeta) sideMeta.textContent = "Load error";
+
+      const msg = err && (err.stack || err.message) ? (err.stack || err.message) : String(err);
+
+      showToast("Load failed", modulePath);
+
+      if (content){
         content.innerHTML = `
           <div class="errorBox">
-            <h3>Couldn’t load <code>./app.js</code></h3>
+            <h3>Couldn’t load <code>${esc(modulePath)}</code></h3>
             <div class="muted">
-              Common causes:
-              <ul style="margin:8px 0 0; padding-left:18px;">
-                <li><code>app.js</code> is missing or not in the same folder as <code>index.html</code></li>
-                <li>One of <code>app.js</code> imports has the wrong path (e.g., <code>./data-activities.js</code>)</li>
-                <li>A syntax error inside one of your JS files</li>
-                <li>Case mismatch on GitHub Pages (e.g., <code>App.js</code> vs <code>app.js</code>)</li>
+              Most common causes:
+              <ul>
+                <li>File is missing or not in the same folder as <code>index.html</code></li>
+                <li>Wrong filename casing on GitHub Pages (e.g., <code>Data-Vocab.js</code> vs <code>data-vocab.js</code>)</li>
+                <li>That file imports something with a bad path</li>
+                <li>Syntax error inside the module</li>
+                <li>Opening via <code>file://</code> instead of a local server (ES modules often break)</li>
               </ul>
             </div>
-            <pre>${safeMsg.replaceAll("<","&lt;").replaceAll(">","&gt;")}</pre>
+            <pre>${esc(msg)}</pre>
           </div>
         `;
       }
+    }
 
-      const mainSub = document.getElementById("mainSub");
-      const sideMeta = document.getElementById("sideMeta");
-      if (mainSub) mainSub.textContent = "App failed to load. See error below.";
-      if (sideMeta) sideMeta.textContent = "Load error";
-    });
+    async function preflightImport(modulePath, label){
+      if (mainSub) mainSub.textContent = `Loading ${label}…`;
+      await import(modulePath);
+    }
+
+    (async () => {
+      try {
+        // Preflight the modules you named (in a predictable order).
+        await preflightImport("./data-activities.js", "data-activities.js");
+        await preflightImport("./data-charts.js", "data-charts.js");
+        await preflightImport("./data-vocab.js", "data-vocab.js");
+        await preflightImport("./verb-engine.js", "verb-engine.js");
+
+        if (sideMeta) sideMeta.textContent = "Modules OK";
+        if (mainSub) mainSub.textContent = "Modules loaded. Starting app…";
+
+        // Now load the actual app.
+        await import("./app.js");
+
+        // If app.js runs successfully, it will take over the UI.
+        showToast("Ready", "App started.");
+      } catch (err) {
+        // Try to identify which import likely failed (best effort).
+        // If the error happened in app.js, show that.
+        // Otherwise the console will show the exact failing module.
+        const hint =
+          (err && err.message && err.message.includes("app.js")) ? "./app.js" :
+          "A required module";
+        showFatal(hint, err);
+      }
+    })();
   </script>
 </body>
 </html>
