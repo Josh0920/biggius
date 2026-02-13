@@ -2642,7 +2642,724 @@
 
     }
   };
-
+"ἀκολουθέω": {
+  lemma: "ἀκολουθέω",
+  gloss: "I follow / accompany",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["ἀκολουθῶ", "ἀκολουθεῖς", "ἀκολουθεῖ", "ἀκολουθοῦμεν", "ἀκολουθεῖτε", "ἀκολουθοῦσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["ἀκολουθοῦμαι", "ἀκολουθεῖ", "ἀκολουθεῖται", "ἀκολουθούμεθα", "ἀκολουθεῖσθε", "ἀκολουθοῦνται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἠκολούθουν", "ἠκολούθεις", "ἠκολούθει", "ἠκολουθοῦμεν", "ἠκολουθεῖτε", "ἠκολούθουν"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἠκολουθούμην", "ἠκολουθοῦ", "ἠκολουθεῖτο", "ἠκολουθούμεθα", "ἠκολουθεῖσθε", "ἠκολουθοῦντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["ἀκολουθήσω", "ἀκολουθήσεις", "ἀκολουθήσει", "ἀκολουθήσομεν", "ἀκολουθήσετε", "ἀκολουθήσουσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["ἀκολουθήσομαι", "ἀκολουθήσῃ", "ἀκολουθήσεται", "ἀκολουθησόμεθα", "ἀκολουθήσεσθε", "ἀκολουθήσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative (Rare)",
+      forms: ["ἀκολουθηθήσομαι", "ἀκολουθηθήσῃ", "ἀκολουθηθήσεται", "ἀκολουθηθησόμεθα", "ἀκολουθηθήσεσθε", "ἀκολουθηθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἠκολούθησα", "ἠκολούθησας", "ἠκολούθησε(ν)", "ἠκολουθήσαμεν", "ἠκολουθήσατε", "ἠκολούθησαν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἠκολουθησάμην", "ἠκολουθήσω", "ἠκολουθήσατο", "ἠκολουθησάμεθα", "ἠκολουθήσασθε", "ἠκολουθήσαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative (Very Rare)",
+      forms: ["ἠκολουθήθην", "ἠκολουθήθης", "ἠκολουθήθη", "ἠκολουθήθημεν", "ἠκολουθήθητε", "ἠκολουθήθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἠκολούθηκα", "ἠκολούθηκας", "ἠκολούθηκε(ν)", "ἠκολουθήκαμεν", "ἠκολουθήκατε", "ἠκολούθηκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["ἠκολούθημαι", "ἠκολούθησαι", "ἠκολούθηται", "ἠκολουθήμεθα", "ἠκολουθήσθε", "ἠκολούθηνται"]
+    }
+  }
+},
+ "βάλλω": {
+  lemma: "βάλλω",
+  gloss: "I throw / cast / put",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["βάλλω", "βάλλεις", "βάλλει", "βάλλομεν", "βάλλετε", "βάλλουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["βάλλομαι", "βάλλῃ", "βάλλεται", "βαλλόμεθα", "βάλλεσθε", "βάλλονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἔβαλλον", "ἔβαλλες", "ἔβαλλε(ν)", "ἐβάλλομεν", "ἐβάλλετε", "ἔβαλλον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐβαλλόμην", "ἐβάλλου", "ἐβάλλετο", "ἐβαλλόμεθα", "ἐβάλλεσθε", "ἐβάλλοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["βαλῶ", "βαλεῖς", "βαλεῖ", "βαλοῦμεν", "βαλεῖτε", "βαλοῦσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["βαλοῦμαι", "βαλῇ", "βαλεῖται", "βαλούμεθα", "βαλεῖσθε", "βαλοῦνται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["βληθήσομαι", "βληθήσῃ", "βληθήσεται", "βληθησόμεθα", "βληθήσεσθε", "βληθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["ἔβαλον", "ἔβαλες", "ἔβαλε(ν)", "ἐβάλομεν", "ἐβάλετε", "ἔβαλον"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["ἐβαλόμην", "ἔβαλου", "ἔβαλετο", "ἐβαλόμεθα", "ἔβαλεσθε", "ἔβαλοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["βέβληκα", "βέβληκας", "βέβληκε(ν)", "βεβλήκαμεν", "βεβλήκατε", "βέβληκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["βέβλημαι", "βέβλησαι", "βέβληται", "βεβλήμεθα", "βέβλησθε", "βέβληνται"]
+    }
+  }
+},
+"βαπτίζω": {
+  lemma: "βαπτίζω",
+  gloss: "I baptize / immerse / dip",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["βαπτίζω", "βαπτίζεις", "βαπτίζει", "βαπτίζομεν", "βαπτίζετε", "βαπτίζουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["βαπτίζομαι", "βαπτίζῃ", "βαπτίζεται", "βαπτιζόμεθα", "βαπτίζεσθε", "βαπτίζονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἐβάπτιζον", "ἐβάπτιζες", "ἐβάπτιζε(ν)", "ἐβαπτίζομεν", "ἐβαπτίζετε", "ἐβάπτιζον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐβαπτιζόμην", "ἐβαπτίζου", "ἐβαπτίζετο", "ἐβαπτιζόμεθα", "ἐβαπτίζεσθε", "ἐβαπτίζοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["βαπτίσω", "βαπτίσεις", "βαπτίσει", "βαπτίσομεν", "βαπτίσετε", "βαπτίσουσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["βαπτίσομαι", "βαπτίσῃ", "βαπτίσεται", "βαπτισόμεθα", "βαπτίσεσθε", "βαπτίσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["βαπτισθήσομαι", "βαπτισθήσῃ", "βαπτισθήσεται", "βαπτισθησόμεθα", "βαπτισθήσεσθε", "βαπτισθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἐβάπτισα", "ἐβάπτισας", "ἐβάπτισε(ν)", "ἐβαπτίσαμεν", "ἐβαπτίσατε", "ἐβάπτισαν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἐβαπτισάμην", "ἐβαπτίσω", "ἐβαπτίσατο", "ἐβαπτισάμεθα", "ἐβαπτίσασθε", "ἐβαπτίσαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative",
+      forms: ["ἐβαπτίσθην", "ἐβαπτίσθης", "ἐβαπτίσθη", "ἐβαπτίσθημεν", "ἐβαπτίσθητε", "ἐβαπτίσθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["βεβάπτικα", "βεβάπτικας", "βεβάπτικε(ν)", "βεβαπτίκαμεν", "βεβαπτίκατε", "βεβάπτικασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["βεβάπτισμαι", "βεβάπτισαι", "βεβάπτισται", "βεβαπτίσμεθα", "βεβάπτισθε", "βεβάπτισνται"]
+    }
+  }
+},
+"διδάσκω": {
+  lemma: "διδάσκω",
+  gloss: "I teach / instruct",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["διδάσκω", "διδάσκεις", "διδάσκει", "διδάσκομεν", "διδάσκετε", "διδάσκουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["διδάσκομαι", "διδάσκῃ", "διδάσκεται", "διδασκόμεθα", "διδάσκεσθε", "διδάσκονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἐδίδασκον", "ἐδίδασκες", "ἐδίδασκε(ν)", "ἐδιδάσκομεν", "ἐδιδάσκετε", "ἐδίδασκον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐδιδασκόμην", "ἐδιδάσκου", "ἐδιδάσκετο", "ἐδιδασκόμεθα", "ἐδιδάσκεσθε", "ἐδιδάσκοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["διδάξω", "διδάξεις", "διδάξει", "διδάξομεν", "διδάξετε", "διδάξουσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["διδάξομαι", "διδάξῃ", "διδάξεται", "διδαξόμεθα", "διδάξεσθε", "διδάξονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["διδαχθήσομαι", "διδαχθήσῃ", "διδαχθήσεται", "διδαχθησόμεθα", "διδαχθήσεσθε", "διδαχθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἐδίδαξα", "ἐδίδαξας", "ἐδίδαξε(ν)", "ἐδιδάξαμεν", "ἐδιδάξατε", "ἐδίδαξαν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἐδιδαξάμην", "ἐδίδαξω", "ἐδιδάξατο", "ἐδιδαξάμεθα", "ἐδιδάξασθε", "ἐδιδάξαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative",
+      forms: ["ἐδιδάχθην", "ἐδιδάχθης", "ἐδιδάχθη", "ἐδιδάχθημεν", "ἐδιδάχθητε", "ἐδιδάχθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["δεδίδαχα", "δεδίδαχας", "δεδίδαχε(ν)", "δεδιδάχαμεν", "δεδιδάχατε", "δεδίδαχασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["δεδίδαγμαι", "δεδίδαξαι", "δεδίδακται", "δεδιδάγμεθα", "δεδίδαχθε", "δεδίδαγνται"]
+    }
+  }
+},
+"ἐγείρω": {
+  lemma: "ἐγείρω",
+  gloss: "I raise / awaken / lift up",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["ἐγείρω", "ἐγείρεις", "ἐγείρει", "ἐγείρομεν", "ἐγείρετε", "ἐγείρουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["ἐγείρομαι", "ἐγείρῃ", "ἐγείρεται", "ἐγειρόμεθα", "ἐγείρεσθε", "ἐγείρονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἤγειρον", "ἤγειρες", "ἤγειρε(ν)", "ἠγείρομεν", "ἠγείρετε", "ἤγειρον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἠγειρόμην", "ἤγειρου", "ἤγειρετο", "ἠγειρόμεθα", "ἤγειρεσθε", "ἤγειροντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative (Liquid Future)",
+      forms: ["ἐγερῶ", "ἐγερεῖς", "ἐγερεῖ", "ἐγεροῦμεν", "ἐγερεῖτε", "ἐγεροῦσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["ἐγεροῦμαι", "ἐγερῇ", "ἐγερεῖται", "ἐγερούμεθα", "ἐγερεῖσθε", "ἐγεροῦνται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["ἐγερθήσομαι", "ἐγερθήσῃ", "ἐγερθήσεται", "ἐγερθησόμεθα", "ἐγερθήσεσθε", "ἐγερθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἤγειρα", "ἤγειρας", "ἤγειρε(ν)", "ἠγείραμεν", "ἠγείρατε", "ἤγειραν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἠγειράμην", "ἤγειρω", "ἠγείρατο", "ἠγειράμεθα", "ἠγείρασθε", "ἠγείραντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative",
+      forms: ["ἠγέρθην", "ἠγέρθης", "ἠγέρθη", "ἠγέρθημεν", "ἠγέρθητε", "ἠγέρθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἐγήγερκα", "ἐγήγερκας", "ἐγήγερκε(ν)", "ἐγηγήρκαμεν", "ἐγηγήρκατε", "ἐγήγερκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["ἐγήγερμαι", "ἐγήγερσαι", "ἐγήγερται", "ἐγηγήρμεθα", "ἐγήγερσθε", "ἐγήγερνται"]
+    }
+  }
+},
+"ἐκβάλλω": {
+  lemma: "ἐκβάλλω",
+  gloss: "I cast out / throw out / drive out",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["ἐκβάλλω", "ἐκβάλλεις", "ἐκβάλλει", "ἐκβάλλομεν", "ἐκβάλλετε", "ἐκβάλλουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["ἐκβάλλομαι", "ἐκβάλλῃ", "ἐκβάλλεται", "ἐκβαλλόμεθα", "ἐκβάλλεσθε", "ἐκβάλλονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἐξέβαλλον", "ἐξέβαλλες", "ἐξέβαλλε(ν)", "ἐξεβάλλομεν", "ἐξεβάλλετε", "ἐξέβαλλον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐξεβαλλόμην", "ἐξεβάλλου", "ἐξεβάλλετο", "ἐξεβαλλόμεθα", "ἐξεβάλλεσθε", "ἐξεβάλλοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative (Liquid Future)",
+      forms: ["ἐκβαλῶ", "ἐκβαλεῖς", "ἐκβαλεῖ", "ἐκβαλοῦμεν", "ἐκβαλεῖτε", "ἐκβαλοῦσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["ἐκβαλοῦμαι", "ἐκβαλῇ", "ἐκβαλεῖται", "ἐκβαλούμεθα", "ἐκβαλεῖσθε", "ἐκβαλοῦνται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["ἐκβληθήσομαι", "ἐκβληθήσῃ", "ἐκβληθήσεται", "ἐκβληθησόμεθα", "ἐκβληθήσεσθε", "ἐκβληθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["ἐξέβαλον", "ἐξέβαλες", "ἐξέβαλε(ν)", "ἐξεβάλομεν", "ἐξεβάλετε", "ἐξέβαλον"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["ἐξεβαλόμην", "ἐξέβαλου", "ἐξέβαλετο", "ἐξεβαλόμεθα", "ἐξέβαλεσθε", "ἐξέβαλοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἐκβέβληκα", "ἐκβέβληκας", "ἐκβέβληκε(ν)", "ἐκβεβλήκαμεν", "ἐκβεβλήκατε", "ἐκβέβληκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["ἐκβέβλημαι", "ἐκβέβλησαι", "ἐκβέβληται", "ἐκβεβλήμεθα", "ἐκβέβλησθε", "ἐκβέβληνται"]
+    }
+  }
+},
+"γινώσκω": {
+  lemma: "γινώσκω",
+  gloss: "I know / come to know / learn / realize",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["γινώσκω", "γινώσκεις", "γινώσκει", "γινώσκομεν", "γινώσκετε", "γινώσκουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["γινώσκομαι", "γινώσκῃ", "γινώσκεται", "γινωσκόμεθα", "γινώσκεσθε", "γινώσκονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἐγίνωσκον", "ἐγίνωσκες", "ἐγίνωσκε(ν)", "ἐγινώσκομεν", "ἐγινώσκετε", "ἐγίνωσκον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐγινωσκόμην", "ἐγινώσκου", "ἐγινώσκετο", "ἐγινωσκόμεθα", "ἐγινώσκεσθε", "ἐγινώσκοντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative (Deponent)",
+      forms: ["γνώσομαι", "γνώσῃ", "γνώσεται", "γνωσόμεθα", "γνώσεσθε", "γνώσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["γνωσθήσομαι", "γνωσθήσῃ", "γνωσθήσεται", "γνωσθησόμεθα", "γνωσθήσεσθε", "γνωσθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["ἔγνων", "ἔγνως", "ἔγνω", "ἔγνωμεν", "ἔγνωτε", "ἔγνωσαν"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["ἐγνόμην", "ἔγνου", "ἔγνετο", "ἐγνόμεθα", "ἔγνεσθε", "ἐγνοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἔγνωκα", "ἔγνωκας", "ἔγνωκε(ν)", "ἐγνώκαμεν", "ἐγνώκατε", "ἔγνωκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["ἔγνωσμαι", "ἔγνωσαι", "ἔγνωσται", "ἐγνώσμεθα", "ἔγνωσθε", "ἔγνωσντα"]
+    }
+  }
+},
+"καταβαίνω": {
+  lemma: "καταβαίνω",
+  gloss: "I go down / descend",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["καταβαίνω", "καταβαίνεις", "καταβαίνει", "καταβαίνομεν", "καταβαίνετε", "καταβαίνουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["καταβαίνομαι", "καταβαίνῃ", "καταβαίνεται", "καταβαινόμεθα", "καταβαίνεσθε", "καταβαίνονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["κατέβαινον", "κατέβαινες", "κατέβαινε(ν)", "κατεβαίνομεν", "κατεβαίνετε", "κατέβαινον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["κατεβαινόμην", "κατεβαίνου", "κατεβαίνετο", "κατεβαινόμεθα", "κατεβαίνεσθε", "κατέβαινοντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative (Deponent)",
+      forms: ["καταβήσομαι", "καταβήσῃ", "καταβήσεται", "καταβησόμεθα", "καταβήσεσθε", "καταβήσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["καταβηθήσομαι", "καταβηθήσῃ", "καταβηθήσεται", "καταβηθησόμεθα", "καταβηθήσεσθε", "καταβηθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["κατέβην", "κατέβης", "κατέβη", "κατέβημεν", "κατέβητε", "κατέβησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["καταβέβηκα", "καταβέβηκας", "καταβέβηκε(ν)", "καταβεβήκαμεν", "καταβεβήκατε", "καταβέβηκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["καταβέβημαι", "καταβέβησαι", "καταβέβηται", "καταβεβήμεθα", "καταβέβησθε", "καταβέβηνται"]
+    }
+  }
+},
+"μένω": {
+  lemma: "μένω",
+  gloss: "I remain / stay / abide / continue",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["μένω", "μένεις", "μένει", "μένομεν", "μένετε", "μένουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["μένομαι", "μένῃ", "μένεται", "μενόμεθα", "μένεσθε", "μένονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἔμενον", "ἔμενες", "ἔμενε(ν)", "ἐμένομεν", "ἐμένετε", "ἔμενον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐμενόμην", "ἐμένου", "ἐμένετο", "ἐμενόμεθα", "ἐμένεσθε", "ἐμένοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative (Liquid Future)",
+      forms: ["μενῶ", "μενεῖς", "μενεῖ", "μενοῦμεν", "μενεῖτε", "μενοῦσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["μενοῦμαι", "μενῇ", "μενεῖται", "μενούμεθα", "μενεῖσθε", "μενοῦνται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative (Rare)",
+      forms: ["μενηθήσομαι", "μενηθήσῃ", "μενηθήσεται", "μενηθησόμεθα", "μενηθήσεσθε", "μενηθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἔμεινα", "ἔμεινας", "ἔμεινε(ν)", "ἐμείναμεν", "ἐμείνατε", "ἔμειναν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἐμεινάμην", "ἔμεινω", "ἐμείνατο", "ἐμεινάμεθα", "ἐμείνασθε", "ἐμείναντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["μεμένηκα", "μεμένηκας", "μεμένηκε(ν)", "μεμενήκαμεν", "μεμενήκατε", "μεμένηκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["μεμένημαι", "μεμένησαι", "μεμένηται", "μεμενήμεθα", "μεμένησθε", "μεμένηνται"]
+    }
+  }
+},
+"πείθω": {
+  lemma: "πείθω",
+  gloss: "I persuade / convince (middle: I trust / obey)",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["πείθω", "πείθεις", "πείθει", "πείθομεν", "πείθετε", "πείθουσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["πείθομαι", "πείθῃ", "πείθεται", "πειθόμεθα", "πείθεσθε", "πείθονται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἔπειθον", "ἔπειθες", "ἔπειθε(ν)", "ἐπείθομεν", "ἐπείθετε", "ἔπειθον"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἐπειθόμην", "ἐπείθου", "ἐπείθετο", "ἐπειθόμεθα", "ἐπείθεσθε", "ἐπείθοντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["πείσω", "πείσεις", "πείσει", "πείσομεν", "πείσετε", "πείσουσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["πείσομαι", "πείσῃ", "πείσεται", "πεισόμεθα", "πείσεσθε", "πείσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["πεισθήσομαι", "πεισθήσῃ", "πεισθήσεται", "πεισθησόμεθα", "πεισθήσεσθε", "πεισθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["ἔπεισα", "ἔπεισας", "ἔπεισε(ν)", "ἐπείσαμεν", "ἐπείσατε", "ἔπεισαν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["ἐπεισάμην", "ἔπεισω", "ἐπείσατο", "ἐπεισάμεθα", "ἐπείσασθε", "ἐπείσαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative",
+      forms: ["ἐπείσθην", "ἐπείσθης", "ἐπείσθη", "ἐπείσθημεν", "ἐπείσθητε", "ἐπείσθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["πέπεικα", "πέπεικας", "πέπεικε(ν)", "πεπείκαμεν", "πεπείκατε", "πέπεικασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["πέπεισμαι", "πέπεισαι", "πέπεισται", "πεπείσμεθα", "πέπεισθε", "πέπεισνται"]
+    }
+  }
+},
+"παρακαλέω": {
+  lemma: "παρακαλέω",
+  gloss: "I exhort / urge / encourage / comfort",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative",
+      forms: ["παρακαλῶ", "παρακαλεῖς", "παρακαλεῖ", "παρακαλοῦμεν", "παρακαλεῖτε", "παρακαλοῦσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["παρακαλοῦμαι", "παρακαλεῖ", "παρακαλεῖται", "παρακαλούμεθα", "παρακαλεῖσθε", "παρακαλοῦνται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["παρεκάλουν", "παρεκάλεις", "παρεκάλει", "παρεκαλοῦμεν", "παρεκαλεῖτε", "παρεκάλουν"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["παρεκαλούμην", "παρεκαλοῦ", "παρεκαλεῖτο", "παρεκαλούμεθα", "παρεκαλεῖσθε", "παρεκαλοῦντο"]
+    },
+    future_active_indicative: {
+      label: "Future Active Indicative",
+      forms: ["παρακαλέσω", "παρακαλέσεις", "παρακαλέσει", "παρακαλέσομεν", "παρακαλέσετε", "παρακαλέσουσι(ν)"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["παρακαλέσομαι", "παρακαλέσῃ", "παρακαλέσεται", "παρακαλεσόμεθα", "παρακαλέσεσθε", "παρακαλέσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["παρακληθήσομαι", "παρακληθήσῃ", "παρακληθήσεται", "παρακληθησόμεθα", "παρακληθήσεσθε", "παρακληθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "First Aorist Active Indicative",
+      forms: ["παρεκάλεσα", "παρεκάλεσας", "παρεκάλεσε(ν)", "παρεκαλέσαμεν", "παρεκαλέσατε", "παρεκάλεσαν"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["παρεκαλεσάμην", "παρεκάλεσω", "παρεκαλέσατο", "παρεκαλεσάμεθα", "παρεκαλέσασθε", "παρεκαλέσαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative",
+      forms: ["παρεκλήθην", "παρεκλήθης", "παρεκλήθη", "παρεκλήθημεν", "παρεκλήθητε", "παρεκλήθησαν"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["παρακεκάλεκα", "παρακεκάλεκας", "παρακεκάλεκε(ν)", "παρακεκαλέκαμεν", "παρακεκαλέκατε", "παρακεκάλεκασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["παρακεκάλεσμαι", "παρακεκάλεσαι", "παρακεκάλεσται", "παρακεκαλέσμεθα", "παρακεκάλεσθε", "παρακεκάλεσνται"]
+    }
+  }
+},
+"προσεύχομαι": {
+  lemma: "προσεύχομαι",
+  gloss: "I pray",
+  charts: {
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["προσεύχομαι", "προσεύχῃ", "προσεύχεται", "προσευχόμεθα", "προσεύχεσθε", "προσεύχονται"]
+    },
+    imperfect_middle_indicative: {
+      label: "Imperfect Middle Indicative",
+      forms: ["προσηυχόμην", "προσηύχου", "προσηύχετο", "προσηυχόμεθα", "προσηύχεσθε", "προσηύχοντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["προσεύξομαι", "προσεύξῃ", "προσεύξεται", "προσευξόμεθα", "προσεύξεσθε", "προσεύξονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative (Rare)",
+      forms: ["προσευξθήσομαι", "προσευξθήσῃ", "προσευξθήσεται", "προσευξθησόμεθα", "προσευξθήσεσθε", "προσευξθήσονται"]
+    },
+    aorist_middle_indicative: {
+      label: "First Aorist Middle Indicative",
+      forms: ["προσηυξάμην", "προσηύξω", "προσηύξατο", "προσηυξάμεθα", "προσηύξασθε", "προσηύξαντο"]
+    },
+    aorist_passive_indicative: {
+      label: "First Aorist Passive Indicative (Rare)",
+      forms: ["προσηύχθην", "προσηύχθης", "προσηύχθη", "προσηύχθημεν", "προσηύχθητε", "προσηύχθησαν"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative (Rare)",
+      forms: ["προσεύγμαι", "προσεύγσαι", "προσεύγται", "προσεύγμεθα", "προσεύγσθε", "προσεύγνται"]
+    }
+  }
+},
+"προσέρχομαι": {
+  lemma: "προσέρχομαι",
+  gloss: "I come/go to / approach",
+  charts: {
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["προσέρχομαι", "προσέρχῃ", "προσέρχεται", "προσερχόμεθα", "προσέρχεσθε", "προσέρχονται"]
+    },
+    imperfect_middle_indicative: {
+      label: "Imperfect Middle Indicative",
+      forms: ["προσηρχόμην", "προσήρχου", "προσήρχετο", "προσηρχόμεθα", "προσήρχεσθε", "προσήρχοντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["προσελεύσομαι", "προσελεύσῃ", "προσελεύσεται", "προσελευσόμεθα", "προσελεύσεσθε", "προσελεύσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative (Rare)",
+      forms: ["προσελευσθήσομαι", "προσελευσθήσῃ", "προσελευσθήσεται", "προσελευσθησόμεθα", "προσελευσθήσεσθε", "προσελευσθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["προσῆλθον", "προσῆλθες", "προσῆλθε(ν)", "προσήλθομεν", "προσήλθετε", "προσῆλθον"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["προσηλθόμην", "προσῆλθου", "προσῆλθετο", "προσηλθόμεθα", "προσῆλθεσθε", "προσῆλθοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["προσελήλυθα", "προσελήλυθας", "προσελήλυθε(ν)", "προσεληλύθαμεν", "προσεληλύθατε", "προσελήλυθασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative (Rare)",
+      forms: ["προσελήλυμαι", "προσελήλυσαι", "προσελήλυται", "προσεληλύμεθα", "προσελήλυσθε", "προσελήλυνται"]
+    }
+  }
+},
+"ἐξέρχομαι": {
+  lemma: "ἐξέρχομαι",
+  gloss: "I go out / depart",
+  charts: {
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["ἐξέρχομαι", "ἐξέρχῃ", "ἐξέρχεται", "ἐξερχόμεθα", "ἐξέρχεσθε", "ἐξέρχονται"]
+    },
+    imperfect_middle_indicative: {
+      label: "Imperfect Middle Indicative",
+      forms: ["ἐξηρχόμην", "ἐξήρχου", "ἐξήρχετο", "ἐξηρχόμεθα", "ἐξήρχεσθε", "ἐξήρχοντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative",
+      forms: ["ἐξελεύσομαι", "ἐξελεύσῃ", "ἐξελεύσεται", "ἐξελευσόμεθα", "ἐξελεύσεσθε", "ἐξελεύσονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative (Rare)",
+      forms: ["ἐξελευσθήσομαι", "ἐξελευσθήσῃ", "ἐξελευσθήσεται", "ἐξελευσθησόμεθα", "ἐξελευσθήσεσθε", "ἐξελευσθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["ἐξῆλθον", "ἐξῆλθες", "ἐξῆλθε(ν)", "ἐξήλθομεν", "ἐξήλθετε", "ἐξῆλθον"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["ἐξηλθόμην", "ἐξῆλθου", "ἐξῆλθετο", "ἐξηλθόμεθα", "ἐξῆλθεσθε", "ἐξῆλθοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἐξελήλυθα", "ἐξελήλυθας", "ἐξελήλυθε(ν)", "ἐξεληλύθαμεν", "ἐξεληλύθατε", "ἐξελήλυθασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative (Rare)",
+      forms: ["ἐξελήλυμαι", "ἐξελήλυσαι", "ἐξελήλυται", "ἐξεληλύμεθα", "ἐξελήλυσθε", "ἐξελήλυνται"]
+    }
+  }
+},
+"ὁράω": {
+  lemma: "ὁράω",
+  gloss: "I see / behold / perceive",
+  charts: {
+    present_active_indicative: {
+      label: "Present Active Indicative (Alpha Contract)",
+      forms: ["ὁρῶ", "ὁρᾷς", "ὁρᾷ", "ὁρῶμεν", "ὁρᾶτε", "ὁρῶσι(ν)"]
+    },
+    present_middle_passive_indicative: {
+      label: "Present Middle/Passive Indicative",
+      forms: ["ὁρῶμαι", "ὁρᾷ", "ὁρᾶται", "ὁρώμεθα", "ὁρᾶσθε", "ὁρῶνται"]
+    },
+    imperfect_active_indicative: {
+      label: "Imperfect Active Indicative",
+      forms: ["ἑώρων", "ἑώρας", "ἑώρα", "ἑωρῶμεν", "ἑωρᾶτε", "ἑώρων"]
+    },
+    imperfect_middle_passive_indicative: {
+      label: "Imperfect Middle/Passive Indicative",
+      forms: ["ἑωρώμην", "ἑώρω", "ἑωρᾶτο", "ἑωρώμεθα", "ἑωρᾶσθε", "ἑωρῶντο"]
+    },
+    future_middle_indicative: {
+      label: "Future Middle Indicative (Irregular)",
+      forms: ["ὄψομαι", "ὄψῃ", "ὄψεται", "ὀψόμεθα", "ὄψεσθε", "ὄψονται"]
+    },
+    future_passive_indicative: {
+      label: "Future Passive Indicative",
+      forms: ["ὀφθήσομαι", "ὀφθήσῃ", "ὀφθήσεται", "ὀφθησόμεθα", "ὀφθήσεσθε", "ὀφθήσονται"]
+    },
+    aorist_active_indicative: {
+      label: "Second Aorist Active Indicative",
+      forms: ["εἶδον", "εἶδες", "εἶδε(ν)", "εἴδομεν", "εἴδετε", "εἶδον"]
+    },
+    aorist_middle_indicative: {
+      label: "Second Aorist Middle Indicative",
+      forms: ["εἰδόμην", "εἶδου", "εἶδετο", "εἰδόμεθα", "εἶδεσθε", "εἶδοντο"]
+    },
+    perfect_active_indicative: {
+      label: "Perfect Active Indicative",
+      forms: ["ἑώρακα", "ἑώρακας", "ἑώρακε(ν)", "ἑωράκαμεν", "ἑωράκατε", "ἑώρακασι(ν)"]
+    },
+    perfect_middle_passive_indicative: {
+      label: "Perfect Middle/Passive Indicative",
+      forms: ["ἑώραμαι", "ἑώρασαι", "ἑώραται", "ἑωράμεθα", "ἑώρασθε", "ἑώρανται"]
+    }
+  }
+},
   // Expose globally (for your verb-engine.js)
   global.DATA_CHARTS = DATA_CHARTS;
 
