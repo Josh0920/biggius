@@ -256,7 +256,7 @@
   </div>
 
   <!-- App Loader (NO query-string cache-busting; avoids duplicate module instances) -->
- <script type="module">
+<script type="module">
   const content = document.getElementById("content");
   const mainSub  = document.getElementById("mainSub");
   const sideMeta = document.getElementById("sideMeta");
@@ -294,7 +294,6 @@
     try{
       return await import(path);
     }catch(err){
-      // THIS is what you need: the file name is embedded in the thrown error.
       console.error("FAILED MODULE:", path, err);
       throw new Error(`Failed loading ${path}\n\n${err?.message || err}`);
     }
@@ -303,7 +302,7 @@
   (async () => {
     try {
       await loadModule("./data-activities.js");
-      await loadModule("./data-charts.js");
+      await loadModule("./data-charts-ascii.js");  // ✅ FIX: use ASCII-safe Greek
       await loadModule("./data-vocab.js");
       await loadModule("./verb-engine.js");
       if (sideMeta) sideMeta.textContent = "Modules OK";
