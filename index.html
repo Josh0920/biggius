@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Koine Greek</title>
-  <meta name="color-scheme" content="light" />
 
   <style>
     :root {
@@ -14,374 +13,78 @@
       --line:#e7e7e7;
       --text:#111111;
       --muted:#5a5a5a;
-
-      --ok:#1a7f37;
-      --bad:#b42318;
-
       --shadow: 0 14px 45px rgba(0,0,0,.08);
       --radius: 16px;
-      --radius2: 12px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
+
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
       background: var(--bg);
       color: var(--text);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      min-height:100vh;
     }
 
-    .app{
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 18px;
-      display:grid;
-      grid-template-columns: 320px 1fr;
-      gap: 16px;
+    .wrap{
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
     }
-
-    @media (max-width: 980px){
-      .app{ grid-template-columns: 1fr; }
-      .sidebar{ order:2; }
-      .main{ order:1; }
-    }
-
-    .panel{
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-
-    /* Sidebar */
-    .sidebarHeader{
-      padding: 16px 16px 12px;
-      border-bottom:1px solid var(--line);
-      display:flex; gap:12px; align-items:center; justify-content:space-between;
-    }
-    .brand{
-      display:flex; gap:12px; align-items:center;
-    }
-    .logo{
-      width: 42px; height: 42px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      display:grid;
-      place-items:center;
-      font-weight: 900;
-      letter-spacing:.2px;
-      font-size: 16px;
-    }
-    .brand h1{ margin:0; font-size: 14px; line-height:1.2; }
-    .brand p{ margin:4px 0 0; color: var(--muted); font-size: 12px; }
-
-    .searchWrap{ padding: 12px 16px; border-bottom:1px solid var(--line); }
-    .search {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      outline:none;
-      font-size: 13px;
-      background: #fff;
-      color: var(--text);
-    }
-    .search:focus{ border-color:#111; }
-
-    .sideList{ padding: 10px 8px 14px; min-height: 120px; }
-    .groupTitle{
-      padding: 10px 10px 8px;
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-    .itemBtn{
-      width:100%;
-      text-align:left;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      background: transparent;
-      cursor:pointer;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
-      font-size: 13px;
-      color: var(--text);
-      transition: .12s ease;
-    }
-    .itemBtn:hover{ background:#f7f7f7; }
-    .itemBtn.active{ background:#111; color:#fff; }
-    .tag{
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: #fff;
-      flex: 0 0 auto;
-    }
-    .itemBtn.active .tag{ background:#111; border-color:#444; color:#fff; }
-
-    /* Main */
-    .topbar{
-      padding: 14px 16px 12px;
-      border-bottom: 1px solid var(--line);
-    }
-    .topRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; }
-    .titleBlock h2{ margin:0; font-size: 16px; }
-    .titleBlock p{ margin:6px 0 0; color: var(--muted); font-size: 12px; }
-    .stats{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
-    .pill{
-      font-size: 12px;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--muted);
-    }
-    .pill strong{ color: var(--text); font-weight: 700; }
-
-    .progressBar{
-      margin-top: 12px;
-      height: 10px;
-      border-radius: 999px;
-      background: #f1f1f1;
-      border: 1px solid var(--line);
-      overflow:hidden;
-    }
-    .progressFill{
-      height:100%;
-      width:0%;
-      background:#111;
-      border-radius: 999px;
-      transition: width .2s ease;
-    }
-
-    .content{ padding: 16px; }
 
     .card{
-      background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .bigGreek{
-      font-size: 36px;
-      letter-spacing: .3px;
-      margin: 2px 0 0;
-    }
-    .muted{ color: var(--muted); font-size: 13px; margin-top: 8px; }
-
-    .toast{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      border: 1px solid var(--line);
-      background:#fff;
-      color: var(--text);
-      border-radius: 14px;
-      padding: 10px 12px;
+      border-radius: var(--radius);
+      padding: 20px;
       box-shadow: var(--shadow);
-      max-width: 380px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events:none;
-      transition: .16s ease;
-    }
-    .toast.show{ opacity: 1; transform: translateY(0); }
-    .toast strong{ display:block; margin-bottom: 3px; }
-    .toast .tmuted{ color: var(--muted); font-size: 12px; }
-
-    .errorBox{
-      border: 1px solid rgba(180,35,24,.35);
-      background: rgba(180,35,24,.06);
-      border-radius: 18px;
-      padding: 16px;
-    }
-    .errorBox h3{ margin: 0 0 8px; font-size: 14px; }
-    .errorBox ul{ margin:8px 0 0; padding-left:18px; color: var(--muted); font-size: 13px; }
-    .errorBox pre{
-      margin: 12px 0 0;
-      background:#fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px;
-      overflow:auto;
-      font-size: 12px;
-      font-family: var(--mono);
-      color: var(--text);
-      max-height: 260px;
-      white-space: pre-wrap;
-      word-break: break-word;
     }
 
-    .okBox{
-      border: 1px solid rgba(26,127,55,.35);
-      background: rgba(26,127,55,.06);
-      border-radius: 18px;
-      padding: 16px;
-    }
+    .muted{ color: var(--muted); }
+    code{ background:#f7f7f7; padding:2px 6px; border-radius:6px; }
   </style>
 </head>
 
 <body>
-  <noscript>
-    <div style="max-width:1240px;margin:0 auto;padding:18px;">
-      <div style="border:1px solid #e7e7e7;border-radius:16px;padding:16px;">
-        <strong>JavaScript is required.</strong>
-        <div style="margin-top:8px;color:#5a5a5a;font-size:13px;">
-          This app needs JavaScript enabled to load activities and quizzes.
-        </div>
-      </div>
+  <div class="wrap">
+    <div class="card">
+      <h2>Koine Greek Study</h2>
+      <p class="muted">Loading application…</p>
+      <div id="error" class="muted"></div>
     </div>
-  </noscript>
-
-  <div class="app">
-    <aside class="panel sidebar">
-      <div class="sidebarHeader">
-        <div class="brand">
-          <div class="logo" aria-label="Koine Greek">Κ</div>
-          <div>
-            <h1>Koine Greek Study</h1>
-            <p id="sideMeta">Loading…</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="searchWrap">
-        <input id="activitySearch" class="search" type="text" placeholder="Search (e.g., Demonstrative Pronouns)" />
-      </div>
-
-      <div id="sideList" class="sideList">
-        <div class="groupTitle">Activities</div>
-        <button class="itemBtn" type="button" disabled>
-          Loading…
-          <span class="tag">…</span>
-        </button>
-      </div>
-    </aside>
-
-    <main class="panel main">
-      <div class="topbar">
-        <div class="topRow">
-          <div class="titleBlock">
-            <h2 id="mainTitle">Koine Greek</h2>
-            <p id="mainSub">Booting modules…</p>
-          </div>
-          <div class="stats">
-            <span class="pill"><strong id="statProgress">0/0</strong> <span id="statProgressLabel">items</span></span>
-            <span class="pill"><strong id="statScore">0</strong> score</span>
-            <span class="pill"><strong id="statStreak">0</strong> streak</span>
-          </div>
-        </div>
-        <div class="progressBar"><div id="progressFill" class="progressFill"></div></div>
-      </div>
-
-      <div class="content" id="content">
-        <div class="card">
-          <div class="bigGreek">Ἑτοιμάζω…</div>
-          <div class="muted">
-            Loading: <code>data-activities.js</code>, <code>data-charts.js</code>, <code>data-vocab.js</code>, <code>verb-engine.js</code>, then <code>app.js</code>.
-          </div>
-        </div>
-      </div>
-    </main>
   </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    <strong id="toastTitle">—</strong>
-    <div class="tmuted" id="toastMsg">—</div>
-  </div>
-
+  <!-- SAFE MODULE LOADER -->
   <script type="module">
-    const content = document.getElementById("content");
-    const mainSub = document.getElementById("mainSub");
-    const sideMeta = document.getElementById("sideMeta");
+    const errorBox = document.getElementById("error");
 
-    const toast = document.getElementById("toast");
-    const toastTitle = document.getElementById("toastTitle");
-    const toastMsg = document.getElementById("toastMsg");
-
-    function showToast(title, msg){
-      if(!toast) return;
-      toastTitle.textContent = title;
-      toastMsg.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(()=>toast.classList.remove("show"), 4200);
-    }
-
-    function esc(s){
-      return String(s ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;");
-    }
-
-    function showFatal(modulePath, err){
-      console.error("Module load failure:", modulePath, err);
-
-      if (mainSub) mainSub.textContent = "Startup failed (module load error).";
-      if (sideMeta) sideMeta.textContent = "Load error";
-
-      const msg = err && (err.stack || err.message) ? (err.stack || err.message) : String(err);
-
-      showToast("Load failed", modulePath);
-
-      if (content){
-        content.innerHTML = `
-          <div class="errorBox">
-            <h3>Couldn’t load <code>${esc(modulePath)}</code></h3>
-            <div class="muted">
-              Most common causes:
-              <ul>
-                <li>File is missing or not in the same folder as <code>index.html</code></li>
-                <li>Wrong filename casing on GitHub Pages (e.g., <code>Data-Vocab.js</code> vs <code>data-vocab.js</code>)</li>
-                <li>That file imports something with a bad path</li>
-                <li>Syntax error inside the module</li>
-                <li>Opening via <code>file://</code> instead of a local server (ES modules often break)</li>
-              </ul>
-            </div>
-            <pre>${esc(msg)}</pre>
-          </div>
-        `;
-      }
-    }
-
-    async function preflightImport(modulePath, label){
-      if (mainSub) mainSub.textContent = `Loading ${label}…`;
-      await import(modulePath);
-    }
-
-    (async () => {
+    async function boot() {
       try {
-        // Preflight the modules you named (in a predictable order).
-        await preflightImport("./data-activities.js", "data-activities.js");
-        await preflightImport("./data-charts.js", "data-charts.js");
-        await preflightImport("./data-vocab.js", "data-vocab.js");
-        await preflightImport("./verb-engine.js", "verb-engine.js");
+        await import("./data-activities.js");
+        await import("./data-charts.js");
+        await import("./data-vocab.js");
+        await import("./verb-engine.js");
 
-        if (sideMeta) sideMeta.textContent = "Modules OK";
-        if (mainSub) mainSub.textContent = "Modules loaded. Starting app…";
-
-        // Now load the actual app.
+        // Only load app AFTER dependencies succeed
         await import("./app.js");
-
-        // If app.js runs successfully, it will take over the UI.
-        showToast("Ready", "App started.");
       } catch (err) {
-        // Try to identify which import likely failed (best effort).
-        // If the error happened in app.js, show that.
-        // Otherwise the console will show the exact failing module.
-        const hint =
-          (err && err.message && err.message.includes("app.js")) ? "./app.js" :
-          "A required module";
-        showFatal(hint, err);
+        console.error(err);
+
+        if (errorBox) {
+          errorBox.innerHTML = `
+            <p style="color:#b42318;"><strong>Startup failed</strong></p>
+            <p>Check:</p>
+            <ul>
+              <li>Filename casing (GitHub Pages is case-sensitive)</li>
+              <li>Correct paths (./data-vocab.js etc)</li>
+              <li>No syntax errors in JS files</li>
+            </ul>
+            <code>${err.message}</code>
+          `;
+        }
       }
-    })();
+    }
+
+    boot();
   </script>
 </body>
 </html>
