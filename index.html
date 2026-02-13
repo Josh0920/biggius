@@ -302,13 +302,13 @@
 
   (async () => {
     const modules = [
-      "./data-activities.js",
-      "./data-charts.js",
-      "./data-vocab.js",
-      "./verb-engine.js",
-      "./app.js"
-    ];
-
+    const modules = [
+  "./data-activities.js?v=1",
+  "./data-charts.js?v=1",
+  "./data-vocab.js?v=1",
+  "./verb-engine.js?v=1",
+  "./app.js?v=1"
+];
     for (const m of modules){
       if (mainSub) mainSub.textContent = "Loading " + m.replace("./","") + "…";
       const r = await loadOne(m);
