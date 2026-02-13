@@ -114,7 +114,8 @@ function renderSidebar(){
     }
   }
 
-  $("#sideMeta").textContent = `${VOCAB.length} vocab • ${VERB_CHARTS.length + PRONOUN_CHARTS.length + ENDING_CHARTS.length} charts`;
+  const chartCount = (VERB_CHARTS?.length || 0) + (PRONOUN_CHARTS?.length || 0) + (ENDING_CHARTS?.length || 0);
+  $("#sideMeta").textContent = `${VOCAB.length} vocab • ${chartCount} charts`;
 }
 
 $("#activitySearch").addEventListener("input", renderSidebar);
@@ -138,19 +139,14 @@ function getActiveActivity(){
   return ACTIVITIES.find(a=>a.id===activeActivityId) || ACTIVITIES[0];
 }
 
-function setHeader(title, sub){
-  $("#mainTitle").textContent = title;
-  $("#mainSub").textContent = sub;
+function updateStats(){
+  $("#score").textContent = String(session.score);
+  $("#streak").textContent = String(session.streak);
 }
 
-function updateStats(){
-  const total = session.items.length || 0;
-  const at = total ? Math.min(session.index+1, total) : 0;
-  $("#statProgress").textContent = `${at}/${total}`;
-  $("#statScore").textContent = String(session.score);
-  $("#statStreak").textContent = String(session.streak);
-  const pct = total ? (session.index/total)*100 : 0;
-  $("#progressFill").style.width = `${Math.max(0, Math.min(100,pct))}%`;
+function setHeader(title, subtitle){
+  $("#mainTitle").textContent = title || "Koine Greek";
+  $("#mainSub").textContent = subtitle || "";
 }
 
 function resetSessionForActivity(){
@@ -175,189 +171,119 @@ function resetSessionForActivity(){
   updateStats();
 }
 
-function nextItem(){
-  session.index++;
-  session.locked = false;
-  updateStats();
-  renderMain();
-}
-
-function prevItem(){
-  if(session.index===0) return;
-  session.index--;
-  session.locked = false;
-  updateStats();
-  renderMain();
-}
-
-// -------- Renderers --------
-function renderMain(){
-  const a = getActiveActivity();
-  if(a.type === "vocab_fill") return renderVocabFill();
-  if(a.type === "flash") return renderFlashcards();
-  if(a.type === "chart") return renderChart();
-}
-
 function renderVocabFill(){
-  setHeader("Vocab Quiz (Fill in the Blank)", "All vocab, one at a time. Type the English gloss and press Enter.");
-  const cur = session.items[session.index];
   const root = $("#content");
+  const item = session.items[session.index % session.items.length];
+  setHeader("Vocab (Fill)", `Answer in English • ${session.index+1}/${session.items.length}`);
 
-  if(!cur){
-    root.innerHTML = `
-      <div class="card">
-        <div class="row">
-          <div>
-            <div style="font-size:18px; font-weight:800;">Done</div>
-            <div class="muted">Final score: <b>${session.score}</b> / ${VOCAB.length}</div>
-          </div>
-          <button class="btn primary" id="restartBtn">Restart</button>
-        </div>
-      </div>
-    `;
-    $("#restartBtn").addEventListener("click", ()=>{ resetSessionForActivity(); renderMain(); });
-    return;
-  }
-
-  const acceptable = Array.from(buildAcceptable(cur.e));
+  const acceptable = buildAcceptable(item.e);
 
   root.innerHTML = `
     <div class="card">
       <div class="row">
         <div>
           <div class="muted">Greek</div>
-          <div class="bigGreek">${escapeHtml(cur.g)}</div>
+          <div style="font-size:26px;font-weight:800;margin-top:2px;">${escapeHtml(item.g)}</div>
         </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="btn" id="peekBtn">Peek</button>
-          <button class="btn" id="skipBtn">Skip</button>
-        </div>
+        <div class="muted">Score: <b>${session.score}</b></div>
       </div>
 
-      <div style="margin-top:14px;">
-        <div class="muted">English (type and press Enter)</div>
-        <form id="answerForm" autocomplete="off">
-          <input id="answerInput" class="input" type="text" placeholder="Type the meaning…" />
-        </form>
-        <div id="fb" style="display:none;" class="feedback"></div>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <input id="ans" class="input" placeholder="Type English…" autocomplete="off" />
+        <button class="btn primary" id="check">Check</button>
+        <button class="btn" id="skip">Skip</button>
       </div>
 
-      <div class="row" style="margin-top:14px;">
-        <div class="muted">Shortcuts: <span class="kbd">Enter</span> submit • <span class="kbd">N</span> next • <span class="kbd">P</span> previous</div>
-        <button class="btn primary" id="nextBtn" disabled>Next</button>
-      </div>
+      <div id="feedback" style="margin-top:10px;"></div>
     </div>
   `;
 
-  const input = $("#answerInput");
-  const fb = $("#fb");
-  const nextBtn = $("#nextBtn");
-  const form = $("#answerForm");
+  const ans = $("#ans");
+  ans.focus();
 
-  input.focus();
-
-  function grade(){
+  function check(){
     if(session.locked) return;
-    const guessRaw = input.value;
-    const guess = norm(guessRaw);
-    const ok = acceptable.includes(guess) || buildAcceptable(cur.e).has(guess);
+    const val = norm(ans.value);
+    const ok = acceptable.has(val);
 
     session.locked = true;
+    const fb = $("#feedback");
+    fb.innerHTML = ok
+      ? `<div class="ok">✅ Correct</div>`
+      : `<div class="bad">❌ Incorrect. Acceptable: <b>${escapeHtml(item.e)}</b></div>`;
 
     if(ok){
-      input.classList.add("ok");
-      fb.className = "feedback ok";
-      fb.innerHTML = `<b>Correct.</b> ${escapeHtml(cur.e)}`;
-      session.score++;
-      session.streak++;
-      toast("Correct", `Streak: ${session.streak}`);
-    } else {
-      input.classList.add("bad");
-      fb.className = "feedback bad";
-      fb.innerHTML = `<b>Wrong.</b> Correct answer: ${escapeHtml(cur.e)}`;
+      session.score += 1;
+      session.streak += 1;
+    }else{
       session.streak = 0;
-      toast("Not quite", "Streak reset.");
     }
-    fb.style.display = "block";
-    nextBtn.disabled = false;
-    nextBtn.focus();
     updateStats();
+
+    setTimeout(()=>{
+      session.locked = false;
+      session.index += 1;
+      renderMain();
+    }, 650);
   }
 
-  form.addEventListener("submit", (e)=>{ e.preventDefault(); grade(); });
-  nextBtn.addEventListener("click", ()=> nextItem());
-
-  $("#peekBtn").addEventListener("click", ()=>{ toast("Answer", cur.e); });
-  $("#skipBtn").addEventListener("click", ()=>{
-    session.locked = false;
+  $("#check").addEventListener("click", check);
+  $("#skip").addEventListener("click", ()=>{
+    if(session.locked) return;
+    session.locked = true;
     session.streak = 0;
-    toast("Skipped", "Moving on.");
-    nextItem();
+    updateStats();
+    setTimeout(()=>{
+      session.locked = false;
+      session.index += 1;
+      renderMain();
+    }, 200);
   });
+  ans.addEventListener("keydown",(e)=>{ if(e.key==="Enter") check(); });
 }
 
-function renderFlashcards(){
-  setHeader("Flashcards", "All vocab, flip to reveal. Mark ✓ or ✕.");
-  const cur = session.items[session.index];
+function renderFlash(){
   const root = $("#content");
-
-  if(!cur){
-    root.innerHTML = `
-      <div class="card">
-        <div class="row">
-          <div>
-            <div style="font-size:18px; font-weight:800;">Done</div>
-            <div class="muted">Score: <b>${session.score}</b> / ${VOCAB.length} (based on ✓ clicks)</div>
-          </div>
-          <button class="btn primary" id="restartBtn">Restart</button>
-        </div>
-      </div>
-    `;
-    $("#restartBtn").addEventListener("click", ()=>{ resetSessionForActivity(); renderMain(); });
-    return;
-  }
+  const item = session.items[session.index % session.items.length];
+  setHeader("Flashcards", `Click to reveal • ${session.index+1}/${session.items.length}`);
 
   root.innerHTML = `
-    <div class="card" id="flashCard" style="cursor:pointer;">
-      <div class="muted">Click to flip</div>
-      <div class="bigGreek" id="flashFace">${escapeHtml(cur.g)}</div>
-      <div class="muted" id="flashHint">Greek → English</div>
-
-      <div class="row" style="margin-top:14px;">
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button class="btn" id="missBtn">✕ Missed</button>
-          <button class="btn primary" id="gotBtn">✓ Got it</button>
-        </div>
-        <div class="muted">Shortcuts: <span class="kbd">Space</span> flip • <span class="kbd">N</span> next</div>
+    <div class="card flashCard" id="flashCard">
+      <div class="muted">Greek</div>
+      <div class="big">${escapeHtml(item.g)}</div>
+      <div class="reveal muted" id="reveal">Click to reveal</div>
+      <div class="eng" id="eng" style="display:none;"><b>${escapeHtml(item.e)}</b></div>
+      <div style="margin-top:14px;display:flex;gap:10px;">
+        <button class="btn primary" id="knew">I knew it</button>
+        <button class="btn" id="next">Next</button>
       </div>
     </div>
   `;
 
-  let flipped = false;
-  const face = $("#flashFace");
-  const hint = $("#flashHint");
-
-  function flip(){
-    flipped = !flipped;
-    face.textContent = flipped ? cur.e : cur.g;
-    hint.textContent = flipped ? "English revealed" : "Greek → English";
+  const card = $("#flashCard");
+  const reveal = $("#reveal");
+  const eng = $("#eng");
+  function show(){
+    reveal.style.display = "none";
+    eng.style.display = "block";
   }
+  card.addEventListener("click", show);
 
-  $("#flashCard").addEventListener("click", (e)=>{
-    if(e.target.closest("button")) return;
-    flip();
+  $("#knew").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    session.score += 1;
+    session.streak += 1;
+    updateStats();
+    session.index += 1;
+    renderMain();
   });
 
-  $("#gotBtn").addEventListener("click", ()=>{
-    session.score++;
-    session.streak++;
-    toast("Nice", `Streak: ${session.streak}`);
-    nextItem();
-  });
-  $("#missBtn").addEventListener("click", ()=>{
+  $("#next").addEventListener("click", (e)=>{
+    e.stopPropagation();
     session.streak = 0;
-    toast("Logged", "Keep going.");
-    nextItem();
+    updateStats();
+    session.index += 1;
+    renderMain();
   });
 }
 
@@ -386,26 +312,14 @@ function renderChart(){
     return `<span class="${cls}" data-slot="${idx}">${display}</span>`;
   }
 
-  let table = "";
-  if(total===6 && chart.labels && chart.labels.length===6){
-    table = `
-      <table class="chartTable">
-        <thead><tr><th>Person</th><th>Blank</th></tr></thead>
-        <tbody>
-          ${chart.labels.map((lab, idx)=>`<tr><td>${escapeHtml(lab)}</td><td>${slotHtml(idx)}</td></tr>`).join("")}
-        </tbody>
-      </table>
-    `;
-  } else {
-    table = `
-      <table class="chartTable">
-        <thead><tr><th>Slot</th><th>Blank</th></tr></thead>
-        <tbody>
-          ${chart.labels.map((lab, idx)=>`<tr><td>${escapeHtml(lab)}</td><td>${slotHtml(idx)}</td></tr>`).join("")}
-        </tbody>
-      </table>
-    `;
-  }
+  let table = `
+    <table class="chartTable">
+      <thead><tr><th>Label</th><th>Blank</th></tr></thead>
+      <tbody>
+        ${(chart.labels || []).map((lab, idx)=>`<tr><td>${escapeHtml(lab)}</td><td>${slotHtml(idx)}</td></tr>`).join("")}
+      </tbody>
+    </table>
+  `;
 
   root.innerHTML = `
     <div class="chartWrap">
@@ -423,164 +337,78 @@ function renderChart(){
           ${table}
         </div>
 
-        <div class="row" style="margin-top:14px;">
-          <div class="muted">Shortcuts: <span class="kbd">U</span> undo • <span class="kbd">R</span> reshuffle</div>
-          <button class="btn primary" id="doneNextBtn" ${session.graded ? "" : "disabled"}>Keep practicing</button>
+        <div style="margin-top:14px;">
+          <div class="muted" style="margin-bottom:8px;">Options</div>
+          <div class="bank" id="bank"></div>
         </div>
 
-        <div id="chartStatus" class="muted" style="margin-top:10px;"></div>
-      </div>
-
-      <div class="card">
-        <div class="row">
-          <div>
-            <div style="font-weight:800;">Option bank</div>
-            <div class="muted">Click the correct option for the focused blank.</div>
-          </div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <button class="btn" id="undoBtn">Undo</button>
-            <button class="btn" id="revealBtn">Reveal next</button>
-          </div>
-        </div>
-
-        <div id="bank" class="bank"></div>
+        <div id="chartFeedback" style="margin-top:12px;"></div>
       </div>
     </div>
   `;
 
-  function pickTargetSlot(){
-    if(!session.filled[session.focus]) return session.focus;
-    for(let j=session.focus+1; j<total; j++) if(!session.filled[j]) return j;
-    for(let j=0; j<total; j++) if(!session.filled[j]) return j;
-    return -1;
-  }
+  const bank = $("#bank");
+  bank.innerHTML = session.bank
+    .map((f, i)=>`<button class="pill" data-i="${i}">${escapeHtml(f)}</button>`)
+    .join("");
 
-  function repaintSlots(){
-    const slotEls = $$("#content .slot");
-    slotEls.forEach((el, idx)=>{
-      el.classList.remove("correct","wrong");
-      const val = session.filled[idx];
-      if(!val || !session.graded) return;
-      el.classList.add(val===chart.forms[idx] ? "correct":"wrong");
+  $$("#bank .pill").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const i = Number(btn.dataset.i);
+      const val = session.bank[i];
+      if(val == null) return;
+      session.filled[session.focus] = val;
+      session.focus = Math.min(session.focus + 1, total - 1);
+      renderChart();
     });
-  }
+  });
 
-  function renderBank(){
-    const bank = $("#bank");
-    bank.innerHTML = "";
-    for(const form of session.bank){
-      const used = session.used.has(form);
-      const pill = document.createElement("button");
-      pill.className = "pillOpt" + (used ? " used":"");
-      pill.type = "button";
-      pill.textContent = form;
-      if(used) pill.disabled = true;
-
-      pill.addEventListener("click", ()=>{
-        if(session.graded) return;
-        const target = pickTargetSlot();
-        if(target===-1) return;
-        session.filled[target] = form;
-        session.used.add(form);
-        session.focus = Math.min(target+1, total-1);
-        renderMain();
-      });
-      bank.appendChild(pill);
-    }
-  }
-
-  $$("#content .slot").forEach(s => {
-    s.addEventListener("click", ()=>{
-      session.focus = Number(s.dataset.slot);
-      renderMain();
+  $$("#content .slot").forEach(el=>{
+    el.addEventListener("click", ()=>{
+      session.focus = Number(el.dataset.slot);
+      renderChart();
     });
   });
 
   $("#clearBtn").addEventListener("click", ()=>{
     session.filled = [];
-    session.used = new Set();
     session.focus = 0;
     session.graded = false;
-    session.bank = shuffle(chart.forms);
-    toast("Cleared", "Chart cleared.");
-    renderMain();
+    renderChart();
   });
+
   $("#reshuffleBtn").addEventListener("click", ()=>{
     session.bank = shuffle(chart.forms);
-    toast("Reshuffled", "Option bank reshuffled.");
-    renderMain();
-  });
-  $("#undoBtn").addEventListener("click", ()=>{
-    let last=-1;
-    for(let k=total-1;k>=0;k--) if(session.filled[k]) { last=k; break; }
-    if(last===-1) return;
-    const removed=session.filled[last];
-    session.filled[last]=null;
-    session.used = new Set(session.filled.filter(Boolean));
-    session.focus = last;
-    session.graded = false;
-    toast("Undo", `Removed: ${removed}`);
-    renderMain();
-  });
-  $("#revealBtn").addEventListener("click", ()=>{
-    const target = pickTargetSlot();
-    if(target===-1) return;
-    toast("Next answer", chart.forms[target]);
+    renderChart();
   });
 
   $("#gradeBtn").addEventListener("click", ()=>{
-    session.graded = true;
-    const correct = chart.forms.reduce((acc, f, idx)=>acc + ((session.filled[idx]||"")===f ? 1:0), 0);
-    $("#chartStatus").innerHTML = `Score: <b>${correct}</b> / ${total}`;
-    toast("Graded", `${correct}/${total}`);
-    $("#doneNextBtn").disabled = false;
-    repaintSlots();
+    const fb = $("#chartFeedback");
+    const filled = session.filled.map(x=>String(x||""));
+    const key = chart.forms.map(x=>String(x||""));
+    let correct = 0;
+    for(let i=0;i<key.length;i++){
+      if(filled[i] === key[i]) correct++;
+    }
+    const ok = correct === key.length;
+    fb.innerHTML = ok
+      ? `<div class="ok">✅ Perfect — ${correct}/${key.length}</div>`
+      : `<div class="bad">❌ ${correct}/${key.length} correct</div>`;
   });
-
-  $("#doneNextBtn").addEventListener("click", ()=>{
-    session.filled = [];
-    session.used = new Set();
-    session.focus = 0;
-    session.graded = false;
-    session.bank = shuffle(chart.forms);
-    toast("Again", "Fresh run.");
-    renderMain();
-  });
-
-  renderBank();
-  repaintSlots();
-  $("#chartStatus").textContent = session.graded ? "Graded. Fix mistakes or click “Keep practicing”." : "Fill the blanks, then click Grade.";
 }
 
-// -------- Keyboard shortcuts --------
-document.addEventListener("keydown", (e)=>{
+function renderMain(){
   const a = getActiveActivity();
-  if(e.key.toLowerCase()==="n") {
-    if(a.type==="vocab_fill") {
-      const nextBtn = $("#nextBtn");
-      if(nextBtn && !nextBtn.disabled) nextBtn.click();
-      else if(session.locked) nextItem();
-    } else if(a.type==="flash") {
-      nextItem();
-    }
-  }
-  if(e.key.toLowerCase()==="p") {
-    if(a.type==="vocab_fill") prevItem();
-  }
-  if(a.type==="flash" && e.code==="Space") {
-    e.preventDefault();
-    const card = $("#flashCard");
-    if(card) card.click();
-  }
-  if(a.type==="chart" && e.key.toLowerCase()==="r") {
-    const btn = $("#reshuffleBtn"); if(btn) btn.click();
-  }
-  if(a.type==="chart" && e.key.toLowerCase()==="u") {
-    const btn = $("#undoBtn"); if(btn) btn.click();
-  }
-});
+  if(a.type === "vocab_fill") return renderVocabFill();
+  if(a.type === "flash") return renderFlash();
+  if(a.type === "chart") return renderChart();
+  $("#content").innerHTML = `<div class="card"><b>Unknown activity type:</b> ${escapeHtml(a.type)}</div>`;
+}
 
-// -------- Init --------
-renderSidebar();
-resetSessionForActivity();
-renderMain();
+function init(){
+  renderSidebar();
+  resetSessionForActivity();
+  renderMain();
+}
+
+init();
