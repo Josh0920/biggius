@@ -257,69 +257,78 @@
       .replaceAll(">","&gt;");
   }
 
-  async function peek(path){
-    try{
-      const r = await fetch(path, { cache: "no-store" });
-      const t = await r.text();
-      return { ok: r.ok, status: r.status, head: t.slice(0, 260) };
-    } catch(e){
-      return { ok:false, status:"(fetch failed)", head:String(e) };
-    }
-  }
-
-  async function loadOne(path){
-    try{
-      await import(path);
-      return { ok:true };
-    } catch(err){
-      const msg = err?.stack || err?.message || String(err);
-      const p = await peek(path);
-      return { ok:false, err: msg, peek: p };
-    }
-  }
-
-  function showError(path, info){
-    console.error("Broken module:", path, info?.err);
-
-    if (mainSub) mainSub.textContent = "Startup failed (module load error).";
-    if (sideMeta) sideMeta.textContent = "Load error";
-
+  function showRuntimeError(title, err){
+    console.error(title, err);
+    const msg = err?.stack || err?.message || String(err);
+    if (mainSub) mainSub.textContent = "App crashed (runtime error).";
+    if (sideMeta) sideMeta.textContent = "Runtime error";
     if (content){
       content.innerHTML = `
         <div style="border:1px solid rgba(180,35,24,.35);background:rgba(180,35,24,.06);border-radius:18px;padding:16px;">
-          <h3 style="margin:0 0 8px;font-size:14px;">Couldn’t load <code>${esc(path)}</code></h3>
-          <div style="color:#5a5a5a;font-size:13px;">
-            Fetch check: <code>ok=${esc(info?.peek?.ok)} status=${esc(info?.peek?.status)}</code>
+          <h3 style="margin:0 0 8px;font-size:14px;">${esc(title)}</h3>
+          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(msg)}</pre>
+          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;">
+            Open DevTools Console for the exact line.
           </div>
-          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;"><strong>Error:</strong></div>
-          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(info?.err)}</pre>
-          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;"><strong>File starts with:</strong></div>
-          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(info?.peek?.head)}</pre>
         </div>
       `;
     }
   }
 
-  (async () => {
-    const modules = [
-    const modules = [
-  "./data-activities.js?v=1",
-  "./data-charts.js?v=1",
-  "./data-vocab.js?v=1",
-  "./verb-engine.js?v=1",
-  "./app.js?v=1"
-];
-    for (const m of modules){
-      if (mainSub) mainSub.textContent = "Loading " + m.replace("./","") + "…";
-      const r = await loadOne(m);
-      if (!r.ok){
-        showError(m, r);
-        return;
-      }
-    }
+  // Catch runtime errors that happen AFTER modules load
+  window.addEventListener("error", (e) => showRuntimeError("Window error", e.error || e.message));
+  window.addEventListener("unhandledrejection", (e) => showRuntimeError("Unhandled promise rejection", e.reason));
 
-    if (mainSub) mainSub.textContent = "Loaded.";
-    if (sideMeta) sideMeta.textContent = "Ready";
+  async function loadOne(path){
+    if (mainSub) mainSub.textContent = "Loading " + path.replace("./","") + "…";
+    return import(path);
+  }
+
+  (async () => {
+    try {
+      // Preflight in your required order:
+      await loadOne("./data-activities.js?v=2");
+      await loadOne("./data-charts.js?v=2");
+      await loadOne("./data-vocab.js?v=2");
+      await loadOne("./verb-engine.js?v=2");
+
+      if (sideMeta) sideMeta.textContent = "Modules OK";
+      if (mainSub) mainSub.textContent = "Starting app…";
+
+      // Load app.js last
+      await loadOne("./app.js?v=2");
+
+      // Give app.js a moment to run and paint
+      setTimeout(() => {
+        // If your app sets a flag when it starts, great.
+        // If not, you'll still see runtime errors via the handlers above.
+        if (!window.__APP_STARTED__) {
+          if (mainSub) mainSub.textContent = "App loaded, but did not start.";
+          if (content){
+            content.innerHTML = `
+              <div style="border:1px solid rgba(0,0,0,.12);background:#fff;border-radius:18px;padding:16px;">
+                <h3 style="margin:0 0 8px;font-size:14px;">App loaded, but UI didn’t initialize</h3>
+                <div style="color:#5a5a5a;font-size:13px;">
+                  This means <code>app.js</code> ran but didn’t render or attach handlers.
+                  Most common causes:
+                  <ul style="margin:8px 0 0;padding-left:18px;">
+                    <li><code>app.js</code> expects a function to be called (e.g., <code>init()</code>) but nothing calls it.</li>
+                    <li><code>app.js</code> is waiting for missing exports from your data files.</li>
+                    <li><code>app.js</code> threw an error before rendering (check Console).</li>
+                  </ul>
+                </div>
+              </div>
+            `;
+          }
+        } else {
+          if (mainSub) mainSub.textContent = "Ready";
+          if (sideMeta) sideMeta.textContent = "Ready";
+        }
+      }, 250);
+
+    } catch (err) {
+      showRuntimeError("Module load failed", err);
+    }
   })();
 </script>
 </body>
