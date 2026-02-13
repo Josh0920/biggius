@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Koine Greek</title>
+  <meta name="color-scheme" content="light" />
 
   <style>
     :root {
@@ -13,78 +14,328 @@
       --line:#e7e7e7;
       --text:#111111;
       --muted:#5a5a5a;
+
+      --ok:#1a7f37;
+      --bad:#b42318;
+
       --shadow: 0 14px 45px rgba(0,0,0,.08);
       --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
-
     *{ box-sizing:border-box; }
-
     body{
       margin:0;
       background: var(--bg);
       color: var(--text);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height:100vh;
     }
 
-    .wrap{
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 20px;
+    .app{
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 980px){
+      .app{ grid-template-columns: 1fr; }
+      .sidebar{ order:2; }
+      .main{ order:1; }
     }
 
-    .card{
+    .panel{
+      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px;
       box-shadow: var(--shadow);
+      overflow:hidden;
     }
 
-    .muted{ color: var(--muted); }
-    code{ background:#f7f7f7; padding:2px 6px; border-radius:6px; }
+    /* Sidebar */
+    .sidebarHeader{
+      padding: 16px 16px 12px;
+      border-bottom:1px solid var(--line);
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+    }
+    .brand{ display:flex; gap:12px; align-items:center; }
+    .logo{
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      display:grid;
+      place-items:center;
+      font-weight: 900;
+      letter-spacing:.2px;
+      font-size: 16px;
+    }
+    .brand h1{ margin:0; font-size: 14px; line-height:1.2; }
+    .brand p{ margin:4px 0 0; color: var(--muted); font-size: 12px; }
+
+    .searchWrap{ padding: 12px 16px; border-bottom:1px solid var(--line); }
+    .search{
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      outline:none;
+      font-size: 13px;
+      background: #fff;
+      color: var(--text);
+    }
+    .search:focus{ border-color:#111; }
+
+    .sideList{ padding: 10px 8px 14px; min-height: 120px; }
+    .groupTitle{
+      padding: 10px 10px 8px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .itemBtn{
+      width:100%;
+      text-align:left;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background: transparent;
+      cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .tag{
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: #fff;
+      flex: 0 0 auto;
+    }
+
+    /* Main */
+    .topbar{
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .topRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; }
+    .titleBlock h2{ margin:0; font-size: 16px; }
+    .titleBlock p{ margin:6px 0 0; color: var(--muted); font-size: 12px; }
+    .stats{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .pill{
+      font-size: 12px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+    }
+    .pill strong{ color: var(--text); font-weight: 700; }
+
+    .progressBar{
+      margin-top: 12px;
+      height: 10px;
+      border-radius: 999px;
+      background: #f1f1f1;
+      border: 1px solid var(--line);
+      overflow:hidden;
+    }
+    .progressFill{
+      height:100%;
+      width:0%;
+      background:#111;
+      border-radius: 999px;
+      transition: width .2s ease;
+    }
+
+    .content{ padding: 16px; }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .bigGreek{
+      font-size: 36px;
+      letter-spacing: .3px;
+      margin: 2px 0 0;
+    }
+    .muted{ color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+    .errorBox{
+      border: 1px solid rgba(180,35,24,.35);
+      background: rgba(180,35,24,.06);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .errorBox h3{ margin: 0 0 8px; font-size: 14px; }
+    .errorBox ul{ margin:8px 0 0; padding-left:18px; color: var(--muted); font-size: 13px; }
+    .errorBox pre{
+      margin: 12px 0 0;
+      background:#fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      overflow:auto;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--text);
+      max-height: 280px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    code{ font-family: var(--mono); font-size: 12px; }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h2>Koine Greek Study</h2>
-      <p class="muted">Loading application…</p>
-      <div id="error" class="muted"></div>
-    </div>
+  <div class="app">
+    <aside class="panel sidebar">
+      <div class="sidebarHeader">
+        <div class="brand">
+          <div class="logo">Κ</div>
+          <div>
+            <h1>Koine Greek Study</h1>
+            <p id="sideMeta">Loading…</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="searchWrap">
+        <input id="activitySearch" class="search" type="text" placeholder="Search (e.g., Demonstrative Pronouns)" />
+      </div>
+
+      <div id="sideList" class="sideList">
+        <div class="groupTitle">Activities</div>
+        <button class="itemBtn" type="button" disabled>
+          Loading…
+          <span class="tag">…</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="panel main">
+      <div class="topbar">
+        <div class="topRow">
+          <div class="titleBlock">
+            <h2 id="mainTitle">Koine Greek</h2>
+            <p id="mainSub">Loading application…</p>
+          </div>
+          <div class="stats">
+            <span class="pill"><strong id="statProgress">0/0</strong> <span id="statProgressLabel">items</span></span>
+            <span class="pill"><strong id="statScore">0</strong> score</span>
+            <span class="pill"><strong id="statStreak">0</strong> streak</span>
+          </div>
+        </div>
+        <div class="progressBar"><div id="progressFill" class="progressFill"></div></div>
+      </div>
+
+      <div class="content" id="content">
+        <div class="card">
+          <div class="bigGreek">Ἑτοιμάζω…</div>
+          <div class="muted">Booting modules…</div>
+        </div>
+      </div>
+    </main>
   </div>
 
-  <!-- SAFE MODULE LOADER -->
+  <!-- Module preflight + app load -->
   <script type="module">
-    const errorBox = document.getElementById("error");
+    const content = document.getElementById("content");
+    const mainSub = document.getElementById("mainSub");
+    const sideMeta = document.getElementById("sideMeta");
 
-    async function boot() {
-      try {
-        await import("./data-activities.js");
-        await import("./data-charts.js");
-        await import("./data-vocab.js");
-        await import("./verb-engine.js");
+    function esc(s){
+      return String(s ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;");
+    }
 
-        // Only load app AFTER dependencies succeed
-        await import("./app.js");
-      } catch (err) {
-        console.error(err);
-
-        if (errorBox) {
-          errorBox.innerHTML = `
-            <p style="color:#b42318;"><strong>Startup failed</strong></p>
-            <p>Check:</p>
-            <ul>
-              <li>Filename casing (GitHub Pages is case-sensitive)</li>
-              <li>Correct paths (./data-vocab.js etc)</li>
-              <li>No syntax errors in JS files</li>
-            </ul>
-            <code>${err.message}</code>
-          `;
-        }
+    async function peek(path){
+      try{
+        const r = await fetch(path, { cache: "no-store" });
+        const t = await r.text();
+        return { ok: r.ok, status: r.status, head: t.slice(0, 260) };
+      } catch(e){
+        return { ok:false, status:"(fetch failed)", head:String(e) };
       }
     }
 
-    boot();
+    async function loadOne(path){
+      try{
+        await import(path);
+        return { ok:true };
+      } catch(err){
+        const msg = err?.stack || err?.message || String(err);
+        const p = await peek(path);
+        return { ok:false, err: msg, peek: p };
+      }
+    }
+
+    function showError(path, info){
+      console.error("Broken module:", path, info?.err);
+
+      if (mainSub) mainSub.textContent = "Startup failed (module load error).";
+      if (sideMeta) sideMeta.textContent = "Load error";
+
+      const errText = info?.err || "Unknown error";
+      const ok = info?.peek?.ok;
+      const status = info?.peek?.status;
+      const head = info?.peek?.head || "";
+
+      if (content){
+        content.innerHTML = `
+          <div class="errorBox">
+            <h3>Couldn’t load <code>${esc(path)}</code></h3>
+            <div class="muted">
+              <ul>
+                <li><strong>Most common cause for “Unexpected token ':'”:</strong> this file is JSON (starts with <code>{</code>) but must be a JS module that exports something.</li>
+                <li>Or the request is returning HTML (404 page) instead of JS.</li>
+              </ul>
+            </div>
+
+            <div class="muted" style="margin-top:10px;">
+              Fetch check: <code>ok=${esc(ok)} status=${esc(status)}</code>
+            </div>
+
+            <div class="muted" style="margin-top:10px;"><strong>Error:</strong></div>
+            <pre>${esc(errText)}</pre>
+
+            <div class="muted" style="margin-top:10px;"><strong>File starts with:</strong></div>
+            <pre>${esc(head)}</pre>
+          </div>
+        `;
+      }
+    }
+
+    (async () => {
+      const modules = [
+        "./data-activities.js",
+        "./data-charts.js",
+        "./data-vocab.js",
+        "./verb-engine.js",
+        "./app.js"
+      ];
+
+      for (const m of modules){
+        if (mainSub) mainSub.textContent = "Loading " + m.replace("./","") + "…";
+        const r = await loadOne(m);
+        if (!r.ok){
+          showError(m, r);
+          return;
+        }
+      }
+
+      if (mainSub) mainSub.textContent = "Loaded.";
+      if (sideMeta) sideMeta.textContent = "Ready";
+      // app.js is already imported above; it should take over UI if it's written to do so.
+    })();
   </script>
 </body>
 </html>
