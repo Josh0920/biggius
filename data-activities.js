@@ -1,8 +1,6 @@
 // data-activities.js
-// Must match app.js expectations:
-// - activity.type is "vocab_fill" | "flash" | "chart"
-// - chart activities include chartGroup ("verbs"|"pronouns"|"endings") and chartId
-// - ids must match activeActivityId default "vocab_fill"
+// Sidebar activity registry (matches app.js expectations).
+// NOTE: No "label:" prefixes anywhere (those cause Unexpected token ':').
 
 import { VOCAB } from "./data-vocab.js";
 import { VERB_CHARTS, PRONOUN_CHARTS, ENDING_CHARTS } from "./data-charts.js";
@@ -25,42 +23,39 @@ function chartActivities(chartGroup, charts, groupLabel){
     const title = c?.title ?? c?.name ?? `Chart ${idx + 1}`;
     const chartId = c?.id ?? slugify(title);
     return {
-      id: `${chartGroup}-${chartId}`,     // unique sidebar id
-      group: groupLabel,                  // sidebar group heading
+      id: `${chartGroup}-${chartId}`, // sidebar id
+      group: groupLabel,              // sidebar group heading
       title: s(title),
       type: "chart",
-      chartGroup,                         // app.js uses this to pick CHART_MAP
-      chartId: s(chartId)                 // app.js uses this to find the chart
+      chartGroup,                     // "verbs" | "pronouns" | "endings"
+      chartId: s(chartId)             // must match chart.id in data-charts.js
     };
   });
 }
 
-// Built-in practice modes (these ids must exist)
+// Built-in activities (these ids match app.js default activeActivityId)
 const BUILT_INS = [
   {
     id: "vocab_fill",
     group: "Practice",
     title: "Vocab (Fill)",
-    type: "vocab_fill"
+    type: "vocab_fill",
+    tag: String(asArray(VOCAB).length)
   },
   {
     id: "flash",
     group: "Practice",
     title: "Flashcards",
-    type: "flash"
+    type: "flash",
+    tag: "Cards"
   }
 ];
 
-// Chart activities
-const chartsVerbs    = chartActivities("verbs",    VERB_CHARTS,    "Charts");
-const chartsPronouns = chartActivities("pronouns", PRONOUN_CHARTS, "Charts");
-const chartsEndings  = chartActivities("endings",  ENDING_CHARTS,  "Charts");
-
 export const ACTIVITIES = [
   ...BUILT_INS,
-  ...chartsVerbs,
-  ...chartsPronouns,
-  ...chartsEndings
+  ...chartActivities("verbs", VERB_CHARTS, "Charts"),
+  ...chartActivities("pronouns", PRONOUN_CHARTS, "Charts"),
+  ...chartActivities("endings", ENDING_CHARTS, "Charts"),
 ];
 
 export default ACTIVITIES;
