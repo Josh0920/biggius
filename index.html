@@ -245,97 +245,82 @@
   </div>
 
   <!-- Module preflight + app load -->
-  <script type="module">
-    const content = document.getElementById("content");
-    const mainSub = document.getElementById("mainSub");
-    const sideMeta = document.getElementById("sideMeta");
+<script type="module">
+  const content = document.getElementById("content");
+  const mainSub = document.getElementById("mainSub");
+  const sideMeta = document.getElementById("sideMeta");
 
-    function esc(s){
-      return String(s ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;");
+  function esc(s){
+    return String(s ?? "")
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;");
+  }
+
+  async function peek(path){
+    try{
+      const r = await fetch(path, { cache: "no-store" });
+      const t = await r.text();
+      return { ok: r.ok, status: r.status, head: t.slice(0, 260) };
+    } catch(e){
+      return { ok:false, status:"(fetch failed)", head:String(e) };
     }
+  }
 
-    async function peek(path){
-      try{
-        const r = await fetch(path, { cache: "no-store" });
-        const t = await r.text();
-        return { ok: r.ok, status: r.status, head: t.slice(0, 260) };
-      } catch(e){
-        return { ok:false, status:"(fetch failed)", head:String(e) };
-      }
+  async function loadOne(path){
+    try{
+      await import(path);
+      return { ok:true };
+    } catch(err){
+      const msg = err?.stack || err?.message || String(err);
+      const p = await peek(path);
+      return { ok:false, err: msg, peek: p };
     }
+  }
 
-    async function loadOne(path){
-      try{
-        await import(path);
-        return { ok:true };
-      } catch(err){
-        const msg = err?.stack || err?.message || String(err);
-        const p = await peek(path);
-        return { ok:false, err: msg, peek: p };
-      }
-    }
+  function showError(path, info){
+    console.error("Broken module:", path, info?.err);
 
-    function showError(path, info){
-      console.error("Broken module:", path, info?.err);
+    if (mainSub) mainSub.textContent = "Startup failed (module load error).";
+    if (sideMeta) sideMeta.textContent = "Load error";
 
-      if (mainSub) mainSub.textContent = "Startup failed (module load error).";
-      if (sideMeta) sideMeta.textContent = "Load error";
-
-      const errText = info?.err || "Unknown error";
-      const ok = info?.peek?.ok;
-      const status = info?.peek?.status;
-      const head = info?.peek?.head || "";
-
-      if (content){
-        content.innerHTML = `
-          <div class="errorBox">
-            <h3>Couldn’t load <code>${esc(path)}</code></h3>
-            <div class="muted">
-              <ul>
-                <li><strong>Most common cause for “Unexpected token ':'”:</strong> this file is JSON (starts with <code>{</code>) but must be a JS module that exports something.</li>
-                <li>Or the request is returning HTML (404 page) instead of JS.</li>
-              </ul>
-            </div>
-
-            <div class="muted" style="margin-top:10px;">
-              Fetch check: <code>ok=${esc(ok)} status=${esc(status)}</code>
-            </div>
-
-            <div class="muted" style="margin-top:10px;"><strong>Error:</strong></div>
-            <pre>${esc(errText)}</pre>
-
-            <div class="muted" style="margin-top:10px;"><strong>File starts with:</strong></div>
-            <pre>${esc(head)}</pre>
+    if (content){
+      content.innerHTML = `
+        <div style="border:1px solid rgba(180,35,24,.35);background:rgba(180,35,24,.06);border-radius:18px;padding:16px;">
+          <h3 style="margin:0 0 8px;font-size:14px;">Couldn’t load <code>${esc(path)}</code></h3>
+          <div style="color:#5a5a5a;font-size:13px;">
+            Fetch check: <code>ok=${esc(info?.peek?.ok)} status=${esc(info?.peek?.status)}</code>
           </div>
-        `;
+          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;"><strong>Error:</strong></div>
+          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(info?.err)}</pre>
+          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;"><strong>File starts with:</strong></div>
+          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(info?.peek?.head)}</pre>
+        </div>
+      `;
+    }
+  }
+
+  (async () => {
+    const modules = [
+      "./data-activities.js",
+      "./data-charts.js",
+      "./data-vocab.js",
+      "./verb-engine.js",
+      "./app.js"
+    ];
+
+    for (const m of modules){
+      if (mainSub) mainSub.textContent = "Loading " + m.replace("./","") + "…";
+      const r = await loadOne(m);
+      if (!r.ok){
+        showError(m, r);
+        return;
       }
     }
 
-    (async () => {
-      const modules = [
-        "./data-activities.js",
-        "./data-charts.js",
-        "./data-vocab.js",
-        "./verb-engine.js",
-        "./app.js"
-      ];
-
-      for (const m of modules){
-        if (mainSub) mainSub.textContent = "Loading " + m.replace("./","") + "…";
-        const r = await loadOne(m);
-        if (!r.ok){
-          showError(m, r);
-          return;
-        }
-      }
-
-      if (mainSub) mainSub.textContent = "Loaded.";
-      if (sideMeta) sideMeta.textContent = "Ready";
-      // app.js is already imported above; it should take over UI if it's written to do so.
-    })();
-  </script>
+    if (mainSub) mainSub.textContent = "Loaded.";
+    if (sideMeta) sideMeta.textContent = "Ready";
+  })();
+</script>
 </body>
 </html>
