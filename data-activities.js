@@ -1,10 +1,10 @@
 // data-activities.js
 // Sidebar activity registry (matches app.js expectations).
-// Must start with // or import — NO "label:" prefixes.
 
-import { VOCAB } from "./data-vocab.js";
-import { VERB_CHARTS, PRONOUN_CHARTS, ENDING_CHARTS } from "./data-charts.js";
+import DATA_CHARTS from "./data-charts-ascii.js";
+import VOCAB_DEFAULT from "./data-vocab.js";
 
+const VOCAB = VOCAB_DEFAULT?.VOCAB ?? VOCAB_DEFAULT ?? [];
 const asArray = (v) => (Array.isArray(v) ? v : []);
 const s = (v) => (v == null ? "" : String(v));
 
@@ -18,19 +18,27 @@ function slugify(str){
     .slice(0, 64) || "item";
 }
 
-function chartActivities(chartGroup, charts, groupLabel){
-  return asArray(charts).map((c, idx) => {
-    const title = c?.title ?? c?.name ?? `Chart ${idx + 1}`;
-    const chartId = c?.id ?? slugify(title);
-    return {
-      id: `${chartGroup}-${chartId}`,
-      group: groupLabel,
-      title: s(title),
-      type: "chart",
-      chartGroup,
-      chartId: s(chartId)
-    };
-  });
+function verbChartActivities(){
+  const verbs = DATA_CHARTS?.verbs ?? {};
+  const out = [];
+
+  for (const [lemma, v] of Object.entries(verbs)){
+    const charts = v?.charts ?? {};
+    const keys = Object.keys(charts);
+
+    // one sidebar item per verb (clicking can show all its charts in your UI)
+    out.push({
+      id: `verb-${slugify(lemma)}`,
+      group: "Charts",
+      title: lemma,
+      type: "verb",
+      chartGroup: "verbs",
+      chartId: lemma,
+      tag: String(keys.length)
+    });
+  }
+
+  return out;
 }
 
 const BUILT_INS = [
@@ -52,9 +60,7 @@ const BUILT_INS = [
 
 export const ACTIVITIES = [
   ...BUILT_INS,
-  ...chartActivities("verbs", VERB_CHARTS, "Charts"),
-  ...chartActivities("pronouns", PRONOUN_CHARTS, "Charts"),
-  ...chartActivities("endings", ENDING_CHARTS, "Charts"),
+  ...verbChartActivities()
 ];
 
 export default ACTIVITIES;
