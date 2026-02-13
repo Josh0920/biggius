@@ -1,18 +1,15 @@
 // data-activities.js
-// Central registry of everything that appears in the left sidebar.
-// IMPORTANT FIX: avoid module duplication by importing the SAME URLs that the app loads.
-// (Do NOT add ?v=... here unless you add it literally everywhere. Best is no query strings.)
+// Must match app.js expectations:
+// - activity.type is "vocab_fill" | "flash" | "chart"
+// - chart activities include chartGroup ("verbs"|"pronouns"|"endings") and chartId
+// - ids must match activeActivityId default "vocab_fill"
 
-import { CHARTS } from "./data-charts.js";
 import { VOCAB } from "./data-vocab.js";
+import { VERB_CHARTS, PRONOUN_CHARTS, ENDING_CHARTS } from "./data-charts.js";
 
-/** Safe string */
+const asArray = (v) => (Array.isArray(v) ? v : []);
 const s = (v) => (v == null ? "" : String(v));
 
-/** Safe array */
-const asArray = (v) => (Array.isArray(v) ? v : []);
-
-/** Create a stable id from a title if none exists */
 function slugify(str){
   return s(str)
     .trim()
@@ -23,64 +20,47 @@ function slugify(str){
     .slice(0, 64) || "item";
 }
 
-/** Dedupe by id while keeping first occurrence */
-function dedupeById(items){
-  const seen = new Set();
-  const out = [];
-  for (const it of items){
-    const id = s(it?.id);
-    if (!id) continue;
-    if (seen.has(id)) continue;
-    seen.add(id);
-    out.push(it);
-  }
-  return out;
+function chartActivities(chartGroup, charts, groupLabel){
+  return asArray(charts).map((c, idx) => {
+    const title = c?.title ?? c?.name ?? `Chart ${idx + 1}`;
+    const chartId = c?.id ?? slugify(title);
+    return {
+      id: `${chartGroup}-${chartId}`,     // unique sidebar id
+      group: groupLabel,                  // sidebar group heading
+      title: s(title),
+      type: "chart",
+      chartGroup,                         // app.js uses this to pick CHART_MAP
+      chartId: s(chartId)                 // app.js uses this to find the chart
+    };
+  });
 }
 
-// ===== Built-in practice modes =====
-const vocabCount = asArray(VOCAB).length;
-
+// Built-in practice modes (these ids must exist)
 const BUILT_INS = [
   {
-    id: "vocab",
+    id: "vocab_fill",
     group: "Practice",
-    title: "Vocabulary",
-    subtitle: "Greek ↔ English practice",
-    kind: "vocab",
-    tag: String(vocabCount)
+    title: "Vocab (Fill)",
+    type: "vocab_fill"
   },
   {
-    id: "verbs",
+    id: "flash",
     group: "Practice",
-    title: "Verbs",
-    subtitle: "Conjugation charts practice",
-    kind: "verbs",
-    tag: "Practice"
+    title: "Flashcards",
+    type: "flash"
   }
 ];
 
-// ===== Chart activities (auto-generated) =====
-const chartArr = asArray(CHARTS);
+// Chart activities
+const chartsVerbs    = chartActivities("verbs",    VERB_CHARTS,    "Charts");
+const chartsPronouns = chartActivities("pronouns", PRONOUN_CHARTS, "Charts");
+const chartsEndings  = chartActivities("endings",  ENDING_CHARTS,  "Charts");
 
-const CHART_ACTIVITIES = chartArr.map((c, idx) => {
-  const title = c?.title ?? c?.name ?? `Chart ${idx + 1}`;
-  const chartId = c?.id ?? slugify(title);
-
-  return {
-    id: c?.id ? s(c.id) : `chart-${chartId}`,      // stable unique sidebar id
-    group: s(c?.group) || "Charts",
-    title: s(title),
-    subtitle: s(c?.subtitle ?? c?.description) || "Practice this chart",
-    kind: "chart",
-    chartId: s(chartId),                          // id used to look up the chart data
-    tag: s(c?.tag) || "Chart"
-  };
-});
-
-// ===== Export =====
-export const ACTIVITIES = dedupeById([
+export const ACTIVITIES = [
   ...BUILT_INS,
-  ...CHART_ACTIVITIES
-]);
+  ...chartsVerbs,
+  ...chartsPronouns,
+  ...chartsEndings
+];
 
 export default ACTIVITIES;
