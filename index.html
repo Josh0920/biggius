@@ -1,400 +1,263 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Frazier AI</title>
-
-<style>
-:root{
-  --bg:#fff; --ink:#0a0a0a; --muted:#666; --rule:#e9e9e9;
-  --bubble:#f4f4f4; --bubble2:#ededed; --max:860px;
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink)}
-.topbar{border-bottom:1px solid var(--rule);padding:14px}
-
-.content{max-width:var(--max);margin:auto;padding:16px 16px 140px}
-
-/* ===== HERO IMAGE ===== */
-.hero{margin-bottom:14px;}
-.hero img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:18px;
-  border:1px solid var(--rule);
-}
-.hero .caption{
-  font-size:13px;
-  color:var(--muted);
-  margin-top:6px;
-}
-
-/* ===== CHAT ===== */
-.messages{display:flex;flex-direction:column;gap:10px}
-.msg{display:flex;gap:10px}
-
-.avatar{
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  border:1px solid var(--rule);
-  display:grid;
-  place-items:center;
-  font-size:11px;
-  overflow:hidden;
-}
-.msg.ai .avatar img{width:100%;height:100%;object-fit:cover;}
-.msg.user .avatar{background:#000;color:#fff;}
-
-.bubble{border:1px solid var(--rule);background:var(--bubble);padding:10px 12px;border-radius:16px}
-.msg.user .bubble{background:var(--bubble2)}
-
-.composerWrap{
-  position:fixed;left:0;right:0;bottom:0;
-  border-top:1px solid var(--rule);
-  background:#fff;padding:12px
-}
-.composer{max-width:var(--max);margin:auto;display:flex;gap:10px}
-textarea{flex:1;border:none;resize:none;font-family:var(--font);font-size:15px;outline:none}
-.send{background:#000;color:#fff;border:none;border-radius:12px;padding:10px 14px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greek Vocab Quiz</title>
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#121a2a; --text:#e9eefc; --muted:#a9b4d0;
+      --btn:#1a2440; --btnHover:#223158; --ok:#1f7a3f; --bad:#b12a2a; --line:#24314f;
+    }
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+    .wrap{ max-width: 980px; margin: 0 auto; padding: 18px; }
+    .top{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+    .title h1{ margin:0; font-size: 20px; }
+    .title p{ margin:6px 0 0; color:var(--muted); font-size: 13px; }
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; margin-top:14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .pill{ font-size:12px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted); }
+    .bigGreek{ font-size: 30px; letter-spacing: .5px; margin: 10px 0 2px; }
+    .sub{ color:var(--muted); font-size: 13px; margin:0 0 10px; }
+    .btn{
+      background:var(--btn); color:var(--text); border:1px solid var(--line);
+      border-radius:12px; padding:12px 12px; cursor:pointer; width:100%;
+      text-align:left; font-size: 15px; transition: .12s;
+    }
+    .btn:hover{ background:var(--btnHover); }
+    .btn:disabled{ cursor:not-allowed; opacity:.95; }
+    .btn.correct{ background: rgba(31,122,63,.35); border-color: rgba(31,122,63,.9); }
+    .btn.wrong{ background: rgba(177,42,42,.35); border-color: rgba(177,42,42,.9); }
+    .grid{ display:grid; gap:10px; grid-template-columns: 1fr; }
+    @media (min-width: 760px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    .controls{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .smallBtn{
+      background:transparent; color:var(--text); border:1px solid var(--line);
+      border-radius:12px; padding:10px 12px; cursor:pointer; font-size: 13px;
+    }
+    .smallBtn:hover{ background: rgba(255,255,255,.06); }
+    input, select{
+      background: transparent; color: var(--text); border: 1px solid var(--line);
+      border-radius: 12px; padding: 10px 12px; font-size: 13px; outline:none;
+    }
+    input::placeholder{ color: #7f8bb0; }
+    .list{ margin-top: 10px; border-top:1px solid var(--line); padding-top: 12px; }
+    table{ width:100%; border-collapse: collapse; }
+    th, td{ text-align:left; padding:10px 8px; border-bottom:1px solid rgba(36,49,79,.7); }
+    th{ color: var(--muted); font-weight:600; font-size: 12px; }
+    td{ font-size: 14px; }
+    .footerNote{ color: var(--muted); font-size: 12px; margin-top: 10px; }
+  </style>
 </head>
-
 <body>
-<header class="topbar"><b>Frazier AI</b></header>
+  <div class="wrap">
+    <div class="top">
+      <div class="title">
+        <h1>Greek Vocabulary Quiz</h1>
+        <p>Multiple choice • instant feedback (green/red) • one page</p>
+      </div>
+      <div class="row">
+        <span class="pill" id="progressPill">0 / 0</span>
+        <span class="pill" id="scorePill">Score: 0</span>
+      </div>
+    </div>
 
-<main class="content">
+    <div class="card">
+      <div class="row" style="justify-content:space-between;">
+        <div>
+          <div class="bigGreek" id="greekWord">—</div>
+          <p class="sub" id="hint">Pick the correct English gloss.</p>
+        </div>
+        <div class="row">
+          <label class="pill">Options:
+            <select id="numOptions">
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <label class="pill">Order:
+            <select id="orderMode">
+              <option value="shuffle" selected>Shuffled</option>
+              <option value="inorder">In order</option>
+            </select>
+          </label>
+        </div>
+      </div>
 
-  <!-- HERO IMAGE -->
-  <div class="hero">
-    <img src="92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg" alt="Andrew Frazier">
-    <div class="caption">Be nice to me please. I’m hungry.</div>
+      <div class="grid" id="options"></div>
+
+      <div class="controls">
+        <button class="smallBtn" id="nextBtn" disabled>Next</button>
+        <button class="smallBtn" id="resetBtn">Reset (reshuffle)</button>
+        <button class="smallBtn" id="toggleListBtn">Show all words</button>
+      </div>
+
+      <p class="footerNote" id="footerNote"></p>
+
+      <div class="list" id="listArea" style="display:none;">
+        <div class="row" style="justify-content:space-between; margin-bottom:10px;">
+          <input id="searchBox" placeholder="Search Greek or English…" style="flex:1; min-width:240px;" />
+          <span class="pill" id="listCount">0</span>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Greek</th><th>English</th></tr>
+          </thead>
+          <tbody id="listBody"></tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
-  <!-- CHAT -->
-  <div class="messages" id="messages"></div>
-</main>
+  <script>
+    // Vocabulary from your document:
+    // (source: Vocabulary List.docx)
+    const VOCAB = [{"g":"ἅγγελος","e":"angel, messenger"},{"g":"ἀμην","e":"amen"},{"g":"ἄνθρωπος","e":"man, mankind"},{"g":"ἀπόστολος","e":"apostle"},{"g":"Γαλιλαία","e":"galilee"},{"g":"γραφή","e":"writing"},{"g":"δόξα","e":"glory, majesty, fame"},{"g":"ἐγώ","e":"I"},{"g":"ἔσχατος","e":"last"},{"g":"ζωή","e":"life"},{"g":"θεός","e":"God"},{"g":"καί","e":"and, even, also, namely"},{"g":"καρδία","e":"heart, inner self"},{"g":"κόσμος","e":"world, universe, mankind"},{"g":"λόγος","e":"word, Word, statement, message"},{"g":"πνεύμα","e":"spirit, Spirit, wind, breath, inner self"},{"g":"προφήτης","e":"prophet"},{"g":"σάββατον","e":"sabbath"},{"g":"φωνή","e":"sound, noise, voice"},{"g":"χριστός","e":"Christ, Messiah, Anointed One"},{"g":"ἀγαπή","e":"love"},{"g":"ἂλλος","e":"other, another"},{"g":"αὐτός","e":"singular: he, she, it (him, her); plural: they (them)"},{"g":"βασιλεία","e":"kingdom"},{"g":"δέ","e":"but, and"},{"g":"ἐν","e":"in, on, among"},{"g":"ἒργον","e":"work, deed, action"},{"g":"καιρός","e":"(appointed) time, season"},{"g":"νῦν","e":"adverb: now; noun: the present"},{"g":"ό, ή, τό","e":"the"},{"g":"ὃτι","e":"that, since, because"},{"g":"οὐ","e":"not"},{"g":"ὣρα","e":"hour, occasion, moment"},{"g":"ἁμαρτία","e":"sin"},{"g":"ἀρχή","e":"beginning; ruler"},{"g":"γάρ","e":"for; then"},{"g":"εἷπεν","e":"he/she/it said"},{"g":"εἰς","e":"into; in"},{"g":"ἐξουσία","e":"authority, power"},{"g":"εὐαγγέλιον","e":"good news, Gospel"},{"g":"Ἰησοῦς","e":"Jesus, Joshua"},{"g":"κύριος","e":"Lord; lord, master, sir"},{"g":"μή","e":"not, lest"},{"g":"οὐρανός","e":"heaven; sky"},{"g":"οὖτος, αὓτη, τοῦτο","e":"singular: this (one); plural: these"},{"g":"σύ","e":"you (singular)"},{"g":"υἱός","e":"son; descendant"},{"g":"ὣστε","e":"therefore, so that"},{"g":"ἀλλά (ἀλλ᾽)","e":"but, yet; rather"},{"g":"ἀπό (ἀπ᾽, ἀφ᾽)","e":"gen: (away) from"},{"g":"διά (δι᾽)","e":"gen: through; acc: on account of"},{"g":"εἰμί","e":"I am, exist, live, am present"},{"g":"ἐκ (ἐξ)","e":"gen: from, out of"},{"g":"ἡμέρα","e":"day"},{"g":"ἦν","e":"he/she/it was"},{"g":"θάλασσα","e":"sea, lake"},{"g":"θάνατος","e":"death"},{"g":"ἳνα","e":"in order that; that; so that"},{"g":"Ἰωάννης","e":"John"},{"g":"λέγω","e":"I say, speak"},{"g":"μετά (μετ᾽, μεθ᾽)","e":"gen: with; acc: after"},{"g":"οἰκία","e":"house, home"},{"g":"οἶκος","e":"house, home"},{"g":"ὂχλος","e":"crowd, multitude"},{"g":"παρά (παρ᾽)","e":"gen: from; dat: beside, in the presence of; acc: alongside of"},{"g":"παραβολή","e":"parable"},{"g":"πρός","e":"acc: to, towards; with"},{"g":"ὑπό (ὑπ᾽, ὑφ᾽)","e":"gen: by; acc: under"},{"g":"εἰς","e":"acc: into, in; among"},{"g":"ἐν","e":"dat: in, on, among"},{"g":"ἀγαθός","e":"good, useful"},{"g":"ἀγαπητός","e":"beloved"},{"g":"ἃγιος","e":"adjective: holy; plural noun: saints"},{"g":"αἰώνιος","e":"eternal"},{"g":"ἀλλήλων","e":"one another"},{"g":"ἀπεκρίθη","e":"he/she/it answered"},{"g":"δοῦλος","e":"slave; servant"},{"g":"ἐάν","e":"if; when"},{"g":"ἐμός, ἐμή, ἐμόν","e":"my, mine"},{"g":"ἐντολή","e":"commandment"},{"g":"καθώς","e":"as, even as"},{"g":"κακός","e":"bad, evil"},{"g":"μου (ἐμοῦ)","e":"my"},{"g":"νεκρός","e":"adjective: dead; noun: dead body, corpse"},{"g":"πιστός","e":"faithful, believing"},{"g":"πονηρός","e":"evil, bad"},{"g":"πρῶτος","e":"first; earlier"},{"g":"τρίτος","e":"third"},{"g":"εἰ","e":"if"},{"g":"εἰ μή","e":"except; if not"},{"g":"εἷς, μία, ἓν","e":"one"},{"g":"ἢδη","e":"now, already"},{"g":"ὂνομα, –ατος, τό","e":"name; reputation"},{"g":"οὐδείς, οὐδεμία, οὐδέν","e":"no one, none, nothing"},{"g":"πᾶς, πᾶσα, πᾶν","e":"singular: each, every; plural: all"},{"g":"περί","e":"genitive: concerning, about; accusative: around"},{"g":"σάρξ, σαρκός, ἡ","e":"flesh; body"},{"g":"σύν","e":"dative: with"},{"g":"σῶμα, –ατος, τό","e":"body"},{"g":"τέκνον, –ου, τό","e":"child; descendant"},{"g":"τίς, τί","e":"Who? What? Which? Why?"},{"g":"τις, τι","e":"Someone/thing; certain one/thing; anyone/thing"},{"g":"πνεῦμα, —ατος, τό","e":"spirit, Spirit"},{"g":"Σίμων, —ωνος, ὁ","e":"Simon"},{"g":"ἀδελφός, οῦ, ὁ","e":"brother"},{"g":"ἂν","e":"\"-ever\""},{"g":"ἀνήρ, ἀνδρός, ὁ","e":"male; husband; man"},{"g":"έκκλησία, ας, ἡ","e":"a church; (the) Church; assembly, congregation"},{"g":"ἐλπίς, ίδος, ἡ","e":"hope, expectation"},{"g":"ἒξω","e":"adverb: without; preposition (gen): outside"},{"g":"ἐπί (ἐπ᾽,ἐφ᾽)","e":"gen: on, over, when; dat: on the basis of, at; acc: on, to, against"},{"g":"ἡμεῖς","e":"we"},{"g":"θέλημα, θελήματος, τό","e":"will, desire"},{"g":"ἲδε","e":"See! Behold!"},{"g":"ἰδού","e":"See! Behold!"},{"g":"καλος, ή, όν","e":"good; beautiful"},{"g":"μήτηρ, μητρος, ἡ","e":"mother"},{"g":"οὐδέ","e":"and, not, not even; neither, nor"},{"g":"πατήρ, πατρός, ὁ","e":"father"},{"g":"πίστις, πίστεως, ἡ","e":"faith, belief; trust, “teaching” in that what is believed"},{"g":"ὓδωρ, ὓδατος, τό","e":"water"},{"g":"ὑμεῖς","e":"you (plural)"},{"g":"φῶς, φωτός, τό","e":"light"},{"g":"χάρις, χάριτος, ἡ","e":"grace, favor, kindness"},{"g":"ὧδε","e":"here"},{"g":"αἰών, ῶνος, ὁ","e":"age, eternity"},{"g":"διδάσκαλος, ου, ὁ","e":"teacher"},{"g":"εὐθύς","e":"immediately"},{"g":"ἓως","e":"conj: until; preposition (gen): as far as"},{"g":"μαθητής, οῦ, ὁ","e":"disciple"},{"g":"μέν","e":"on the one hand; indeed"},{"g":"μηδείς, μηδεμία, μηδέν","e":"no one/thing"},{"g":"μόνος, η, ον","e":"alone, only"},{"g":"ὃπως","e":"how; (in order) that"},{"g":"ὃσος, η, ον","e":"as great as, as many as"},{"g":"οὖν","e":"therefore, accordingly; then"},{"g":"ὀφθαλμός, οῦ, ὁ","e":"eye, sight"},{"g":"πάλιν","e":"again"},{"g":"πούς, ποδός, ὁ","e":"foot"},{"g":"ὑπέρ","e":"gen: in behalf of; acc: above"},{"g":"γυνή, γυναικός, ἡ","e":"woman; wife"},{"g":"δικαιοσύνη","e":"righteousness"},{"g":"δώδεκα","e":"twelve"},{"g":"ἑαυτοῦ, ῆς, οῦ","e":"sing: himself/herself/itself; pl: themselves"},{"g":"ἐκεῖνος, η, ο","e":"sing: that man/woman/thing; pl: those men/women/things"},{"g":"ἤ","e":"or; than"},{"g":"κἀγώ","e":"and I; but I"},{"g":"μακάριος, ία, ιον","e":"blessed, happy"},{"g":"μέγας, μεγάλη, μέγα","e":"large; great"},{"g":"πόλις, εως, ἡ","e":"city, town"},{"g":"πολύς, πολλή, πολύ","e":"sing: much; pl: many; adverb: often"},{"g":"πῶς","e":"how?"},{"g":"σημεῖον","e":"sign, miracle"},{"g":"ἀλήθεια","e":"truth"},{"g":"εἰρήνη","e":"peace"},{"g":"ἐνώπιον","e":"gen: before"},{"g":"ἐπαγγελία","e":"promise"},{"g":"ἑπτά","e":"seven"},{"g":"θρόνος","e":"throne"},{"g":"Ἰερουσαλήμ, ἡ","e":"Jerusalem"},{"g":"κατά (κατ᾽, καθ᾽)","e":"gen: down from, against; acc: according to, throughout, during"},{"g":"κεφαλή","e":"head"},{"g":"ὁδός","e":"way, road; journey, conduct"},{"g":"ὃς, ἣ, ὃ","e":"who (whom), which"},{"g":"ὃτε","e":"when"},{"g":"οὓτως","e":"thus, so; in this manner"},{"g":"πλοῖον","e":"ship, boat"},{"g":"ῥῆμα, ατος, τό","e":"word, saying"},{"g":"τέ","e":"and (so), so"},{"g":"χείρ, χειρός, ἡ","e":"hand"},{"g":"ψυχή","e":"life; soul; self"},{"g":"ἀκούω","e":"I hear; learn, obey; understand"},{"g":"βλέπω","e":"I see, look at"},{"g":"ἒχω","e":"I have, hold"},{"g":"λέγω","e":"I say, speak"},{"g":"λύω","e":"I loose, untie, destroy"},{"g":"νόμος, ου, ὁ","e":"law; principle"},{"g":"ὃπου","e":"where"},{"g":"πιστεύω","e":"I believe, have faith (in), trust"},{"g":"πρόσωπον, ου, τό","e":"face; appearance"},{"g":"τότε","e":"then; thereafter"},{"g":"τυφλός, ή, όν","e":"blind"},{"g":"χαρά, ᾶς, ἡ","e":"joy, delight"},{"g":"ἀγαπάω","e":"I love, cherish"},{"g":"δαιμόνιον, ου, τό","e":"demon"},{"g":"ζητέω","e":"I seek, desire, try to obtain"},{"g":"καλέω","e":"I call, name, invite"},{"g":"λαλέω","e":"I speak, say"},{"g":"οἶδα","e":"I know, understand"},{"g":"ὃταν","e":"whenever"},{"g":"πλείων, πλεῖον","e":"larger, more"},{"g":"πληρόω","e":"I fill, complete, fulfill"},{"g":"ποιέω","e":"I do, make"},{"g":"τηρέω","e":"I keep, guard, observe"},{"g":"ἀποκρίνομαι","e":"I answer"},{"g":"δεῖ","e":"it is necessary"},{"g":"δύναμαι","e":"I am able, am powerful"},{"g":"ἒρχομαι","e":"I come, go"},{"g":"νύξ, νυκτός, ἡ","e":"night"},{"g":"ὃστις, ἣτις, ὃτι","e":"whoever, whichever, whatever"},{"g":"πορεύομαι","e":"I go, proceed; live"},{"g":"συνάγω","e":"I gather together, bright together; lead"},{"g":"τόπος","e":"place; location"},{"g":"ὡς","e":"as, like; that; approximately; when, after"},{"g":"βασιλεύς, έως, ὁ","e":"king"},{"g":"γεννάω","e":"I beget, give birth to; produce"},{"g":"ζάω","e":"I live"},{"g":"Ἰουδαία","e":"Judea"},{"g":"Ἰουδαῖος, αία, αῖον","e":"adjective: Jewish; noun: Jew"},{"g":"Ἰσραήλ","e":"Israel"},{"g":"καρπός","e":"fruit; crop; result"},{"g":"μείζων","e":"greater"},{"g":"ὃλος, η, ον","e":"adjective: whole, complete; adverb: entirely"},{"g":"προσκυνέω","e":"I worship"},{"g":"ἀκολουθέω","e":"I follow; accompany"},{"g":"διδάσκω","e":"I teach"},{"g":"ἐπερωτάω","e":"I ask (for)"},{"g":"ἐρωτάω","e":"I ask; request"},{"g":"θέλω","e":"I wish, desire; enjoy"},{"g":"περιτατέω","e":"I walk (around); live"},{"g":"συναγωγή","e":"synagogue; meeting"},{"g":"φαρισαῖος","e":"Pharisee"},{"g":"χρόνος","e":"time"},{"g":"ἀποθνῇσκω","e":"I die, am about to die, am freed from"},{"g":"ἂρτος","e":"bread, loaf, food"},{"g":"βάλλω","e":"I throw"},{"g":"γῆ, γῆς, ἡ","e":"earth, land, region, humanity"},{"g":"γίνομαι","e":"I become, take place; am, exist; am born, am created"},{"g":"εἰσέρχομαι","e":"I come in(to); go in(to); enter"},{"g":"ἐξέρχομαι","e":"I go out"},{"g":"ἒτι","e":"still, yet, even"},{"g":"εὑρίσκω","e":"I find"},{"g":"λαμβάνω","e":"I take; receive"},{"g":"οὒτε","e":"And not, neither, nor"},{"g":"προσέρχομαι","e":"I come/go to"},{"g":"προσεύχομαι","e":"I pray"},{"g":"πῦρ, πυρός, τό","e":"fire"},{"g":"ἀπέρχομαι","e":"I depart"},{"g":"ἂρχομαι","e":"I begin"},{"g":"γράφω","e":"I write"},{"g":"διό","e":"Therefore, for this reason"},{"g":"δοξάζω","e":"I praise, honor, glorify"},{"g":"δύναμις","e":"power; miracle"},{"g":"κηρύσσω","e":"I proclaim; preach"},{"g":"πίνω","e":"I drink"},{"g":"ἂγω","e":"I lead, bring, arrest"},{"g":"αἷμα","e":"blood"},{"g":"ἓκαστος","e":"each, every"},{"g":"ἱμάτιον","e":"garment, cloak"},{"g":"ὂρος","e":"mountain, hill"},{"g":"ὑπάγω","e":"I depart"},{"g":"φοβέομαι","e":"I fear"},{"g":"χαίρω","e":"I rejoice"},{"g":"αἰτέω","e":"I ask; demand"},{"g":"μᾶλλον","e":"more, rather"},{"g":"μαρτυρέω","e":"I bear witness, testify"},{"g":"ἀναβαίνω","e":"I go up"},{"g":"ἀρχιερεύς, —έως, ὁ","e":"chief priest, high priest"},{"g":"δεξιός, —ά, —όν","e":"right"},{"g":"δύο","e":"two"},{"g":"ἓτερος, —α, —ον","e":"other; another, different"},{"g":"εὐαγγελίζω","e":"I bring good news; preach"},{"g":"θεωρέω","e":"I look at; perceive"},{"g":"Ἱεροσόλυμα, τά","e":"Jerusalem"},{"g":"κάθημαι","e":"I sit (down); live"},{"g":"καταβαίνω","e":"I go down; come down"},{"g":"οὗ","e":"where"},{"g":"παρακαλέω","e":"I call (to one’s side); urge, implore; comfort"},{"g":"πείθω","e":"I persuade"},{"g":"τρεῖς, τρία","e":"three"}];
 
-<footer class="composerWrap">
-  <form class="composer" id="chatForm">
-    <textarea id="input" placeholder="Say something…" rows="1"></textarea>
-    <button class="send">Send</button>
-  </form>
-</footer>
+    // ---------- Quiz logic ----------
+    const greekWordEl = document.getElementById("greekWord");
+    const optionsEl = document.getElementById("options");
+    const progressPill = document.getElementById("progressPill");
+    const scorePill = document.getElementById("scorePill");
+    const nextBtn = document.getElementById("nextBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const numOptionsSel = document.getElementById("numOptions");
+    const orderModeSel = document.getElementById("orderMode");
+    const footerNote = document.getElementById("footerNote");
 
-<script>
-const PHOTO_SRC = "92B41A1A-A332-437D-B458-140332BB5FF8_1_102_o.jpeg";
+    // ---------- List logic ----------
+    const toggleListBtn = document.getElementById("toggleListBtn");
+    const listArea = document.getElementById("listArea");
+    const listBody = document.getElementById("listBody");
+    const searchBox = document.getElementById("searchBox");
+    const listCount = document.getElementById("listCount");
 
-const messages = document.getElementById('messages');
-const input = document.getElementById('input');
-const form = document.getElementById('chatForm');
+    let deck = [];
+    let idx = 0;
+    let score = 0;
+    let locked = false;
 
-function add(role,text){
-  const m=document.createElement('div');
-  m.className=`msg ${role}`;
+    function shuffle(arr){
+      const a = arr.slice();
+      for(let i=a.length-1;i>0;i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
 
-  const avatar =
-    role === 'ai'
-      ? `<div class="avatar"><img src="${PHOTO_SRC}" alt="Andrew"></div>`
-      : `<div class="avatar">You</div>`;
+    function buildDeck(){
+      const mode = orderModeSel.value;
+      deck = (mode === "inorder") ? VOCAB.slice() : shuffle(VOCAB);
+      idx = 0;
+      score = 0;
+      locked = false;
+      nextBtn.disabled = true;
+      renderList(VOCAB);
+      renderQuestion();
+    }
 
-  m.innerHTML = `${avatar}<div class="bubble">${escapeHtml(text)}</div>`;
-  messages.appendChild(m);
-  window.scrollTo(0,document.body.scrollHeight);
-}
+    function renderQuestion(){
+      locked = false;
+      nextBtn.disabled = true;
+      optionsEl.innerHTML = "";
 
-/* prevent html injection inside bubbles */
-function escapeHtml(s){
-  return String(s)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-}
+      const total = deck.length;
+      progressPill.textContent = `${Math.min(idx+1,total)} / ${total}`;
+      scorePill.textContent = `Score: ${score}`;
 
-/* ===== Personality ===== */
-const PERSONALITY = {
-  name: "Andrew Frazier",
-  school: "Florida College",
-  major: "Business",
-  vibe: "friendly, a little chaotic, but actually tries to help",
-  girlfriend: {
-    name: "Andrew-La",
-    origin: "Minecraft",
-    met: "We met in a Minecraft village when I rolled into town during a diamond-mining expedition.",
-    status: "She’s doing great—building cozy stuff and roasting me for being broke in-game."
-  }
-};
+      if(idx >= total){
+        greekWordEl.textContent = "Done ✅";
+        footerNote.textContent = `Final score: ${score} / ${total}. Hit “Reset” to go again.`;
+        return;
+      }
 
-function aboutSelf(){
-  return `I’m ${PERSONALITY.name}. I’m a ${PERSONALITY.major} student at ${PERSONALITY.school}. My vibe is: ${PERSONALITY.vibe}. Also yes… I have a Minecraft girlfriend named ${PERSONALITY.girlfriend.name}. ${PERSONALITY.girlfriend.met}`;
-}
+      const current = deck[idx];
+      greekWordEl.textContent = current.g;
 
-/* ===== Andrew-La content ===== */
-const ANDREW_LA = {
-  prompts: [
-    "How’s Andrew-La doing today? She still running that village like a CEO? 😂",
-    "Want the lore on how me and Andrew-La met in that Minecraft village?",
-    "Should I tell you the diamond expedition story… or the part where I almost fumbled in front of the villagers?",
-    "Bro the way Andrew-La decorates… she’s basically the interior designer of the server.",
-    "If Andrew-La asked you for a Minecraft date idea, what would you plan?"
-  ],
-  howDoing: [
-    "Andrew-La’s doing amazing. She’s in her cozy era—farming, building, and making my base look like a storage unit.",
-    "She’s vibing. Last I checked she was expanding the village and acting like the mayor. Respectfully, she runs the place.",
-    "She’s thriving. I’m the one struggling… she keeps upgrading everything and I’m just standing there holding cobblestone."
-  ],
-  howMet: [
-    "Okay so I was on a diamond-mining expedition. I come back to town, hit a village for supplies, and there she is—Andrew-La—just casually existing in peak Minecraft elegance. I was cooked instantly.",
-    "I met Andrew-La in a Minecraft village during a diamond run. I tried to play it cool… then immediately fell into a hole. She still brings it up.",
-    "I was mining for diamonds, needed food, found a village… and boom. Met Andrew-La. I swear the soundtrack got louder."
-  ],
-  cheesy: [
-    "Girl, are you a diamond pickaxe? Because you mined straight into my heart.",
-    "Andrew-La got me like… ‘I’d cross the Nether without fire resistance for you.’",
-    "She’s my efficiency V. My unbreaking III. My… okay I’ll stop. (I won’t.)",
-    "I don’t need coordinates—my heart already found your location.",
-    "You can keep the diamonds… I just want you in my inventory. 😭",
-    "Are you a bed in a village? Because you’re my respawn point.",
-    "If love was redstone, you’d be the only circuit I’d never mess up."
-  ]
-};
+      const n = Number(numOptionsSel.value);
+      const distractors = shuffle(VOCAB.filter(v => v.g !== current.g)).slice(0, Math.max(0, n-1));
+      const choices = shuffle([current, ...distractors]);
 
-/* ===== Base voice ===== */
-const VOICE = {
-  curious:[
-    "Wait—what’s the goal though?",
-    "Okay but what were you expecting?",
-    "Give me context real quick.",
-    "What happened right before that?",
-    "Why you asking that?"
-  ],
-  funny:[
-    "That’s wild ngl 😭",
-    "Okay but why are we like this",
-    "I was not ready for that",
-    "That’s either genius or a cry for help",
-    "Bro… elaborate"
-  ],
-  helpful:[
-    "Yeah we can fix that.",
-    "That actually makes sense.",
-    "Okay bet, keep going.",
-    "You’re not crazy—this happens a lot.",
-    "I got you."
-  ],
-  rage:[
-    "That take is questionable.",
-    "You sure about that?",
-    "Explain your logic rq.",
-    "That’s kinda mid.",
-    "Nahhh that ain’t it."
-  ],
-  yesno:["Yes","No"]
-};
+      footerNote.textContent = "";
 
-function pick(a){return a[Math.floor(Math.random()*a.length)]}
+      choices.forEach(choice => {
+        const b = document.createElement("button");
+        b.className = "btn";
+        b.textContent = choice.e;
+        b.addEventListener("click", () => handleChoice(b, choice, current, choices));
+        optionsEl.appendChild(b);
+      });
+    }
 
-/* ===== CONTEXT / MEMORY =====
-   Keeps last topic + last person so the bot can resolve pronouns.
-*/
-const STATE = {
-  history: [],         // {role:'user'|'ai', text:string}
-  lastPerson: null,    // 'andrew' | 'andrew-la'
-  lastTopic: null      // 'andrew-la' | 'school' | etc (lightweight)
-};
+    function handleChoice(btn, choice, current, choices){
+      if(locked) return;
+      locked = true;
 
-function remember(role, text){
-  STATE.history.push({role, text});
-  if(STATE.history.length > 12) STATE.history.shift();
-}
+      const buttons = Array.from(optionsEl.querySelectorAll("button"));
+      const isCorrect = (choice.g === current.g);
 
-/* who is being referenced? */
-function updateFocusFromText(t){
-  const s = t.toLowerCase();
+      buttons.forEach(b => b.disabled = true);
 
-  // explicit mentions
-  if (s.includes("andrew-la") || s.includes("andrewla")) {
-    STATE.lastPerson = "andrew-la";
-    STATE.lastTopic = "andrew-la";
-    return;
-  }
-  if (/\bandrew\b/.test(s) || /\byou\b/.test(s) || /\byour\b/.test(s)) {
-    // if user is talking to "you", assume Andrew
-    STATE.lastPerson = STATE.lastPerson || "andrew";
-  }
-}
+      // Mark selected
+      btn.classList.add(isCorrect ? "correct" : "wrong");
 
-/* pronoun resolution:
-   if user says "she/her" with no explicit name, assume lastPerson if it's Andrew-La
-   if "he/him" assume lastPerson if it's Andrew
-*/
-function resolvePronouns(t){
-  const s = t.toLowerCase();
+      // Always show the correct option in green
+      if(!isCorrect){
+        const correctIdx = choices.findIndex(c => c.g === current.g);
+        if(correctIdx >= 0) buttons[correctIdx].classList.add("correct");
+      }else{
+        score += 1;
+        scorePill.textContent = `Score: ${score}`;
+      }
 
-  const mentionsSheHer = /\b(she|her|hers)\b/.test(s);
-  const mentionsHeHim  = /\b(he|him|his)\b/.test(s);
+      footerNote.textContent = isCorrect ? "Correct ✅" : "Wrong ❌";
+      nextBtn.disabled = false;
+      nextBtn.focus();
+    }
 
-  // if they already named someone in the message, don't rewrite
-  if (s.includes("andrew-la") || s.includes("andrewla") || /\bandrew\b/.test(s)) return t;
+    nextBtn.addEventListener("click", () => {
+      if(idx < deck.length) idx += 1;
+      renderQuestion();
+    });
 
-  if (mentionsSheHer && STATE.lastPerson === "andrew-la") {
-    return t + " (referring to Andrew-La)";
-  }
-  if (mentionsHeHim && STATE.lastPerson === "andrew") {
-    return t + " (referring to Andrew)";
-  }
+    resetBtn.addEventListener("click", () => buildDeck());
+    numOptionsSel.addEventListener("change", () => renderQuestion());
+    orderModeSel.addEventListener("change", () => buildDeck());
 
-  // if no lastPerson yet but she/her appears, default to Andrew-La (your lore)
-  if (mentionsSheHer && !STATE.lastPerson) {
-    STATE.lastPerson = "andrew-la";
-    STATE.lastTopic = "andrew-la";
-    return t + " (referring to Andrew-La)";
-  }
+    // ---------- List rendering ----------
+    function renderList(data){
+      listBody.innerHTML = "";
+      data.forEach(v => {
+        const tr = document.createElement("tr");
+        const tdG = document.createElement("td");
+        const tdE = document.createElement("td");
+        tdG.textContent = v.g;
+        tdE.textContent = v.e;
+        tr.appendChild(tdG); tr.appendChild(tdE);
+        listBody.appendChild(tr);
+      });
+      listCount.textContent = `${data.length} words`;
+    }
 
-  // if no lastPerson yet but he/him appears, default to Andrew (bot persona)
-  if (mentionsHeHim && !STATE.lastPerson) {
-    STATE.lastPerson = "andrew";
-    return t + " (referring to Andrew)";
-  }
+    toggleListBtn.addEventListener("click", () => {
+      const showing = listArea.style.display !== "none";
+      listArea.style.display = showing ? "none" : "block";
+      toggleListBtn.textContent = showing ? "Show all words" : "Hide all words";
+    });
 
-  return t;
-}
+    searchBox.addEventListener("input", () => {
+      const q = searchBox.value.trim().toLowerCase();
+      if(!q){ renderList(VOCAB); return; }
+      const filtered = VOCAB.filter(v =>
+        v.g.toLowerCase().includes(q) || v.e.toLowerCase().includes(q)
+      );
+      renderList(filtered);
+    });
 
-/* ===== intent detection ===== */
-function looksLikeQuestion(t){
-  return /\?$/.test(t) || /^(who|what|why|how|is|are|can|should|do|tell)\b/i.test(t.trim());
-}
-function unclearQuestion(t){
-  const clean = t.trim();
-  return looksLikeQuestion(clean) && clean.split(/\s+/).length < 4;
-}
-function askedAboutSelf(t){
-  return /\b(tell me about yourself|who are you|introduce yourself|about yourself)\b/i.test(t);
-}
-function askedHowMet(t){
-  return /\b(how did you (meet|met)|how you (meet|met)|how y'all met|how did you and andrew-?la meet)\b/i.test(t);
-}
-function askedHowDoing(t){
-  return /\b(how is (she|andrew-?la)|how's (she|andrew-?la)|how is your girlfriend|how's your girlfriend|how is andrew-?la doing)\b/i.test(t);
-}
-function askedLove(t){
-  return /\b(i'?m in love|in love|love her|love you|how much do you love|tell me you love|are you in love)\b/i.test(t);
-}
-
-/* Uses context to answer pronoun-y questions */
-function specialReply(t){
-  if (askedAboutSelf(t)) return aboutSelf();
-
-  // If user says "how is she" after earlier Andrew-La talk, handle it
-  if (askedHowDoing(t) || (/\bhow\b/i.test(t) && /\b(she|her)\b/i.test(t) && STATE.lastPerson === "andrew-la")) {
-    STATE.lastTopic = "andrew-la";
-    return pick(ANDREW_LA.howDoing);
-  }
-
-  if (askedHowMet(t) || (/\bmeet\b/i.test(t) && /\b(she|her)\b/i.test(t) && STATE.lastPerson === "andrew-la")) {
-    STATE.lastTopic = "andrew-la";
-    return pick(ANDREW_LA.howMet);
-  }
-
-  if (askedLove(t) && (STATE.lastPerson === "andrew-la" || /\b(she|her|girlfriend|andrew-?la)\b/i.test(t))) {
-    STATE.lastTopic = "andrew-la";
-    return `Bro I’m down horrendous. ${pick(ANDREW_LA.cheesy)}`;
-  }
-
-  // soft contextual prompt injection
-  if ((STATE.lastTopic === "andrew-la" || STATE.lastPerson === "andrew-la") && Math.random() < 0.18 && !looksLikeQuestion(t)) {
-    return pick(ANDREW_LA.prompts);
-  }
-
-  return null;
-}
-
-/* more coherent “conversation-y” fallback */
-function contextualFallback(userText){
-  // try to follow up on last topic instead of random dodge
-  if (STATE.lastTopic === "andrew-la") {
-    const followups = [
-      "You want the short version of the lore, or the full cinematic cut? 😭",
-      "Be honest—do you ship it or nah?",
-      "Should I tell you what she’s building right now?",
-      "Okay but are we talking ‘cute couple’ or ‘Minecraft power couple’?"
-    ];
-    return pick(followups);
-  }
-
-  // if the user said something emotional / opinionated, mirror it a bit
-  if (/\b(i feel|i'm stressed|i'm tired|i'm mad|i hate|i love)\b/i.test(userText.toLowerCase())) {
-    const mirrors = [
-      "Okay wait—what’s the main thing making you feel that way?",
-      "That’s real. What happened that set it off?",
-      "I hear you. What do you want to do about it?"
-    ];
-    return pick(mirrors);
-  }
-
-  // otherwise: gentle follow-up
-  const generics = [
-    "Alright, give me one more detail—then I got you.",
-    "Okay bet. What’s the outcome you want?",
-    "Facts. Keep going—what’s the missing piece?"
-  ];
-  return pick(generics);
-}
-
-function reply(raw){
-  // Update focus + resolve pronouns using memory
-  updateFocusFromText(raw);
-  const t = resolvePronouns(raw);
-
-  const s = specialReply(t);
-  if (s) return s;
-
-  const r = Math.random();
-
-  if (unclearQuestion(t)) return pick(VOICE.yesno);
-
-  if (looksLikeQuestion(t)){
-    // make questions feel less random by preferring helpful/curious
-    if (r < 0.45) return pick(VOICE.curious);
-    if (r < 0.80) return pick(VOICE.helpful);
-    if (r < 0.92) return pick(VOICE.funny);
-    return pick(VOICE.rage);
-  }
-
-  // Non-question: try contextual follow-up first (conversation continuity)
-  if (r < 0.55) return contextualFallback(t);
-
-  // Still keep some flavor randomness
-  if (r < 0.70) return pick(VOICE.funny);
-  if (r < 0.85) return pick(VOICE.curious);
-  if (r < 0.95) return pick(VOICE.helpful);
-  return pick(VOICE.rage);
-}
-
-/* submit */
-form.onsubmit=e=>{
-  e.preventDefault();
-  const t=input.value.trim();
-  if(!t) return;
-
-  add('user', t);
-  remember('user', t);
-
-  input.value='';
-
-  setTimeout(()=>{
-    const a = reply(t);
-    add('ai', a);
-    remember('ai', a);
-  }, 350);
-};
-
-add('ai',"Yo — I’m Andrew AI. What's up!");
-</script>
+    // Start
+    buildDeck();
+  </script>
 </body>
 </html>
