@@ -6,20 +6,7 @@
 import { CHARTS } from "./data-charts.js";
 import { VOCAB } from "./data-vocab.js";
 
-/**
- * Activity shape:
- * {
- *   id: "unique-id",
- *   group: "Charts" | "Vocab" | "Verbs" | "Other",
- *   title: "Sidebar title",
- *   subtitle: "Short description",
- *   kind: "chart" | "vocab" | "verbs" | "custom",
- *   chartId?: "some-chart-id",
- *   tag?: "pill text" (e.g., "Chart", "Vocab", "Verbs"),
- * }
- */
-
-// 1) Built-in practice modes
+// Build two built-in practice modes
 const BUILT_INS = [
   {
     id: "vocab",
@@ -39,7 +26,7 @@ const BUILT_INS = [
   }
 ];
 
-// 2) Auto-generate one activity per chart in data-charts.js
+// Auto-generate one sidebar activity per chart
 const CHART_ACTIVITIES = (Array.isArray(CHARTS) ? CHARTS : []).map((c, idx) => ({
   id: c.id || `chart-${idx + 1}`,
   group: "Charts",
@@ -50,11 +37,9 @@ const CHART_ACTIVITIES = (Array.isArray(CHARTS) ? CHARTS : []).map((c, idx) => (
   tag: "Chart"
 }));
 
-// 3) Final export used by app.js
 export const ACTIVITIES = [
   ...BUILT_INS,
   ...CHART_ACTIVITIES
 ];
 
-// Optional default export (helps prevent import mismatches)
 export default ACTIVITIES;
