@@ -1,6 +1,6 @@
 // data-activities.js
 // Sidebar activity registry (matches app.js expectations).
-// NOTE: No "label:" prefixes anywhere (those cause Unexpected token ':').
+// Must start with // or import — NO "label:" prefixes.
 
 import { VOCAB } from "./data-vocab.js";
 import { VERB_CHARTS, PRONOUN_CHARTS, ENDING_CHARTS } from "./data-charts.js";
@@ -23,17 +23,16 @@ function chartActivities(chartGroup, charts, groupLabel){
     const title = c?.title ?? c?.name ?? `Chart ${idx + 1}`;
     const chartId = c?.id ?? slugify(title);
     return {
-      id: `${chartGroup}-${chartId}`, // sidebar id
-      group: groupLabel,              // sidebar group heading
+      id: `${chartGroup}-${chartId}`,
+      group: groupLabel,
       title: s(title),
       type: "chart",
-      chartGroup,                     // "verbs" | "pronouns" | "endings"
-      chartId: s(chartId)             // must match chart.id in data-charts.js
+      chartGroup,
+      chartId: s(chartId)
     };
   });
 }
 
-// Built-in activities (these ids match app.js default activeActivityId)
 const BUILT_INS = [
   {
     id: "vocab_fill",
