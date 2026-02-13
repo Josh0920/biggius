@@ -291,3 +291,4 @@ export const VOCAB = [
   { g: "πείθω", e: "I persuade" },
   { g: "τρεῖς, τρία", e: "three" }
 ];
+export default VOCAB;
