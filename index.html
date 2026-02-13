@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Koine Greek</title>
-  <meta name="color-scheme" content="light" />
+  <title>Koine Greek • Study</title>
+  <meta name="description" content="Minimal Koine Greek study app: vocab, verbs, charts, and activities." />
 
   <style>
-    :root {
+    :root{
       --bg:#ffffff;
       --panel:#ffffff;
       --card:#ffffff;
@@ -20,301 +20,589 @@
 
       --shadow: 0 14px 45px rgba(0,0,0,.08);
       --radius: 16px;
+      --radius2: 12px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      min-height:100vh;
+      font-family:var(--sans);
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.35;
     }
-
-    .app{
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 18px;
-      display:grid;
-      grid-template-columns: 320px 1fr;
-      gap: 16px;
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:20px;
     }
-    @media (max-width: 980px){
-      .app{ grid-template-columns: 1fr; }
-      .sidebar{ order:2; }
-      .main{ order:1; }
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--panel);
+      box-shadow:var(--shadow);
     }
-
-    .panel{
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      min-width:220px;
     }
-
-    /* Sidebar */
-    .sidebarHeader{
-      padding: 16px 16px 12px;
-      border-bottom:1px solid var(--line);
-      display:flex; gap:12px; align-items:center; justify-content:space-between;
-    }
-    .brand{ display:flex; gap:12px; align-items:center; }
-    .logo{
-      width: 42px; height: 42px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      display:grid;
-      place-items:center;
-      font-weight: 900;
+    .brand h1{
+      margin:0;
+      font-size:18px;
       letter-spacing:.2px;
-      font-size: 16px;
     }
-    .brand h1{ margin:0; font-size: 14px; line-height:1.2; }
-    .brand p{ margin:4px 0 0; color: var(--muted); font-size: 12px; }
-
-    .searchWrap{ padding: 12px 16px; border-bottom:1px solid var(--line); }
-    .search{
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      outline:none;
-      font-size: 13px;
-      background: #fff;
-      color: var(--text);
+    .brand p{
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
     }
-    .search:focus{ border-color:#111; }
-
-    .sideList{ padding: 10px 8px 14px; min-height: 120px; }
-    .groupTitle{
-      padding: 10px 10px 8px;
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-    .itemBtn{
-      width:100%;
-      text-align:left;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      background: transparent;
-      cursor:pointer;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
-      font-size: 13px;
-      color: var(--text);
-    }
-    .itemBtn:hover{ background:#fafafa; border-color: var(--line); }
-    .itemBtn[aria-current="true"]{
-      background:#111;
-      color:#fff;
-      border-color:#111;
-    }
-    .itemBtn[aria-current="true"] .tag{
-      background:#111;
-      border-color: rgba(255,255,255,.35);
-      color: rgba(255,255,255,.85);
-    }
-    .tag{
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: #fff;
-      flex: 0 0 auto;
-    }
-
-    /* Main */
     .topbar{
-      padding: 14px 16px 12px;
-      border-bottom: 1px solid var(--line);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+      align-items:center;
+      width:100%;
     }
-    .topRow{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; }
-    .titleBlock h2{ margin:0; font-size: 16px; }
-    .titleBlock p{ margin:6px 0 0; color: var(--muted); font-size: 12px; }
-    .stats{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
     .pill{
-      font-size: 12px;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:13px;
+      color:var(--muted);
     }
-    .pill strong{ color: var(--text); font-weight: 700; }
-
-    .progressBar{
-      margin-top: 12px;
-      height: 10px;
-      border-radius: 999px;
-      background: #f1f1f1;
-      border: 1px solid var(--line);
+    .pill input[type="search"]{
+      border:none;
+      outline:none;
+      font-size:13px;
+      width:240px;
+      background:transparent;
+      color:var(--text);
+    }
+    .btn{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:999px;
+      padding:9px 12px;
+      font-size:13px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:active{ transform:translateY(1px); }
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:14px 0 0;
+      padding:10px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--panel);
+    }
+    .tab{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      cursor:pointer;
+      color:var(--muted);
+    }
+    .tab[aria-selected="true"]{
+      color:var(--text);
+      border-color:var(--text);
+    }
+    main{
+      margin-top:14px;
+      display:grid;
+      gap:14px;
+    }
+    section.panel{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--panel);
+      box-shadow:var(--shadow);
       overflow:hidden;
     }
-    .progressFill{
-      height:100%;
-      width:0%;
-      background:#111;
-      border-radius: 999px;
-      transition: width .2s ease;
+    .panel-head{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
     }
-
-    .content{ padding: 16px; }
-
+    .panel-head h2{
+      margin:0;
+      font-size:14px;
+      letter-spacing:.2px;
+    }
+    .panel-body{
+      padding:16px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    @media (min-width: 980px){
+      .grid.two{ grid-template-columns: 1.1fr .9fr; }
+    }
     .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      background:var(--card);
+      padding:14px;
     }
-    .bigGreek{
-      font-size: 36px;
-      letter-spacing: .3px;
-      margin: 2px 0 0;
+    .card h3{
+      margin:0 0 8px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
     }
-    .muted{ color: var(--muted); font-size: 13px; margin-top: 8px; }
-
-    .errorBox{
-      border: 1px solid rgba(180,35,24,.35);
-      background: rgba(180,35,24,.06);
-      border-radius: 18px;
-      padding: 16px;
+    .muted{ color:var(--muted); }
+    .mono{ font-family:var(--mono); }
+    .row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
     }
-    .errorBox h3{ margin: 0 0 8px; font-size: 14px; }
-    .errorBox ul{ margin:8px 0 0; padding-left:18px; color: var(--muted); font-size: 13px; }
-    .errorBox pre{
-      margin: 12px 0 0;
-      background:#fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px;
-      overflow:auto;
-      font-size: 12px;
-      font-family: var(--mono);
-      color: var(--text);
-      max-height: 280px;
-      white-space: pre-wrap;
-      word-break: break-word;
+    select, input[type="text"], input[type="number"]{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:10px;
+      padding:9px 10px;
+      font-size:13px;
+      outline:none;
+      color:var(--text);
+      min-width:200px;
     }
-    code{ font-family: var(--mono); font-size: 12px; }
+    .split{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .kpi{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .badge{
+      font-size:12px;
+      padding:6px 9px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--card);
+      color:var(--muted);
+    }
+    .badge.ok{ color:var(--ok); border-color:rgba(26,127,55,.35); }
+    .badge.bad{ color:var(--bad); border-color:rgba(180,35,24,.35); }
+    .table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:var(--card);
+      font-size:13px;
+    }
+    .table th, .table td{
+      padding:10px 10px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    .table th{
+      text-align:left;
+      color:var(--muted);
+      font-weight:600;
+      background:rgba(0,0,0,.02);
+    }
+    .table tr:last-child td{ border-bottom:none; }
+    .hidden{ display:none !important; }
+    footer{
+      padding:14px 2px 2px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .notice{
+      border:1px dashed var(--line);
+      background:rgba(0,0,0,.02);
+      padding:10px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="app">
-    <aside class="panel sidebar">
-      <div class="sidebarHeader">
-        <div class="brand">
-          <div class="logo">Κ</div>
-          <div>
-            <h1>Koine Greek Study</h1>
-            <p id="sideMeta">Loading…</p>
-          </div>
-        </div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Koine Greek • Study</h1>
+        <p class="muted">Minimal, customizable practice for vocab + verbs.</p>
       </div>
 
-      <div class="searchWrap">
-        <input id="activitySearch" class="search" type="text" placeholder="Search (e.g., Demonstrative Pronouns)" />
-      </div>
-
-      <div id="sideList" class="sideList">
-        <div class="groupTitle">Activities</div>
-        <button class="itemBtn" type="button" disabled>
-          Loading…
-          <span class="tag">…</span>
-        </button>
-      </div>
-    </aside>
-
-    <main class="panel main">
       <div class="topbar">
-        <div class="topRow">
-          <div class="titleBlock">
-            <h2 id="mainTitle">Koine Greek</h2>
-            <p id="mainSub">Loading application…</p>
-          </div>
-          <div class="stats">
-            <span class="pill"><strong id="statProgress">0/0</strong> <span id="statProgressLabel">items</span></span>
-            <span class="pill"><strong id="statScore">0</strong> score</span>
-            <span class="pill"><strong id="statStreak">0</strong> streak</span>
-          </div>
+        <div class="pill" title="Search (your JS can wire this up)">
+          <span class="mono">⌕</span>
+          <input id="globalSearch" type="search" placeholder="Search vocab / verbs…" autocomplete="off" />
         </div>
-        <div class="progressBar"><div id="progressFill" class="progressFill"></div></div>
-      </div>
 
-      <div class="content" id="content">
-        <div class="card">
-          <div class="bigGreek">Ἑτοιμάζω…</div>
-          <div class="muted">Booting modules…</div>
-        </div>
+        <button class="btn" id="btnReset" type="button" title="Reset UI state (wired in app.js)">Reset</button>
+        <button class="btn" id="btnExport" type="button" title="Export progress/settings (optional)">Export</button>
       </div>
+    </header>
+
+    <nav class="tabs" aria-label="Primary">
+      <button class="tab" id="tabVocab"  type="button" data-tab="vocab" aria-selected="true">Vocab</button>
+      <button class="tab" id="tabVerbs"  type="button" data-tab="verbs" aria-selected="false">Verbs</button>
+      <button class="tab" id="tabCharts" type="button" data-tab="charts" aria-selected="false">Charts</button>
+      <button class="tab" id="tabActs"   type="button" data-tab="activities" aria-selected="false">Activities</button>
+      <button class="tab" id="tabSettings" type="button" data-tab="settings" aria-selected="false">Settings</button>
+    </nav>
+
+    <main>
+      <!-- VOCAB -->
+      <section class="panel" id="viewVocab" data-view="vocab">
+        <div class="panel-head">
+          <h2>Vocab Practice</h2>
+          <div class="kpi">
+            <span class="badge" id="vocabCount">0 items</span>
+            <span class="badge ok" id="vocabStreak">Streak: 0</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="grid two">
+            <div class="card">
+              <h3>Mode</h3>
+              <div class="row">
+                <select id="vocabMode">
+                  <option value="multiple_choice">Multiple Choice</option>
+                  <option value="fill_blank">Fill in the Blank</option>
+                  <option value="true_false">True / False</option>
+                  <option value="typing">Typing</option>
+                </select>
+
+                <select id="vocabDirection" title="Greek → English or English → Greek">
+                  <option value="gr_to_en">Greek → English</option>
+                  <option value="en_to_gr">English → Greek</option>
+                </select>
+
+                <button class="btn" id="vocabNext" type="button">Next</button>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div class="card" style="padding:12px">
+                <div class="split">
+                  <div>
+                    <div class="muted" style="font-size:12px">Prompt</div>
+                    <div id="vocabPrompt" class="mono" style="font-size:20px; margin-top:6px;">—</div>
+                  </div>
+                  <div class="muted" style="font-size:12px" id="vocabMeta">#0</div>
+                </div>
+
+                <div style="height:12px"></div>
+
+                <div id="vocabAnswerArea">
+                  <!-- app.js can render inputs/options here -->
+                  <div class="notice">Waiting for app.js to render vocab UI…</div>
+                </div>
+
+                <div style="height:10px"></div>
+
+                <div class="row">
+                  <button class="btn" id="vocabReveal" type="button">Reveal</button>
+                  <button class="btn" id="vocabMarkRight" type="button">Right</button>
+                  <button class="btn" id="vocabMarkWrong" type="button">Wrong</button>
+                  <span class="muted" id="vocabFeedback"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Filters</h3>
+              <div class="row">
+                <select id="vocabUnit">
+                  <option value="all">All units</option>
+                </select>
+                <select id="vocabPartOfSpeech">
+                  <option value="all">All parts of speech</option>
+                  <option value="noun">Noun</option>
+                  <option value="verb">Verb</option>
+                  <option value="adj">Adjective</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div style="height:10px"></div>
+
+              <div class="row">
+                <label class="muted" style="font-size:13px">Pool size</label>
+                <input id="vocabPoolSize" type="number" min="5" step="5" value="50" style="width:120px" />
+                <span class="muted" style="font-size:13px">items</span>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div class="card" style="padding:12px">
+                <h3 style="margin-bottom:10px">Recent</h3>
+                <div id="vocabRecent" class="notice">No recent answers yet.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERBS -->
+      <section class="panel hidden" id="viewVerbs" data-view="verbs">
+        <div class="panel-head">
+          <h2>Verb Practice</h2>
+          <div class="kpi">
+            <span class="badge" id="verbCount">0 verbs</span>
+            <span class="badge" id="verbTenseLabel">Tense: —</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="grid two">
+            <div class="card">
+              <h3>Choose a verb / mode</h3>
+              <div class="row">
+                <select id="verbSelect">
+                  <option value="">Select a verb…</option>
+                </select>
+
+                <select id="verbMode">
+                  <option value="chart">Full Chart</option>
+                  <option value="random_cell">Random Form</option>
+                  <option value="multiple_choice">Multiple Choice</option>
+                  <option value="fill_blank">Fill in the Blank</option>
+                  <option value="typing">Typing</option>
+                </select>
+
+                <button class="btn" id="verbGo" type="button">Go</button>
+                <button class="btn" id="verbRandom" type="button">Random Verb</button>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div class="card" style="padding:12px">
+                <div class="split">
+                  <div>
+                    <div class="muted" style="font-size:12px">Active verb</div>
+                    <div id="verbHeading" class="mono" style="font-size:18px; margin-top:6px;">—</div>
+                  </div>
+                  <div class="muted" style="font-size:12px" id="verbMeta">—</div>
+                </div>
+
+                <div style="height:10px"></div>
+
+                <div id="verbWorkspace">
+                  <!-- verb-engine.js/app.js can render chart/practice UI here -->
+                  <div class="notice">Waiting for verb-engine.js to render verb UI…</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Options</h3>
+              <div class="row">
+                <select id="verbTense">
+                  <option value="all">All learned tenses</option>
+                </select>
+                <select id="verbVoice">
+                  <option value="all">All voices</option>
+                  <option value="active">Active</option>
+                  <option value="middle">Middle</option>
+                  <option value="passive">Passive</option>
+                </select>
+                <select id="verbMood">
+                  <option value="all">All moods</option>
+                  <option value="indicative">Indicative</option>
+                  <option value="subjunctive">Subjunctive</option>
+                  <option value="imperative">Imperative</option>
+                  <option value="infinitive">Infinitive</option>
+                  <option value="participle">Participle</option>
+                </select>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div class="card" style="padding:12px">
+                <h3 style="margin-bottom:10px">Feedback</h3>
+                <div id="verbFeedback" class="notice">No attempts yet.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHARTS -->
+      <section class="panel hidden" id="viewCharts" data-view="charts">
+        <div class="panel-head">
+          <h2>Charts</h2>
+          <div class="kpi">
+            <span class="badge" id="chartCount">0 charts</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="grid two">
+            <div class="card">
+              <h3>Select chart</h3>
+              <div class="row">
+                <select id="chartSelect">
+                  <option value="">Select a chart…</option>
+                </select>
+                <button class="btn" id="chartLoad" type="button">Load</button>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div id="chartViewer" class="card" style="padding:12px">
+                <div class="notice">Waiting for data-charts.js + app.js…</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Notes</h3>
+              <textarea id="chartNotes" rows="10" style="width:100%; border:1px solid var(--line); border-radius:12px; padding:10px; font-size:13px; font-family:var(--sans);"></textarea>
+              <div style="height:10px"></div>
+              <button class="btn" id="chartSaveNotes" type="button">Save Notes</button>
+              <span class="muted" id="chartNotesStatus" style="margin-left:10px;"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITIES -->
+      <section class="panel hidden" id="viewActivities" data-view="activities">
+        <div class="panel-head">
+          <h2>Activities</h2>
+          <div class="kpi">
+            <span class="badge" id="activityCount">0 activities</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="grid two">
+            <div class="card">
+              <h3>Pick an activity</h3>
+              <div class="row">
+                <select id="activitySelect">
+                  <option value="">Select an activity…</option>
+                </select>
+                <button class="btn" id="activityStart" type="button">Start</button>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div id="activityStage" class="card" style="padding:12px">
+                <div class="notice">Waiting for data-activities.js + app.js…</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Results</h3>
+              <div id="activityResults" class="notice">No activity results yet.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="panel hidden" id="viewSettings" data-view="settings">
+        <div class="panel-head">
+          <h2>Settings</h2>
+          <div class="kpi">
+            <span class="badge" id="appVersion">v1</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="grid two">
+            <div class="card">
+              <h3>General</h3>
+              <div class="row">
+                <select id="settingTheme">
+                  <option value="light">Light</option>
+                  <option value="dark">Dark (optional)</option>
+                </select>
+
+                <select id="settingSpeed">
+                  <option value="normal">Normal</option>
+                  <option value="slow">Slow</option>
+                </select>
+              </div>
+
+              <div style="height:12px"></div>
+
+              <div class="row">
+                <button class="btn" id="settingSave" type="button">Save</button>
+                <button class="btn" id="settingClear" type="button">Clear Data</button>
+                <span class="muted" id="settingStatus"></span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Debug</h3>
+              <div class="row">
+                <button class="btn" id="btnRebuildIndexes" type="button">Rebuild Indexes</button>
+                <button class="btn" id="btnSelfTest" type="button">Self Test</button>
+              </div>
+              <div style="height:12px"></div>
+              <pre id="debugOut" class="mono" style="margin:0; white-space:pre-wrap; font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:12px; padding:10px; background:rgba(0,0,0,.02);">—</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>Data: <span class="mono">data-vocab.js</span>, <span class="mono">data-charts.js</span>, <span class="mono">data-activities.js</span> • Verbs: <span class="mono">verb-engine.js</span> • UI: <span class="mono">app.js</span></div>
+      </footer>
+
+      <noscript>
+        <div class="panel" style="margin-top:14px">
+          <div class="panel-body">
+            <div class="notice">This app needs JavaScript enabled.</div>
+          </div>
+        </div>
+      </noscript>
     </main>
   </div>
 
-  <!-- App Loader (NO query-string cache-busting; avoids duplicate module instances) -->
-<script type="module">
-  const content = document.getElementById("content");
-  const mainSub  = document.getElementById("mainSub");
-  const sideMeta = document.getElementById("sideMeta");
+  <!-- Data first -->
+  <script src="data-vocab.js" defer></script>
+  <script src="data-charts.js" defer></script>
+  <script src="data-activities.js" defer></script>
 
-  function esc(s){
-    return String(s ?? "")
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;");
-  }
+  <!-- Engine(s) next -->
+  <script src="verb-engine.js" defer></script>
 
-  function showRuntimeError(title, err){
-    console.error(title, err);
-    const msg = err?.stack || err?.message || String(err);
-    if (mainSub)  mainSub.textContent  = "App crashed (runtime error).";
-    if (sideMeta) sideMeta.textContent = "Runtime error";
-    if (content){
-      content.innerHTML = `
-        <div style="border:1px solid rgba(180,35,24,.35);background:rgba(180,35,24,.06);border-radius:18px;padding:16px;">
-          <h3 style="margin:0 0 8px;font-size:14px;">${esc(title)}</h3>
-          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(msg)}</pre>
-          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;">
-            Open DevTools Console for the exact file and line.
-          </div>
-        </div>
-      `;
-    }
-  }
-
-  window.addEventListener("error", (e) => showRuntimeError("Window error", e.error || e.message));
-  window.addEventListener("unhandledrejection", (e) => showRuntimeError("Unhandled promise rejection", e.reason));
-
-  async function loadModule(path){
-    if (mainSub) mainSub.textContent = "Loading " + path.replace("./","") + "…";
-    try{
-      return await import(path);
-    }catch(err){
-      console.error("FAILED MODULE:", path, err);
-      throw new Error(`Failed loading ${path}\n\n${err?.message || err}`);
-    }
-  }
-
-  (async () => {
-    try {
-      await loadModule("./data-activities.js");
-      await loadModule("./data-charts-ascii.js");  // ✅ FIX: use ASCII-safe Greek
-      await loadModule("./data-vocab.js");
-      await loadModule("./verb-engine.js");
-      if (sideMeta) sideMeta.textContent = "Modules OK";
-      if (mainSub)  mainSub.textContent  = "Starting app…";
-      await loadModule("./app.js");
-      window.__APP_STARTED__ = true;
-      if (mainSub)  mainSub.textContent  = "Ready";
-      if (sideMeta) sideMeta.textContent = "Ready";
-    } catch (err) {
-      showRuntimeError("Module load failed", err);
-    }
-  })();
-</script>
+  <!-- App last -->
+  <script src="app.js" defer></script>
 </body>
 </html>
