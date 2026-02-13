@@ -107,6 +107,17 @@
       font-size: 13px;
       color: var(--text);
     }
+    .itemBtn:hover{ background:#fafafa; border-color: var(--line); }
+    .itemBtn[aria-current="true"]{
+      background:#111;
+      color:#fff;
+      border-color:#111;
+    }
+    .itemBtn[aria-current="true"] .tag{
+      background:#111;
+      border-color: rgba(255,255,255,.35);
+      color: rgba(255,255,255,.85);
+    }
     .tag{
       font-size: 11px;
       padding: 4px 8px;
@@ -244,92 +255,92 @@
     </main>
   </div>
 
-  <!-- Module preflight + app load -->
-<script type="module">
-  const content = document.getElementById("content");
-  const mainSub = document.getElementById("mainSub");
-  const sideMeta = document.getElementById("sideMeta");
+  <!-- App Loader (NO query-string cache-busting; avoids duplicate module instances) -->
+  <script type="module">
+    const content = document.getElementById("content");
+    const mainSub  = document.getElementById("mainSub");
+    const sideMeta = document.getElementById("sideMeta");
 
-  function esc(s){
-    return String(s ?? "")
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;");
-  }
+    function esc(s){
+      return String(s ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;");
+    }
 
-  function showRuntimeError(title, err){
-    console.error(title, err);
-    const msg = err?.stack || err?.message || String(err);
-    if (mainSub) mainSub.textContent = "App crashed (runtime error).";
-    if (sideMeta) sideMeta.textContent = "Runtime error";
-    if (content){
-      content.innerHTML = `
-        <div style="border:1px solid rgba(180,35,24,.35);background:rgba(180,35,24,.06);border-radius:18px;padding:16px;">
-          <h3 style="margin:0 0 8px;font-size:14px;">${esc(title)}</h3>
-          <pre style="margin:8px 0 0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:10px;white-space:pre-wrap;word-break:break-word;">${esc(msg)}</pre>
-          <div style="margin-top:10px;color:#5a5a5a;font-size:13px;">
-            Open DevTools Console for the exact line.
+    function showRuntimeError(title, err){
+      console.error(title, err);
+      const msg = err?.stack || err?.message || String(err);
+
+      if (mainSub)  mainSub.textContent  = "App crashed (runtime error).";
+      if (sideMeta) sideMeta.textContent = "Runtime error";
+
+      if (content){
+        content.innerHTML = `
+          <div class="errorBox">
+            <h3>${esc(title)}</h3>
+            <div class="muted">Open DevTools Console for the exact line.</div>
+            <pre>${esc(msg)}</pre>
           </div>
-        </div>
-      `;
+        `;
+      }
     }
-  }
 
-  // Catch runtime errors that happen AFTER modules load
-  window.addEventListener("error", (e) => showRuntimeError("Window error", e.error || e.message));
-  window.addEventListener("unhandledrejection", (e) => showRuntimeError("Unhandled promise rejection", e.reason));
+    // Catch runtime errors after modules load
+    window.addEventListener("error", (e) =>
+      showRuntimeError("Window error", e.error || e.message)
+    );
+    window.addEventListener("unhandledrejection", (e) =>
+      showRuntimeError("Unhandled promise rejection", e.reason)
+    );
 
-  async function loadOne(path){
-    if (mainSub) mainSub.textContent = "Loading " + path.replace("./","") + "…";
-    return import(path);
-  }
+    async function loadModule(path){
+      if (mainSub) mainSub.textContent = "Loading " + path.replace("./","") + "…";
+      return import(path);
+    }
 
-  (async () => {
-    try {
-      // Preflight in your required order:
-      await loadOne("./data-activities.js?v=2");
-      await loadOne("./data-charts.js?v=2");
-      await loadOne("./data-vocab.js?v=2");
-      await loadOne("./verb-engine.js?v=2");
+    (async () => {
+      try {
+        // IMPORTANT: Use consistent, identical URLs everywhere (no ?v=2),
+        // so imports inside modules resolve to the same instances.
+        await loadModule("./data-activities.js");
+        await loadModule("./data-charts.js");
+        await loadModule("./data-vocab.js");
+        await loadModule("./verb-engine.js");
 
-      if (sideMeta) sideMeta.textContent = "Modules OK";
-      if (mainSub) mainSub.textContent = "Starting app…";
+        if (sideMeta) sideMeta.textContent = "Modules OK";
+        if (mainSub)  mainSub.textContent  = "Starting app…";
 
-      // Load app.js last
-      await loadOne("./app.js?v=2");
+        await loadModule("./app.js");
 
-      // Give app.js a moment to run and paint
-      setTimeout(() => {
-        // If your app sets a flag when it starts, great.
-        // If not, you'll still see runtime errors via the handlers above.
-        if (!window.__APP_STARTED__) {
-          if (mainSub) mainSub.textContent = "App loaded, but did not start.";
-          if (content){
-            content.innerHTML = `
-              <div style="border:1px solid rgba(0,0,0,.12);background:#fff;border-radius:18px;padding:16px;">
-                <h3 style="margin:0 0 8px;font-size:14px;">App loaded, but UI didn’t initialize</h3>
-                <div style="color:#5a5a5a;font-size:13px;">
-                  This means <code>app.js</code> ran but didn’t render or attach handlers.
-                  Most common causes:
-                  <ul style="margin:8px 0 0;padding-left:18px;">
-                    <li><code>app.js</code> expects a function to be called (e.g., <code>init()</code>) but nothing calls it.</li>
-                    <li><code>app.js</code> is waiting for missing exports from your data files.</li>
-                    <li><code>app.js</code> threw an error before rendering (check Console).</li>
-                  </ul>
+        // app.js should set window.__APP_STARTED__ = true when it initializes.
+        // If it doesn't, we still show a helpful message.
+        setTimeout(() => {
+          if (!window.__APP_STARTED__) {
+            if (mainSub)  mainSub.textContent  = "App loaded, but did not start.";
+            if (sideMeta) sideMeta.textContent = "Loaded";
+            if (content){
+              content.innerHTML = `
+                <div class="card">
+                  <h3 style="margin:0 0 8px;font-size:14px;">App loaded, but UI didn’t initialize</h3>
+                  <div class="muted">
+                    This usually means <code>app.js</code> ran but didn’t render or attach handlers.
+                    Check the Console for errors, or add at the end of your app init:
+                    <code>window.__APP_STARTED__ = true;</code>
+                  </div>
                 </div>
-              </div>
-            `;
+              `;
+            }
+          } else {
+            if (mainSub)  mainSub.textContent  = "Ready";
+            if (sideMeta) sideMeta.textContent = "Ready";
           }
-        } else {
-          if (mainSub) mainSub.textContent = "Ready";
-          if (sideMeta) sideMeta.textContent = "Ready";
-        }
-      }, 250);
+        }, 250);
 
-    } catch (err) {
-      showRuntimeError("Module load failed", err);
-    }
-  })();
-</script>
+      } catch (err) {
+        showRuntimeError("Module load failed", err);
+      }
+    })();
+  </script>
 </body>
 </html>
