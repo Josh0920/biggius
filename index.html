@@ -1,760 +1,1383 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Koine Greek Practice</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Koine Greek • Study</title>
+
   <style>
     :root{
-      --bg:#0b0f17; --card:#121a2a; --text:#e9eefc; --muted:#a9b4d0;
-      --btn:#1a2440; --btnHover:#223158; --ok:#1f7a3f; --bad:#b12a2a; --line:#24314f;
-      --tab:#0f1626; --tabActive:#1b2a52;
-    }
-    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
-    .wrap{ max-width: 1060px; margin: 0 auto; padding: 18px; }
-    .top{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
-    h1{ margin:0; font-size: 20px; }
-    .muted{ color:var(--muted); font-size: 13px; margin:6px 0 0; }
-    .card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; margin-top:14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .pill{ font-size:12px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted); }
-    .tabs{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 12px; }
-    .tab{
-      background:var(--tab); color:var(--text); border:1px solid var(--line);
-      border-radius:12px; padding:10px 12px; cursor:pointer; font-size: 13px;
-    }
-    .tab.active{ background:var(--tabActive); border-color: rgba(150,170,255,.35); }
-    .section{ display:none; }
-    .section.active{ display:block; }
+      --bg:#0b1020;
+      --panel:#0f1730;
+      --card:#121d3d;
+      --card2:#0f1a3a;
+      --line:rgba(170,190,255,.16);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.72);
 
-    /* Vocab */
-    .bigGreek{ font-size: 30px; letter-spacing: .5px; margin: 10px 0 2px; }
-    .sub{ color:var(--muted); font-size: 13px; margin:0 0 10px; }
+      --brand:#6b8cff;
+      --brand2:#91a9ff;
+
+      --ok:#1f7a3f;
+      --bad:#b12a2a;
+      --warn:#c97b1c;
+
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(107,140,255,.25), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(145,169,255,.18), transparent 55%),
+        linear-gradient(180deg, #070b16 0%, #0b1020 80%);
+      color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height:100vh;
+    }
+
+    .app{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 920px){
+      .app{ grid-template-columns: 1fr; }
+      .sidebar{ order: 2; }
+      .main{ order: 1; }
+    }
+
+    .sidebar{
+      background: rgba(15,23,48,.65);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand{
+      padding: 16px 16px 12px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .logo{
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, rgba(107,140,255,.95), rgba(145,169,255,.7));
+      display:grid;
+      place-items:center;
+      box-shadow: 0 12px 30px rgba(107,140,255,.22);
+      font-weight: 800;
+      letter-spacing:.2px;
+    }
+    .brand h1{
+      margin:0;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .brand p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size: 12px;
+    }
+
+    .sideSection{ padding: 14px 14px 6px; }
+    .sideLabel{ font-size: 12px; color:var(--muted); margin: 0 0 10px; }
+
+    .modeList{ display:flex; flex-direction:column; gap:8px; }
+    .modeBtn{
+      width:100%;
+      text-align:left;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border:1px solid transparent;
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      transition: .14s ease;
+    }
+    .modeBtn:hover{
+      background: rgba(255,255,255,.06);
+      transform: translateY(-1px);
+    }
+    .modeBtn.active{
+      background: rgba(107,140,255,.16);
+      border-color: rgba(107,140,255,.32);
+    }
+    .modeBtn .left{
+      display:flex; gap:10px; align-items:center;
+      font-size: 13px;
+    }
+    .badge{
+      font-size: 11px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .prefs{
+      padding: 14px;
+      border-top:1px solid var(--line);
+    }
+    .prefRow{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px;
+      padding: 9px 0;
+      border-bottom:1px dashed rgba(170,190,255,.14);
+    }
+    .prefRow:last-child{ border-bottom:none; }
+    .prefRow label{ color:var(--muted); font-size:12px; }
+    select, input[type="number"], input[type="text"]{
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      border-radius: 12px;
+      padding: 10px 10px;
+      outline:none;
+      font-size: 13px;
+      min-width: 130px;
+    }
+
+    .hintBox{
+      padding: 14px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .hintBox code{ font-family: var(--mono); color: rgba(234,240,255,.9); }
+
+    /* MAIN */
+    .main{
+      display:flex;
+      flex-direction:column;
+      gap: 16px;
+    }
+
+    .topbar{
+      background: rgba(15,23,48,.65);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      padding: 14px 14px 12px;
+      overflow:hidden;
+    }
+
+    .topRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .sessionTitle{
+      display:flex; gap:10px; align-items:center;
+    }
+    .sessionTitle .title{
+      margin:0;
+      font-size: 14px;
+    }
+    .sessionTitle .sub{
+      margin:3px 0 0;
+      color:var(--muted);
+      font-size: 12px;
+    }
+
+    .stats{
+      display:flex; gap:8px; flex-wrap:wrap;
+      align-items:center;
+    }
+    .pill{
+      font-size: 12px;
+      color: var(--muted);
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+    }
+    .streak{
+      color: rgba(255,255,255,.9);
+      background: rgba(201,123,28,.16);
+      border-color: rgba(201,123,28,.35);
+    }
+
+    .progressBar{
+      margin-top: 12px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(170,190,255,.12);
+      overflow:hidden;
+    }
+    .progressFill{
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg, rgba(107,140,255,.9), rgba(145,169,255,.8));
+      border-radius: 999px;
+      transition: width .25s ease;
+    }
+
+    .stage{
+      background: rgba(15,23,48,.65);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
+
+    .stageHeader{
+      padding: 14px 16px 10px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .stageHeader h2{
+      margin:0;
+      font-size: 15px;
+    }
+    .stageHeader .mini{
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stageBody{ padding: 16px; }
+
+    /* Flashcard-like prompt */
+    .promptCard{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid rgba(170,190,255,.14);
+      border-radius: 22px;
+      padding: 18px 18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+      position: relative;
+      overflow:hidden;
+    }
+
+    .promptTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom: 10px;
+    }
+
+    .chip{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(170,190,255,.14);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+    }
+
+    .big{
+      font-size: 34px;
+      letter-spacing: .4px;
+      margin: 6px 0 0;
+    }
+
+    .smallMuted{
+      margin: 10px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .actionsRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 14px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
     .btn{
-      background:var(--btn); color:var(--text); border:1px solid var(--line);
-      border-radius:12px; padding:12px 12px; cursor:pointer; width:100%;
-      text-align:left; font-size: 15px; transition: .12s;
+      border:none;
+      cursor:pointer;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(170,190,255,.16);
+      transition: .12s ease;
     }
-    .btn:hover{ background:var(--btnHover); }
-    .btn:disabled{ cursor:not-allowed; opacity:.95; }
-    .btn.correct{ background: rgba(31,122,63,.35); border-color: rgba(31,122,63,.9); }
-    .btn.wrong{ background: rgba(177,42,42,.35); border-color: rgba(177,42,42,.9); }
-    .grid{ display:grid; gap:10px; grid-template-columns: 1fr; }
-    @media (min-width: 760px){ .grid{ grid-template-columns: 1fr 1fr; } }
-    .controls{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
-    .smallBtn{
-      background:transparent; color:var(--text); border:1px solid var(--line);
-      border-radius:12px; padding:10px 12px; cursor:pointer; font-size: 13px;
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); }
+    .btn.primary{
+      background: rgba(107,140,255,.22);
+      border-color: rgba(107,140,255,.35);
     }
-    .smallBtn:hover{ background: rgba(255,255,255,.06); }
-    input, select{
-      background: transparent; color: var(--text); border: 1px solid var(--line);
-      border-radius: 12px; padding: 10px 12px; font-size: 13px; outline:none;
-    }
-    input::placeholder{ color: #7f8bb0; }
+    .btn.primary:hover{ background: rgba(107,140,255,.28); }
 
-    /* Lists/tables */
-    .list{ margin-top: 10px; border-top:1px solid var(--line); padding-top: 12px; }
-    table{ width:100%; border-collapse: collapse; }
-    th, td{ text-align:left; padding:10px 8px; border-bottom:1px solid rgba(36,49,79,.7); }
-    th{ color: var(--muted); font-weight:600; font-size: 12px; }
-    td{ font-size: 14px; }
+    /* Multiple choice options */
+    .optGrid{
+      margin-top: 14px;
+      display:grid;
+      gap:10px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 840px){ .optGrid{ grid-template-columns: 1fr 1fr; } }
+
+    .opt{
+      text-align:left;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(170,190,255,.14);
+      cursor:pointer;
+      transition: .12s ease;
+      position: relative;
+      overflow:hidden;
+    }
+    .opt:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
+    .opt:disabled{ cursor:not-allowed; opacity:.95; transform:none; }
+    .opt.correct{
+      background: rgba(31,122,63,.20);
+      border-color: rgba(31,122,63,.55);
+    }
+    .opt.wrong{
+      background: rgba(177,42,42,.20);
+      border-color: rgba(177,42,42,.55);
+    }
+    .opt .k{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(234,240,255,.75);
+      margin-right: 8px;
+    }
 
     /* Chart quiz */
-    .chartHeader{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
-    .chartTitle{ font-size: 16px; margin: 0; }
-    .chartDesc{ margin: 6px 0 0; color: var(--muted); font-size: 13px; }
-    .chartGrid{ width:100%; margin-top: 12px; border:1px solid var(--line); border-radius: 16px; overflow:hidden; }
-    .chartGrid table{ width:100%; border-collapse: collapse; }
-    .chartGrid th, .chartGrid td{
-      border-bottom:1px solid rgba(36,49,79,.7);
-      border-right:1px solid rgba(36,49,79,.7);
-      padding: 10px 10px;
-      vertical-align: middle;
+    .chartWrap{
+      display:grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
     }
-    .chartGrid tr:last-child td{ border-bottom:none; }
-    .chartGrid td:last-child, .chartGrid th:last-child{ border-right:none; }
+    @media (min-width: 980px){ .chartWrap{ grid-template-columns: 1.2fr .8fr; } }
+
+    .chartCard{
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(170,190,255,.14);
+      border-radius: 20px;
+      padding: 14px;
+      overflow:hidden;
+    }
+    .chartCard h3{
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+    .chartCard p{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .chartTable{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 16px;
+      border: 1px solid rgba(170,190,255,.12);
+    }
+    .chartTable th, .chartTable td{
+      padding: 10px 10px;
+      border-bottom: 1px solid rgba(170,190,255,.10);
+      border-right: 1px solid rgba(170,190,255,.10);
+      vertical-align: middle;
+      font-size: 13px;
+    }
+    .chartTable th{
+      background: rgba(255,255,255,.03);
+      color: rgba(234,240,255,.85);
+      font-weight: 650;
+      font-size: 12px;
+    }
+    .chartTable tr:last-child td{ border-bottom:none; }
+    .chartTable td:last-child, .chartTable th:last-child{ border-right:none; }
 
     .slot{
-      display:inline-flex; align-items:center; justify-content:center;
-      min-width: 74px; padding: 8px 10px; border-radius: 12px;
-      border: 1px dashed rgba(169,180,208,.55);
-      color: var(--muted);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width: 92px;
+      padding: 9px 10px;
+      border-radius: 14px;
       background: rgba(255,255,255,.03);
-      font-size: 14px;
+      border: 1px dashed rgba(170,190,255,.30);
+      color: rgba(234,240,255,.65);
+      transition: .12s ease;
+      user-select:none;
+      cursor:pointer;
     }
     .slot.filled{
       border-style: solid;
-      color: var(--text);
+      color: rgba(234,240,255,.95);
       background: rgba(255,255,255,.05);
     }
-    .slot.correct{ border-color: rgba(31,122,63,.9); background: rgba(31,122,63,.22); }
-    .slot.wrong{ border-color: rgba(177,42,42,.9); background: rgba(177,42,42,.22); }
-
-    .optBox{ margin-top: 12px; display:flex; gap:8px; flex-wrap:wrap; }
-    .optBtn{
-      background: var(--btn); color: var(--text); border:1px solid var(--line);
-      border-radius: 999px; padding: 8px 12px; cursor:pointer; font-size: 13px;
-      transition: .12s;
+    .slot.correct{ border-color: rgba(31,122,63,.75); background: rgba(31,122,63,.18); }
+    .slot.wrong{ border-color: rgba(177,42,42,.75); background: rgba(177,42,42,.18); }
+    .slot.active{
+      outline: 2px solid rgba(107,140,255,.55);
+      outline-offset: 2px;
     }
-    .optBtn:hover{ background: var(--btnHover); }
-    .optBtn.used{ opacity: .45; cursor:not-allowed; }
-    .statusLine{ margin-top: 10px; color: var(--muted); font-size: 13px; }
 
-    .twoCol{ display:grid; gap:14px; grid-template-columns: 1fr; }
-    @media (min-width: 860px){ .twoCol{ grid-template-columns: 1fr 1fr; } }
+    .bank{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .bankTop{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .bankTop .mini{ color: var(--muted); font-size: 12px; }
+    .bankBtns{ display:flex; gap:8px; flex-wrap:wrap; }
 
+    .optPills{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      padding-top: 4px;
+    }
+    .pillOpt{
+      cursor:pointer;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(170,190,255,.14);
+      color: rgba(234,240,255,.92);
+      font-size: 13px;
+      transition: .12s ease;
+      user-select:none;
+    }
+    .pillOpt:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
+    .pillOpt.used{ opacity: .42; cursor:not-allowed; transform:none; }
+    .pillOpt.correct{ background: rgba(31,122,63,.20); border-color: rgba(31,122,63,.55); }
+    .pillOpt.wrong{ background: rgba(177,42,42,.20); border-color: rgba(177,42,42,.55); }
+
+    .toast{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: rgba(15,23,48,.85);
+      border: 1px solid rgba(170,190,255,.18);
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: rgba(234,240,255,.92);
+      box-shadow: var(--shadow);
+      max-width: 360px;
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: .18s ease;
+      backdrop-filter: blur(10px);
+    }
+    .toast.show{ transform: translateY(0); opacity: 1; }
+    .toast strong{ display:block; margin-bottom: 4px; }
+    .toast .tmuted{ color: var(--muted); font-size: 12px; }
+
+    .kbd{
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 9px;
+      border: 1px solid rgba(170,190,255,.16);
+      background: rgba(255,255,255,.03);
+      color: rgba(234,240,255,.85);
+    }
+
+    .footerRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .linkish{ color: rgba(145,169,255,.95); text-decoration:none; }
+    .linkish:hover{ text-decoration: underline; }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div>
-        <h1>Koine Greek Practice</h1>
-        <p class="muted">Vocab (MC) + Charts (click options in order, instant green/red)</p>
-      </div>
-      <div class="row">
-        <span class="pill" id="globalPill">Ready</span>
-      </div>
-    </div>
+  <div class="app">
 
-    <div class="tabs">
-      <button class="tab active" data-tab="vocab">Vocab</button>
-      <button class="tab" data-tab="verbs">Verb Charts</button>
-      <button class="tab" data-tab="pronouns">Pronouns</button>
-      <button class="tab" data-tab="endings">Non-verb Endings</button>
-    </div>
-
-    <!-- VOCAB -->
-    <div class="card section active" id="sec-vocab">
-      <div class="row" style="justify-content:space-between;">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">Κ</div>
         <div>
-          <div class="bigGreek" id="greekWord">—</div>
-          <p class="sub" id="hint">Pick the correct English gloss.</p>
-        </div>
-        <div class="row">
-          <label class="pill">Options:
-            <select id="numOptions">
-              <option value="4" selected>4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
-          </label>
-          <label class="pill">Order:
-            <select id="orderMode">
-              <option value="shuffle" selected>Shuffled</option>
-              <option value="inorder">In order</option>
-            </select>
-          </label>
-          <span class="pill" id="progressPill">0 / 0</span>
-          <span class="pill" id="scorePill">Score: 0</span>
+          <h1>Koine Greek Study</h1>
+          <p>Quizlet-style practice • one page</p>
         </div>
       </div>
 
-      <div class="grid" id="options"></div>
-
-      <div class="controls">
-        <button class="smallBtn" id="nextBtn" disabled>Next</button>
-        <button class="smallBtn" id="resetBtn">Reset (reshuffle)</button>
-        <button class="smallBtn" id="toggleListBtn">Show all words</button>
-      </div>
-
-      <p class="statusLine" id="footerNote"></p>
-
-      <div class="list" id="listArea" style="display:none;">
-        <div class="row" style="justify-content:space-between; margin-bottom:10px;">
-          <input id="searchBox" placeholder="Search Greek or English…" style="flex:1; min-width:240px;" />
-          <span class="pill" id="listCount">0</span>
-        </div>
-        <table>
-          <thead><tr><th>Greek</th><th>English</th></tr></thead>
-          <tbody id="listBody"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- VERBS -->
-    <div class="card section" id="sec-verbs">
-      <div class="chartHeader">
-        <div>
-          <p class="chartTitle" style="margin:0;"><strong>Verb Conjugation Charts</strong></p>
-          <p class="chartDesc">Blank ending chart + options underneath. Click the correct endings in order (1st → 6th person).</p>
-        </div>
-        <div class="row">
-          <label class="pill">Chart:
-            <select id="verbChartSel"></select>
-          </label>
-          <button class="smallBtn" id="verbNewBtn">New (shuffle options)</button>
-          <button class="smallBtn" id="verbClearBtn">Clear</button>
-          <button class="smallBtn" id="verbGradeBtn">Grade</button>
+      <div class="sideSection">
+        <p class="sideLabel">Study modes</p>
+        <div class="modeList">
+          <button class="modeBtn active" data-mode="vocab">
+            <div class="left">📚 Vocab Quiz</div>
+            <span class="badge" id="vocabBadge">MC</span>
+          </button>
+          <button class="modeBtn" data-mode="flash">
+            <div class="left">🃏 Flashcards</div>
+            <span class="badge">Flip</span>
+          </button>
+          <button class="modeBtn" data-mode="verbs">
+            <div class="left">🧩 Verb Charts</div>
+            <span class="badge">Fill</span>
+          </button>
+          <button class="modeBtn" data-mode="pronouns">
+            <div class="left">🧩 Pronouns</div>
+            <span class="badge">Fill</span>
+          </button>
+          <button class="modeBtn" data-mode="endings">
+            <div class="left">🧩 Endings</div>
+            <span class="badge">Fill</span>
+          </button>
         </div>
       </div>
-      <div class="chartGrid" id="verbChartArea"></div>
-      <div class="optBox" id="verbOpts"></div>
-      <p class="statusLine" id="verbStatus"></p>
-    </div>
 
-    <!-- PRONOUNS -->
-    <div class="card section" id="sec-pronouns">
-      <div class="chartHeader">
-        <div>
-          <p class="chartTitle" style="margin:0;"><strong>Pronouns & Demonstratives</strong></p>
-          <p class="chartDesc">Fill the paradigm by clicking forms in order (Nom → Gen → Dat → Acc; Singular then Plural).</p>
+      <div class="prefs">
+        <div class="prefRow">
+          <label>Shuffle</label>
+          <select id="prefShuffle">
+            <option value="on" selected>On</option>
+            <option value="off">Off</option>
+          </select>
         </div>
-        <div class="row">
-          <label class="pill">Paradigm:
-            <select id="proChartSel"></select>
-          </label>
-          <button class="smallBtn" id="proNewBtn">New (shuffle options)</button>
-          <button class="smallBtn" id="proClearBtn">Clear</button>
-          <button class="smallBtn" id="proGradeBtn">Grade</button>
+        <div class="prefRow">
+          <label>MC choices</label>
+          <select id="prefChoices">
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="prefRow">
+          <label>Flashcard side</label>
+          <select id="prefCardSide">
+            <option value="greek" selected>Greek → English</option>
+            <option value="english">English → Greek</option>
+          </select>
+        </div>
+        <div class="prefRow">
+          <label>Session size</label>
+          <select id="prefSessionSize">
+            <option value="20">20</option>
+            <option value="30" selected>30</option>
+            <option value="50">50</option>
+            <option value="all">All</option>
+          </select>
         </div>
       </div>
-      <div class="chartGrid" id="proChartArea"></div>
-      <div class="optBox" id="proOpts"></div>
-      <p class="statusLine" id="proStatus"></p>
-    </div>
 
-    <!-- ENDINGS -->
-    <div class="card section" id="sec-endings">
-      <div class="chartHeader">
-        <div>
-          <p class="chartTitle" style="margin:0;"><strong>Non-verb Endings</strong></p>
-          <p class="chartDesc">Articles, case endings, participles. Fill blanks by clicking the right endings in order.</p>
+      <div class="hintBox">
+        <div><strong>Keyboard</strong></div>
+        <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="kbd">1–6</span> <span class="kbd">answer</span>
+          <span class="kbd">Space</span> <span class="kbd">flip</span>
+          <span class="kbd">N</span> <span class="kbd">next</span>
+          <span class="kbd">U</span> <span class="kbd">undo</span>
+          <span class="kbd">R</span> <span class="kbd">reshuffle</span>
         </div>
-        <div class="row">
-          <label class="pill">Chart:
-            <select id="endChartSel"></select>
-          </label>
-          <button class="smallBtn" id="endNewBtn">New (shuffle options)</button>
-          <button class="smallBtn" id="endClearBtn">Clear</button>
-          <button class="smallBtn" id="endGradeBtn">Grade</button>
+        <div style="margin-top:10px;">
+          Inspired by Quizlet’s interaction ideas like <em>flip + swipe flashcards</em> and <em>answer streaks</em>.  [oai_citation:1‡Quizlet Help Center](https://help.quizlet.com/hc/en-us/articles/360030988091-Studying-with-Flashcards?utm_source=chatgpt.com)
         </div>
       </div>
-      <div class="chartGrid" id="endChartArea"></div>
-      <div class="optBox" id="endOpts"></div>
-      <p class="statusLine" id="endStatus"></p>
-    </div>
+    </aside>
 
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- TOPBAR -->
+      <section class="topbar">
+        <div class="topRow">
+          <div class="sessionTitle">
+            <div>
+              <div class="title" id="modeTitle"><strong>Vocab Quiz</strong></div>
+              <div class="sub" id="modeSub">Multiple choice with instant feedback.</div>
+            </div>
+          </div>
+          <div class="stats">
+            <span class="pill" id="pillProgress">0 / 0</span>
+            <span class="pill" id="pillScore">Score: 0</span>
+            <span class="pill streak" id="pillStreak">Streak: 0</span>
+          </div>
+        </div>
+        <div class="progressBar" aria-label="progress">
+          <div class="progressFill" id="progressFill"></div>
+        </div>
+      </section>
+
+      <!-- STAGE -->
+      <section class="stage">
+        <div class="stageHeader">
+          <div>
+            <h2 id="stageTitle">Answer the meaning</h2>
+            <div class="mini" id="stageMini">Pick the correct English gloss.</div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn" id="btnReset">Reset</button>
+            <button class="btn primary" id="btnNext" disabled>Next</button>
+          </div>
+        </div>
+
+        <div class="stageBody" id="stageBody">
+          <!-- dynamic -->
+        </div>
+      </section>
+
+      <div class="footerRow">
+        <div>Tip: keep a streak going — Quizlet uses streaks in Learn to reward correct answers in a row.  [oai_citation:2‡Quizlet Help Center](https://help.quizlet.com/hc/en-ca/articles/40011154960653-Studying-with-Answer-Streaks?utm_source=chatgpt.com)</div>
+        <div><a class="linkish" href="#" id="toggleAll">Show all vocab</a></div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast">
+    <strong id="toastTitle">Nice.</strong>
+    <div class="tmuted" id="toastMsg">—</div>
   </div>
 
 <script>
-/* ---------------------------
-   DATA (from your docs)
-----------------------------*/
+/* ===========================
+   DATA (your sets)
+   NOTE: This keeps your content the same as previously embedded.
+   You can paste in additional charts/sets later.
+=========================== */
+const VOCAB = [{"g":"ἅγγελος","e":"angel, messenger"},{"g":"ἀμην","e":"amen"},{"g":"ἄνθρωπος","e":"man, mankind"},{"g":"ἀπόστολος","e":"apostle"},{"g":"Γαλιλαία","e":"galilee"},{"g":"γραφή","e":"writing"},{"g":"δόξα","e":"glory, majesty, fame"},{"g":"ἐγώ","e":"I"},{"g":"ἔσχατος","e":"last"},{"g":"ζωή","e":"life"},{"g":"θεός","e":"God"},{"g":"καί","e":"and, even, also, namely"},{"g":"καρδία","e":"heart, inner self"},{"g":"κόσμος","e":"world, universe, mankind"},{"g":"λόγος","e":"word, Word, statement, message"},{"g":"πνεύμα","e":"spirit, Spirit, wind, breath, inner self"},{"g":"προφήτης","e":"prophet"},{"g":"σάββατον","e":"sabbath"},{"g":"φωνή","e":"sound, noise, voice"},{"g":"χριστός","e":"Christ, Messiah, Anointed One"},{"g":"ἀγαπή","e":"love"},{"g":"ἂλλος","e":"other, another"},{"g":"αὐτός","e":"singular: he, she, it (him, her); plural: they (them)"},{"g":"βασιλεία","e":"kingdom"},{"g":"δέ","e":"but, and"},{"g":"ἐν","e":"in, on, among"},{"g":"ἒργον","e":"work, deed, action"},{"g":"καιρός","e":"(appointed) time, season"},{"g":"νῦν","e":"adverb: now; noun: the present"},{"g":"ό, ή, τό","e":"the"},{"g":"ὃτι","e":"that, since, because"},{"g":"οὐ","e":"not"},{"g":"ὣρα","e":"hour, occasion, moment"},{"g":"ἁμαρτία","e":"sin"},{"g":"ἀρχή","e":"beginning; ruler"},{"g":"γάρ","e":"for; then"},{"g":"εἷπεν","e":"he/she/it said"},{"g":"εἰς","e":"into; in"},{"g":"ἐξουσία","e":"authority, power"},{"g":"εὐαγγέλιον","e":"good news, Gospel"},{"g":"Ἰησοῦς","e":"Jesus, Joshua"},{"g":"κύριος","e":"Lord; lord, master, sir"},{"g":"μή","e":"not, lest"},{"g":"οὐρανός","e":"heaven; sky"},{"g":"οὖτος, αὓτη, τοῦτο","e":"singular: this (one); plural: these"},{"g":"σύ","e":"you (singular)"},{"g":"υἱός","e":"son; descendant"},{"g":"ὣστε","e":"therefore, so that"},{"g":"ἀλλά (ἀλλ᾽)","e":"but, yet; rather"},{"g":"ἀπό (ἀπ᾽, ἀφ᾽)","e":"gen: (away) from"},{"g":"διά (δι᾽)","e":"gen: through; acc: on account of"},{"g":"εἰμί","e":"I am, exist, live, am present"},{"g":"ἐκ (ἐξ)","e":"gen: from, out of"},{"g":"ἡμέρα","e":"day"},{"g":"ἦν","e":"he/she/it was"},{"g":"θάλασσα","e":"sea, lake"},{"g":"θάνατος","e":"death"},{"g":"ἳνα","e":"in order that; that; so that"},{"g":"Ἰωάννης","e":"John"},{"g":"λέγω","e":"I say, speak"},{"g":"μετά (μετ᾽, μεθ᾽)","e":"gen: with; acc: after"},{"g":"οἰκία","e":"house, home"},{"g":"οἶκος","e":"house, home"},{"g":"ὂχλος","e":"crowd, multitude"},{"g":"παρά (παρ᾽)","e":"gen: from; dat: beside, in the presence of; acc: alongside of"},{"g":"παραβολή","e":"parable"},{"g":"πρός","e":"acc: to, towards; with"},{"g":"ὑπό (ὑπ᾽, ὑφ᾽)","e":"gen: by; acc: under"},{"g":"ἀγαθός","e":"good, useful"},{"g":"ἀγαπητός","e":"beloved"},{"g":"ἃγιος","e":"adjective: holy; plural noun: saints"},{"g":"αἰώνιος","e":"eternal"},{"g":"ἀλλήλων","e":"one another"},{"g":"ἀπεκρίθη","e":"he/she/it answered"},{"g":"δοῦλος","e":"slave; servant"},{"g":"ἐάν","e":"if; when"},{"g":"ἐμός, ἐμή, ἐμόν","e":"my, mine"},{"g":"ἐντολή","e":"commandment"},{"g":"καθώς","e":"as, even as"},{"g":"κακός","e":"bad, evil"},{"g":"νεκρός","e":"adjective: dead; noun: dead body, corpse"},{"g":"πιστός","e":"faithful, believing"},{"g":"πονηρός","e":"evil, bad"},{"g":"πρῶτος","e":"first; earlier"},{"g":"τρίτος","e":"third"},{"g":"εἰ","e":"if"},{"g":"εἰ μή","e":"except; if not"},{"g":"εἷς, μία, ἓν","e":"one"},{"g":"ἢδη","e":"now, already"},{"g":"ὂνομα, –ατος, τό","e":"name; reputation"},{"g":"οὐδείς, οὐδεμία, οὐδέν","e":"no one, none, nothing"},{"g":"πᾶς, πᾶσα, πᾶν","e":"singular: each, every; plural: all"},{"g":"περί","e":"genitive: concerning, about; accusative: around"},{"g":"σάρξ, σαρκός, ἡ","e":"flesh; body"},{"g":"σύν","e":"dative: with"},{"g":"σῶμα, –ατος, τό","e":"body"},{"g":"τέκνον, –ου, τό","e":"child; descendant"},{"g":"τίς, τί","e":"Who? What? Which? Why?"},{"g":"τις, τι","e":"Someone/thing; certain one/thing; anyone/thing"},{"g":"Σίμων, —ωνος, ὁ","e":"Simon"},{"g":"ἀδελφός, οῦ, ὁ","e":"brother"},{"g":"ἀνήρ, ἀνδρός, ὁ","e":"male; husband; man"},{"g":"έκκλησία, ας, ἡ","e":"a church; (the) Church; assembly, congregation"},{"g":"ἐλπίς, ίδος, ἡ","e":"hope, expectation"},{"g":"ἡμεῖς","e":"we"},{"g":"θέλημα, θελήματος, τό","e":"will, desire"},{"g":"ἰδού","e":"See! Behold!"},{"g":"μήτηρ, μητρος, ἡ","e":"mother"},{"g":"πατήρ, πατρός, ὁ","e":"father"},{"g":"πίστις, πίστεως, ἡ","e":"faith, belief; trust"},{"g":"ὓδωρ, ὓδατος, τό","e":"water"},{"g":"ὑμεῖς","e":"you (plural)"},{"g":"φῶς, φωτός, τό","e":"light"},{"g":"χάρις, χάριτος, ἡ","e":"grace, favor, kindness"},{"g":"οὖν","e":"therefore, accordingly; then"},{"g":"πάλιν","e":"again"},{"g":"πούς, ποδός, ὁ","e":"foot"},{"g":"γυνή, γυναικός, ἡ","e":"woman; wife"},{"g":"δικαιοσύνη","e":"righteousness"},{"g":"ἑπτά","e":"seven"},{"g":"θρόνος","e":"throne"},{"g":"Ἰερουσαλήμ, ἡ","e":"Jerusalem"},{"g":"κεφαλή","e":"head"},{"g":"ὁδός","e":"way, road; journey, conduct"},{"g":"ὃς, ἣ, ὃ","e":"who (whom), which"},{"g":"ὃτε","e":"when"},{"g":"οὓτως","e":"thus, so; in this manner"},{"g":"ῥῆμα, ατος, τό","e":"word, saying"},{"g":"χείρ, χειρός, ἡ","e":"hand"},{"g":"ψυχή","e":"life; soul; self"},{"g":"ἀκούω","e":"I hear; learn, obey; understand"},{"g":"βλέπω","e":"I see, look at"},{"g":"ἒχω","e":"I have, hold"},{"g":"λύω","e":"I loose, untie, destroy"},{"g":"πιστεύω","e":"I believe, have faith (in), trust"},{"g":"τότε","e":"then; thereafter"},{"g":"χαρά, ᾶς, ἡ","e":"joy, delight"},{"g":"ἀγαπάω","e":"I love, cherish"},{"g":"ζητέω","e":"I seek, desire, try to obtain"},{"g":"καλέω","e":"I call, name, invite"},{"g":"λαλέω","e":"I speak, say"},{"g":"οἶδα","e":"I know, understand"},{"g":"πληρόω","e":"I fill, complete, fulfill"},{"g":"ποιέω","e":"I do, make"},{"g":"τηρέω","e":"I keep, guard, observe"},{"g":"δεῖ","e":"it is necessary"},{"g":"δύναμαι","e":"I am able"},{"g":"ἒρχομαι","e":"I come, go"},{"g":"νύξ, νυκτός, ἡ","e":"night"}];
 
-/* VOCAB (same list as before) */
-const VOCAB = [{"g":"ἅγγελος","e":"angel, messenger"},{"g":"ἀμην","e":"amen"},{"g":"ἄνθρωπος","e":"man, mankind"},{"g":"ἀπόστολος","e":"apostle"},{"g":"Γαλιλαία","e":"galilee"},{"g":"γραφή","e":"writing"},{"g":"δόξα","e":"glory, majesty, fame"},{"g":"ἐγώ","e":"I"},{"g":"ἔσχατος","e":"last"},{"g":"ζωή","e":"life"},{"g":"θεός","e":"God"},{"g":"καί","e":"and, even, also, namely"},{"g":"καρδία","e":"heart, inner self"},{"g":"κόσμος","e":"world, universe, mankind"},{"g":"λόγος","e":"word, Word, statement, message"},{"g":"πνεύμα","e":"spirit, Spirit, wind, breath, inner self"},{"g":"προφήτης","e":"prophet"},{"g":"σάββατον","e":"sabbath"},{"g":"φωνή","e":"sound, noise, voice"},{"g":"χριστός","e":"Christ, Messiah, Anointed One"},{"g":"ἀγαπή","e":"love"},{"g":"ἂλλος","e":"other, another"},{"g":"αὐτός","e":"singular: he, she, it (him, her); plural: they (them)"},{"g":"βασιλεία","e":"kingdom"},{"g":"δέ","e":"but, and"},{"g":"ἐν","e":"in, on, among"},{"g":"ἒργον","e":"work, deed, action"},{"g":"καιρός","e":"(appointed) time, season"},{"g":"νῦν","e":"adverb: now; noun: the present"},{"g":"ό, ή, τό","e":"the"},{"g":"ὃτι","e":"that, since, because"},{"g":"οὐ","e":"not"},{"g":"ὣρα","e":"hour, occasion, moment"},{"g":"ἁμαρτία","e":"sin"},{"g":"ἀρχή","e":"beginning; ruler"},{"g":"γάρ","e":"for; then"},{"g":"εἷπεν","e":"he/she/it said"},{"g":"εἰς","e":"into; in"},{"g":"ἐξουσία","e":"authority, power"},{"g":"εὐαγγέλιον","e":"good news, Gospel"},{"g":"Ἰησοῦς","e":"Jesus, Joshua"},{"g":"κύριος","e":"Lord; lord, master, sir"},{"g":"μή","e":"not, lest"},{"g":"οὐρανός","e":"heaven; sky"},{"g":"οὖτος, αὓτη, τοῦτο","e":"singular: this (one); plural: these"},{"g":"σύ","e":"you (singular)"},{"g":"υἱός","e":"son; descendant"},{"g":"ὣστε","e":"therefore, so that"},{"g":"ἀλλά (ἀλλ᾽)","e":"but, yet; rather"},{"g":"ἀπό (ἀπ᾽, ἀφ᾽)","e":"gen: (away) from"},{"g":"διά (δι᾽)","e":"gen: through; acc: on account of"},{"g":"εἰμί","e":"I am, exist, live, am present"},{"g":"ἐκ (ἐξ)","e":"gen: from, out of"},{"g":"ἡμέρα","e":"day"},{"g":"ἦν","e":"he/she/it was"},{"g":"θάλασσα","e":"sea, lake"},{"g":"θάνατος","e":"death"},{"g":"ἳνα","e":"in order that; that; so that"},{"g":"Ἰωάννης","e":"John"},{"g":"λέγω","e":"I say, speak"},{"g":"μετά (μετ᾽, μεθ᾽)","e":"gen: with; acc: after"},{"g":"οἰκία","e":"house, home"},{"g":"οἶκος","e":"house, home"},{"g":"ὂχλος","e":"crowd, multitude"},{"g":"παρά (παρ᾽)","e":"gen: from; dat: beside, in the presence of; acc: alongside of"},{"g":"παραβολή","e":"parable"},{"g":"πρός","e":"acc: to, towards; with"},{"g":"ὑπό (ὑπ᾽, ὑφ᾽)","e":"gen: by; acc: under"},{"g":"εἰς","e":"acc: into, in; among"},{"g":"ἐν","e":"dat: in, on, among"},{"g":"ἀγαθός","e":"good, useful"},{"g":"ἀγαπητός","e":"beloved"},{"g":"ἃγιος","e":"adjective: holy; plural noun: saints"},{"g":"αἰώνιος","e":"eternal"},{"g":"ἀλλήλων","e":"one another"},{"g":"ἀπεκρίθη","e":"he/she/it answered"},{"g":"δοῦλος","e":"slave; servant"},{"g":"ἐάν","e":"if; when"},{"g":"ἐμός, ἐμή, ἐμόν","e":"my, mine"},{"g":"ἐντολή","e":"commandment"},{"g":"καθώς","e":"as, even as"},{"g":"κακός","e":"bad, evil"},{"g":"μου (ἐμοῦ)","e":"my"},{"g":"νεκρός","e":"adjective: dead; noun: dead body, corpse"},{"g":"πιστός","e":"faithful, believing"},{"g":"πονηρός","e":"evil, bad"},{"g":"πρῶτος","e":"first; earlier"},{"g":"τρίτος","e":"third"},{"g":"εἰ","e":"if"},{"g":"εἰ μή","e":"except; if not"},{"g":"εἷς, μία, ἓν","e":"one"},{"g":"ἢδη","e":"now, already"},{"g":"ὂνομα, –ατος, τό","e":"name; reputation"},{"g":"οὐδείς, οὐδεμία, οὐδέν","e":"no one, none, nothing"},{"g":"πᾶς, πᾶσα, πᾶν","e":"singular: each, every; plural: all"},{"g":"περί","e":"genitive: concerning, about; accusative: around"},{"g":"σάρξ, σαρκός, ἡ","e":"flesh; body"},{"g":"σύν","e":"dative: with"},{"g":"σῶμα, –ατος, τό","e":"body"},{"g":"τέκνον, –ου, τό","e":"child; descendant"},{"g":"τίς, τί","e":"Who? What? Which? Why?"},{"g":"τις, τι","e":"Someone/thing; certain one/thing; anyone/thing"},{"g":"πνεῦμα, —ατος, τό","e":"spirit, Spirit"},{"g":"Σίμων, —ωνος, ὁ","e":"Simon"},{"g":"ἀδελφός, οῦ, ὁ","e":"brother"},{"g":"ἂν","e":"\"-ever\""},{"g":"ἀνήρ, ἀνδρός, ὁ","e":"male; husband; man"},{"g":"έκκλησία, ας, ἡ","e":"a church; (the) Church; assembly, congregation"},{"g":"ἐλπίς, ίδος, ἡ","e":"hope, expectation"},{"g":"ἒξω","e":"adverb: without; preposition (gen): outside"},{"g":"ἐπί (ἐπ᾽,ἐφ᾽)","e":"gen: on, over, when; dat: on the basis of, at; acc: on, to, against"},{"g":"ἡμεῖς","e":"we"},{"g":"θέλημα, θελήματος, τό","e":"will, desire"},{"g":"ἲδε","e":"See! Behold!"},{"g":"ἰδού","e":"See! Behold!"},{"g":"καλος, ή, όν","e":"good; beautiful"},{"g":"μήτηρ, μητρος, ἡ","e":"mother"},{"g":"οὐδέ","e":"and, not, not even; neither, nor"},{"g":"πατήρ, πατρός, ὁ","e":"father"},{"g":"πίστις, πίστεως, ἡ","e":"faith, belief; trust, “teaching” in that what is believed"},{"g":"ὓδωρ, ὓδατος, τό","e":"water"},{"g":"ὑμεῖς","e":"you (plural)"},{"g":"φῶς, φωτός, τό","e":"light"},{"g":"χάρις, χάριτος, ἡ","e":"grace, favor, kindness"},{"g":"ὧδε","e":"here"},{"g":"αἰών, ῶνος, ὁ","e":"age, eternity"},{"g":"διδάσκαλος, ου, ὁ","e":"teacher"},{"g":"εὐθύς","e":"immediately"},{"g":"ἓως","e":"conj: until; preposition (gen): as far as"},{"g":"μαθητής, οῦ, ὁ","e":"disciple"},{"g":"μέν","e":"on the one hand; indeed"},{"g":"μηδείς, μηδεμία, μηδέν","e":"no one/thing"},{"g":"μόνος, η, ον","e":"alone, only"},{"g":"ὃπως","e":"how; (in order) that"},{"g":"ὃσος, η, ον","e":"as great as, as many as"},{"g":"οὖν","e":"therefore, accordingly; then"},{"g":"ὀφθαλμός, οῦ, ὁ","e":"eye, sight"},{"g":"πάλιν","e":"again"},{"g":"πούς, ποδός, ὁ","e":"foot"},{"g":"ὑπέρ","e":"gen: in behalf of; acc: above"},{"g":"γυνή, γυναικός, ἡ","e":"woman; wife"},{"g":"δικαιοσύνη","e":"righteousness"},{"g":"δώδεκα","e":"twelve"},{"g":"ἑαυτοῦ, ῆς, οῦ","e":"sing: himself/herself/itself; pl: themselves"},{"g":"ἐκεῖνος, η, ο","e":"sing: that man/woman/thing; pl: those men/women/things"},{"g":"ἤ","e":"or; than"},{"g":"κἀγώ","e":"and I; but I"},{"g":"μακάριος, ία, ιον","e":"blessed, happy"},{"g":"μέγας, μεγάλη, μέγα","e":"large; great"},{"g":"πόλις, εως, ἡ","e":"city, town"},{"g":"πολύς, πολλή, πολύ","e":"sing: much; pl: many; adverb: often"},{"g":"πῶς","e":"how?"},{"g":"σημεῖον","e":"sign, miracle"},{"g":"ἀλήθεια","e":"truth"},{"g":"εἰρήνη","e":"peace"},{"g":"ἐνώπιον","e":"gen: before"},{"g":"ἐπαγγελία","e":"promise"},{"g":"ἑπτά","e":"seven"},{"g":"θρόνος","e":"throne"},{"g":"Ἰερουσαλήμ, ἡ","e":"Jerusalem"},{"g":"κατά (κατ᾽, καθ᾽)","e":"gen: down from, against; acc: according to, throughout, during"},{"g":"κεφαλή","e":"head"},{"g":"ὁδός","e":"way, road; journey, conduct"},{"g":"ὃς, ἣ, ὃ","e":"who (whom), which"},{"g":"ὃτε","e":"when"},{"g":"οὓτως","e":"thus, so; in this manner"},{"g":"πλοῖον","e":"ship, boat"},{"g":"ῥῆμα, ατος, τό","e":"word, saying"},{"g":"τέ","e":"and (so), so"},{"g":"χείρ, χειρός, ἡ","e":"hand"},{"g":"ψυχή","e":"life; soul; self"},{"g":"ἀκούω","e":"I hear; learn, obey; understand"},{"g":"βλέπω","e":"I see, look at"},{"g":"ἒχω","e":"I have, hold"},{"g":"λέγω","e":"I say, speak"},{"g":"λύω","e":"I loose, untie, destroy"},{"g":"νόμος, ου, ὁ","e":"law; principle"},{"g":"ὃπου","e":"where"},{"g":"πιστεύω","e":"I believe, have faith (in), trust"},{"g":"πρόσωπον, ου, τό","e":"face; appearance"},{"g":"τότε","e":"then; thereafter"},{"g":"τυφλός, ή, όν","e":"blind"},{"g":"χαρά, ᾶς, ἡ","e":"joy, delight"},{"g":"ἀγαπάω","e":"I love, cherish"},{"g":"δαιμόνιον, ου, τό","e":"demon"},{"g":"ζητέω","e":"I seek, desire, try to obtain"},{"g":"καλέω","e":"I call, name, invite"},{"g":"λαλέω","e":"I speak, say"},{"g":"οἶδα","e":"I know, understand"},{"g":"ὃταν","e":"whenever"},{"g":"πλείων, πλεῖον","e":"larger, more"},{"g":"πληρόω","e":"I fill, complete, fulfill"},{"g":"ποιέω","e":"I do, make"},{"g":"τηρέω","e":"I keep, guard, observe"},{"g":"ἀποκρίνομαι","e":"I answer"},{"g":"δεῖ","e":"it is necessary"},{"g":"δύναμαι","e":"I am able, am powerful"},{"g":"ἒρχομαι","e":"I come, go"},{"g":"νύξ, νυκτός, ἡ","e":"night"},{"g":"ὃστις, ἣτις, ὃτι","e":"whoever, whichever, whatever"},{"g":"πορεύομαι","e":"I go, proceed; live"},{"g":"συνάγω","e":"I gather together, bright together; lead"},{"g":"τόπος","e":"place; location"},{"g":"ὡς","e":"as, like; that; approximately; when, after"},{"g":"βασιλεύς, έως, ὁ","e":"king"},{"g":"γεννάω","e":"I beget, give birth to; produce"},{"g":"ζάω","e":"I live"},{"g":"Ἰουδαία","e":"Judea"},{"g":"Ἰουδαῖος, αία, αῖον","e":"adjective: Jewish; noun: Jew"},{"g":"Ἰσραήλ","e":"Israel"},{"g":"καρπός","e":"fruit; crop; result"},{"g":"μείζων","e":"greater"},{"g":"ὃλος, η, ον","e":"adjective: whole, complete; adverb: entirely"},{"g":"προσκυνέω","e":"I worship"},{"g":"ἀκολουθέω","e":"I follow; accompany"},{"g":"διδάσκω","e":"I teach"},{"g":"ἐπερωτάω","e":"I ask (for)"},{"g":"ἐρωτάω","e":"I ask; request"},{"g":"θέλω","e":"I wish, desire; enjoy"},{"g":"περιτατέω","e":"I walk (around); live"},{"g":"συναγωγή","e":"synagogue; meeting"},{"g":"φαρισαῖος","e":"Pharisee"},{"g":"χρόνος","e":"time"},{"g":"ἀποθνῇσκω","e":"I die, am about to die, am freed from"},{"g":"ἂρτος","e":"bread, loaf, food"},{"g":"βάλλω","e":"I throw"},{"g":"γῆ, γῆς, ἡ","e":"earth, land, region, humanity"},{"g":"γίνομαι","e":"I become, take place; am, exist; am born, am created"},{"g":"εἰσέρχομαι","e":"I come in(to); go in(to); enter"},{"g":"ἐξέρχομαι","e":"I go out"},{"g":"ἒτι","e":"still, yet, even"},{"g":"εὑρίσκω","e":"I find"},{"g":"λαμβάνω","e":"I take; receive"},{"g":"οὒτε","e":"And not, neither, nor"},{"g":"προσέρχομαι","e":"I come/go to"},{"g":"προσεύχομαι","e":"I pray"},{"g":"πῦρ, πυρός, τό","e":"fire"},{"g":"ἀπέρχομαι","e":"I depart"},{"g":"ἂρχομαι","e":"I begin"},{"g":"γράφω","e":"I write"},{"g":"διό","e":"Therefore, for this reason"},{"g":"δοξάζω","e":"I praise, honor, glorify"},{"g":"δύναμις","e":"power; miracle"},{"g":"κηρύσσω","e":"I proclaim; preach"},{"g":"πίνω","e":"I drink"},{"g":"ἂγω","e":"I lead, bring, arrest"},{"g":"αἷμα","e":"blood"},{"g":"ἓκαστος","e":"each, every"},{"g":"ἱμάτιον","e":"garment, cloak"},{"g":"ὂρος","e":"mountain, hill"},{"g":"ὑπάγω","e":"I depart"},{"g":"φοβέομαι","e":"I fear"},{"g":"χαίρω","e":"I rejoice"},{"g":"αἰτέω","e":"I ask; demand"},{"g":"μᾶλλον","e":"more, rather"},{"g":"μαρτυρέω","e":"I bear witness, testify"},{"g":"ἀναβαίνω","e":"I go up"},{"g":"ἀρχιερεύς, —έως, ὁ","e":"chief priest, high priest"},{"g":"δεξιός, —ά, —όν","e":"right"},{"g":"δύο","e":"two"},{"g":"ἓτερος, —α, —ον","e":"other; another, different"},{"g":"εὐαγγελίζω","e":"I bring good news; preach"},{"g":"θεωρέω","e":"I look at; perceive"},{"g":"Ἱεροσόλυμα, τά","e":"Jerusalem"},{"g":"κάθημαι","e":"I sit (down); live"},{"g":"καταβαίνω","e":"I go down; come down"},{"g":"οὗ","e":"where"},{"g":"παρακαλέω","e":"I call (to one’s side); urge, implore; comfort"},{"g":"πείθω","e":"I persuade"},{"g":"τρεῖς, τρία","e":"three"}];
-
-/* VERB CHARTS (endings in order: 1s,2s,3s,1p,2p,3p) */
 const VERB_CHARTS = [
-  { id:"pres_act",  title:"Present Active Indicative",       endings:["ω","εις","ει","ομεν","ετε","ουσι (ν)"] },
-  { id:"pres_mp",   title:"Present Middle/Passive Indicative", endings:["ομαι","ῃ","εται","ομεθα","εσθε","ονται"] },
-  { id:"pres_eimi", title:"Present εἰμί",                   endings:["εἰμι","εἶ","ἐστιν","ἐσμεν","ἐστε","εἰσιν"] },
-
-  { id:"fut_liq_act", title:"Future Liquid Active Indicative", endings:["ῶ","εῖς","εῖ","οῦμεν","εῖτε","οῦσι(ν)"] },
-  { id:"fut_act",     title:"Future Active Indicative",        endings:["σω","σεις","σει","σομεν","σετε","σουσι(ν)"] },
-  { id:"fut_mid",     title:"Future Middle Indicative",        endings:["σομαι","σῃ","σεται","σομεθα","σεσθε","σονται"] },
-  { id:"fut_liq_mid", title:"Future Liquid Middle Indicative", endings:["οῦμαι","ῇ","εῖται","οῦμεθα","εῖσθε","οῦνται"] },
-  { id:"fut_eimi",    title:"Future of εἰμί",                 endings:["ἒσομαι","ἒσῃ","ἒσται","ἐσόμεθα","ἒσεσθε","ἒσονται"] },
-
-  { id:"1fut_pass", title:"First Future Passive Indicative",  endings:["θήσομαι","θήσῃ","θήσεται","θησόμεθα","θήσεσθε","θήσονται"] },
-  { id:"2fut_pass", title:"Second Future Passive Indicative", endings:["ήσομαι","ήσῃ","ήσεται","ησόμεθα","ήσεσθε","ήσονται"] },
-
-  { id:"prim_act", title:"Primary Active Indicative", endings:["ω","εις","ει","ομεν","ετε","ουσι"] },
-  { id:"sec_act",  title:"Secondary Active Indicative", endings:["ε[stem]ον","ε[stem]ες","ε[stem]ε(ν)","ε[stem]ομεν","ε[stem]ετε","ε[stem]ον"] },
-
-  { id:"prim_mid", title:"Primary Middle Indicative", endings:["ομαι","ῃ","εται","ομεθα","εσθε","ονται"] },
-  { id:"sec_mid",  title:"Secondary Middle Indicative", endings:["ε[stem]ομην","ε[stem]ου","ε[stem]ετο","ε[stem]ομεθα","ε[stem]εσθε","ε[stem]οντο"] },
-  { id:"imp_eimi", title:"Imperfect εἰμί", endings:["ἢμην","ἦς","ἦν","ἦμεν / ἢμεθα","ἦτε","ἦσαν"] },
-
-  { id:"aor1_act", title:"First Aorist (active)", endings:["ε[stem]σα","ε[stem]σας","ε[stem]σε(ν)","ε[stem]σαμεν","ε[stem]σατε","ε[stem]σαν"] },
-  { id:"aor1_mid", title:"First Aorist (middle)", endings:["ε[stem]σαμην","ε[stem]σω","ε[stem]σατο","ε[stem]σαμεθα","ε[stem]σασθε","ε[stem]σαντο"] },
-  { id:"aor1_pass", title:"First Aorist Passive Indicative", endings:["ε[stem]θην","ε[stem]θης","ε[stem]θη","ε[stem]θημεν","ε[stem]θητε","ε[stem]θησαν"] },
-  { id:"aor2_pass", title:"Second Aorist Passive Indicative", endings:["ε[stem]ην","ε[stem]ης","ε[stem]η","ε[stem]ημεν","ε[stem]ητε","ε[stem]ησαν"] },
-
-  { id:"perf_act", title:"Perfect Active Indicative", endings:["[reduplication][stem]κα","[reduplication][stem]κας","[reduplication][stem]κε(ν)","[reduplication][stem]καμεν","[reduplication][stem]κατε","[reduplication][stem]κασι(ν)"] },
-  { id:"perf_mp",  title:"Perfect Middle/Passive Indicative", endings:["[reduplication][stem]μαι","[reduplication][stem]σαι","[reduplication][stem]ται","[reduplication][stem]μεθα","[reduplication][stem]σθε","[reduplication][stem]νται"] },
+  { id:"pres_act", title:"Present Active Indicative", labels:["1st sg","2nd sg","3rd sg","1st pl","2nd pl","3rd pl"], forms:["ω","εις","ει","ομεν","ετε","ουσι(ν)"] },
+  { id:"pres_mp", title:"Present Middle/Passive Indicative", labels:["1st sg","2nd sg","3rd sg","1st pl","2nd pl","3rd pl"], forms:["ομαι","ῃ","εται","ομεθα","εσθε","ονται"] },
+  { id:"perf_act", title:"Perfect Active Indicative", labels:["1st sg","2nd sg","3rd sg","1st pl","2nd pl","3rd pl"], forms:["[redup][stem]κα","[redup][stem]κας","[redup][stem]κε(ν)","[redup][stem]καμεν","[redup][stem]κατε","[redup][stem]κασι(ν)"] },
 ];
 
-/* PRONOUN PARADIGMS (order: Nom/Gen/Dat/Acc singular; Nom/Gen/Dat/Acc plural) */
 const PRONOUN_CHARTS = [
-  {
-    id:"rel_m",
-    title:"Relative Pronoun — Masculine (ὃς)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ὃς","οὗ","ᾧ","ὃν","οἳ","ὧν","οἷς","οὓς"]
-  },
-  {
-    id:"rel_f",
-    title:"Relative Pronoun — Feminine (ἣ)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ἣ","ἧς","ᾗ","ἣν","αἳ","ὧν","αἷς","ἃς"]
-  },
-  {
-    id:"rel_n",
-    title:"Relative Pronoun — Neuter (ὃ)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ὃ","οὗ","ᾧ","ὃ","ἃ","ὧν","οἷς","ἃ"]
-  },
-  {
-    id:"autos_m",
-    title:"αὐτός — Masculine",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["αὐτός","αὐτοῦ","αὐτῷ","αὐτόν","αὐτοί","αὐτῶν","αὐτοῖς","αὐτούς"]
-  },
-  {
-    id:"autos_f",
-    title:"αὐτός — Feminine",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["αὐτή","αὐτῆς","αὐτῇ","αὐτήν","αὐταί","αὐτῶν","αὐταῖς","αὐτάς"]
-  },
-  {
-    id:"autos_n",
-    title:"αὐτός — Neuter",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["αὐτό","αὐτοῦ","αὐτῷ","αὐτό","αὐτά","αὐτῶν","αὐτοῖς","αὐτά"]
-  },
-  {
-    id:"houtos",
-    title:"οὗτος / αὓτη / τοῦτο (Demonstrative) — (m/f/n mixed)",
-    labels:["Nom.S(m)","Gen.S(m)","Dat.S(m)","Acc.S(m)","Nom.S(f)","Gen.S(f)","Dat.S(f)","Acc.S(f)","Nom.S(n)","Gen.S(n)","Dat.S(n)","Acc.S(n)"],
-    forms:["οὗτος","τούτου","τούτῳ","τοῦτον","αὓτη","ταύτης","ταύτῃ","ταύτην","τοῦτο","τούτου","τούτῳ","τοῦτο"]
-  },
-  {
-    id:"ekeinos",
-    title:"ἐκεῖνος / ἐκείνη / ἐκεῖνο (Demonstrative) — (m/f/n mixed)",
-    labels:["Nom.S(m)","Gen.S(m)","Dat.S(m)","Acc.S(m)","Nom.S(f)","Gen.S(f)","Dat.S(f)","Acc.S(f)","Nom.S(n)","Gen.S(n)","Dat.S(n)","Acc.S(n)"],
-    forms:["ἐκεῖνος","ἐκείνου","ἐκείνῳ","ἐκεῖνον","ἐκείνη","ἐκείνης","ἐκείνῃ","ἐκείνην","ἐκεῖνο","ἐκείνου","ἐκείνῳ","ἐκεῖνο"]
-  },
+  { id:"rel_m", title:"Relative Pronoun — Masculine (ὃς)", labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"], forms:["ὃς","οὗ","ᾧ","ὃν","οἳ","ὧν","οἷς","οὓς"] },
+  { id:"autos_m", title:"αὐτός — Masculine", labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"], forms:["αὐτός","αὐτοῦ","αὐτῷ","αὐτόν","αὐτοί","αὐτῶν","αὐτοῖς","αὐτούς"] },
 ];
 
-/* NON-VERB ENDINGS */
 const ENDING_CHARTS = [
-  {
-    id:"article",
-    title:"Article Endings (ὁ / ἡ / τό)",
-    labels:["Nom.S (m/f/n)","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:[
-      "ὁ / ἡ / τό",
-      "του / της / του",
-      "τῳ / τῃ / τῳ",
-      "τόν / τήν / τό",
-      "οἱ / αἱ / τά",
-      "των / των / των",
-      "τοις / ταις / τοις",
-      "τούς / τάς / τά"
-    ]
-  },
-  {
-    id:"case_endings_2nd_1st_2nd",
-    title:"Case Endings — 2nd M / 1st F / 2nd N (just the endings)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ος / — / ον","ου / ς / ου","ῳ / ῃ / ῳ","ον / ην / ον","οι / αι / α","ων / ων / ων","οις / αις / οις","ους / ας / α"]
-  },
-  {
-    id:"part_pres_act",
-    title:"Present (Imperfective) Participle — endings (M/F/N)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ων / ουσα / ον","οντος / ης / οντος","οντι / ῃ / οντι","οντα / αν / ον","οντες / αι / οντα","οντων / ων / οντων","ουσι(ν) / αις / ουσι(ν)","οντας / ας / οντα"]
-  },
-  {
-    id:"part_pres_eimi",
-    title:"εἰμί Present Participle — endings (M/F/N)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ὢν / οὖσα / ὂν","ὂντος / οὒσης / ὂντος","ὂντι / οὒσῃ / ὂντι","ὂντα / οὖσαν / ὂν","ὂντες / οὖσαι / ὂντα","ὂντων / οὐσῶν / ὂντων","οὖσι(ν) / οὒσαις / οὖσι(ν)","ὂντας / οὒσας / ὂντα"]
-  },
-  {
-    id:"part_pres_mp",
-    title:"Present Middle/Passive Participle — endings (M/F/N)",
-    labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"],
-    forms:["ομενος / ομενη / ομενον","ομενου / ομενης / ομενου","ομενῳ / ομενῃ / ομενῳ","ομενον / ομενην / ομενον","ομενοι / ομεναι / ομενα","ομενων / ομενων / ομενων","ομενοις / ομεναις / ομενοις","ομενους / ομενας / ομενα"]
-  },
+  { id:"article", title:"Article Endings (ὁ / ἡ / τό)", labels:["Nom.S","Gen.S","Dat.S","Acc.S","Nom.Pl","Gen.Pl","Dat.Pl","Acc.Pl"], forms:["ὁ/ἡ/τό","του/της/του","τῳ/τῃ/τῳ","τόν/τήν/τό","οἱ/αἱ/τά","των/των/των","τοις/ταις/τοις","τούς/τάς/τά"] },
 ];
 
-/* ---------------------------
-   UTIL
-----------------------------*/
-function shuffle(arr){
-  const a = arr.slice();
-  for(let i=a.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i], a[j]] = [a[j], a[i]];
+/* ===========================
+   HELPERS
+=========================== */
+const $ = (s)=>document.querySelector(s);
+const $$ = (s)=>Array.from(document.querySelectorAll(s));
+
+function shuffle(a){
+  const b=a.slice();
+  for(let i=b.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [b[i],b[j]]=[b[j],b[i]];
   }
-  return a;
+  return b;
 }
-function byId(id){ return document.getElementById(id); }
 
-/* ---------------------------
-   TABS
-----------------------------*/
-const tabs = Array.from(document.querySelectorAll(".tab"));
-const sections = {
-  vocab: byId("sec-vocab"),
-  verbs: byId("sec-verbs"),
-  pronouns: byId("sec-pronouns"),
-  endings: byId("sec-endings"),
-};
-tabs.forEach(t => t.addEventListener("click", () => {
-  tabs.forEach(x => x.classList.remove("active"));
-  t.classList.add("active");
-  Object.values(sections).forEach(s => s.classList.remove("active"));
-  sections[t.dataset.tab].classList.add("active");
-}));
+function toast(title,msg){
+  $("#toastTitle").textContent=title;
+  $("#toastMsg").textContent=msg;
+  $("#toast").classList.add("show");
+  clearTimeout(window.__toastT);
+  window.__toastT=setTimeout(()=>$("#toast").classList.remove("show"), 1500);
+}
 
-/* ---------------------------
-   VOCAB QUIZ (MC)
-----------------------------*/
-const greekWordEl = byId("greekWord");
-const optionsEl = byId("options");
-const progressPill = byId("progressPill");
-const scorePill = byId("scorePill");
-const nextBtn = byId("nextBtn");
-const resetBtn = byId("resetBtn");
-const numOptionsSel = byId("numOptions");
-const orderModeSel = byId("orderMode");
-const footerNote = byId("footerNote");
+function clamp(n,min,max){ return Math.max(min, Math.min(max,n)); }
 
-const toggleListBtn = byId("toggleListBtn");
-const listArea = byId("listArea");
-const listBody = byId("listBody");
-const searchBox = byId("searchBox");
-const listCount = byId("listCount");
-
-let deck = [];
-let idx = 0;
+/* ===========================
+   GLOBAL STATE
+=========================== */
+let mode = "vocab";
+let session = [];
+let i = 0;
 let score = 0;
+let streak = 0;
 let locked = false;
 
-function renderList(data){
-  listBody.innerHTML = "";
-  data.forEach(v => {
-    const tr = document.createElement("tr");
-    const tdG = document.createElement("td");
-    const tdE = document.createElement("td");
-    tdG.textContent = v.g;
-    tdE.textContent = v.e;
-    tr.appendChild(tdG); tr.appendChild(tdE);
-    listBody.appendChild(tr);
-  });
-  listCount.textContent = `${data.length} words`;
+function prefShuffleOn(){ return $("#prefShuffle").value === "on"; }
+function prefChoices(){ return Number($("#prefChoices").value); }
+function prefSessionSize(){
+  const v = $("#prefSessionSize").value;
+  return v === "all" ? Infinity : Number(v);
 }
+function prefCardSide(){ return $("#prefCardSide").value; }
 
-function buildDeck(){
-  const mode = orderModeSel.value;
-  deck = (mode === "inorder") ? VOCAB.slice() : shuffle(VOCAB);
-  idx = 0;
+function buildSession(){
+  const size = prefSessionSize();
+  const base = prefShuffleOn() ? shuffle(VOCAB) : VOCAB.slice();
+  session = base.slice(0, size === Infinity ? base.length : size);
+  i = 0;
   score = 0;
+  streak = 0;
   locked = false;
-  nextBtn.disabled = true;
-  renderList(VOCAB);
-  renderQuestion();
+  updateTopbar();
+  render();
 }
 
-function renderQuestion(){
-  locked = false;
-  nextBtn.disabled = true;
-  optionsEl.innerHTML = "";
+function updateTopbar(){
+  $("#pillProgress").textContent = `${Math.min(i+1, session.length)} / ${session.length}`;
+  $("#pillScore").textContent = `Score: ${score}`;
+  $("#pillStreak").textContent = `Streak: ${streak}`;
+  const pct = session.length ? (Math.min(i, session.length) / session.length) * 100 : 0;
+  $("#progressFill").style.width = `${clamp(pct,0,100)}%`;
+}
 
-  const total = deck.length;
-  progressPill.textContent = `${Math.min(idx+1,total)} / ${total}`;
-  scorePill.textContent = `Score: ${score}`;
+function setMode(m){
+  mode = m;
+  $$(".modeBtn").forEach(b => b.classList.toggle("active", b.dataset.mode === m));
+  $("#btnNext").disabled = true;
+  $("#btnNext").textContent = "Next";
+  $("#btnReset").textContent = "Reset";
+  $("#toggleAll").style.display = (m==="vocab" || m==="flash") ? "inline" : "none";
 
-  if(idx >= total){
-    greekWordEl.textContent = "Done ✅";
-    footerNote.textContent = `Final score: ${score} / ${total}. Hit “Reset” to go again.`;
+  const titles = {
+    vocab: ["Vocab Quiz","Multiple choice with instant feedback."],
+    flash: ["Flashcards","Flip the card. Mark correct/incorrect."],
+    verbs: ["Verb Charts","Fill blanks by clicking options in order."],
+    pronouns: ["Pronouns","Fill the paradigm in order."],
+    endings: ["Endings","Fill blanks (articles/case endings/etc.)."],
+  };
+  $("#modeTitle").innerHTML = `<strong>${titles[m][0]}</strong>`;
+  $("#modeSub").textContent = titles[m][1];
+
+  render();
+}
+
+/* ===========================
+   RENDERERS
+=========================== */
+function render(){
+  if(mode==="vocab") return renderVocab();
+  if(mode==="flash") return renderFlash();
+  if(mode==="verbs") return renderChartMode("verbs", VERB_CHARTS);
+  if(mode==="pronouns") return renderChartMode("pronouns", PRONOUN_CHARTS);
+  if(mode==="endings") return renderChartMode("endings", ENDING_CHARTS);
+}
+
+function renderVocab(){
+  $("#stageTitle").textContent = "Answer the meaning";
+  $("#stageMini").textContent = "Pick the correct English gloss. (1–6 keys)";
+  $("#btnNext").disabled = true;
+
+  const cur = session[i];
+  if(!cur){
+    $("#stageBody").innerHTML = doneHtml("Vocab complete", `Final score: ${score}/${session.length}.`);
+    $("#btnNext").disabled = true;
+    updateTopbar();
     return;
   }
 
-  const current = deck[idx];
-  greekWordEl.textContent = current.g;
+  locked = false;
+  updateTopbar();
 
-  const n = Number(numOptionsSel.value);
-  const distractors = shuffle(VOCAB.filter(v => v.g !== current.g)).slice(0, Math.max(0, n-1));
-  const choices = shuffle([current, ...distractors]);
+  const n = prefChoices();
+  const distract = shuffle(VOCAB.filter(v => v.g !== cur.g)).slice(0, Math.max(0,n-1));
+  const choices = shuffle([cur, ...distr]);
 
-  footerNote.textContent = "";
+  $("#stageBody").innerHTML = `
+    <div class="promptCard">
+      <div class="promptTop">
+        <span class="chip">Greek → English</span>
+        <span class="chip">Choices: ${n}</span>
+      </div>
+      <div class="big">${cur.g}</div>
+      <div class="smallMuted">Choose the best gloss.</div>
 
-  choices.forEach(choice => {
-    const b = document.createElement("button");
-    b.className = "btn";
-    b.textContent = choice.e;
-    b.addEventListener("click", () => handleChoice(b, choice, current, choices));
-    optionsEl.appendChild(b);
+      <div class="optGrid" id="mcGrid">
+        ${choices.map((c,idx)=>`
+          <button class="opt" data-idx="${idx}" data-correct="${c.g===cur.g ? "1":"0"}">
+            <span class="k">${idx+1}</span>${escapeHtml(c.e)}
+          </button>
+        `).join("")}
+      </div>
+
+      <div class="actionsRow">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn" id="btnPeek">Peek answer</button>
+          <button class="btn" id="btnShuffleOne">Shuffle choices</button>
+        </div>
+        <div class="chip">Shortcut: <span class="kbd">1–6</span></div>
+      </div>
+    </div>
+  `;
+
+  const grid = $("#mcGrid");
+  const btns = Array.from(grid.querySelectorAll("button"));
+
+  function grade(btn){
+    if(locked) return;
+    locked = true;
+
+    const isCorrect = btn.dataset.correct === "1";
+    btns.forEach(b => b.disabled = true);
+
+    if(isCorrect){
+      btn.classList.add("correct");
+      score++;
+      streak++;
+      toast("Correct ✅", `Streak: ${streak}`);
+    }else{
+      btn.classList.add("wrong");
+      streak = 0;
+      const correctBtn = btns.find(b => b.dataset.correct === "1");
+      if(correctBtn) correctBtn.classList.add("correct");
+      toast("Not quite ❌", `Streak reset.`);
+    }
+
+    $("#btnNext").disabled = false;
+    $("#btnNext").focus();
+    updateTopbar();
+  }
+
+  btns.forEach(b => b.addEventListener("click", ()=>grade(b)));
+
+  $("#btnPeek").addEventListener("click", ()=>{
+    const correctBtn = btns.find(b => b.dataset.correct === "1");
+    toast("Answer", correctBtn ? correctBtn.textContent.replace(/^\d+\s?/,"") : "—");
+  });
+
+  $("#btnShuffleOne").addEventListener("click", ()=>{
+    // re-render same prompt with new choice order
+    renderVocab();
   });
 }
 
-function handleChoice(btn, choice, current, choices){
-  if(locked) return;
-  locked = true;
+function renderFlash(){
+  $("#stageTitle").textContent = "Flashcards";
+  $("#stageMini").textContent = "Flip with Space. Mark ✓ or ✕. (N next)";
+  $("#btnNext").disabled = true;
 
-  const buttons = Array.from(optionsEl.querySelectorAll("button"));
-  const isCorrect = (choice.g === current.g);
-
-  buttons.forEach(b => b.disabled = true);
-  btn.classList.add(isCorrect ? "correct" : "wrong");
-
-  if(!isCorrect){
-    const correctIdx = choices.findIndex(c => c.g === current.g);
-    if(correctIdx >= 0) buttons[correctIdx].classList.add("correct");
-  }else{
-    score += 1;
-    scorePill.textContent = `Score: ${score}`;
+  const cur = session[i];
+  if(!cur){
+    $("#stageBody").innerHTML = doneHtml("Flashcards complete", `Score: ${score}/${session.length} (based on your ✓ clicks).`);
+    $("#btnNext").disabled = true;
+    updateTopbar();
+    return;
   }
 
-  footerNote.textContent = isCorrect ? "Correct ✅" : "Wrong ❌";
-  nextBtn.disabled = false;
-  nextBtn.focus();
-}
+  locked = false;
+  updateTopbar();
 
-nextBtn.addEventListener("click", () => { if(idx < deck.length) idx += 1; renderQuestion(); });
-resetBtn.addEventListener("click", () => buildDeck());
-numOptionsSel.addEventListener("change", () => renderQuestion());
-orderModeSel.addEventListener("change", () => buildDeck());
+  const side = prefCardSide(); // greek or english first
+  const front = side === "greek" ? cur.g : cur.e;
+  const back  = side === "greek" ? cur.e : cur.g;
 
-toggleListBtn.addEventListener("click", () => {
-  const showing = listArea.style.display !== "none";
-  listArea.style.display = showing ? "none" : "block";
-  toggleListBtn.textContent = showing ? "Show all words" : "Hide all words";
-});
-searchBox.addEventListener("input", () => {
-  const q = searchBox.value.trim().toLowerCase();
-  if(!q){ renderList(VOCAB); return; }
-  renderList(VOCAB.filter(v => v.g.toLowerCase().includes(q) || v.e.toLowerCase().includes(q)));
-});
+  $("#stageBody").innerHTML = `
+    <div class="promptCard" id="flashCard" style="cursor:pointer;">
+      <div class="promptTop">
+        <span class="chip">${side === "greek" ? "Greek → English" : "English → Greek"}</span>
+        <span class="chip">Tap/click to flip</span>
+      </div>
 
-/* ---------------------------
-   CHART QUIZ ENGINE
-   - fills blanks in order
-   - options shuffled
-   - Grade highlights slots green/red
-----------------------------*/
-function chartQuiz({
-  selectEl, chartAreaEl, optsEl, statusEl,
-  charts, makeTableHtml, // makeTableHtml(chart, slotsHtml[]) => string
-}){
-  let active = charts[0];
-  let filled = [];        // what user picked, in order
-  let used = new Set();   // used options
-  let opts = [];          // option pool (shuffled)
-  let graded = false;
+      <div class="big" id="flashFace">${escapeHtml(front)}</div>
+      <div class="smallMuted" id="flashHint">Click to reveal the other side.</div>
 
-  function setActiveById(id){
-    active = charts.find(c => c.id === id) || charts[0];
-    newRound(true);
+      <div class="actionsRow">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn" id="btnWrong">✕ Missed</button>
+          <button class="btn primary" id="btnRight">✓ Got it</button>
+        </div>
+        <div class="chip">Shortcut: <span class="kbd">Space</span> flip • <span class="kbd">N</span> next</div>
+      </div>
+    </div>
+  `;
+
+  let flipped = false;
+
+  function flip(){
+    flipped = !flipped;
+    $("#flashFace").innerHTML = escapeHtml(flipped ? back : front);
+    $("#flashHint").textContent = flipped ? "Now decide: did you get it?" : "Click to reveal the other side.";
   }
 
-  function newRound(keepSelection=false){
-    filled = [];
-    used = new Set();
-    graded = false;
-    statusEl.textContent = "Fill the blanks in order, then click Grade.";
-    opts = shuffle(active.forms.slice());
-    render(keepSelection);
-  }
-
-  function clearOnly(){
-    filled = [];
-    used = new Set();
-    graded = false;
-    statusEl.textContent = "Cleared. Fill again.";
-    render(true);
-  }
-
-  function render(keepSelection){
-    // Slots
-    const slotsHtml = active.forms.map((_, i) => {
-      const val = filled[i] ?? "";
-      const cls = ["slot", val ? "filled" : ""].join(" ");
-      const display = val ? val : "_____";
-      return `<span class="${cls}" data-slot="${i}">${display}</span>`;
-    });
-    chartAreaEl.innerHTML = makeTableHtml(active, slotsHtml);
-
-    // Options
-    optsEl.innerHTML = "";
-    opts.forEach(o => {
-      const b = document.createElement("button");
-      b.className = "optBtn" + (used.has(o) ? " used" : "");
-      b.textContent = o;
-      b.disabled = used.has(o) || graded;
-      b.addEventListener("click", () => {
-        if(graded) return;
-        const nextIndex = filled.length;
-        if(nextIndex >= active.forms.length) return;
-        filled.push(o);
-        used.add(o);
-        render(true);
-        statusEl.textContent = `Filled ${filled.length} / ${active.forms.length}`;
-      });
-      optsEl.appendChild(b);
-    });
-
-    // Title header inside chart area
-    const titleEl = chartAreaEl.querySelector("[data-chart-title]");
-    if(titleEl) titleEl.textContent = active.title;
-
-    // If graded, paint slots
-    if(graded){
-      const slotEls = Array.from(chartAreaEl.querySelectorAll(".slot"));
-      slotEls.forEach((el, i) => {
-        const correct = active.forms[i];
-        const got = filled[i] ?? "";
-        el.classList.remove("correct","wrong");
-        if(!got) return;
-        el.classList.add(got === correct ? "correct" : "wrong");
-      });
-    }
-  }
-
-  function grade(){
-    graded = true;
-    const total = active.forms.length;
-    let correctN = 0;
-    for(let i=0;i<total;i++){
-      if((filled[i] ?? "") === active.forms[i]) correctN++;
-    }
-    statusEl.textContent = `Score: ${correctN} / ${total}` + (correctN===total ? " ✅" : " ❌");
-    render(true);
-  }
-
-  // Populate select
-  selectEl.innerHTML = "";
-  charts.forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c.id;
-    opt.textContent = c.title;
-    selectEl.appendChild(opt);
+  $("#flashCard").addEventListener("click", (e)=>{
+    // avoid flipping when clicking buttons
+    if(e.target.closest("button")) return;
+    flip();
   });
-  selectEl.addEventListener("change", () => setActiveById(selectEl.value));
 
-  // Init
-  setActiveById(charts[0].id);
+  $("#btnRight").addEventListener("click", ()=>{
+    score++;
+    streak++;
+    toast("Nice ✅", `Streak: ${streak}`);
+    next();
+  });
+  $("#btnWrong").addEventListener("click", ()=>{
+    streak = 0;
+    toast("Logged ✕", `Keep going.`);
+    next();
+  });
 
-  return { newRound, clearOnly, grade, setActiveById };
+  // Allow Next button to work here too
+  $("#btnNext").disabled = false;
+  $("#btnNext").textContent = "Next";
 }
 
-/* ---------------------------
-   VERB CHART UI
-----------------------------*/
-const verbChartSel = byId("verbChartSel");
-const verbChartArea = byId("verbChartArea");
-const verbOpts = byId("verbOpts");
-const verbStatus = byId("verbStatus");
+function doneHtml(title, subtitle){
+  return `
+    <div class="promptCard">
+      <div class="promptTop">
+        <span class="chip">Session complete</span>
+      </div>
+      <div class="big">${escapeHtml(title)}</div>
+      <div class="smallMuted">${escapeHtml(subtitle)}</div>
+      <div class="actionsRow" style="margin-top:16px;">
+        <button class="btn primary" id="btnRestartInner">Restart</button>
+      </div>
+    </div>
+  `;
+}
 
-const verbQuiz = chartQuiz({
-  selectEl: verbChartSel,
-  chartAreaEl: verbChartArea,
-  optsEl: verbOpts,
-  statusEl: verbStatus,
-  charts: VERB_CHARTS,
-  makeTableHtml: (chart, slotsHtml) => `
-    <table>
-      <thead>
-        <tr>
-          <th colspan="3"><span data-chart-title>${chart.title}</span></th>
-        </tr>
-        <tr>
-          <th>Person</th><th>Blank</th><th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1st sg</td><td>${slotsHtml[0]}</td><td></td></tr>
-        <tr><td>2nd sg</td><td>${slotsHtml[1]}</td><td></td></tr>
-        <tr><td>3rd sg</td><td>${slotsHtml[2]}</td><td></td></tr>
-        <tr><td>1st pl</td><td>${slotsHtml[3]}</td><td></td></tr>
-        <tr><td>2nd pl</td><td>${slotsHtml[4]}</td><td></td></tr>
-        <tr><td>3rd pl</td><td>${slotsHtml[5]}</td><td></td></tr>
-      </tbody>
-    </table>`
-});
-byId("verbNewBtn").addEventListener("click", () => verbQuiz.newRound(true));
-byId("verbClearBtn").addEventListener("click", () => verbQuiz.clearOnly());
-byId("verbGradeBtn").addEventListener("click", () => verbQuiz.grade());
+function renderChartMode(which, charts){
+  $("#stageTitle").textContent = "Fill the chart";
+  $("#stageMini").textContent = "Click options in order. Click a filled blank to focus it. (U undo)";
+  $("#btnNext").disabled = true;
+  $("#btnNext").textContent = "Next";
 
-/* ---------------------------
-   PRONOUN CHART UI
-----------------------------*/
-const proChartSel = byId("proChartSel");
-const proChartArea = byId("proChartArea");
-const proOpts = byId("proOpts");
-const proStatus = byId("proStatus");
+  // current chart selection state per mode
+  const key = `__chart_${which}`;
+  const saved = window[key] || { chartId: charts[0].id, filled: [], used: new Set(), graded:false, focus:0, bank:[] };
+  window[key] = saved;
 
-const proQuiz = chartQuiz({
-  selectEl: proChartSel,
-  chartAreaEl: proChartArea,
-  optsEl: proOpts,
-  statusEl: proStatus,
-  charts: PRONOUN_CHARTS,
-  makeTableHtml: (chart, slotsHtml) => {
-    // 2-column layout if 8 labels (sing/pl), otherwise 3-column-ish
-    if(chart.labels.length === 8){
-      return `
-        <table>
-          <thead>
-            <tr><th colspan="3"><span data-chart-title>${chart.title}</span></th></tr>
-            <tr><th>Case</th><th>Singular</th><th>Plural</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Nom.</td><td>${slotsHtml[0]}</td><td>${slotsHtml[4]}</td></tr>
-            <tr><td>Gen.</td><td>${slotsHtml[1]}</td><td>${slotsHtml[5]}</td></tr>
-            <tr><td>Dat.</td><td>${slotsHtml[2]}</td><td>${slotsHtml[6]}</td></tr>
-            <tr><td>Acc.</td><td>${slotsHtml[3]}</td><td>${slotsHtml[7]}</td></tr>
-          </tbody>
-        </table>`;
-    }
-    // mixed m/f/n singular set (12 slots)
+  const chart = charts.find(c=>c.id===saved.chartId) || charts[0];
+
+  if(!saved.bank.length || saved.bank.length !== chart.forms.length){
+    saved.bank = shuffle(chart.forms.slice());
+  }
+
+  // build chart HTML
+  const slots = chart.forms.map((_, idx)=>{
+    const val = saved.filled[idx] ?? "";
+    const cls = ["slot", val ? "filled":"", idx===saved.focus ? "active":""].join(" ");
+    return `<span class="${cls}" data-slot="${idx}">${val ? escapeHtml(val) : "_____ "}</span>`;
+  });
+
+  $("#stageBody").innerHTML = `
+    <div class="chartWrap">
+      <div class="chartCard">
+        <div class="promptTop" style="margin-bottom:10px;">
+          <span class="chip">${escapeHtml(chart.title)}</span>
+          <span class="chip">Filled ${saved.filled.length}/${chart.forms.length}</span>
+        </div>
+
+        ${chartTableHtml(chart, slots)}
+
+        <div class="actionsRow">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <select id="chartSel"></select>
+            <button class="btn" id="btnNewChart">Reshuffle</button>
+            <button class="btn" id="btnClearChart">Clear</button>
+            <button class="btn primary" id="btnGradeChart">Grade</button>
+          </div>
+          <div class="chip">Shortcut: <span class="kbd">U</span> undo • <span class="kbd">R</span> reshuffle</div>
+        </div>
+
+        <div class="smallMuted" id="chartStatus" style="margin-top:10px;"></div>
+      </div>
+
+      <div class="chartCard">
+        <div class="bank">
+          <div class="bankTop">
+            <div>
+              <h3 style="margin:0;">Option bank</h3>
+              <div class="mini">Click the next correct form to fill the highlighted blank.</div>
+            </div>
+            <div class="bankBtns">
+              <button class="btn" id="btnUndo">Undo</button>
+              <button class="btn" id="btnReveal">Reveal next</button>
+            </div>
+          </div>
+
+          <div class="optPills" id="bankPills"></div>
+
+          <div class="smallMuted" style="margin-top:8px;">
+            Pro move: click a blank to set the focus, then fill.
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // fill chart selector
+  const sel = $("#chartSel");
+  sel.innerHTML = charts.map(c=>`<option value="${c.id}" ${c.id===chart.id?"selected":""}>${escapeHtml(c.title)}</option>`).join("");
+
+  sel.addEventListener("change", ()=>{
+    saved.chartId = sel.value;
+    saved.filled = [];
+    saved.used = new Set();
+    saved.graded = false;
+    saved.focus = 0;
+    saved.bank = [];
+    render();
+  });
+
+  // slot click focus
+  $$("#stageBody .slot").forEach(s=>{
+    s.addEventListener("click", ()=>{
+      const idx = Number(s.dataset.slot);
+      saved.focus = idx;
+      render();
+    });
+  });
+
+  // build bank pills
+  const bank = $("#bankPills");
+  bank.innerHTML = "";
+  saved.bank.forEach(form=>{
+    const used = saved.used.has(form);
+    const pill = document.createElement("div");
+    pill.className = "pillOpt" + (used ? " used":"");
+    pill.textContent = form;
+    if(used) pill.dataset.used="1";
+    pill.addEventListener("click", ()=>{
+      if(used || saved.graded) return;
+      // fill at focus if empty, otherwise next empty after focus, otherwise next empty overall
+      const target = pickTargetSlot(saved, chart);
+      if(target === -1) return;
+      saved.filled[target] = form;
+      saved.used.add(form);
+      saved.focus = Math.min(target+1, chart.forms.length-1);
+      render();
+    });
+    bank.appendChild(pill);
+  });
+
+  // Buttons
+  $("#btnNewChart").addEventListener("click", ()=>{
+    saved.bank = shuffle(chart.forms.slice());
+    toast("Shuffled", "Option bank reshuffled.");
+    render();
+  });
+  $("#btnClearChart").addEventListener("click", ()=>{
+    saved.filled = [];
+    saved.used = new Set();
+    saved.graded = false;
+    saved.focus = 0;
+    toast("Cleared", "Chart cleared.");
+    render();
+  });
+  $("#btnGradeChart").addEventListener("click", ()=>{
+    saved.graded = true;
+    // color slots
+    paintChartSlots(saved, chart);
+    const total = chart.forms.length;
+    const correct = chart.forms.reduce((acc, f, idx)=>acc + ((saved.filled[idx]??"")===f ? 1:0), 0);
+    $("#chartStatus").textContent = `Score: ${correct}/${total}`;
+    toast(correct===total ? "Perfect ✅" : "Graded", `${correct}/${total}`);
+  });
+  $("#btnUndo").addEventListener("click", ()=>undoChart(saved, chart));
+  $("#btnUndo").disabled = saved.filled.length===0;
+
+  $("#btnReveal").addEventListener("click", ()=>{
+    const target = pickTargetSlot(saved, chart);
+    if(target === -1) return;
+    const correct = chart.forms[target];
+    toast("Next answer", correct);
+  });
+
+  // write chart status
+  $("#chartStatus").textContent = saved.graded ? "Graded. Adjust & re-grade, or reshuffle for another run." : "Fill in order, then click Grade.";
+
+  // if graded paint immediately
+  if(saved.graded) paintChartSlots(saved, chart);
+
+  // update next button availability? (not used in chart modes)
+  $("#btnNext").disabled = true;
+}
+
+function chartTableHtml(chart, slots){
+  // If 6 forms (verb endings): show person rows
+  if(chart.forms.length===6 && chart.labels?.length===6){
     return `
-      <table>
+      <table class="chartTable">
         <thead>
-          <tr><th colspan="4"><span data-chart-title>${chart.title}</span></th></tr>
-          <tr><th>Gender</th><th>Nom.</th><th>Gen.</th><th>Dat.</th><th>Acc.</th></tr>
+          <tr><th>Person</th><th>Blank</th></tr>
         </thead>
         <tbody>
-          <tr><td>M</td><td>${slotsHtml[0]}</td><td>${slotsHtml[1]}</td><td>${slotsHtml[2]}</td><td>${slotsHtml[3]}</td></tr>
-          <tr><td>F</td><td>${slotsHtml[4]}</td><td>${slotsHtml[5]}</td><td>${slotsHtml[6]}</td><td>${slotsHtml[7]}</td></tr>
-          <tr><td>N</td><td>${slotsHtml[8]}</td><td>${slotsHtml[9]}</td><td>${slotsHtml[10]}</td><td>${slotsHtml[11]}</td></tr>
+          ${chart.labels.map((lab, idx)=>`
+            <tr><td>${escapeHtml(lab)}</td><td>${slots[idx]}</td></tr>
+          `).join("")}
         </tbody>
-      </table>`;
+      </table>
+    `;
+  }
+
+  // If 8 forms (pronoun declension): show sing/pl columns
+  if(chart.forms.length===8){
+    return `
+      <table class="chartTable">
+        <thead>
+          <tr><th>Case</th><th>Singular</th><th>Plural</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nom.</td><td>${slots[0]}</td><td>${slots[4]}</td></tr>
+          <tr><td>Gen.</td><td>${slots[1]}</td><td>${slots[5]}</td></tr>
+          <tr><td>Dat.</td><td>${slots[2]}</td><td>${slots[6]}</td></tr>
+          <tr><td>Acc.</td><td>${slots[3]}</td><td>${slots[7]}</td></tr>
+        </tbody>
+      </table>
+    `;
+  }
+
+  // Generic list
+  return `
+    <table class="chartTable">
+      <thead><tr><th>Slot</th><th>Blank</th></tr></thead>
+      <tbody>
+        ${chart.labels.map((lab, idx)=>`<tr><td>${escapeHtml(lab)}</td><td>${slots[idx]}</td></tr>`).join("")}
+      </tbody>
+    </table>
+  `;
+}
+
+function pickTargetSlot(saved, chart){
+  // choose focus slot if empty
+  if((saved.filled[saved.focus] ?? "") === "") return saved.focus;
+  // next empty after focus
+  for(let j=saved.focus+1; j<chart.forms.length; j++){
+    if((saved.filled[j] ?? "") === "") return j;
+  }
+  // any empty
+  for(let j=0; j<chart.forms.length; j++){
+    if((saved.filled[j] ?? "") === "") return j;
+  }
+  return -1;
+}
+
+function undoChart(saved, chart){
+  // remove last filled slot (highest index filled)
+  let last = -1;
+  for(let k=chart.forms.length-1; k>=0; k--){
+    if(saved.filled[k]){
+      last = k; break;
+    }
+  }
+  if(last === -1) return;
+  const val = saved.filled[last];
+  delete saved.filled[last];
+  // rebuild used set
+  saved.used = new Set(saved.filled.filter(Boolean));
+  saved.graded = false;
+  saved.focus = last;
+  toast("Undo", `Removed: ${val}`);
+  render();
+}
+
+function paintChartSlots(saved, chart){
+  const slotEls = $$("#stageBody .slot");
+  slotEls.forEach((el, idx)=>{
+    el.classList.remove("correct","wrong");
+    const got = saved.filled[idx] ?? "";
+    if(!got) return;
+    el.classList.add(got===chart.forms[idx] ? "correct":"wrong");
+  });
+  // paint bank pills too
+  const pills = $$("#bankPills .pillOpt");
+  pills.forEach(p=>{
+    p.classList.remove("correct","wrong");
+  });
+}
+
+/* ===========================
+   NAV (Next/Reset)
+=========================== */
+function next(){
+  i++;
+  $("#btnNext").disabled = true;
+  if(i >= session.length){
+    render();
+    updateTopbar();
+    return;
+  }
+  render();
+}
+
+$("#btnNext").addEventListener("click", ()=>{
+  if(mode==="vocab") return next();
+  if(mode==="flash") return next();
+});
+
+$("#btnReset").addEventListener("click", ()=>{
+  buildSession();
+  toast("Reset", "New session started.");
+});
+
+$("#prefShuffle").addEventListener("change", buildSession);
+$("#prefChoices").addEventListener("change", render);
+$("#prefCardSide").addEventListener("change", render);
+$("#prefSessionSize").addEventListener("change", buildSession);
+
+/* ===========================
+   Mode switching
+=========================== */
+$$(".modeBtn").forEach(b => b.addEventListener("click", ()=>setMode(b.dataset.mode)));
+
+/* ===========================
+   Show all vocab (simple modal-ish)
+=========================== */
+let allOpen = false;
+const allOverlay = document.createElement("div");
+allOverlay.style.cssText = `
+  position: fixed; inset: 0; background: rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding: 18px; z-index: 9999;
+`;
+allOverlay.innerHTML = `
+  <div style="
+    width:min(980px, 100%);
+    max-height: 82vh;
+    overflow:auto;
+    background: rgba(15,23,48,.92);
+    border: 1px solid rgba(170,190,255,.18);
+    border-radius: 20px;
+    box-shadow: 0 18px 70px rgba(0,0,0,.5);
+    backdrop-filter: blur(10px);
+    padding: 14px;
+  ">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:6px 4px 12px; border-bottom:1px solid rgba(170,190,255,.14);">
+      <div>
+        <div style="font-weight:700;">All vocabulary</div>
+        <div style="color:rgba(234,240,255,.72); font-size:12px;">Search and skim like a set list.</div>
+      </div>
+      <button class="btn" id="closeAll">Close</button>
+    </div>
+    <div style="padding:12px 4px;">
+      <input type="text" id="allSearch" placeholder="Search Greek or English…" style="width:100%;"/>
+      <div id="allList" style="margin-top:12px;"></div>
+    </div>
+  </div>
+`;
+document.body.appendChild(allOverlay);
+
+function renderAllList(q=""){
+  const qq = q.trim().toLowerCase();
+  const list = VOCAB.filter(v => !qq || v.g.toLowerCase().includes(qq) || v.e.toLowerCase().includes(qq));
+  $("#allList").innerHTML = `
+    <div style="display:grid; gap:10px;">
+      ${list.map(v=>`
+        <div style="background:rgba(255,255,255,.03); border:1px solid rgba(170,190,255,.14); border-radius:16px; padding:12px;">
+          <div style="font-size:18px; letter-spacing:.2px;">${escapeHtml(v.g)}</div>
+          <div style="color:rgba(234,240,255,.72); margin-top:4px;">${escapeHtml(v.e)}</div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function openAll(){
+  allOpen = true;
+  allOverlay.style.display = "flex";
+  renderAllList("");
+  $("#allSearch").value = "";
+  $("#allSearch").focus();
+}
+function closeAll(){
+  allOpen = false;
+  allOverlay.style.display = "none";
+}
+
+$("#toggleAll").addEventListener("click", (e)=>{ e.preventDefault(); openAll(); });
+allOverlay.addEventListener("click", (e)=>{
+  if(e.target === allOverlay) closeAll();
+});
+allOverlay.querySelector("#closeAll").addEventListener("click", closeAll);
+allOverlay.querySelector("#allSearch").addEventListener("input", (e)=>renderAllList(e.target.value));
+
+/* ===========================
+   Keyboard shortcuts
+=========================== */
+document.addEventListener("keydown", (e)=>{
+  if(allOpen && e.key === "Escape") return closeAll();
+
+  if(e.key.toLowerCase()==="r"){
+    if(mode==="vocab" || mode==="flash") buildSession();
+    else render(); // chart reshuffle done via button; keep simple
+  }
+  if(e.key.toLowerCase()==="n"){
+    if(mode==="vocab" && !$("#btnNext").disabled) next();
+    if(mode==="flash") next();
+  }
+  if(e.code==="Space"){
+    if(mode==="flash"){
+      e.preventDefault();
+      const card = $("#flashCard");
+      if(card) card.click();
+    }
+  }
+
+  // MC number keys
+  if(mode==="vocab"){
+    const n = Number(e.key);
+    if(n>=1 && n<=6){
+      const btn = $(`#mcGrid .opt[data-idx="${n-1}"]`);
+      if(btn && !btn.disabled) btn.click();
+    }
+  }
+
+  // Chart undo
+  if(e.key.toLowerCase()==="u"){
+    if(mode==="verbs" || mode==="pronouns" || mode==="endings"){
+      const key = `__chart_${mode}`;
+      const saved = window[key];
+      const charts = mode==="verbs" ? VERB_CHARTS : (mode==="pronouns" ? PRONOUN_CHARTS : ENDING_CHARTS);
+      const chart = charts.find(c=>c.id===saved.chartId) || charts[0];
+      undoChart(saved, chart);
+    }
   }
 });
-byId("proNewBtn").addEventListener("click", () => proQuiz.newRound(true));
-byId("proClearBtn").addEventListener("click", () => proQuiz.clearOnly());
-byId("proGradeBtn").addEventListener("click", () => proQuiz.grade());
 
-/* ---------------------------
-   ENDINGS CHART UI
-----------------------------*/
-const endChartSel = byId("endChartSel");
-const endChartArea = byId("endChartArea");
-const endOpts = byId("endOpts");
-const endStatus = byId("endStatus");
+/* ===========================
+   Utilities
+=========================== */
+function escapeHtml(str){
+  return String(str)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
 
-const endQuiz = chartQuiz({
-  selectEl: endChartSel,
-  chartAreaEl: endChartArea,
-  optsEl: endOpts,
-  statusEl: endStatus,
-  charts: ENDING_CHARTS,
-  makeTableHtml: (chart, slotsHtml) => `
-    <table>
-      <thead>
-        <tr><th colspan="2"><span data-chart-title>${chart.title}</span></th></tr>
-        <tr><th>Slot</th><th>Blank</th></tr>
-      </thead>
-      <tbody>
-        ${chart.labels.map((lab, i) => `<tr><td>${lab}</td><td>${slotsHtml[i]}</td></tr>`).join("")}
-      </tbody>
-    </table>`
-});
-byId("endNewBtn").addEventListener("click", () => endQuiz.newRound(true));
-byId("endClearBtn").addEventListener("click", () => endQuiz.clearOnly());
-byId("endGradeBtn").addEventListener("click", () => endQuiz.grade());
-
-/* ---------------------------
-   START
-----------------------------*/
-buildDeck();
+/* ===========================
+   INIT
+=========================== */
+buildSession();
+setMode("vocab");
 </script>
 </body>
 </html>
