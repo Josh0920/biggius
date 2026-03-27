@@ -4,7 +4,7 @@
 
 const CATEGORIES = {
     vocabulary: {
-        name: "Vocabular",
+        name: "Vocabulary",
         icon: "📖",
         cards: [
             { term: "ἄγγελος", definition: "angel, messenger", notes: "" },
