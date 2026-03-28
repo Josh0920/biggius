@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koine Greek Study Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header>
+            <div class="header-inner">
+                <h1 class="logo">Koine Greek</h1>
+                <nav id="main-nav">
+                    <button class="nav-btn active" data-view="home">Study</button>
+                    <button class="nav-btn" data-view="manage">Manage</button>
+                </nav>
+            </div>
+        </header>
+
+        <main id="app">
+            <!-- HOME -->
+            <div id="home-view" class="view active">
+                <div class="section-header">
+                    <h2>Categories</h2>
+                    <p class="section-sub">Choose a subject to study</p>
+                </div>
+                <div id="category-grid" class="category-grid"></div>
+            </div>
+
+            <!-- MANAGE -->
+            <div id="manage-view" class="view">
+                <div class="section-header">
+                    <h2>Manage Cards</h2>
+                    <p class="section-sub">Add, edit, import, or export your study cards</p>
+                </div>
+                <div class="manage-layout">
+                    <div class="manage-sidebar">
+                        <label class="field-label" for="manage-category">Category</label>
+                        <select id="manage-category">
+                            <option value="vocabulary">Vocabulary</option>
+                            <option value="nouns">Noun Paradigms</option>
+                            <option value="adjectives">Adjectives</option>
+                            <option value="verbs">Verb Paradigms</option>
+                            <option value="prepositions">Prepositions</option>
+                            <option value="pronouns">Pronouns</option>
+                            <option value="participles">Participles</option>
+                            <option value="syntax">Syntax & Grammar</option>
+                        </select>
+                        <div class="add-form">
+                            <h3>Add Card</h3>
+                            <label class="field-label" for="card-term">Term</label>
+                            <input type="text" id="card-term" placeholder="Greek term">
+                            <label class="field-label" for="card-definition">Definition</label>
+                            <input type="text" id="card-definition" placeholder="English definition">
+                            <label class="field-label" for="card-notes">Notes</label>
+                            <input type="text" id="card-notes" placeholder="Optional notes">
+                            <button id="add-card-btn" class="btn btn-primary">Add Card</button>
+                        </div>
+                        <div class="import-export">
+                            <h3>Import / Export</h3>
+                            <p class="hint">Tab-separated: term, definition, notes</p>
+                            <textarea id="bulk-import" rows="4" placeholder="Paste tab-separated data..."></textarea>
+                            <div class="btn-group">
+                                <button id="import-btn" class="btn btn-outline">Import</button>
+                                <button id="export-btn" class="btn btn-outline">Export</button>
+                                <label class="btn btn-outline file-label">
+                                    Upload
+                                    <input type="file" id="file-upload" accept=".txt,.csv,.tsv" hidden>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="manage-main">
+                        <h3>Cards <span class="count-badge" id="card-count">0</span></h3>
+                        <div id="card-list" class="card-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODE SELECT -->
+            <div id="mode-view" class="view">
+                <button class="back-link" data-back="home">&larr; Categories</button>
+                <div class="section-header">
+                    <h2 id="mode-category-title"></h2>
+                    <p id="mode-card-count" class="section-sub"></p>
+                </div>
+                <div class="mode-grid">
+                    <button class="mode-card" data-mode="flashcards">
+                        <div class="mode-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+                        <span class="mode-label">Flashcards</span>
+                        <span class="mode-desc">Flip through cards</span>
+                    </button>
+                    <button class="mode-card" data-mode="multiple-choice">
+                        <div class="mode-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div>
+                        <span class="mode-label">Multiple Choice</span>
+                        <span class="mode-desc">Pick the right answer</span>
+                    </button>
+                    <button class="mode-card" data-mode="fill-blank">
+                        <div class="mode-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4v14a2 2 0 002 2h12a2 2 0 002-2v-5"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+                        <span class="mode-label">Fill in the Blank</span>
+                        <span class="mode-desc">Type the correct answer</span>
+                    </button>
+                    <button class="mode-card" data-mode="matching">
+                        <div class="mode-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/></svg></div>
+                        <span class="mode-label">Matching</span>
+                        <span class="mode-desc">Pair terms & definitions</span>
+                    </button>
+                    <button class="mode-card" data-mode="true-false">
+                        <div class="mode-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+                        <span class="mode-label">True / False</span>
+                        <span class="mode-desc">Judge the pairing</span>
+                    </button>
+                </div>
+                <div class="study-opts">
+                    <label><input type="checkbox" id="opt-shuffle" checked> Shuffle</label>
+                    <label><input type="checkbox" id="opt-reverse"> Show definition first</label>
+                    <label><input type="checkbox" id="opt-blank-all"> Blank all cells (paradigms)</label>
+                </div>
+            </div>
+
+            <!-- FLASHCARD -->
+            <div id="flashcard-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="fc-progress" class="progress-label"></span>
+                </div>
+                <div class="progress-track"><div id="fc-bar" class="progress-fill"></div></div>
+                <div id="flashcard" class="flashcard" tabindex="0">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-face flashcard-front">
+                            <p id="fc-front-text" class="greek-text"></p>
+                            <span class="flip-hint">Click or Space to flip</span>
+                        </div>
+                        <div class="flashcard-face flashcard-back">
+                            <p id="fc-back-text"></p>
+                            <p id="fc-notes" class="notes-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fc-nav">
+                    <button id="fc-prev" class="btn btn-outline">&larr; Prev</button>
+                    <button id="fc-next" class="btn btn-primary">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- MULTIPLE CHOICE -->
+            <div id="mc-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="mc-progress" class="progress-label"></span>
+                    <span id="mc-score" class="score-label"></span>
+                </div>
+                <div class="progress-track"><div id="mc-bar" class="progress-fill"></div></div>
+                <div class="quiz-body">
+                    <p class="quiz-prompt greek-text" id="mc-prompt"></p>
+                    <div id="mc-options" class="mc-options"></div>
+                    <button id="mc-next" class="btn btn-primary hidden">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- FILL IN BLANK -->
+            <div id="fib-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="fib-progress" class="progress-label"></span>
+                    <span id="fib-score" class="score-label"></span>
+                </div>
+                <div class="progress-track"><div id="fib-bar" class="progress-fill"></div></div>
+                <div class="quiz-body">
+                    <p class="quiz-prompt" id="fib-prompt"></p>
+                    <div class="fib-row">
+                        <input type="text" id="fib-input" class="fib-input" placeholder="Type your answer..." autocomplete="off">
+                        <button id="fib-submit" class="btn btn-primary">Check</button>
+                    </div>
+                    <div id="fib-feedback" class="feedback hidden"></div>
+                    <button id="fib-next" class="btn btn-primary hidden">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- MATCHING -->
+            <div id="match-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="match-progress" class="progress-label"></span>
+                </div>
+                <div class="match-area">
+                    <div id="match-left" class="match-col"></div>
+                    <div id="match-right" class="match-col"></div>
+                </div>
+                <button id="match-next" class="btn btn-primary hidden">Next Round &rarr;</button>
+            </div>
+
+            <!-- TRUE FALSE -->
+            <div id="tf-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="tf-progress" class="progress-label"></span>
+                    <span id="tf-score" class="score-label"></span>
+                </div>
+                <div class="progress-track"><div id="tf-bar" class="progress-fill"></div></div>
+                <div class="quiz-body">
+                    <p class="quiz-prompt greek-text" id="tf-term"></p>
+                    <p class="quiz-sub" id="tf-def"></p>
+                    <div class="tf-row">
+                        <button class="btn btn-tf" data-answer="true">True</button>
+                        <button class="btn btn-tf" data-answer="false">False</button>
+                    </div>
+                    <div id="tf-feedback" class="feedback hidden"></div>
+                    <button id="tf-next" class="btn btn-primary hidden">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- PARADIGM TABLE QUIZ -->
+            <div id="paradigm-view" class="view">
+                <div class="study-bar">
+                    <button class="back-link" data-back="mode">&larr; Back</button>
+                    <span id="para-progress" class="progress-label"></span>
+                    <span id="para-score" class="score-label"></span>
+                </div>
+                <div class="paradigm-body">
+                    <h3 id="para-title" class="para-title"></h3>
+                    <div id="para-table-wrap" class="para-table-wrap"></div>
+                    <div id="para-input-area" class="para-input-area">
+                        <!-- MC options or FIB input rendered here -->
+                    </div>
+                    <div id="para-feedback" class="feedback hidden"></div>
+                    <button id="para-next-cell" class="btn btn-primary hidden">Next &rarr;</button>
+                    <button id="para-next-table" class="btn btn-primary hidden">Next Table &rarr;</button>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div id="results-view" class="view">
+                <div class="results-card">
+                    <h2>Results</h2>
+                    <p id="results-score" class="results-pct"></p>
+                    <p id="results-detail" class="results-detail"></p>
+                    <div id="results-missed" class="results-missed"></div>
+                    <div class="btn-group centered">
+                        <button id="results-retry" class="btn btn-primary">Try Again</button>
+                        <button id="results-back" class="btn btn-outline">Back</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
